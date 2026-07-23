@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "tyre importer Pakistan",
   ],
   openGraph: {
-    default: "J. Rashid & Sons | Pakistan's Trusted Tyre Partner Since 1948",
+    title: "J. Rashid & Sons | Pakistan's Trusted Tyre Partner Since 1948",
     description:
       "Official importer of Yokohama, Goodyear, Michelin tyres. 70+ years of trust.",
     url: "https://jrashid.com",
