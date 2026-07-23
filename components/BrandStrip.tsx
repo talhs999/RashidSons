@@ -100,7 +100,7 @@ export default function BrandStrip() {
                     <img
                       src={brand.logo}
                       alt={brand.name}
-                      className={`max-h-12 max-w-[90%] object-contain ${brand.slug === 'goodyear' ? 'scale-135' : ''}`}
+                      className="max-h-12 max-w-[85%] object-contain"
                     />
                   </div>
                 </div>
