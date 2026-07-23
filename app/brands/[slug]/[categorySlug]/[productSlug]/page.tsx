@@ -249,14 +249,14 @@ export default function ProductDetailPage() {
                   href={`https://wa.me/923004058489?text=${encodeURIComponent(`Hi, I'm interested in ${product.name} (${product.size || ""}). Please provide a quote and availability.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary rounded-xl flex-1 justify-center"
+                  className="bg-brand-yellow hover:bg-brand-yellow-dark text-brand-black px-6 py-3 font-bold rounded-xl flex-1 flex items-center justify-center gap-2 transition-colors"
                 >
                   <MessageCircle size={18} />
                   Get a Quote on WhatsApp
                 </a>
                 <a
                   href="tel:+923004058489"
-                  className="btn-secondary rounded-xl flex-1 justify-center"
+                  className="bg-transparent border-2 border-brand-yellow text-brand-yellow hover:bg-brand-yellow/10 px-6 py-3 font-bold rounded-xl flex-1 flex items-center justify-center gap-2 transition-colors"
                 >
                   <Phone size={18} />
                   Call Us
