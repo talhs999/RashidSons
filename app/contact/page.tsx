@@ -162,12 +162,12 @@ export default function ContactPage() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 lg:p-10 border border-brand-black/5 shadow-sm"
+              className="bg-brand-black rounded-2xl p-8 lg:p-10 border border-brand-yellow/30 shadow-md"
             >
-              <h2 className="text-2xl font-bold text-brand-black mb-2">
+              <h2 className="text-2xl font-bold text-brand-yellow mb-2">
                 Send us a Message
               </h2>
-              <p className="text-brand-gray mb-8">
+              <p className="text-white/70 mb-8">
                 Fill out the form below and we&apos;ll get back to you within 24
                 hours.
               </p>
@@ -178,16 +178,16 @@ export default function ContactPage() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-12"
                 >
-                  <div className="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 rounded-full bg-brand-yellow/10 flex items-center justify-center mx-auto mb-4 border border-brand-yellow/20">
                     <Check
                       size={32}
-                      className="text-emerald-500"
+                      className="text-brand-yellow"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-brand-black mb-2">
+                  <h3 className="text-xl font-bold text-brand-yellow mb-2">
                     Message Sent Successfully
                   </h3>
-                  <p className="text-brand-gray">
+                  <p className="text-white/70">
                     Thank you for contacting us. Our team will respond shortly.
                   </p>
                   <button
@@ -201,7 +201,7 @@ export default function ContactPage() {
                         message: "",
                       });
                     }}
-                    className="mt-6 text-brand-yellow-dark font-semibold hover:text-brand-yellow"
+                    className="mt-6 text-brand-yellow font-semibold hover:text-white transition-colors"
                   >
                     Send another message
                   </button>
@@ -210,7 +210,7 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-xs font-semibold text-brand-black uppercase tracking-wider mb-2">
+                      <label className="block text-xs font-bold text-brand-yellow uppercase tracking-wider mb-2">
                         Full Name *
                       </label>
                       <input
@@ -220,12 +220,12 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormState({ ...formState, name: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-lg border border-brand-black/10 text-brand-black placeholder:text-brand-gray focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/10 transition-all"
+                        className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all"
                         placeholder="Your name"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-brand-black uppercase tracking-wider mb-2">
+                      <label className="block text-xs font-bold text-brand-yellow uppercase tracking-wider mb-2">
                         Phone Number *
                       </label>
                       <input
@@ -235,7 +235,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormState({ ...formState, phone: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-lg border border-brand-black/10 text-brand-black placeholder:text-brand-gray focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/10 transition-all"
+                        className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all"
                         placeholder="+92 300 XXXXXXX"
                       />
                     </div>
@@ -243,7 +243,7 @@ export default function ContactPage() {
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-xs font-semibold text-brand-black uppercase tracking-wider mb-2">
+                      <label className="block text-xs font-bold text-brand-yellow uppercase tracking-wider mb-2">
                         Email (Optional)
                       </label>
                       <input
@@ -252,12 +252,12 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormState({ ...formState, email: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-lg border border-brand-black/10 text-brand-black placeholder:text-brand-gray focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/10 transition-all"
+                        className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all"
                         placeholder="your@email.com"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-brand-black uppercase tracking-wider mb-2">
+                      <label className="block text-xs font-bold text-brand-yellow uppercase tracking-wider mb-2">
                         City
                       </label>
                       <input
@@ -266,14 +266,14 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormState({ ...formState, city: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-lg border border-brand-black/10 text-brand-black placeholder:text-brand-gray focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/10 transition-all"
+                        className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all"
                         placeholder="Lahore, Karachi..."
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-brand-black uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-bold text-brand-yellow uppercase tracking-wider mb-2">
                       Message *
                     </label>
                     <textarea
@@ -283,7 +283,7 @@ export default function ContactPage() {
                       onChange={(e) =>
                         setFormState({ ...formState, message: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-lg border border-brand-black/10 text-brand-black placeholder:text-brand-gray focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/10 transition-all resize-none"
+                      className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all resize-none"
                       placeholder="Tell us how we can help — tyre inquiry, quote request, dealer application..."
                     />
                   </div>
@@ -291,7 +291,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="btn-primary rounded-lg w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="bg-brand-yellow hover:bg-brand-yellow-dark text-brand-black px-6 py-3 font-bold rounded-lg w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 transition-colors"
                   >
                     {submitting ? (
                       <>
@@ -328,10 +328,10 @@ export default function ContactPage() {
                     className="group bg-white rounded-xl p-4 border border-brand-black/5 hover:shadow-md hover:border-brand-yellow/20 transition-all"
                   >
                     <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-brand-yellow/10 flex items-center justify-center flex-shrink-0">
+                      <div className="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0">
                         <MapPin
                           size={14}
-                          className="text-brand-yellow"
+                          className="text-red-500"
                         />
                       </div>
                       <div className="min-w-0">
@@ -343,9 +343,9 @@ export default function ContactPage() {
                         </p>
                         <a
                           href={`tel:${branch.phone}`}
-                          className="inline-flex items-center gap-1 text-xs text-brand-yellow-dark hover:text-brand-yellow mt-1 transition-colors"
+                          className="inline-flex items-center gap-1 text-xs font-bold text-brand-black hover:text-red-600 mt-1 transition-colors"
                         >
-                          <Phone size={11} />
+                          <Phone size={11} className="text-red-500" />
                           {branch.phone}
                         </a>
                       </div>
@@ -362,9 +362,9 @@ export default function ContactPage() {
       <section className="py-16 bg-white border-t border-brand-black/5">
         <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <p className="text-xs text-brand-yellow uppercase tracking-[0.2em] font-semibold mb-2">
+            <div className="inline-flex items-center justify-center px-3 py-1.5 rounded bg-brand-black border border-brand-yellow/20 text-xs text-brand-yellow uppercase tracking-[0.2em] font-bold mb-4 shadow-sm">
               Main Location
-            </p>
+            </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-brand-black">
               Visit Our Main Branch
             </h2>

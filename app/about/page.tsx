@@ -8,11 +8,6 @@ import {
   Calendar,
   MapPin,
   Phone,
-  Award,
-  Globe,
-  Truck,
-  Users,
-  ArrowRight,
   Quote,
 } from "lucide-react";
 
@@ -58,77 +53,8 @@ const timeline = [
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative bg-brand-black pt-32 md:pt-40 pb-24 overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div
-            className="w-full h-full"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-              backgroundSize: "40px 40px",
-            }}
-          />
-        </div>
-        <div className="max-w-[1400px] mx-auto px-4 lg:px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <motion.p
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-xs text-brand-yellow uppercase tracking-[0.2em] font-semibold mb-4"
-              >
-                Our Story
-              </motion.p>
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="text-4xl lg:text-6xl font-bold text-white mb-6"
-              >
-                70+ Years of
-                <br />
-                <span className="text-gradient">Tyre Excellence</span>
-              </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="text-white/50 text-lg leading-relaxed"
-              >
-                Since 1948, J. Rashid &amp; Sons has been Pakistan&apos;s most
-                trusted name in tyres. From our humble beginnings in
-                Lahore&apos;s Anarkali bazaar to becoming the official importer
-                of the world&apos;s leading tyre brands, our journey is one of
-                dedication, quality, and unwavering customer trust.
-              </motion.p>
-            </div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3 }}
-              className="relative"
-            >
-              <div className="rounded-3xl overflow-hidden border border-brand-yellow/30 shadow-2xl group">
-                <img
-                  src="/images/showroom.jpg"
-                  alt="J. Rashid & Sons Historic Shop 1948"
-                  className="w-full h-[400px] lg:h-[450px] object-cover object-center opacity-95 group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-brand-yellow rounded-2xl p-6 text-brand-black shadow-2xl">
-                <p className="text-4xl font-heading font-extrabold">1948</p>
-                <p className="text-sm font-bold uppercase tracking-wider">
-                  Established
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* CEO Message & Founders Section */}
-      <section className="py-24 lg:py-32 bg-brand-black text-white relative overflow-hidden">
+      <section className="pt-32 md:pt-40 pb-24 lg:pb-32 bg-brand-black text-white relative overflow-hidden">
         {/* Animated ambient background glows */}
         <div className="absolute top-1/4 -left-20 w-80 h-80 bg-brand-yellow/10 blur-[120px] rounded-full pointer-events-none" />
         <div className="absolute bottom-10 right-0 w-96 h-96 bg-brand-yellow/5 blur-[150px] rounded-full pointer-events-none" />
@@ -231,6 +157,71 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Hero */}
+      <section className="relative py-24 lg:py-32 bg-brand-black overflow-hidden border-t border-white/10">
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className="w-full h-full"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+          />
+        </div>
+        <div className="max-w-[1400px] mx-auto px-4 lg:px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center justify-center px-3 py-1.5 rounded bg-black border border-brand-yellow/20 text-xs text-brand-yellow uppercase tracking-[0.2em] font-bold mb-4 shadow-sm">
+                Our Story
+              </div>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="text-4xl lg:text-6xl font-bold text-white mb-6 font-heading"
+              >
+                70+ Years of
+                <br />
+                <span className="text-gradient">Tyre Excellence</span>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="text-white/70 text-lg leading-relaxed"
+              >
+                Since 1948, J. Rashid &amp; Sons has been Pakistan&apos;s most
+                trusted name in tyres. From our humble beginnings in
+                Lahore&apos;s Anarkali bazaar to becoming the official importer
+                of the world&apos;s leading tyre brands, our journey is one of
+                dedication, quality, and unwavering customer trust.
+              </motion.p>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3 }}
+              className="relative"
+            >
+              <div className="rounded-3xl overflow-hidden border border-brand-yellow/30 shadow-2xl group">
+                <img
+                  src="/images/showroom.jpg"
+                  alt="J. Rashid & Sons Historic Shop 1948"
+                  className="w-full h-[400px] lg:h-[450px] object-cover object-center opacity-95 group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-brand-yellow rounded-2xl p-6 text-brand-black shadow-2xl">
+                <p className="text-4xl font-heading font-extrabold">1948</p>
+                <p className="text-sm font-bold uppercase tracking-wider">
+                  Established
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Timeline */}
       <section className="py-20 lg:py-28 bg-cream">
         <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
@@ -240,10 +231,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <p className="text-xs text-brand-yellow uppercase tracking-[0.2em] font-semibold mb-3">
+            <div className="inline-flex items-center justify-center px-3 py-1.5 rounded bg-black border border-brand-yellow/20 text-xs text-brand-yellow uppercase tracking-[0.2em] font-bold mb-4 shadow-sm">
               Our Journey
-            </p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-brand-black">
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-brand-black uppercase font-heading">
               A Legacy of Excellence
             </h2>
           </motion.div>
@@ -271,16 +262,16 @@ export default function AboutPage() {
                     className={`${i % 2 === 0 ? "lg:text-right" : "lg:col-start-2"} relative pb-8 lg:pb-16`}
                   >
                     <div className="bg-white rounded-2xl p-6 lg:p-8 border border-brand-black/5 hover:shadow-lg transition-shadow">
-                      <div className="flex items-center gap-3 mb-3">
+                      <div className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 bg-black rounded-lg border border-brand-yellow/20 shadow-sm">
                         <Calendar
-                          size={16}
+                          size={15}
                           className="text-brand-yellow"
                         />
-                        <span className="text-sm font-bold text-brand-yellow-dark">
+                        <span className="text-sm font-bold text-brand-yellow">
                           {item.year}
                         </span>
                       </div>
-                      <h3 className="text-xl font-bold text-brand-black mb-2">
+                      <h3 className="text-xl font-bold text-brand-black mb-2 font-heading">
                         {item.title}
                       </h3>
                       <p className="text-brand-gray leading-relaxed">
@@ -304,15 +295,15 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <p className="text-xs text-brand-yellow uppercase tracking-[0.2em] font-semibold mb-3">
+            <div className="inline-flex items-center justify-center px-3 py-1.5 rounded bg-black border border-brand-yellow/20 text-xs text-brand-yellow uppercase tracking-[0.2em] font-bold mb-4 shadow-sm">
               Our Partners
-            </p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white">
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white uppercase font-heading">
               Trusted Global Brands
             </h2>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {brands.map((brand, i) => (
               <motion.div
                 key={brand.slug}
@@ -349,10 +340,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <p className="text-xs text-brand-yellow uppercase tracking-[0.2em] font-semibold mb-3">
+            <div className="inline-flex items-center justify-center px-3 py-1.5 rounded bg-black border border-brand-yellow/20 text-xs text-brand-yellow uppercase tracking-[0.2em] font-bold mb-4 shadow-sm">
               Visit Us
-            </p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-brand-black">
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-brand-black uppercase font-heading">
               Our Branches
             </h2>
           </motion.div>
@@ -368,14 +359,14 @@ export default function AboutPage() {
                 className="group p-6 rounded-2xl bg-cream border border-brand-black/5 hover:shadow-lg hover:-translate-y-1 transition-all duration-400"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-brand-yellow/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0">
                     <MapPin
                       size={18}
-                      className="text-brand-yellow"
+                      className="text-red-500"
                     />
                   </div>
                   <div>
-                    <h3 className="font-bold text-brand-black mb-1">
+                    <h3 className="font-bold text-brand-black mb-1 font-heading">
                       {branch.name}
                     </h3>
                     <p className="text-sm text-brand-gray mb-2">
@@ -383,9 +374,9 @@ export default function AboutPage() {
                     </p>
                     <a
                       href={`tel:${branch.phone}`}
-                      className="flex items-center gap-1.5 text-sm text-brand-yellow-dark hover:text-brand-yellow transition-colors"
+                      className="flex items-center gap-1.5 text-sm font-bold text-brand-black hover:text-red-600 transition-colors"
                     >
-                      <Phone size={13} />
+                      <Phone size={13} className="text-red-500" />
                       {branch.phone}
                     </a>
                   </div>

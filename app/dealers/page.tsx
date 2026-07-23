@@ -119,38 +119,7 @@ export default function DealersPage() {
               )}
             </div>
 
-            {/* Yokohama Filter Chips */}
-            <div className="flex flex-wrap items-center gap-2 mb-6">
-              <button
-                onClick={() => setActiveTab("all")}
-                className={`px-3 py-2 rounded text-xs font-bold transition-all flex items-center gap-1.5 border ${
-                  activeTab === "all"
-                    ? "bg-white border-brand-black text-brand-black shadow-sm"
-                    : "bg-gray-50 border-gray-200 text-gray-600 hover:bg-gray-100"
-                }`}
-              >
-                <span>Tire Dealers</span>
-                <span className="w-4 h-4 rounded-full bg-red-600 text-white text-[10px] flex items-center justify-center font-bold">✓</span>
-              </button>
 
-              <button
-                onClick={() => setActiveTab("wholesale")}
-                className={`px-3 py-2 rounded text-xs font-bold transition-all border ${
-                  activeTab === "wholesale"
-                    ? "bg-white border-brand-black text-brand-black shadow-sm"
-                    : "bg-gray-50 border-gray-200 text-gray-600 hover:bg-gray-100"
-                }`}
-              >
-                Auto Dealers ⊗
-              </button>
-
-              <button
-                className="px-4 py-2 rounded text-xs font-bold bg-brand-black text-white hover:bg-brand-charcoal transition-all flex items-center gap-1 ml-auto"
-              >
-                <span>Online Dealers</span>
-                <ChevronRight size={14} className="text-brand-yellow" />
-              </button>
-            </div>
 
             {/* Status Indicator Bar */}
             <div className="pb-3 border-b border-gray-200 mb-6 flex items-center justify-between text-xs text-gray-500 font-bold">
@@ -186,23 +155,7 @@ export default function DealersPage() {
                     Type a city name in the search bar above to locate authorized dealers and point pins on the live map.
                   </p>
 
-                  <div className="text-left">
-                    <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2">
-                      Popular Cities Quick Select:
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {quickCities.map((city) => (
-                        <button
-                          key={city}
-                          onClick={() => setSearchQuery(city)}
-                          className="px-3 py-1.5 rounded bg-white border border-gray-300 text-xs font-bold text-brand-black hover:bg-brand-yellow hover:border-brand-yellow transition-all flex items-center gap-1 shadow-sm"
-                        >
-                          <Building2 size={12} className="text-gray-400" />
-                          {city}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+
                 </div>
               )}
 
