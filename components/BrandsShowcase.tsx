@@ -63,7 +63,7 @@ export default function BrandsShowcase() {
                       <img
                         src={brand.logo_url}
                         alt={brand.name}
-                        className="max-h-12 max-w-[85%] object-contain"
+                        className={`max-h-12 max-w-[90%] object-contain ${brand.slug === 'goodyear' ? 'scale-135' : ''}`}
                       />
                     </div>
                   </div>
