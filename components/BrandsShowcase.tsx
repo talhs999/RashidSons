@@ -59,11 +59,11 @@ export default function BrandsShowcase() {
                     </div>
 
                     {/* Bottom: Brand Logo */}
-                    <div className="relative w-full h-[65px] flex items-center justify-center border-t border-black/10 pt-3">
+                    <div className="relative w-full h-[55px] flex items-center justify-center border-t border-black/10 pt-2">
                       <img
                         src={brand.logo_url}
                         alt={brand.name}
-                        className={`object-contain ${brand.slug === 'goodyear' ? 'max-h-6 max-w-[55%] scale-75' : 'max-h-12 max-w-[85%]'}`}
+                        className="max-h-8 max-w-[65%] w-auto object-contain"
                       />
                     </div>
                   </div>
