@@ -16,13 +16,13 @@ export default function HomePage() {
       <HeroVideo />
       <ComfortTicker />
       <CertifiedPartners />
+      <AboutUsTeaser />
       <BrandsShowcase />
       <TireFamilies />
       <TireCarousel />
       <FeaturedCategories />
       <FeaturedNews />
       <SplitCTA />
-      <AboutUsTeaser />
     </>
   );
 }

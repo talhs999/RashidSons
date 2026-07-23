@@ -99,6 +99,24 @@ export const brands: Brand[] = [
     description:
       "Warrior tyres are built tough for Pakistani road conditions. Designed for durability and performance at competitive prices.",
   },
+  {
+    id: 6,
+    name: "Rydanz",
+    slug: "rydanz",
+    logo_url: "/images/partners/rydanz-clean.png",
+    logo_white_url: "/images/brands/rydanz-white.png",
+    description:
+      "Rydanz tyres provide exceptional safety, comfort, and grip. High performance engineered for smooth driving and durability across all terrains.",
+  },
+  {
+    id: 7,
+    name: "Yokohama Alliance",
+    slug: "yokohama-alliance",
+    logo_url: "/images/partners/alliance-clean.png",
+    logo_white_url: "/images/brands/alliance-white.png",
+    description:
+      "Yokohama Alliance tyres deliver superior traction, durable construction, and trusted Japanese quality for agricultural, industrial, and passenger applications.",
+  },
 ];
 
 export const categories: Category[] = [
@@ -114,6 +132,9 @@ export const categories: Category[] = [
   { id: 10, name: "Performance", slug: "blackarrow-performance", brand_id: 4 },
   { id: 11, name: "All Terrain", slug: "warrior-allterrain", brand_id: 5 },
   { id: 12, name: "Highway", slug: "warrior-highway", brand_id: 5 },
+  { id: 13, name: "Passenger Tyres", slug: "rydanz-passenger", brand_id: 6 },
+  { id: 14, name: "SUV & 4x4", slug: "rydanz-suv", brand_id: 6 },
+  { id: 15, name: "Commercial & Off-Road", slug: "alliance-commercial", brand_id: 7 },
 ];
 
 export const products: Product[] = [

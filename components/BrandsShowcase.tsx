@@ -2,12 +2,20 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronRight } from "lucide-react";
-import { brands } from "@/lib/data"; // assuming this exists and has logos
+import { brands } from "@/lib/data";
+
+const brandTires: Record<string, string> = {
+  yokohama: "/images/tires/advan-fleva.png",
+  michelin: "/images/tires/advan-sport-as.webp",
+  goodyear: "/images/tires/advan-a052.png",
+  blackarrow: "/images/tires/advan-apex.png",
+  warrior: "/images/tires/advan-neova-ad09.webp",
+  rydanz: "/images/tires/advan-a055.webp",
+  "yokohama-alliance": "/images/tires/advan-sport-v107.webp",
+};
 
 export default function BrandsShowcase() {
-  // Use all 5 brands for the showcase
   const showcaseBrands = brands;
 
   return (
@@ -23,45 +31,66 @@ export default function BrandsShowcase() {
         </div>
 
         {/* Brands Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {showcaseBrands.map((brand, i) => (
-            <motion.div
-              key={brand.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="group relative bg-white border border-brand-gray/10 rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 h-[340px] flex items-center justify-center"
-            >
-              {/* Brand Logo (Default State) */}
-              <div className="absolute inset-0 p-4 flex flex-col items-center justify-center transition-all duration-500 group-hover:scale-105">
-                <img
-                  src={brand.logo_url}
-                  alt={brand.name}
-                  className="w-full h-full max-h-[240px] object-contain p-1 scale-110 transition-all duration-500"
-                />
-              </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {showcaseBrands.map((brand, i) => {
+            const tireImg = brandTires[brand.slug] || "/images/tires/advan-fleva.png";
 
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-brand-black/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center p-6 text-center translate-y-full group-hover:translate-y-0">
-                <h3 className="text-2xl font-heading font-bold text-white mb-2 uppercase">
-                  {brand.name}
-                </h3>
-                <p className="text-white/70 text-sm mb-6 line-clamp-2">
-                  {brand.description}
-                </p>
-                <Link href={`/brands/${brand.slug}`} className="btn-skew-yellow scale-90 hover:scale-95">
-                  <span>
-                    SHOP {brand.name} <ChevronRight size={16} />
-                  </span>
+            return (
+              <motion.div
+                key={brand.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.5 }}
+              >
+                <Link
+                  href={`/brands/${brand.slug}`}
+                  className="group relative bg-brand-yellow border-2 border-brand-yellow-dark/20 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 h-[300px] flex flex-col justify-between p-6"
+                >
+                  {/* Default View: Top Tyre Image + Bottom Logo */}
+                  <div className="flex flex-col items-center justify-between w-full h-full group-hover:opacity-0 group-hover:scale-95 transition-all duration-500">
+                    {/* Top: Tyre Image */}
+                    <div className="relative w-full h-[160px] flex items-center justify-center pt-2">
+                      <img
+                        src={tireImg}
+                        alt={`${brand.name} tire`}
+                        className="h-full w-auto object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+
+                    {/* Bottom: Brand Logo */}
+                    <div className="relative w-full h-[65px] flex items-center justify-center border-t border-black/10 pt-3">
+                      <img
+                        src={brand.logo_url}
+                        alt={brand.name}
+                        className="max-h-12 max-w-[85%] object-contain"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Hover Overlay: Brand Name + Action Button */}
+                  <div className="absolute inset-0 bg-brand-black/95 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center p-6 text-center z-20">
+                    <h3 className="text-2xl font-heading font-extrabold text-white mb-4 uppercase tracking-wider transform translate-y-3 group-hover:translate-y-0 transition-transform duration-500">
+                      {brand.name}
+                    </h3>
+                    
+                    <div className="btn-skew-yellow py-2.5 px-6 text-xs font-bold uppercase tracking-widest flex items-center gap-1 group-hover:scale-105 transition-transform shadow-lg">
+                      <span>
+                        SHOP {brand.name.toUpperCase()} <ChevronRight size={16} className="inline ml-1" />
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Accent yellow border on hover */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-brand-yellow w-0 group-hover:w-full transition-all duration-500 z-30" />
                 </Link>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
 
-        <div className="mt-12 text-center">
-          <Link href="/brands" className="text-brand-gray hover:text-brand-yellow font-bold uppercase tracking-widest text-sm underline underline-offset-8 transition-colors">
+        <div className="mt-14 text-center">
+          <Link href="/brands" className="text-brand-gray hover:text-brand-yellow-dark font-bold uppercase tracking-widest text-sm underline underline-offset-8 transition-colors">
             View All Brands
           </Link>
         </div>

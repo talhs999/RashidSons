@@ -52,12 +52,12 @@ export default function AboutUsTeaser() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative h-[400px] lg:h-[600px] w-full"
           >
-            <div className="absolute top-0 right-0 w-[80%] h-[80%] bg-brand-black skew-x-[-10deg] overflow-hidden rounded-2xl shadow-2xl">
+            <div className="absolute top-0 right-0 w-[85%] h-[80%] skew-x-[-10deg] overflow-hidden rounded-2xl shadow-2xl border-2 border-brand-yellow/30 group">
               <Image
                 src="/images/about-history.jpg" // The new history image
                 alt="J Rashid History"
                 fill
-                className="object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-700"
+                className="object-cover object-center opacity-95 group-hover:scale-105 transition-all duration-700"
               />
             </div>
             <div className="absolute bottom-0 left-0 w-[60%] h-[50%] bg-brand-yellow skew-x-[10deg] overflow-hidden rounded-2xl border-8 border-brand-light shadow-xl z-10 flex items-center justify-center">

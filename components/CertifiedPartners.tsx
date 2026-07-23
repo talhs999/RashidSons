@@ -1,21 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const partners = [
-  { name: "Partner 1", logo: "/images/partners/1.png" },
-  { name: "Partner 2", logo: "/images/partners/2.png" },
-  { name: "Partner 3", logo: "/images/partners/3.png" },
-  { name: "Partner 4", logo: "/images/partners/4.png" },
-  { name: "Warrior", logo: "/images/partners/warrior-white.png" },
-  { name: "Partner 6", logo: "/images/partners/6.png" },
-  { name: "Partner 7", logo: "/images/partners/7.png" },
-  { name: "Partner 8", logo: "/images/partners/8.png" },
-  { name: "Partner 9", logo: "/images/partners/9.png" },
-  { name: "Partner 10", logo: "/images/partners/10.png" },
-  { name: "Partner 11", logo: "/images/partners/11.png" },
-  { name: "Partner 13", logo: "/images/partners/13.png" },
+  { name: "Yokohama", logo: "/images/partners/yokohama-hd-5100.png" },
+  { name: "Michelin", logo: "/images/partners/michelin-hd.png" },
+  { name: "Goodyear", logo: "/images/partners/goodyear-clean.png" },
+  { name: "Blackarrow", logo: "/images/partners/blackarrow-clean.png" },
+  { name: "Warrior", logo: "/images/partners/warrior-clean.png" },
+  { name: "Rydanz", logo: "/images/partners/rydanz-clean.png" },
+  { name: "Yokohama Alliance", logo: "/images/partners/alliance-clean.png" },
 ];
 
 export default function CertifiedPartners() {
@@ -25,7 +19,7 @@ export default function CertifiedPartners() {
         
         {/* Heading */}
         <div className="flex-shrink-0">
-          <h2 className="text-3xl lg:text-4xl font-heading font-extrabold text-brand-black leading-tight py-4">
+          <h2 className="text-3xl lg:text-4xl font-heading font-extrabold text-brand-black leading-tight py-4 uppercase">
             We have over 150+<br />Certified Partners
           </h2>
         </div>
@@ -38,19 +32,19 @@ export default function CertifiedPartners() {
           
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
-            className="flex gap-12 items-center whitespace-nowrap"
+            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+            className="flex gap-14 md:gap-20 items-center whitespace-nowrap"
           >
-            {/* Double the array for seamless infinite scroll */}
-            {[...partners, ...partners].map((partner, index) => (
+            {/* Repeat the 7 brand logos 4 times for smooth continuous infinite marquee loop */}
+            {[...partners, ...partners, ...partners, ...partners].map((partner, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 flex items-center justify-center"
+                className="flex-shrink-0 flex items-center justify-center min-w-[120px]"
               >
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-16 md:h-24 max-w-[240px] w-auto object-contain drop-shadow-sm"
+                  className="h-9 md:h-12 max-w-[180px] w-auto object-contain drop-shadow-sm brightness-0"
                 />
               </div>
             ))}

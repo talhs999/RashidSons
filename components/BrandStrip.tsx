@@ -2,19 +2,56 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 
 const brands = [
-  { name: "Yokohama", slug: "yokohama", logo: "/images/brands/yokohama.webp" },
-  { name: "Goodyear", slug: "goodyear", logo: "/uploads/brands/goodyear.png" },
-  { name: "Michelin", slug: "michelin", logo: "/uploads/brands/michelin.png" },
-  { name: "Blackarrow", slug: "blackarrow", logo: "/uploads/brands/blackarrow.png" },
-  { name: "Warrior", slug: "warrior", logo: "/uploads/brands/warrior.png" },
+  {
+    name: "Yokohama",
+    slug: "yokohama",
+    logo: "/images/partners/yokohama-hd-5100.png",
+    tire: "/images/tires/advan-fleva.png",
+  },
+  {
+    name: "Michelin",
+    slug: "michelin",
+    logo: "/images/partners/michelin-hd.png",
+    tire: "/images/tires/advan-sport-as.webp",
+  },
+  {
+    name: "Goodyear",
+    slug: "goodyear",
+    logo: "/images/partners/goodyear-clean.png",
+    tire: "/images/tires/advan-a052.png",
+  },
+  {
+    name: "Blackarrow",
+    slug: "blackarrow",
+    logo: "/images/partners/blackarrow-clean.png",
+    tire: "/images/tires/advan-apex.png",
+  },
+  {
+    name: "Warrior",
+    slug: "warrior",
+    logo: "/images/partners/warrior-clean.png",
+    tire: "/images/tires/advan-neova-ad09.webp",
+  },
+  {
+    name: "Rydanz",
+    slug: "rydanz",
+    logo: "/images/partners/rydanz-clean.png",
+    tire: "/images/tires/advan-a055.webp",
+  },
+  {
+    name: "Yokohama Alliance",
+    slug: "yokohama-alliance",
+    logo: "/images/partners/alliance-clean.png",
+    tire: "/images/tires/advan-sport-v107.webp",
+  },
 ];
 
 export default function BrandStrip() {
   return (
-    <section className="py-16 lg:py-20 bg-white relative overflow-hidden">
+    <section className="py-16 lg:py-24 bg-cream relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
         {/* Section header */}
         <motion.div
@@ -24,50 +61,65 @@ export default function BrandStrip() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <p className="text-xs text-brand-yellow uppercase tracking-[0.2em] font-semibold mb-3">
+          <p className="text-xs text-brand-yellow-dark uppercase tracking-[0.2em] font-semibold mb-3">
             Official Distributor
           </p>
-          <h2 className="text-3xl lg:text-4xl font-bold text-brand-black uppercase tracking-tight font-heading">
+          <h2 className="text-3xl lg:text-5xl font-bold text-brand-black uppercase tracking-tight font-heading">
             World-Class Brands,{" "}
-            <span className="text-gradient">One Destination</span>
+            <span className="text-brand-yellow-dark">One Destination</span>
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
+        {/* Brands Cards Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {brands.map((brand, i) => (
             <motion.div
               key={brand.slug}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
             >
               <Link
                 href={`/brands/${brand.slug}`}
-                className="group relative flex flex-col items-center justify-center p-8 lg:p-10 h-full min-h-[220px] rounded-2xl border border-brand-black/5 bg-brand-light/50 hover:bg-brand-black transition-all duration-500 overflow-hidden"
+                className="group relative flex flex-col items-center justify-between p-6 h-[290px] rounded-2xl border-2 border-brand-yellow-dark/20 bg-brand-yellow hover:bg-brand-black shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden"
               >
-                <div className="relative w-24 h-24 lg:w-28 lg:h-28 flex flex-col items-center justify-center transition-all duration-500 group-hover:-translate-y-8">
-                  <Image
-                    src={brand.logo}
-                    alt={brand.name}
-                    width={100}
-                    height={100}
-                    className="w-full h-full object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert"
-                  />
-                  <p className="mt-4 text-sm font-semibold text-brand-gray group-hover:text-white transition-colors duration-500 uppercase tracking-wider text-center">
+                {/* Default View: Top Tyre Image + Bottom Logo */}
+                <div className="flex flex-col items-center justify-between w-full h-full group-hover:opacity-0 group-hover:scale-95 transition-all duration-500">
+                  {/* Top: Tyre Image */}
+                  <div className="relative w-full h-[155px] flex items-center justify-center pt-2">
+                    <img
+                      src={brand.tire}
+                      alt={`${brand.name} tire`}
+                      className="h-full w-auto object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+
+                  {/* Bottom: Brand Logo */}
+                  <div className="relative w-full h-[65px] flex items-center justify-center border-t border-gray-100 pt-3">
+                    <img
+                      src={brand.logo}
+                      alt={brand.name}
+                      className="max-h-12 max-w-[85%] object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Hover View: Brand Name + Action Button */}
+                <div className="absolute inset-0 p-6 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 bg-brand-black z-20 text-center">
+                  <h3 className="text-xl lg:text-2xl font-heading font-extrabold text-white uppercase tracking-wider mb-4 transform translate-y-3 group-hover:translate-y-0 transition-transform duration-500">
                     {brand.name}
-                  </p>
+                  </h3>
+                  
+                  <div className="btn-skew-yellow py-2.5 px-6 text-xs font-bold uppercase tracking-widest flex items-center gap-1 group-hover:scale-105 transition-transform shadow-lg">
+                    <span>
+                      EXPLORE BRAND <ChevronRight size={14} className="inline ml-1" />
+                    </span>
+                  </div>
                 </div>
-                
-                {/* Reveal content on hover */}
-                <div className="absolute bottom-6 left-0 right-0 px-6 opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 text-center flex flex-col items-center">
-                   <p className="text-white/70 text-xs mb-3 line-clamp-2">Explore the premium range of {brand.name} tires.</p>
-                   <span className="text-[10px] uppercase font-bold tracking-widest text-brand-yellow flex items-center gap-1">
-                     View Details
-                   </span>
-                </div>
-                
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-brand-yellow group-hover:w-1/2 transition-all duration-500" />
+
+                {/* Accent bottom yellow bar */}
+                <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-brand-yellow w-0 group-hover:w-full transition-all duration-500 z-30" />
               </Link>
             </motion.div>
           ))}

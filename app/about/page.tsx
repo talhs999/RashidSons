@@ -109,11 +109,11 @@ export default function AboutPage() {
               transition={{ delay: 0.3 }}
               className="relative"
             >
-              <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+              <div className="rounded-3xl overflow-hidden border border-brand-yellow/30 shadow-2xl group">
                 <img
                   src="/images/showroom.jpg"
-                  alt="J. Rashid & Sons Showroom"
-                  className="w-full h-[400px] lg:h-[450px] object-cover"
+                  alt="J. Rashid & Sons Historic Shop 1948"
+                  className="w-full h-[400px] lg:h-[450px] object-cover object-center opacity-95 group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="absolute -bottom-4 -left-4 bg-brand-yellow rounded-2xl p-6 text-brand-black shadow-2xl">
