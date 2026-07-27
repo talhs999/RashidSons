@@ -95,45 +95,39 @@ export default function SizingInformationPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="space-y-12">
             
             {/* Table 1 */}
-            <div className="bg-gray-50 rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col">
-              <div className="mb-6 flex justify-center">
-                <div className="w-full max-w-[320px] rounded-xl overflow-hidden shadow-md bg-white border border-gray-200">
-                  <img src="/images/sizing-3.jpg" alt="Passenger Load Index" className="w-full h-auto object-contain" />
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-brand-black mb-3 text-center">Passenger Load Index</h3>
-              <p className="text-gray-600 text-sm text-center">
+            <div className="bg-gray-50 rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100 flex flex-col items-center">
+              <h3 className="text-2xl font-heading font-extrabold uppercase text-brand-black mb-4">Passenger Load Index</h3>
+              <p className="text-gray-600 text-center max-w-2xl mb-8">
                 Shows typical passenger tire load index and maximum capacity. e.g. an index of 116 = 2,756 lbs per tire.
               </p>
+              <div className="w-full max-w-3xl rounded-2xl overflow-hidden shadow-xl bg-white border border-gray-200">
+                <img src="/images/sizing-3.jpg" alt="Passenger Load Index" className="w-full h-auto object-contain" />
+              </div>
             </div>
 
             {/* Table 2 */}
-            <div className="bg-gray-50 rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col">
-              <div className="mb-6 flex justify-center">
-                <div className="w-full max-w-[350px] rounded-xl overflow-hidden shadow-md bg-white border border-gray-200">
-                  <img src="/images/sizing-4.jpg" alt="Light Truck Load Index" className="w-full h-auto object-contain" />
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-brand-black mb-3 text-center">Light Truck Load Index</h3>
-              <p className="text-gray-600 text-sm text-center">
+            <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100 flex flex-col items-center">
+              <h3 className="text-2xl font-heading font-extrabold uppercase text-brand-black mb-4">Light Truck Load Index</h3>
+              <p className="text-gray-600 text-center max-w-2xl mb-8">
                 Varies from load range B to F. First number is max load single, second is max load dual application.
               </p>
+              <div className="w-full max-w-4xl rounded-2xl overflow-hidden shadow-xl bg-white border border-gray-200">
+                <img src="/images/sizing-4.jpg" alt="Light Truck Load Index" className="w-full h-auto object-contain" />
+              </div>
             </div>
 
             {/* Table 3 */}
-            <div className="bg-gray-50 rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col">
-              <div className="mb-6 flex justify-center">
-                <div className="w-full max-w-[320px] rounded-xl overflow-hidden shadow-md bg-white border border-gray-200">
-                  <img src="/images/sizing-5.jpg" alt="Speed Capability" className="w-full h-auto object-contain" />
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-brand-black mb-3 text-center">Speed Capability</h3>
-              <p className="text-gray-600 text-sm text-center">
+            <div className="bg-gray-50 rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100 flex flex-col items-center">
+              <h3 className="text-2xl font-heading font-extrabold uppercase text-brand-black mb-4">Speed Capability</h3>
+              <p className="text-gray-600 text-center max-w-2xl mb-8">
                 Established to match the speed capability of tires with the top speed of vehicles. Exceeding capacity causes sudden failure.
               </p>
+              <div className="w-full max-w-md rounded-2xl overflow-hidden shadow-xl bg-white border border-gray-200">
+                <img src="/images/sizing-5.jpg" alt="Speed Capability" className="w-full h-auto object-contain" />
+              </div>
             </div>
 
           </div>
