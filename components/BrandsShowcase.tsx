@@ -59,7 +59,7 @@ export default function BrandsShowcase({ brands }: { brands: any[] }) {
                     {/* Bottom: Brand Logo */}
                     <div className="relative w-full h-[85px] flex items-center justify-center border-t border-black/10 pt-3">
                       <img
-                        src={brand.logo}
+                        src={brand.logo_url}
                         alt={`${brand.name} logo`}
                         className="max-h-20 max-w-[95%] object-contain drop-shadow-sm"
                       />
