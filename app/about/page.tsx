@@ -319,7 +319,7 @@ export default function AboutPage() {
                   <img
                     src={brand.logo_white_url || brand.logo_url}
                     alt={brand.name}
-                    className="w-full h-24 md:h-28 object-contain mx-auto brightness-0 group-hover:scale-110 transition-all duration-500"
+                    className="w-full h-16 md:h-20 object-contain mx-auto brightness-0 group-hover:scale-110 transition-all duration-500 p-1"
                   />
                   <p className="mt-4 text-sm font-bold text-brand-black uppercase tracking-wider">
                     {brand.name}
