@@ -134,6 +134,7 @@ export default function Footer() {
                <li><Link href="/brands" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Tire Finder</Link></li>
                <li><Link href="#" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Promotions</Link></li>
                <li><Link href="/about" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Our Branches</Link></li>
+               <li><Link href="/tires-101/selecting-the-right-tire" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Tires 101 Guide</Link></li>
              </ul>
           </div>
           <div>
