@@ -325,13 +325,13 @@ export default function ContactPage() {
               Visit Our Main Branch
             </h2>
             <p className="text-brand-gray mt-2 text-sm">
-              14, Nila Gumbad, Dina Nath Mansion, Anarkali, Lahore
+              Circular Rd, Badami Bagh, Qadimi Shehr, Lahore
             </p>
           </div>
 
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-brand-black/10 h-[450px] lg:h-[500px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.273185368383!2d74.3128823!3d31.5715915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191b5c464e8cd5%3A0x8e833633633633!2sNila%20Gumbad%2C%20Anarkali%20Bazaar%20Lahore!5e0!3m2!1sen!3spk!4v1700000000000!5m2!1sen!3spk"
+              src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Sardar%20Enterprises,%20Circular%20Rd,%20Badami%20Bagh,%20Lahore&t=&z=15&ie=UTF8&iwloc=B&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -347,14 +347,14 @@ export default function ContactPage() {
               <div className="flex items-center gap-3 mb-2">
                 <MapPin className="text-brand-yellow" size={20} />
                 <h3 className="font-bold text-white uppercase text-sm tracking-wider">
-                  Anarkali Main Branch
+                  Sardar Enterprises (Main Branch)
                 </h3>
               </div>
               <p className="text-xs text-white/70 leading-relaxed mb-4">
-                14, Nila Gumbad, Dina Nath Mansion, Anarkali, Lahore
+                Circular Rd, Badami Bagh, Qadimi Shehr, Lahore
               </p>
               <a
-                href="https://maps.google.com/?q=14+Nila+Gumbad+Dina+Nath+Mansion+Anarkali+Lahore"
+                href="https://maps.app.goo.gl/UjLVkSDqg5ZG8Quy9?g_st=ac"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-skew-yellow scale-90 -ml-2"
