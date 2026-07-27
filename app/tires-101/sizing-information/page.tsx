@@ -49,7 +49,7 @@ export default function SizingInformationPage() {
           <p>A Euro-metric size designed for carrying heavy cargo and/or towing trailers often ends with the letter C. C signified the tire is a commercial tread, intended for vans or delivery trucks that are capable of carrying heavy loads. 195/70R15C is an example of this type of sizing convention.</p>
 
           <div className="my-12 flex justify-center">
-            <div className="w-full max-w-[800px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-white">
+            <div className="w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-white">
               <img src="/images/sizing-1.jpg" alt="Size Designation" className="w-full h-auto object-contain" />
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function SizingInformationPage() {
           <p>The last two digits on tire size refer to the rim diameter, or the size of the wheel that the tire is intended to fit.</p>
 
           <div className="my-12 flex justify-center">
-            <div className="w-full max-w-[800px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-[#111111]">
+            <div className="w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-[#111111]">
               <img src="/images/sizing-2.jpg" alt="Tire Dimensions" className="w-full h-auto object-contain" />
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function SizingInformationPage() {
           <p>The two- or three-digits after the rim diameter, along with the letter next to it, are known as service descriptions. Service descriptions show the load index, which defines the maximum loading capacity of a tire, along with the speed rating, which determines the maximum speed allowed.</p>
           
           <div className="my-12 flex justify-center">
-            <div className="w-full max-w-[400px] rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white">
+            <div className="w-full max-w-xl rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white">
               <img src="/images/sizing-3.jpg" alt="Typical passenger tire load index table" className="w-full h-auto object-contain" />
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function SizingInformationPage() {
           <p>Light truck tires are identified by load range, which vary from load range B to load range F. The majority of tires in the market are load range C, D and E.</p>
 
           <div className="my-12 flex justify-center">
-            <div className="w-full max-w-[500px] rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white">
+            <div className="w-full max-w-2xl rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white">
               <img src="/images/sizing-4.jpg" alt="Load index in the light truck tire table" className="w-full h-auto object-contain" />
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function SizingInformationPage() {
           <p>A tire’s maximum load is the most weight the tire is designed to carry. Since a tire’s load carrying capacity is related to the tire’s size and how much inflation pressure is actually used, maximum loads are rated with the tire inflated to an industry-assigned inflation pressure. Never exceed the maximum vehicle load limit listed on the vehicle placard or in the owner’s manual. Never exceed the load carrying limits molded into the tire’s sidewall. Maximum load can only be carried at the maximum cold inflation pressure indicated on the tire’s sidewall. Overloading can cause excessive heat buildup, internal structural damage and may cause tire failure.</p>
 
           <div className="my-12 flex justify-center">
-            <div className="w-full max-w-[400px] rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white">
+            <div className="w-full max-w-xl rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white">
               <img src="/images/sizing-5.jpg" alt="Speed capability table" className="w-full h-auto object-contain" />
             </div>
           </div>
