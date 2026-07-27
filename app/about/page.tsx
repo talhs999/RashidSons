@@ -59,101 +59,145 @@ export default function AboutPage() {
         <div className="absolute top-1/4 -left-20 w-80 h-80 bg-brand-yellow/10 blur-[120px] rounded-full pointer-events-none" />
         <div className="absolute bottom-10 right-0 w-96 h-96 bg-brand-yellow/5 blur-[150px] rounded-full pointer-events-none" />
 
-        <div className="max-w-[1400px] mx-auto px-4 lg:px-6 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-4 lg:px-6 relative z-10 space-y-24 lg:space-y-32 py-12">
+          
+          {/* Section 1: Founders */}
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
-            {/* Left Content */}
-            <div className="lg:col-span-7 relative">
-              <Quote size={140} className="absolute -top-10 -left-6 text-white/[0.03] pointer-events-none" />
-              
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-              >
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow font-bold uppercase text-xs tracking-widest mb-4">
-                  Leadership Vision
-                </div>
-
-                <h2 className="text-4xl lg:text-6xl font-heading font-extrabold uppercase tracking-tighter mb-2 leading-none">
-                  CEO&apos;S <span className="text-brand-yellow">MESSAGE</span>
-                </h2>
-                <p className="text-brand-yellow font-semibold text-lg lg:text-xl mb-6 tracking-wide">
-                  Tariq Javed Rashid
-                </p>
-
-                <p className="text-white/85 text-base lg:text-lg leading-relaxed mb-8 font-sans font-normal border-l-2 border-brand-yellow/40 pl-6 py-1">
-                  As the CEO of our tyre retail company, I envision a future where we are the go-to destination for drivers seeking unapparelled expertise, convenience and value in tyre purchasing and maintenance. Our vision is to create a seamless omnichannel experience, where customers can expert advice and browse a range of wide selection of top-quality tyres and receive a professional installation and maintenance services with ease. We will prioritize customer satisfaction, offering personalized recommendations and exceptional service at every touchpoint. Through innovation and a relentless commitment to excellence we will redefine the tire retail industry, setting new standards for convenience, reliability, and customer care.
-                </p>
-
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3, duration: 0.6 }}
-                  className="pt-6 border-t border-white/10"
-                >
-                  <h3 className="text-brand-yellow font-heading font-bold uppercase tracking-wider text-lg lg:text-xl mb-2">
-                    FOUNDERS:
-                  </h3>
-                  <h4 className="text-xl lg:text-3xl font-heading font-extrabold text-white uppercase tracking-tight leading-snug">
-                    MOHAMMAD ABDUL RASHID AND HAJI JAVED RASHID
-                  </h4>
-                </motion.div>
-              </motion.div>
+            <div className="lg:col-span-5 relative order-2 lg:order-1 flex gap-6">
+               <motion.div 
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 className="relative w-1/2 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-yellow/30"
+               >
+                 <Image src="/images/founder_final.jpeg" alt="Founder" fill className="object-cover object-top" />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                 <div className="absolute bottom-4 left-4 right-4 text-center">
+                    <p className="text-white font-bold uppercase text-sm tracking-widest bg-brand-yellow/90 text-brand-black py-1 px-2 rounded backdrop-blur">Founder</p>
+                 </div>
+               </motion.div>
+               <motion.div 
+                 initial={{ opacity: 0, y: 40 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ delay: 0.2 }}
+                 className="relative w-1/2 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-yellow/30 mt-8"
+               >
+                 <Image src="/images/founder2.png" alt="Founder" fill className="object-cover object-top" />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                 <div className="absolute bottom-4 left-4 right-4 text-center">
+                    <p className="text-white font-bold uppercase text-sm tracking-widest bg-brand-yellow/90 text-brand-black py-1 px-2 rounded backdrop-blur">Founder</p>
+                 </div>
+               </motion.div>
             </div>
-
-            {/* Right Overlapping Images */}
-            <div className="lg:col-span-5 relative min-h-[440px] md:min-h-[500px] flex items-center justify-center">
-              <div className="relative w-full h-[420px] md:h-[480px]">
-                
-                {/* CEO Image (Top Right - Background) */}
-                <motion.div 
-                  initial={{ opacity: 0, y: -20, scale: 0.95 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.03, y: -5 }}
-                  transition={{ duration: 0.7 }}
-                  className="absolute top-0 right-0 w-[70%] h-[78%] rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-yellow/30 z-10 group"
-                >
-                  <Image
-                    src="/images/ceo_final.jpeg"
-                    alt="CEO J. Rashid & Sons"
-                    fill
-                    className="object-cover object-top group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                  <div className="absolute bottom-6 right-6 text-sm font-black uppercase tracking-widest text-brand-yellow bg-black/70 px-4 py-2 rounded-xl shadow-2xl border border-brand-yellow/20 backdrop-blur-sm z-20">
-                    CEO
-                  </div>
-                </motion.div>
-
-                {/* Founder Image (Bottom Left Overlapping - Foreground) */}
-                <motion.div 
-                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.7, delay: 0.2 }}
-                  className="absolute bottom-0 left-0 w-[64%] h-[72%] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-brand-black z-20 group"
-                >
-                  <Image
-                    src="/images/founder_final.jpeg"
-                    alt="Founder J. Rashid & Sons"
-                    fill
-                    className="object-cover object-top group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-                  <div className="absolute bottom-6 left-6 text-sm font-black uppercase tracking-widest bg-brand-yellow px-4 py-2 rounded-xl shadow-2xl border border-white/20 text-brand-black backdrop-blur-sm z-20">
-                    Founder
-                  </div>
-                </motion.div>
-
+            <div className="lg:col-span-7 order-1 lg:order-2">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow font-bold uppercase text-xs tracking-widest mb-4">
+                Our Legacy
               </div>
+              <h2 className="text-4xl lg:text-6xl font-heading font-extrabold uppercase tracking-tighter mb-4 leading-none">
+                THE <span className="text-brand-yellow">FOUNDERS</span>
+              </h2>
+              <h3 className="text-xl lg:text-3xl font-heading font-bold text-white uppercase tracking-tight mb-6">
+                MOHAMMAD ABDUL RASHID <br className="hidden lg:block"/>& HAJI JAVED RASHID
+              </h3>
+              <p className="text-white/85 text-lg leading-relaxed font-sans font-normal border-l-2 border-brand-yellow/40 pl-6 py-1">
+                The foundation of our company was built on the unwavering dedication and visionary leadership of our founders. Their commitment to excellence and customer satisfaction laid the groundwork for what J. Rashid & Sons is today.
+              </p>
             </div>
-
           </div>
+
+          {/* Section 2: CEO */}
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-7">
+              <Quote size={80} className="absolute -top-6 -left-6 text-white/[0.05] pointer-events-none" />
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow font-bold uppercase text-xs tracking-widest mb-4">
+                Leadership Vision
+              </div>
+              <h2 className="text-4xl lg:text-6xl font-heading font-extrabold uppercase tracking-tighter mb-2 leading-none">
+                CEO&apos;S <span className="text-brand-yellow">MESSAGE</span>
+              </h2>
+              <p className="text-brand-yellow font-semibold text-xl lg:text-2xl mb-6 tracking-wide">
+                Jawad Rashid
+              </p>
+              <p className="text-white/85 text-lg leading-relaxed font-sans font-normal border-l-2 border-brand-yellow/40 pl-6 py-1">
+                As the CEO of our tyre retail company, I envision a future where we are the go-to destination for drivers seeking unapparelled expertise, convenience and value in tyre purchasing and maintenance. Our vision is to create a seamless omnichannel experience, where customers can get expert advice, browse a wide selection of top-quality tyres, and receive professional installation and maintenance services with ease. We prioritize customer satisfaction, offering personalized recommendations and exceptional service at every touchpoint. Through innovation and a relentless commitment to excellence, we will redefine the tire retail industry, setting new standards for convenience, reliability, and customer care.
+              </p>
+            </div>
+            <div className="lg:col-span-5 relative">
+              <motion.div 
+                 initial={{ opacity: 0, x: 30 }}
+                 whileInView={{ opacity: 1, x: 0 }}
+                 viewport={{ once: true }}
+                 className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-brand-yellow/30"
+               >
+                 <Image src="/images/ceo_final.jpeg" alt="Jawad Rashid - CEO" fill className="object-cover object-top" />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                 <div className="absolute bottom-6 left-6 right-6">
+                    <p className="text-white font-bold uppercase text-2xl tracking-widest mb-1">Jawad Rashid</p>
+                    <p className="text-brand-yellow font-bold uppercase text-sm tracking-widest">Chief Executive Officer</p>
+                 </div>
+               </motion.div>
+            </div>
+          </div>
+
+          {/* Section 3: Sales Director */}
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-5 relative order-2 lg:order-1">
+               <motion.div 
+                 initial={{ opacity: 0, x: -30 }}
+                 whileInView={{ opacity: 1, x: 0 }}
+                 viewport={{ once: true }}
+                 className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-white/10"
+               >
+                 <Image src="/images/sales-director.jpeg" alt="Sales Director" fill className="object-cover object-top" />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                 <div className="absolute bottom-6 left-6 right-6">
+                    <p className="text-brand-yellow font-bold uppercase text-sm tracking-widest bg-brand-black/50 py-2 px-4 rounded-xl inline-block backdrop-blur-sm border border-white/10">Sales Director</p>
+                 </div>
+               </motion.div>
+            </div>
+            <div className="lg:col-span-7 order-1 lg:order-2">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow font-bold uppercase text-xs tracking-widest mb-4">
+                Driving Growth
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-heading font-extrabold uppercase tracking-tighter mb-4 leading-none text-white">
+                SALES <span className="text-brand-yellow">DIRECTOR</span>
+              </h2>
+              <p className="text-white/85 text-lg leading-relaxed font-sans font-normal border-l-2 border-brand-yellow/40 pl-6 py-1">
+                Leading our sales initiatives with passion and strategic insight, our Sales Director ensures that our premium tyre offerings reach every corner of the market. Building lasting relationships with our network of dealers and enterprise clients is at the heart of our continued growth and success.
+              </p>
+            </div>
+          </div>
+
+          {/* Section 4: Import Manager */}
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow font-bold uppercase text-xs tracking-widest mb-4">
+                Global Sourcing
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-heading font-extrabold uppercase tracking-tighter mb-4 leading-none text-white">
+                IMPORT <span className="text-brand-yellow">MANAGER</span>
+              </h2>
+              <p className="text-white/85 text-lg leading-relaxed font-sans font-normal border-l-2 border-brand-yellow/40 pl-6 py-1">
+                Ensuring a steady and reliable supply chain is critical to our operations. Our Import Manager works tirelessly with international manufacturers and logistics partners to bring the world's best tyre brands to our facilities efficiently, maintaining the high standards of quality our customers expect.
+              </p>
+            </div>
+            <div className="lg:col-span-5 relative">
+              <motion.div 
+                 initial={{ opacity: 0, x: 30 }}
+                 whileInView={{ opacity: 1, x: 0 }}
+                 viewport={{ once: true }}
+                 className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-white/10"
+               >
+                 <Image src="/images/import-manager.jpeg" alt="Import Manager" fill className="object-cover object-top" />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                 <div className="absolute bottom-6 left-6 right-6">
+                    <p className="text-brand-yellow font-bold uppercase text-sm tracking-widest bg-brand-black/50 py-2 px-4 rounded-xl inline-block backdrop-blur-sm border border-white/10">Import Manager</p>
+                 </div>
+               </motion.div>
+            </div>
+          </div>
+
         </div>
       </section>
 
