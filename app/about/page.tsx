@@ -331,61 +331,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Branches */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-14"
-          >
-            <div className="inline-flex items-center justify-center px-3 py-1.5 rounded bg-black border border-brand-yellow/20 text-xs text-brand-yellow uppercase tracking-[0.2em] font-bold mb-4 shadow-sm">
-              Visit Us
-            </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-brand-black uppercase font-heading">
-              Our Branches
-            </h2>
-          </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {branches.map((branch, i) => (
-              <motion.div
-                key={branch.id}
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="group p-6 rounded-2xl bg-cream border border-brand-black/5 hover:shadow-lg hover:-translate-y-1 transition-all duration-400"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0">
-                    <MapPin
-                      size={18}
-                      className="text-red-500"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-brand-black mb-1 font-heading">
-                      {branch.name}
-                    </h3>
-                    <p className="text-sm text-brand-gray mb-2">
-                      {branch.address}
-                    </p>
-                    <a
-                      href={`tel:${branch.phone}`}
-                      className="flex items-center gap-1.5 text-sm font-bold text-brand-black hover:text-red-600 transition-colors"
-                    >
-                      <Phone size={13} className="text-red-500" />
-                      {branch.phone}
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }
