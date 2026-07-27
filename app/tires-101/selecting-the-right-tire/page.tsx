@@ -12,7 +12,12 @@ import {
   CloudRain,
   Snowflake,
   Truck,
-  ShieldAlert
+  ShieldAlert,
+  Compass,
+  Clock,
+  Briefcase,
+  Map,
+  Activity
 } from "lucide-react";
 
 export default function SelectingRightTirePage() {
@@ -211,6 +216,74 @@ export default function SelectingRightTirePage() {
                     </div>
                   </li>
                 </ul>
+              </div>
+            </div>
+          </motion.div>
+          {/* 5. Driving Operation */}
+          <motion.div variants={fadeUp} className="bg-brand-black text-white rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden group">
+             <div className="flex flex-col lg:flex-row gap-8 items-start relative z-10">
+              <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0 border border-white/20">
+                <Compass className="text-brand-yellow" size={32} />
+              </div>
+              <div className="w-full">
+                <h2 className="text-2xl lg:text-3xl font-heading font-extrabold uppercase mb-6 tracking-tight text-brand-yellow">
+                  5. Driving Operation
+                </h2>
+                <p className="text-white/70 leading-relaxed mb-8 max-w-3xl">
+                  The kind of driving you do with your vehicle is just as important to determining the best type of tyre for your particular needs.
+                </p>
+                
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
+                    <Car className="text-brand-yellow mb-4" size={24} />
+                    <h3 className="font-bold text-lg mb-2 uppercase tracking-wide">Commuting & Errands</h3>
+                    <p className="text-sm text-white/60 leading-relaxed">
+                      If you primarily commute, choose based on how you want your vehicle to perform (quiet & comfortable or sporty). You may also want to consider run-flat tyres for extra peace of mind.
+                    </p>
+                  </div>
+                  <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
+                    <Briefcase className="text-brand-yellow mb-4" size={24} />
+                    <h3 className="font-bold text-lg mb-2 uppercase tracking-wide">Daily Work Vehicles</h3>
+                    <p className="text-sm text-white/60 leading-relaxed">
+                      Work vehicles often demand higher load-rated tyres depending on whether you drive mainly highway, on-and-off-road, or have heavy towing requirements.
+                    </p>
+                  </div>
+                  <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
+                    <Activity className="text-brand-yellow mb-4" size={24} />
+                    <h3 className="font-bold text-lg mb-2 uppercase tracking-wide">Recreational Use</h3>
+                    <p className="text-sm text-white/60 leading-relaxed">
+                      For spirited driving, summer and all-season performance tyres offer increased traction, sporty responsiveness, and even race-track capabilities.
+                    </p>
+                  </div>
+                  <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
+                    <Map className="text-brand-yellow mb-4" size={24} />
+                    <h3 className="font-bold text-lg mb-2 uppercase tracking-wide">Off-Road Recreation</h3>
+                    <p className="text-sm text-white/60 leading-relaxed">
+                      If overlanding, rock crawling, or aggressive mud driving is your goal, all-terrain and mud-terrain tyres are the perfect choice for superior off-road performance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* 6. Longevity */}
+          <motion.div variants={fadeUp} className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl shadow-black/5 border border-black/5 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-yellow/5 rounded-bl-[100px] -z-10 transition-transform group-hover:scale-125 duration-500" />
+            <div className="flex flex-col lg:flex-row gap-8 items-start">
+              <div className="w-16 h-16 rounded-2xl bg-brand-yellow/20 flex items-center justify-center flex-shrink-0">
+                <Clock className="text-brand-yellow-dark" size={32} />
+              </div>
+              <div>
+                <h2 className="text-2xl lg:text-3xl font-heading font-extrabold uppercase mb-4 tracking-tight">
+                  6. Longevity & Value
+                </h2>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Longer lasting tyres can add immense value if they provide the performance required for your specific geography and operational requirements. 
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  However, keep in mind that not all tyres can achieve the highest mileage available while simultaneously meeting extreme weather conditions or high-performance track requirements. Treadlife warranties generally provide a good indication of the mileage you can expect from your tyre choice.
+                </p>
               </div>
             </div>
           </motion.div>
