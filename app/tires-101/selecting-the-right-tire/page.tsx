@@ -105,6 +105,10 @@ export default function SelectingRightTirePage() {
                 <p className="text-white/70 leading-relaxed mb-8 max-w-3xl">
                   Where you live and drive significantly dictates the type of tyre you need. Tyres are engineered with specific rubber compounds and tread patterns to handle different climates.
                 </p>
+
+                <div className="mb-10 rounded-2xl overflow-hidden border border-white/10 shadow-lg relative w-full aspect-video">
+                  <img src="/images/snowfall-map.jpg" alt="Annual Snowfall Map" className="w-full h-full object-cover object-center filter saturate-150 brightness-110" />
+                </div>
                 
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
