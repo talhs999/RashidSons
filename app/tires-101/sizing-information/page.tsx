@@ -4,11 +4,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import {
   ArrowRight,
-  Info,
   Type,
   Ruler,
   Weight,
-  Gauge,
   ShieldAlert,
   Image as ImageIcon
 } from "lucide-react";
@@ -55,120 +53,92 @@ export default function SizingInformationPage() {
             Sizing Information
           </h1>
           <p className="text-white/70 text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
-            Sizing information molded on the tyre sidewall provides a significant amount of detail. Once you decode this data, you'll understand the tyre's intended purpose, dimensions, load capacity, and speed rating.
+            Sizing information molded on the tire sidewall provides a significant amount of detail about the tire. Once you know how to decode the data, you’ll be able to better understand the tire's intended purpose, dimensions, load capacity, speed and much more.
           </p>
         </motion.div>
       </section>
 
       {/* Main Content */}
-      <section className="max-w-[1200px] mx-auto px-4 lg:px-6 py-16 lg:py-24">
+      <section className="max-w-[1000px] mx-auto px-4 lg:px-6 py-16 lg:py-24">
         <motion.div 
           variants={stagger}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, margin: "-100px" }}
-          className="space-y-16"
+          className="space-y-12"
         >
           {/* 1. Service Type or Size Designation */}
           <motion.div variants={fadeUp} className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl shadow-black/5 border border-black/5 relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-brand-yellow/5 rounded-bl-[100px] -z-10 transition-transform group-hover:scale-125 duration-500" />
-            <div className="flex flex-col lg:flex-row gap-8 items-start">
-              <div className="w-16 h-16 rounded-2xl bg-brand-yellow/20 flex items-center justify-center flex-shrink-0">
-                <Type className="text-brand-yellow-dark" size={32} />
-              </div>
-              <div className="w-full">
-                <h2 className="text-2xl lg:text-3xl font-heading font-extrabold uppercase mb-4 tracking-tight">
-                  1. Service Type / Size Designation
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center gap-4 border-b border-gray-100 pb-4">
+                <div className="w-12 h-12 rounded-xl bg-brand-yellow/20 flex items-center justify-center flex-shrink-0">
+                  <Type className="text-brand-yellow-dark" size={24} />
+                </div>
+                <h2 className="text-2xl lg:text-3xl font-heading font-extrabold uppercase tracking-tight">
+                  Service Type or Size Designation
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-8 max-w-3xl">
-                  Some tyre size designations start with a letter(s) that identify the type of vehicle and/or type of service for which they were designed (typically P, LT, T, and C).
+              </div>
+              
+              <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-4">
+                <p>
+                  Some tire size designations start with a letter(s) that identify the type of vehicle and/or type of service for which they were designed. The typical letter for passenger and light truck tires would be P, LT, T and C.
                 </p>
+                <p>
+                  Passenger tires that are designed based on the Tire and Rim Association’s (TRA) standard start with the letter P and are known as P-metric size tires. Passenger tires that are designed based on the European Tyre and Rim Technical Organization’s (ETRTO) standard start without any letters. These sizes are known as hard-metric or Euro-metric size tires. Euro-metric sizes are dimensionally equivalent to P-metric sizes, but typically differ subtly in load-carrying capabilities.
+                </p>
+                <p>
+                  Light truck tires that are designed based on the TRA’s standard often start with two letters: LT. LT signifies the tire is a light truck-metric size that was designed to be used on pickup trucks, which have higher cargo carrying and towing capabilities than passenger cars. An example of this type of sizing convention is an LT215/75R15. In older size conventions, the LT designation may be at the end of tire size. Those sizes are known as flotation light truck size. An example of this type of sizing convention is an 35x12.50R17LT.
+                </p>
+                <p>
+                  A tire size that begins with a letter T signifies the tire is a temporary spare or mini-spare. This kind of tire is designed to be used temporarily, only until a flat tire can be repaired or replaced.
+                </p>
+                <p>
+                  A Euro-metric size designed for carrying heavy cargo and/or towing trailers often ends with the letter C. C signified the tire is a commercial tread, intended for vans or delivery trucks that are capable of carrying heavy loads. 195/70R15C is an example of this type of sizing convention.
+                </p>
+              </div>
 
-                <div className="grid sm:grid-cols-2 gap-6 mb-10">
-                   <div className="p-6 rounded-2xl border border-gray-100 bg-gray-50/50">
-                     <h3 className="font-bold text-lg mb-2">P-Metric (Passenger)</h3>
-                     <p className="text-sm text-gray-600 leading-relaxed">
-                       Sizes starting with <strong>P</strong> are passenger tyres designed to US TRA standards. Sizes without a starting letter are Euro-metric, dimensionally equivalent but differ slightly in load capacity.
-                     </p>
-                   </div>
-                   <div className="p-6 rounded-2xl border border-gray-100 bg-gray-50/50">
-                     <h3 className="font-bold text-lg mb-2">LT (Light Truck)</h3>
-                     <p className="text-sm text-gray-600 leading-relaxed">
-                       Sizes starting with <strong>LT</strong> are designed for pickup trucks with higher cargo and towing capacities (e.g., LT215/75R15).
-                     </p>
-                   </div>
-                   <div className="p-6 rounded-2xl border border-gray-100 bg-gray-50/50">
-                     <h3 className="font-bold text-lg mb-2">T (Temporary)</h3>
-                     <p className="text-sm text-gray-600 leading-relaxed">
-                       Sizes starting with <strong>T</strong> signify a temporary spare or mini-spare, used only until a flat tyre is repaired.
-                     </p>
-                   </div>
-                   <div className="p-6 rounded-2xl border border-gray-100 bg-gray-50/50">
-                     <h3 className="font-bold text-lg mb-2">C (Commercial)</h3>
-                     <p className="text-sm text-gray-600 leading-relaxed">
-                       Euro-metric sizes ending in <strong>C</strong> indicate a commercial tread intended for vans or delivery trucks carrying heavy loads.
-                     </p>
-                   </div>
-                </div>
-
-                {/* Image Placeholder */}
-                <div className="w-full aspect-video md:aspect-[21/9] bg-gray-100 rounded-2xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-gray-400">
-                  <ImageIcon size={48} className="mb-4 opacity-50" />
-                  <p className="font-heading uppercase tracking-widest font-bold">Image Placeholder</p>
-                  <p className="text-sm mt-2">Upload Size Designation Diagram Here</p>
-                </div>
+              {/* Image Placeholder 1 */}
+              <div className="mt-6 w-full aspect-[16/5] bg-gray-50 rounded-2xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-gray-400">
+                <ImageIcon size={32} className="mb-2 opacity-50" />
+                <p className="font-heading uppercase tracking-widest font-bold text-sm">Image Placeholder 1</p>
+                <p className="text-xs mt-1">Upload Size Designation Image Here</p>
               </div>
             </div>
           </motion.div>
 
           {/* 2. Tire Dimensions */}
           <motion.div variants={fadeUp} className="bg-brand-black text-white rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden group">
-             <div className="flex flex-col lg:flex-row gap-8 items-start relative z-10">
-              <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0 border border-white/20">
-                <Ruler className="text-brand-yellow" size={32} />
-              </div>
-              <div className="w-full">
-                <h2 className="text-2xl lg:text-3xl font-heading font-extrabold uppercase mb-6 tracking-tight text-brand-yellow">
-                  2. Tyre Dimensions
+            <div className="flex flex-col gap-6 relative z-10">
+              <div className="flex items-center gap-4 border-b border-white/10 pb-4">
+                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0 border border-white/20">
+                  <Ruler className="text-brand-yellow" size={24} />
+                </div>
+                <h2 className="text-2xl lg:text-3xl font-heading font-extrabold uppercase tracking-tight text-brand-yellow">
+                  Tire Dimensions
                 </h2>
-                
-                <div className="grid md:grid-cols-2 gap-8 mb-10">
-                  <div className="space-y-6">
-                    <div>
-                      <h3 className="font-bold text-lg mb-2 uppercase tracking-wide">Section Width</h3>
-                      <p className="text-sm text-white/60 leading-relaxed">
-                        A three-digit number identifying the tyre’s section width in millimeters (e.g., <strong>265</strong>).
-                      </p>
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg mb-2 uppercase tracking-wide">Aspect Ratio</h3>
-                      <p className="text-sm text-white/60 leading-relaxed">
-                        The two-digit number following the width. It is the percentage of the section height divided by the width (e.g., <strong>70</strong> means height is 70% of width).
-                      </p>
-                    </div>
-                  </div>
-                  <div className="space-y-6">
-                    <div>
-                      <h3 className="font-bold text-lg mb-2 uppercase tracking-wide">Construction</h3>
-                      <p className="text-sm text-white/60 leading-relaxed">
-                        A letter identifying construction. <strong>R</strong> means Radial. <strong>D</strong> means bias ply (diagonal). <strong>F</strong> identifies run-flat construction.
-                      </p>
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg mb-2 uppercase tracking-wide">Rim Diameter</h3>
-                      <p className="text-sm text-white/60 leading-relaxed">
-                        The last two digits refer to the wheel diameter the tyre is intended to fit (e.g., <strong>17</strong> inches).
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              </div>
+              
+              <div className="prose prose-lg max-w-none text-white/70 leading-relaxed space-y-4">
+                <p>
+                  The three-digit number identifies the tire’s section width in millimeters. The actual tire may not match perfectly to this, but it is close.
+                </p>
+                <p>
+                  The two-digit number following the section width identifies the tire’s aspect ratio. Aspect ratio is simply identified as a percentage of the section height divided by the section width. In the example below, the aspect ratio of the tire is 70 percent, so the section height of tire will be 129.5mm. The higher the aspect ratio, the taller the tire sidewall.
+                </p>
+                <p>
+                  A letter R following the tire aspect ratio identifies the tire's construction as a radial tire. In rare cases, a D will identify a bias ply construction, where the body plies crisscross on a diagonal. In recent years, ETRTO has adopted F branding standards that allowed tire manufacturers to identify tires with self-supporting, run-flat constructions within the tire size designation.
+                </p>
+                <p>
+                  The last two digits on tire size refer to the rim diameter, or the size of the wheel that the tire is intended to fit.
+                </p>
+              </div>
 
-                {/* Image Placeholder */}
-                <div className="w-full aspect-video md:aspect-[21/9] bg-white/5 rounded-2xl border-2 border-dashed border-white/20 flex flex-col items-center justify-center text-white/40">
-                  <ImageIcon size={48} className="mb-4 opacity-50" />
-                  <p className="font-heading uppercase tracking-widest font-bold">Image Placeholder</p>
-                  <p className="text-sm mt-2">Upload Tyre Dimensions Diagram Here</p>
-                </div>
+              {/* Image Placeholder 2 */}
+              <div className="mt-6 w-full aspect-[16/5] bg-white/5 rounded-2xl border-2 border-dashed border-white/20 flex flex-col items-center justify-center text-white/40">
+                <ImageIcon size={32} className="mb-2 opacity-50" />
+                <p className="font-heading uppercase tracking-widest font-bold text-sm">Image Placeholder 2</p>
+                <p className="text-xs mt-1">Upload Tire Dimensions Graphic Here</p>
               </div>
             </div>
           </motion.div>
@@ -176,95 +146,120 @@ export default function SizingInformationPage() {
           {/* 3. Service Descriptions */}
           <motion.div variants={fadeUp} className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl shadow-black/5 border border-black/5 relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-brand-yellow/5 rounded-bl-[100px] -z-10 transition-transform group-hover:scale-125 duration-500" />
-            <div className="flex flex-col lg:flex-row gap-8 items-start">
-              <div className="w-16 h-16 rounded-2xl bg-brand-yellow/20 flex items-center justify-center flex-shrink-0">
-                <Weight className="text-brand-yellow-dark" size={32} />
-              </div>
-              <div className="w-full">
-                <h2 className="text-2xl lg:text-3xl font-heading font-extrabold uppercase mb-4 tracking-tight">
-                  3. Service Descriptions
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center gap-4 border-b border-gray-100 pb-4">
+                <div className="w-12 h-12 rounded-xl bg-brand-yellow/20 flex items-center justify-center flex-shrink-0">
+                  <Weight className="text-brand-yellow-dark" size={24} />
+                </div>
+                <h2 className="text-2xl lg:text-3xl font-heading font-extrabold uppercase tracking-tight">
+                  Service Descriptions
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-8 max-w-3xl">
-                  The digits and letter after the rim diameter represent the Load Index (maximum loading capacity) and Speed Rating (maximum speed allowed).
+              </div>
+              
+              <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-4">
+                <p>
+                  The two- or three-digits after the rim diameter, along with the letter next to it, are known as service descriptions. Service descriptions show the load index, which defines the maximum loading capacity of a tire, along with the speed rating, which determines the maximum speed allowed.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-8 mb-10">
-                  <div className="bg-gray-50/50 p-6 rounded-2xl border border-gray-100">
-                     <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
-                       <Weight size={20} className="text-brand-black" /> Load Index
-                     </h3>
-                     <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                       Defines maximum load per tyre (e.g., 116 = 2,756 lbs). Passenger tyres may be Light Load (LL), Standard Load (SL), or Extra Load (XL). Light truck tyres use load ranges (B to F, typically C, D, E) and often show two numbers (e.g., 121/118) for single and dual applications.
-                     </p>
-                     <p className="text-xs text-red-600 font-bold uppercase tracking-wider">
-                       Never exceed the maximum vehicle load limit. Overloading causes structural damage.
-                     </p>
-                  </div>
-                  <div className="bg-gray-50/50 p-6 rounded-2xl border border-gray-100">
-                     <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
-                       <Gauge size={20} className="text-brand-black" /> Speed Rating
-                     </h3>
-                     <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                       Matches the speed capability of tyres to the top speed of vehicles. It does not suggest the actual driving speed but shows the maximum capacity.
-                     </p>
-                     <p className="text-xs text-red-600 font-bold uppercase tracking-wider">
-                       Exceeding a tyre’s speed capacity can cause overheating and sudden failure.
-                     </p>
-                  </div>
+                {/* Image Placeholder 3 */}
+                <div className="my-6 w-full aspect-[16/7] bg-gray-50 rounded-2xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-gray-400">
+                  <ImageIcon size={32} className="mb-2 opacity-50" />
+                  <p className="font-heading uppercase tracking-widest font-bold text-sm">Image Placeholder 3</p>
+                  <p className="text-xs mt-1">"This table shows the typical passenger tire load index..."</p>
                 </div>
 
-                {/* Image Placeholder */}
-                <div className="w-full aspect-video md:aspect-[21/9] bg-gray-100 rounded-2xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-gray-400">
-                  <ImageIcon size={48} className="mb-4 opacity-50" />
-                  <p className="font-heading uppercase tracking-widest font-bold">Image Placeholder</p>
-                  <p className="text-sm mt-2">Upload Load Index / Speed Rating Table Here</p>
+                <p>
+                  This table shows the typical passenger tire load index along with the maximum loading capacity. The maximum loading capacity at maximum pressure is also available on the tire sidewall. In this example, a load index of 116 on a P265/70R17 116 will be a maximum of 2,756 pounds of load per tire.
+                </p>
+                <p>
+                  Passenger tires are also identified as light load (LL), standard load (SL) or extra load (XL) on the sidewall. This is the same in both P-metric and Euro-metric sizes, however, the inflation pressure at maximum load slightly varies between the two.
+                </p>
+                <p>
+                  Light truck tires are identified by load range, which vary from load range B to load range F. The majority of tires in the market are load range C, D and E.
+                </p>
+
+                {/* Image Placeholder 4 */}
+                <div className="my-6 w-full aspect-[16/7] bg-gray-50 rounded-2xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-gray-400">
+                  <ImageIcon size={32} className="mb-2 opacity-50" />
+                  <p className="font-heading uppercase tracking-widest font-bold text-sm">Image Placeholder 4</p>
+                  <p className="text-xs mt-1">"This table shows the load index in the [light truck] tire..."</p>
                 </div>
+
+                <p>
+                  This table shows the load index in the tire. Each load index in light truck sizes is also identified by two numbers. The first number is the maximum load in single wheel, and the second number is the maximum load in dual-vehicle applications. In this example, 121/118 represents the maximum load of 3,197 pounds in single and 2,910 pounds on a dual application.
+                </p>
+                <p>
+                  A tire’s maximum load is the most weight the tire is designed to carry. Since a tire’s load carrying capacity is related to the tire’s size and how much inflation pressure is actually used, maximum loads are rated with the tire inflated to an industry-assigned inflation pressure. Never exceed the maximum vehicle load limit listed on the vehicle placard or in the owner’s manual. Never exceed the load carrying limits molded into the tire’s sidewall. Maximum load can only be carried at the maximum cold inflation pressure indicated on the tire’s sidewall. Overloading can cause excessive heat buildup, internal structural damage and may cause tire failure.
+                </p>
+
+                {/* Image Placeholder 5 */}
+                <div className="my-6 w-full aspect-[16/7] bg-gray-50 rounded-2xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-gray-400">
+                  <ImageIcon size={32} className="mb-2 opacity-50" />
+                  <p className="font-heading uppercase tracking-widest font-bold text-sm">Image Placeholder 5</p>
+                  <p className="text-xs mt-1">"This following table illustrates the speed capability of tires."</p>
+                </div>
+
+                <p>
+                  This following table illustrates the speed capability of tires. Speed ratings were established to match the speed capability of tires with the top speed of the vehicles to which they are applied. Speed rating does not suggest the speed of the vehicle, and only shows the maximum capability of the tire. Regardless of the speed capability of your tires, never exceed lawful speeds or speeds dictated by driving conditions. Exceeding a tire’s speed capacity could cause overheating and sudden tire failure.
+                </p>
               </div>
             </div>
           </motion.div>
 
           {/* 4. Critical Safety Warnings */}
           <motion.div variants={fadeUp} className="bg-red-50 rounded-3xl p-8 lg:p-12 shadow-xl relative overflow-hidden border border-red-100">
-            <div className="flex flex-col lg:flex-row gap-8 items-start relative z-10">
-              <div className="w-16 h-16 rounded-2xl bg-red-100 flex items-center justify-center flex-shrink-0 text-red-600 border border-red-200">
-                <ShieldAlert size={32} />
-              </div>
-              <div className="w-full">
-                <h2 className="text-2xl lg:text-3xl font-heading font-extrabold uppercase mb-6 tracking-tight text-red-900">
-                  Critical Safety Information
-                </h2>
-                
-                <div className="space-y-8">
-                  <div>
-                    <h3 className="font-bold text-xl mb-3 text-red-800">Tyre Spinning</h3>
-                    <p className="text-red-900/80 leading-relaxed mb-2">
-                      Do not allow the reading on the speedometer to exceed 35 mph if tyres are spinning (e.g., stuck in mud, snow, ice). When only one tyre on an axle is spinning, its actual speed can be double the speedometer reading.
-                    </p>
-                    <p className="text-red-900/80 leading-relaxed font-bold">
-                      Never allow anyone to stand behind a spinning tyre. Centrifugal force can cause the tyre to explode, resulting in severe injury or death.
-                    </p>
-                  </div>
-                  
-                  <div className="w-full h-px bg-red-200" />
-
-                  <div>
-                    <h3 className="font-bold text-xl mb-3 text-red-800">Inflation Pressure</h3>
-                    <p className="text-red-900/80 leading-relaxed mb-2">
-                      A tyre can only carry its load when properly inflated. Always use the recommended pressure found on the <strong>vehicle placard (driver's door panel)</strong>, not the maximum pressure molded on the tyre sidewall.
-                    </p>
-                    <p className="text-red-900/80 leading-relaxed font-bold">
-                      Warning: Underinflation causes excessive heat build-up. Overinflation makes tyres susceptible to impact damage. Both can lead to catastrophic tread separation and tyre failure.
-                    </p>
-                  </div>
+            <div className="flex flex-col gap-6 relative z-10">
+              <div className="flex items-center gap-4 border-b border-red-200 pb-4">
+                <div className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center flex-shrink-0 text-red-600 border border-red-200">
+                  <ShieldAlert size={24} />
                 </div>
+                <h2 className="text-2xl lg:text-3xl font-heading font-extrabold uppercase tracking-tight text-red-900">
+                  Tire Spinning
+                </h2>
+              </div>
+              
+              <div className="prose prose-lg max-w-none text-red-900/80 leading-relaxed space-y-4 font-medium">
+                <p>
+                  Do not allow the reading on the speedometer to exceed 35 mph if tires are spinning because the vehicle becomes stuck in mud, snow, ice, etc. When only one tire on an axle is spinning, its speed can be double what is indicated on the speedometer and can quickly exceed the capability of the tire.
+                </p>
+                <p>
+                  Never allow anyone to stand behind a spinning tire while attempting to push a vehicle. Speed and force can cause a tire to disintegrate and explode and may cause property damage, serious personal injury or death to you or a bystander.
+                </p>
               </div>
             </div>
           </motion.div>
+
+          {/* 5. Inflation Pressure */}
+          <motion.div variants={fadeUp} className="bg-red-50 rounded-3xl p-8 lg:p-12 shadow-xl relative overflow-hidden border border-red-100">
+            <div className="flex flex-col gap-6 relative z-10">
+              <div className="flex items-center gap-4 border-b border-red-200 pb-4">
+                <div className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center flex-shrink-0 text-red-600 border border-red-200">
+                  <ShieldAlert size={24} />
+                </div>
+                <h2 className="text-2xl lg:text-3xl font-heading font-extrabold uppercase tracking-tight text-red-900">
+                  Inflation Pressure
+                </h2>
+              </div>
+              
+              <div className="prose prose-lg max-w-none text-red-900/80 leading-relaxed space-y-4 font-medium">
+                <p>
+                  A tire can only do its job of carrying a vehicle load when it’s properly inflated. Vehicle manufacturers assign a tire size with a specific tire pressure to carry the load of the vehicle and passengers, and provide the best balance of handling, traction, fuel efficiency and durability.
+                </p>
+                <p>
+                  This inflation pressure is almost always different from what is indicated on the sidewall. The sidewall indicates the maximum pressure and corresponding load for the tire, but the recommended pressure can always be found in the placard in the driver’s door panel. In case of a tire size change, the proper inflation pressure will be recommended to maintain the same amount of load. Higher inflation pressure provides higher load capacity, which is why light load passenger tires have maximum load pressure of 35/36 psi, while extra load passenger tires have a maximum load pressure of 41/42 psi.
+                </p>
+                <p className="font-bold">
+                  Warning: Underinflation and/or overloading of a tire causes excessive heat build-up and internal structural damage. Overinflation makes it more likely for tires to be cut, punctured or broken by sudden impact. These conditions may cause a tire failure, including a tread/belt separation, even at a later date, which can lead to an accident and serious personal injury or death.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
         </motion.div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-brand-yellow py-20 px-4 text-center">
+      <section className="bg-brand-yellow py-20 px-4 text-center mt-12">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
