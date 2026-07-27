@@ -98,11 +98,13 @@ export default function SizingInformationPage() {
                 </p>
               </div>
 
-              {/* Image Placeholder 1 */}
-              <div className="mt-6 w-full aspect-[16/5] bg-gray-50 rounded-2xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-gray-400">
-                <ImageIcon size={32} className="mb-2 opacity-50" />
-                <p className="font-heading uppercase tracking-widest font-bold text-sm">Image Placeholder 1</p>
-                <p className="text-xs mt-1">Upload Size Designation Image Here</p>
+              {/* Image 1: Size Designation */}
+              <div className="mt-6 w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                <img 
+                  src="/images/sizing-designation.jpg" 
+                  alt="Tire Size Designation Breakdown" 
+                  className="w-full h-auto object-contain bg-white"
+                />
               </div>
             </div>
           </motion.div>
