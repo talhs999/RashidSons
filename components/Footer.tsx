@@ -164,7 +164,7 @@ export default function Footer() {
           <p>&copy; {new Date().getFullYear()} J. RASHID & SONS. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-white transition-colors">Terms of Use</Link>
+            <Link href="/terms-of-use" className="hover:text-white transition-colors">Terms of Use</Link>
           </div>
         </div>
       </div>
