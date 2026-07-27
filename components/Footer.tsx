@@ -136,6 +136,28 @@ export default function Footer() {
                <li><Link href="/about" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Our Branches</Link></li>
              </ul>
           </div>
+          <div>
+             <h3 className="font-heading font-bold uppercase text-white tracking-widest text-xs mb-6">Main Branch</h3>
+             <div className="w-full h-32 rounded-lg overflow-hidden border border-white/10 mb-3">
+                <iframe
+                  src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Sardar%20Enterprises,%20Circular%20Rd,%20Badami%20Bagh,%20Lahore&t=&z=13&ie=UTF8&iwloc=B&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sardar Enterprises Main Branch"
+                  className="w-full h-full filter brightness-90 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                />
+             </div>
+             <p className="text-xs text-white/50 leading-relaxed font-medium">
+               Circular Rd, Badami Bagh<br/>Qadimi Shehr, Lahore
+             </p>
+             <a href="https://maps.app.goo.gl/UjLVkSDqg5ZG8Quy9?g_st=ac" target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-xs font-bold text-brand-yellow hover:text-white uppercase tracking-wider transition-colors">
+               Get Directions &rarr;
+             </a>
+          </div>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30 uppercase tracking-widest font-bold">
