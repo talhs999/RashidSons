@@ -4,13 +4,13 @@ import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { useState } from "react";
 import {
   getBrandBySlug,
   getCategoryBySlug,
   getProductsByCategory,
-  brands,
 } from "@/lib/data";
-import ProductCard from "@/components/ProductCard";
+import HorizontalProductCard from "@/components/HorizontalProductCard";
 import { ChevronRight } from "lucide-react";
 
 export default function CategoryProductsPage() {
@@ -26,6 +26,24 @@ export default function CategoryProductsPage() {
   }
 
   const categoryProducts = getProductsByCategory(category.id);
+
+  // Extract unique tire families from products
+  const families = Array.from(new Set(categoryProducts.map(p => {
+    const parts = p.name.split(" ");
+    const isBrand = parts[0].toLowerCase() === brand.name.toLowerCase();
+    return isBrand && parts.length > 1 ? parts[1] : parts[0];
+  })));
+
+  const [activeFamily, setActiveFamily] = useState<string | null>(null);
+
+  const filteredProducts = activeFamily 
+    ? categoryProducts.filter(p => {
+        const parts = p.name.split(" ");
+        const isBrand = parts[0].toLowerCase() === brand.name.toLowerCase();
+        const f = isBrand && parts.length > 1 ? parts[1] : parts[0];
+        return f === activeFamily;
+      })
+    : categoryProducts;
 
   return (
     <>
@@ -87,41 +105,72 @@ export default function CategoryProductsPage() {
         </div>
       </section>
 
-      {/* Products grid */}
-      <section className="py-16 lg:py-20 bg-cream">
+      {/* Main Content Area: Sidebar + Products */}
+      <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
-          {categoryProducts.length > 0 ? (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {categoryProducts.map((product, i) => (
-                <ProductCard
-                  key={product.slug}
-                  name={product.name}
-                  slug={product.slug}
-                  brandName={brand.name}
-                  brandSlug={brand.slug}
-                  categorySlug={category.slug}
-                  size={product.size}
-                  image={product.images[0]}
-                  price={product.price}
-                  stockStatus={product.stock_status}
-                  index={i}
-                />
-              ))}
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+            
+            {/* Left Sidebar Filter */}
+            <aside className="w-full lg:w-64 flex-shrink-0">
+               <div className="sticky top-32 border border-black/10 shadow-sm rounded-t-sm overflow-hidden">
+                  <div className="bg-[#1f5cc0] text-white p-4 border-b border-black/10">
+                     <h3 className="text-lg font-semibold tracking-wide">Tire Family</h3>
+                  </div>
+                  <ul className="bg-white max-h-[60vh] overflow-y-auto custom-scrollbar">
+                     <li 
+                        className={`cursor-pointer px-5 py-3 border-b border-black/5 hover:bg-gray-50 transition-colors ${!activeFamily ? 'font-bold bg-gray-50 border-l-4 border-l-[#1f5cc0]' : 'border-l-4 border-l-transparent text-gray-700'}`}
+                        onClick={() => setActiveFamily(null)}
+                     >
+                        All Families
+                     </li>
+                     {families.map((family) => (
+                        <li 
+                           key={family}
+                           className={`cursor-pointer px-5 py-3 border-b border-black/5 hover:bg-gray-50 transition-colors ${activeFamily === family ? 'font-bold bg-gray-50 border-l-4 border-l-[#1f5cc0]' : 'border-l-4 border-l-transparent text-gray-700'}`}
+                           onClick={() => setActiveFamily(family)}
+                        >
+                           {family}
+                        </li>
+                     ))}
+                  </ul>
+               </div>
+            </aside>
+
+            {/* Right Side Products */}
+            <div className="flex-1 min-w-0 pt-4 lg:pt-0">
+              {filteredProducts.length > 0 ? (
+                <div className="flex flex-col">
+                  {filteredProducts.map((product, i) => (
+                    <HorizontalProductCard
+                      key={product.slug}
+                      name={product.name}
+                      slug={product.slug}
+                      brandName={brand.name}
+                      brandSlug={brand.slug}
+                      categorySlug={category.slug}
+                      size={product.size}
+                      image={product.images[0]}
+                      description={product.description}
+                      index={i}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-20 bg-gray-50 border border-black/5">
+                  <p className="text-brand-gray text-lg">
+                    No products found for this family.
+                  </p>
+                  <button
+                    onClick={() => setActiveFamily(null)}
+                    className="inline-flex items-center gap-2 mt-4 text-[#1f5cc0] font-semibold hover:underline"
+                  >
+                    Clear Filter
+                  </button>
+                </div>
+              )}
             </div>
-          ) : (
-            <div className="text-center py-20">
-              <p className="text-brand-gray text-lg">
-                No products available in this category yet.
-              </p>
-              <Link
-                href={`/brands/${brand.slug}`}
-                className="inline-flex items-center gap-2 mt-4 text-brand-yellow-dark font-semibold hover:text-brand-yellow"
-              >
-                Back to {brand.name}
-                <ChevronRight size={16} />
-              </Link>
-            </div>
-          )}
+
+          </div>
         </div>
       </section>
     </>
