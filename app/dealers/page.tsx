@@ -49,7 +49,7 @@ export default function DealersPage() {
       return `https://maps.google.com/maps?q=${encodeURIComponent(searchQuery + ' Pakistan')}&t=&z=10&ie=UTF8&iwloc=&output=embed`;
     }
     // Default overview
-    return `https://maps.google.com/maps?q=${encodeURIComponent('Anarkali Bazaar Lahore Pakistan Tyre Dealer')}&t=&z=11&ie=UTF8&iwloc=&output=embed`;
+    return `https://maps.google.com/maps?q=Sardar%20Enterprises,%20Circular%20Rd,%20Badami%20Bagh,%20Lahore&t=&z=11&ie=UTF8&iwloc=&output=embed`;
   }, [searchQuery, hasSearched, filteredDealers, activeDealer]);
 
   const quickCities = [
