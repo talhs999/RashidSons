@@ -187,19 +187,21 @@ export default function BrandDetailPage() {
                     </div>
 
                     {/* Content */}
-                    <div className="p-6">
+                    <div className="p-6 group-hover:bg-brand-yellow transition-colors duration-500">
                       <div className="flex items-center justify-between">
                         <div>
-                          <p className="text-[10px] text-brand-yellow uppercase tracking-widest font-semibold mb-1">
-                            {brand.name}
-                          </p>
-                          <h3 className="text-lg font-bold text-brand-black group-hover:text-brand-yellow-dark transition-colors">
+                          <div className="mb-2">
+                            <span className="text-[10px] bg-brand-black text-brand-yellow px-2 py-1 rounded uppercase tracking-widest font-semibold inline-block">
+                              {brand.name}
+                            </span>
+                          </div>
+                          <h3 className="text-lg font-bold text-brand-black group-hover:text-brand-black transition-colors">
                             {category.name}
                           </h3>
                         </div>
                         <ArrowRight
                           size={18}
-                          className="text-brand-gray group-hover:text-brand-yellow group-hover:translate-x-1 transition-all"
+                          className="text-brand-gray group-hover:text-brand-black group-hover:translate-x-1 transition-all"
                         />
                       </div>
                     </div>

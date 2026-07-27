@@ -108,7 +108,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5 relative min-h-[440px] md:min-h-[500px] flex items-center justify-center">
               <div className="relative w-full h-[420px] md:h-[480px]">
                 
-                {/* Main CEO Image (Top Right) */}
+                {/* CEO Image (Top Right - Background) */}
                 <motion.div 
                   initial={{ opacity: 0, y: -20, scale: 0.95 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -118,18 +118,18 @@ export default function AboutPage() {
                   className="absolute top-0 right-0 w-[70%] h-[78%] rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-yellow/30 z-10 group"
                 >
                   <Image
-                    src="/images/ceo-tariq.jpeg"
-                    alt="Tariq Javed Rashid - CEO"
+                    src="/images/ceo_final.jpeg"
+                    alt="CEO J. Rashid & Sons"
                     fill
                     className="object-cover object-top group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-wider text-brand-yellow">
-                    CEO Tariq Javed Rashid
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  <div className="absolute bottom-6 right-6 text-sm font-black uppercase tracking-widest text-brand-yellow bg-black/70 px-4 py-2 rounded-xl shadow-2xl border border-brand-yellow/20 backdrop-blur-sm z-20">
+                    CEO
                   </div>
                 </motion.div>
 
-                {/* Younger CEO Image (Bottom Left Overlapping) */}
+                {/* Founder Image (Bottom Left Overlapping - Foreground) */}
                 <motion.div 
                   initial={{ opacity: 0, y: 30, scale: 0.95 }}
                   whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -139,14 +139,14 @@ export default function AboutPage() {
                   className="absolute bottom-0 left-0 w-[64%] h-[72%] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-brand-black z-20 group"
                 >
                   <Image
-                    src="/images/ceo-young.jpg"
-                    alt="J. Rashid & Sons Leadership"
+                    src="/images/founder_final.jpeg"
+                    alt="Founder J. Rashid & Sons"
                     fill
                     className="object-cover object-top group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-wider text-white">
-                    Executive Leadership
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  <div className="absolute bottom-6 left-6 text-sm font-black uppercase tracking-widest bg-brand-yellow px-4 py-2 rounded-xl shadow-2xl border border-white/20 text-brand-black backdrop-blur-sm z-20">
+                    Founder
                   </div>
                 </motion.div>
 
@@ -314,14 +314,14 @@ export default function AboutPage() {
               >
                 <Link
                   href={`/brands/${brand.slug}`}
-                  className="group block p-6 rounded-2xl bg-white/[0.05] border border-white/10 hover:border-brand-yellow hover:bg-white/10 transition-all text-center h-[180px] flex flex-col items-center justify-center shadow-lg"
+                  className="group block p-6 rounded-2xl bg-brand-yellow border border-brand-yellow hover:bg-white hover:border-white hover:-translate-y-1 hover:shadow-xl transition-all text-center h-[180px] flex flex-col items-center justify-center shadow-lg"
                 >
                   <img
                     src={brand.logo_white_url || brand.logo_url}
                     alt={brand.name}
-                    className="w-full h-20 md:h-24 object-contain mx-auto group-hover:scale-110 transition-transform duration-500 p-2"
+                    className="w-full h-24 md:h-28 object-contain mx-auto brightness-0 group-hover:scale-110 transition-all duration-500"
                   />
-                  <p className="mt-2 text-sm font-bold text-white group-hover:text-brand-yellow transition-colors uppercase tracking-wider">
+                  <p className="mt-4 text-sm font-bold text-brand-black uppercase tracking-wider">
                     {brand.name}
                   </p>
                 </Link>

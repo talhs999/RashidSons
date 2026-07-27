@@ -55,68 +55,53 @@ export interface Branch {
 
 export const brands: Brand[] = [
   {
-    id: 1,
-    name: "Yokohama",
-    slug: "yokohama",
-    logo_url: "/images/partners/yokohama-hd-5100.png",
-    logo_white_url: "/images/brands/yokohama-white.png",
-    description:
-      "Yokohama Rubber Company is a Japanese tire manufacturer. As the official importer of Yokohama tyres in Pakistan, J. Rashid & Sons brings world-class Japanese engineering to Pakistani roads.",
+    "id": 1,
+    "name": "Yokohama",
+    "slug": "yokohama",
+    "logo_url": "/images/partners/yokohama-hd-5100.png",
+    "logo_white_url": "/images/brands/yokohama-white.png",
+    "description": "Yokohama Rubber Company is a Japanese tire manufacturer. As the official importer of Yokohama tyres in Pakistan, J. Rashid & Sons brings world-class Japanese engineering to Pakistani roads."
   },
   {
-    id: 2,
-    name: "Michelin",
-    slug: "michelin",
-    logo_url: "/images/partners/michelin-hd.png",
-    logo_white_url: "/images/partners/michelin-hd.png",
-    description:
-      "Michelin is a French multinational tyre manufacturer known for premium quality and innovation. Experience world-class performance with Michelin tyres from J. Rashid & Sons.",
+    "id": 2,
+    "name": "Goodyear",
+    "slug": "goodyear",
+    "logo_url": "/images/partners/goodyear-clean.png",
+    "logo_white_url": "/images/partners/goodyear-clean.png",
+    "description": "Goodyear Tire & Rubber Company is one of the world's largest tyre companies. J. Rashid & Sons provides authentic Goodyear tyres for passenger cars, SUVs, and commercial vehicles."
   },
   {
-    id: 3,
-    name: "Goodyear",
-    slug: "goodyear",
-    logo_url: "/images/partners/goodyear-clean.png",
-    logo_white_url: "/images/partners/goodyear-clean.png",
-    description:
-      "Goodyear Tire & Rubber Company is one of the world's largest tyre companies. J. Rashid & Sons provides authentic Goodyear tyres for passenger cars, SUVs, and commercial vehicles.",
+    "id": 3,
+    "name": "Warrior",
+    "slug": "warrior",
+    "logo_url": "/images/brands/warrior-final-black.png",
+    "logo_white_url": "/images/brands/warrior-final-white.png",
+    "description": "Warrior tyres are built tough for Pakistani road conditions. Designed for durability and performance at competitive prices."
   },
   {
-    id: 4,
-    name: "Blackarrow",
-    slug: "blackarrow",
-    logo_url: "/images/partners/blackarrow-clean.png",
-    logo_white_url: "/images/partners/blackarrow-white.png",
-    description:
-      "Blackarrow tyres deliver exceptional value and performance for everyday driving. Available across Pakistan through J. Rashid & Sons dealer network.",
+    "id": 4,
+    "name": "Atlas Tyre",
+    "slug": "atlas",
+    "logo_url": "/images/brands/atlas-logo.png",
+    "logo_white_url": "/images/brands/atlas-logo-white.png",
+    "description": "Atlas Tyres deliver superior traction and durability for a wide range of vehicles, ensuring a safe and comfortable ride across Pakistan."
   },
   {
-    id: 5,
-    name: "Warrior",
-    slug: "warrior",
-    logo_url: "/images/partners/warrior-clean.png",
-    logo_white_url: "/images/partners/warrior-white.png",
-    description:
-      "Warrior tyres are built tough for Pakistani road conditions. Designed for durability and performance at competitive prices.",
+    "id": 5,
+    "name": "Risen",
+    "slug": "risen",
+    "logo_url": "/images/brands/risen-logo.png",
+    "logo_white_url": "/images/brands/risen-logo-white.png",
+    "description": "Risen Tyres provide exceptional value and reliable performance, designed specifically to tackle tough road conditions with ease."
   },
   {
-    id: 6,
-    name: "Rydanz",
-    slug: "rydanz",
-    logo_url: "/images/partners/rydanz-clean.png",
-    logo_white_url: "/images/brands/rydanz-white.png",
-    description:
-      "Rydanz tyres provide exceptional safety, comfort, and grip. High performance engineered for smooth driving and durability across all terrains.",
-  },
-  {
-    id: 7,
-    name: "Yokohama Alliance",
-    slug: "yokohama-alliance",
-    logo_url: "/images/partners/alliance-clean.png",
-    logo_white_url: "/images/brands/alliance-white.png",
-    description:
-      "Yokohama Alliance tyres deliver superior traction, durable construction, and trusted Japanese quality for agricultural, industrial, and passenger applications.",
-  },
+    "id": 6,
+    "name": "Falken",
+    "slug": "falken",
+    "logo_url": "/images/brands/falken-logo.png",
+    "logo_white_url": "/images/brands/falken-logo-white.png",
+    "description": "Falken is known for its high-performance tires, offering precision handling and superior grip for sports cars and everyday driving."
+  }
 ];
 
 export const categories: Category[] = [

@@ -122,7 +122,10 @@ export default function Footer() {
              <ul className="space-y-4">
                <li><Link href="/brands/yokohama" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Yokohama</Link></li>
                <li><Link href="/brands/goodyear" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Goodyear</Link></li>
-               <li><Link href="/brands/michelin" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Michelin</Link></li>
+               <li><Link href="/brands/warrior" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Warrior</Link></li>
+               <li><Link href="/brands/atlas" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Atlas Tyre</Link></li>
+               <li><Link href="/brands/risen" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Risen</Link></li>
+               <li><Link href="/brands/falken" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Falken</Link></li>
              </ul>
           </div>
           <div>

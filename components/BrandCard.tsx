@@ -32,7 +32,7 @@ export default function BrandCard({
         className="group block relative bg-white rounded-2xl overflow-hidden border border-brand-black/5 hover:shadow-2xl hover:shadow-brand-black/10 hover:-translate-y-2 transition-all duration-500"
       >
         {/* Top section with brand logo */}
-        <div className="relative h-56 bg-gradient-to-br from-brand-black to-brand-black flex items-center justify-center p-8 overflow-hidden">
+        <div className="relative h-64 bg-gradient-to-br from-brand-black to-brand-black flex items-center justify-center p-8 overflow-hidden">
           {/* Background pattern */}
           <div className="absolute inset-0 opacity-5">
             <div
@@ -46,12 +46,12 @@ export default function BrandCard({
           </div>
 
           {/* Logo */}
-          <div className="relative z-10 w-32 h-32 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+          <div className="relative z-10 w-48 h-48 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
             <Image
               src={logo}
               alt={name}
-              width={120}
-              height={120}
+              width={180}
+              height={180}
               className="w-full h-full object-contain filter brightness-0 invert"
             />
           </div>
@@ -61,18 +61,18 @@ export default function BrandCard({
         </div>
 
         {/* Content */}
-        <div className="p-6">
+        <div className="p-6 group-hover:bg-brand-yellow transition-colors duration-500 h-[140px] flex flex-col justify-center">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-xl font-bold text-brand-black group-hover:text-brand-yellow-dark transition-colors">
+            <h3 className="text-xl font-bold text-brand-black uppercase group-hover:text-brand-black transition-colors">
               {name}
             </h3>
             <ArrowRight
               size={18}
-              className="text-brand-gray group-hover:text-brand-yellow group-hover:translate-x-1 transition-all"
+              className="text-brand-gray group-hover:text-brand-black group-hover:translate-x-1 transition-all"
             />
           </div>
           {description && (
-            <p className="text-sm text-brand-gray line-clamp-2 leading-relaxed">
+            <p className="text-sm text-brand-gray group-hover:text-brand-black/90 line-clamp-2 leading-relaxed transition-colors duration-500">
               {description}
             </p>
           )}

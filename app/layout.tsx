@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import LayoutWrapper from "@/components/LayoutWrapper";
 import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({
@@ -53,9 +52,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
       <body className="min-h-screen flex flex-col antialiased">
         <NextTopLoader color="#ffc107" showSpinner={false} />
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>
   );

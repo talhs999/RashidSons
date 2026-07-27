@@ -1,0 +1,50 @@
+export const brands: Brand[] = [
+  {
+    "id": 1,
+    "name": "Yokohama",
+    "slug": "yokohama",
+    "logo_url": "/images/partners/yokohama-hd-5100.png",
+    "logo_white_url": "/images/brands/yokohama-white.png",
+    "description": "Yokohama Rubber Company is a Japanese tire manufacturer. As the official importer of Yokohama tyres in Pakistan, J. Rashid & Sons brings world-class Japanese engineering to Pakistani roads."
+  },
+  {
+    "id": 2,
+    "name": "Goodyear",
+    "slug": "goodyear",
+    "logo_url": "/images/partners/goodyear-clean.png",
+    "logo_white_url": "/images/partners/goodyear-clean.png",
+    "description": "Goodyear Tire & Rubber Company is one of the world's largest tyre companies. J. Rashid & Sons provides authentic Goodyear tyres for passenger cars, SUVs, and commercial vehicles."
+  },
+  {
+    "id": 3,
+    "name": "Warrior",
+    "slug": "warrior",
+    "logo_url": "/images/brands/warrior-final-black.png",
+    "logo_white_url": "/images/brands/warrior-final-white.png",
+    "description": "Warrior tyres are built tough for Pakistani road conditions. Designed for durability and performance at competitive prices."
+  },
+  {
+    "id": 4,
+    "name": "Atlas Tyre",
+    "slug": "atlas",
+    "logo_url": "/images/brands/atlas-logo.png",
+    "logo_white_url": "/images/brands/atlas-logo-white.png",
+    "description": "Atlas Tyres deliver superior traction and durability for a wide range of vehicles, ensuring a safe and comfortable ride across Pakistan."
+  },
+  {
+    "id": 5,
+    "name": "Risen",
+    "slug": "risen",
+    "logo_url": "/images/brands/risen-logo.png",
+    "logo_white_url": "/images/brands/risen-logo-white.png",
+    "description": "Risen Tyres provide exceptional value and reliable performance, designed specifically to tackle tough road conditions with ease."
+  },
+  {
+    "id": 6,
+    "name": "Falken",
+    "slug": "falken",
+    "logo_url": "/images/brands/falken-logo.png",
+    "logo_white_url": "/images/brands/falken-logo-white.png",
+    "description": "Falken is known for its high-performance tires, offering precision handling and superior grip for sports cars and everyday driving."
+  }
+];

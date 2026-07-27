@@ -3,20 +3,18 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { brands } from "@/lib/data";
 
 const brandTires: Record<string, string> = {
   yokohama: "/images/tires/advan-fleva.png",
-  michelin: "/images/tires/advan-sport-as.webp",
   goodyear: "/images/tires/advan-a052.png",
-  blackarrow: "/images/tires/advan-apex.png",
   warrior: "/images/tires/advan-neova-ad09.webp",
-  rydanz: "/images/tires/advan-a055.webp",
-  "yokohama-alliance": "/images/tires/advan-sport-v107.webp",
+  atlas: "/images/tires/advan-apex.png",
+  risen: "/images/tires/advan-a055.webp",
+  falken: "/images/tires/advan-sport-v107.webp",
 };
 
-export default function BrandsShowcase() {
-  const showcaseBrands = brands;
+export default function BrandsShowcase({ brands }: { brands: any[] }) {
+  const showcaseBrands = brands || [];
 
   return (
     <section className="bg-brand-light py-20 lg:py-28 relative">

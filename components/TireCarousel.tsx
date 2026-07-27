@@ -14,37 +14,31 @@ const brandData: Record<string, { id: number; image: string; title: string }[]> 
     { id: 4, image: "/images/tires/advan-sport-v107.webp", title: "ADVAN SPORT V107" },
     { id: 5, image: "/images/tires/advan-a052.png", title: "ADVAN A052" },
   ],
-  Michelin: [
-    { id: 6, image: "/images/tires/advan-sport-as.webp", title: "PRIMACY 4 ST" },
-    { id: 7, image: "/images/tires/advan-sport-v107.webp", title: "PILOT SPORT 5" },
-    { id: 8, image: "/images/tires/advan-apex.png", title: "LATITUDE SPORT 3" },
-    { id: 9, image: "/images/tires/advan-fleva.png", title: "ENERGY XM2+" },
-  ],
   Goodyear: [
     { id: 10, image: "/images/tires/advan-a052.png", title: "ASSURANCE TRIPLEMAX" },
     { id: 11, image: "/images/tires/advan-fleva.png", title: "WRANGLER AT/SA+" },
     { id: 12, image: "/images/tires/advan-neova-ad09.webp", title: "EAGLE F1 ASYMMETRIC" },
     { id: 13, image: "/images/tires/advan-sport-v107.webp", title: "KMAX S STEER" },
   ],
-  Blackarrow: [
-    { id: 14, image: "/images/tires/advan-apex.png", title: "TOURING PLUS AE" },
-    { id: 15, image: "/images/tires/advan-sport-as.webp", title: "SPORT GT ULTRA" },
-    { id: 16, image: "/images/tires/advan-a055.webp", title: "ECO DRIVE 100" },
-  ],
   Warrior: [
     { id: 17, image: "/images/tires/advan-neova-ad09.webp", title: "ALL TERRAIN X" },
     { id: 18, image: "/images/tires/advan-a052.png", title: "HIGHWAY MASTER" },
     { id: 19, image: "/images/tires/advan-sport-v107.webp", title: "RUGGED GRIP 4X4" },
   ],
-  Rydanz: [
-    { id: 20, image: "/images/tires/advan-apex.png", title: "ROADSTER R02" },
-    { id: 21, image: "/images/tires/advan-fleva.png", title: "REAC R05" },
-    { id: 22, image: "/images/tires/advan-neova-ad09.webp", title: "RALEIGH R06 SUV" },
+  "Atlas Tyre": [
+    { id: 20, image: "/images/tires/advan-apex.png", title: "ATLAS PRO MAX" },
+    { id: 21, image: "/images/tires/advan-sport-as.webp", title: "ATLAS DURAGUARD" },
+    { id: 22, image: "/images/tires/advan-a055.webp", title: "ATLAS TERRAIN M/T" },
   ],
-  "Yokohama Alliance": [
-    { id: 23, image: "/images/tires/advan-neova-ad09.webp", title: "ALLIANCE AL30" },
-    { id: 24, image: "/images/tires/advan-a052.png", title: "ALLIANCE FARMPRO" },
-    { id: 25, image: "/images/tires/advan-fleva.png", title: "ALLIANCE MASTERDRIVE" },
+  Risen: [
+    { id: 23, image: "/images/tires/advan-fleva.png", title: "RISEN TOURING T1" },
+    { id: 24, image: "/images/tires/advan-neova-ad09.webp", title: "RISEN SPORT R3" },
+    { id: 25, image: "/images/tires/advan-a052.png", title: "RISEN HIGHWAY H/T" },
+  ],
+  Falken: [
+    { id: 26, image: "/images/tires/advan-sport-v107.webp", title: "AZENIS FK510" },
+    { id: 27, image: "/images/tires/advan-apex.png", title: "WILDPEAK A/T3W" },
+    { id: 28, image: "/images/tires/advan-fleva.png", title: "ZIEX ZE914" },
   ],
 };
 
@@ -70,7 +64,7 @@ export default function TireCarousel() {
   };
 
   return (
-    <section className="relative overflow-hidden pt-20">
+    <section className="relative overflow-hidden pt-4">
       {/* Background Split */}
       <div className="absolute inset-0 flex flex-col z-0">
         <div className="h-[60%] bg-black relative overflow-hidden flex items-center justify-center">
@@ -86,7 +80,7 @@ export default function TireCarousel() {
         {/* Header and Tabs */}
         <div className="text-center mb-16 relative z-10">
           <h2 className="text-4xl lg:text-6xl font-heading font-extrabold text-white uppercase tracking-tighter mb-4">
-            OUR TRUSTED DEALERS
+            OUR BRANDS
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto font-sans mb-8">
             Discover a tire built for your exact driving needs. From the track to the trail, we have you covered.

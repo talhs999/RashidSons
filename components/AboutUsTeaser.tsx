@@ -32,7 +32,7 @@ export default function AboutUsTeaser() {
             <p className="text-brand-gray text-lg mb-8 font-sans leading-relaxed">
               J. Rashid & Sons has been at the forefront of the tire industry in Pakistan, 
               bringing world-class performance and safety to every journey. As official distributors 
-              for Yokohama, Goodyear, Michelin, and more, we guarantee authentic products and unmatched expertise.
+              for Yokohama, Goodyear, Falken, and more, we guarantee authentic products and unmatched expertise.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -52,7 +52,7 @@ export default function AboutUsTeaser() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative h-[400px] lg:h-[600px] w-full"
           >
-            <div className="absolute top-0 right-0 w-[85%] h-[80%] skew-x-[-10deg] overflow-hidden rounded-2xl shadow-2xl border-2 border-brand-yellow/30 group">
+            <div className="absolute top-0 right-0 w-[85%] h-[80%] overflow-hidden rounded-2xl shadow-2xl border-2 border-brand-yellow/30 group">
               <Image
                 src="/images/about-history.jpg" // The new history image
                 alt="J Rashid History"
@@ -60,9 +60,9 @@ export default function AboutUsTeaser() {
                 className="object-cover object-center opacity-95 group-hover:scale-105 transition-all duration-700"
               />
             </div>
-            <div className="absolute bottom-0 left-0 w-[60%] h-[50%] bg-brand-yellow skew-x-[10deg] overflow-hidden rounded-2xl border-8 border-brand-light shadow-xl z-10 flex items-center justify-center">
-               <div className="text-center p-6 skew-x-[-10deg]">
-                 <p className="text-5xl font-heading font-extrabold text-brand-black mb-1">150+</p>
+            <div className="absolute bottom-0 left-0 w-[60%] h-[50%] bg-brand-yellow overflow-hidden rounded-2xl border-8 border-brand-light shadow-xl z-10 flex items-center justify-center">
+               <div className="text-center p-6">
+                 <p className="text-7xl font-heading font-extrabold text-brand-black mb-1">150+</p>
                  <p className="text-brand-black font-bold uppercase tracking-widest text-sm">Certified Dealers</p>
                </div>
             </div>
