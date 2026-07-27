@@ -48,10 +48,8 @@ export default function SizingInformationPage() {
           <p>A tire size that begins with a letter T signifies the tire is a temporary spare or mini-spare. This kind of tire is designed to be used temporarily, only until a flat tire can be repaired or replaced.</p>
           <p>A Euro-metric size designed for carrying heavy cargo and/or towing trailers often ends with the letter C. C signified the tire is a commercial tread, intended for vans or delivery trucks that are capable of carrying heavy loads. 195/70R15C is an example of this type of sizing convention.</p>
 
-          <div className="my-12 flex justify-center">
-            <div className="w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-white">
-              <img src="/images/sizing-1.jpg" alt="Size Designation" className="w-full h-auto object-contain" />
-            </div>
+          <div className="my-12 w-full rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-white">
+            <img src="/images/sizing-1.jpg" alt="Size Designation" className="w-full h-auto object-contain" />
           </div>
 
           <h2 className="text-2xl lg:text-3xl font-heading font-extrabold uppercase text-brand-black mt-16 mb-6 border-l-4 border-brand-yellow pl-4">Tire Dimensions</h2>
@@ -60,38 +58,30 @@ export default function SizingInformationPage() {
           <p>A letter R following the tire aspect ratio identifies the tire's construction as a radial tire. In rare cases, a D will identify a bias ply construction, where the body plies crisscross on a diagonal. In recent years, ETRTO has adopted F branding standards that allowed tire manufacturers to identify tires with self-supporting, run-flat constructions within the tire size designation.</p>
           <p>The last two digits on tire size refer to the rim diameter, or the size of the wheel that the tire is intended to fit.</p>
 
-          <div className="my-12 flex justify-center">
-            <div className="w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-[#111111]">
-              <img src="/images/sizing-2.jpg" alt="Tire Dimensions" className="w-full h-auto object-contain" />
-            </div>
+          <div className="my-12 w-full rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-[#111111]">
+            <img src="/images/sizing-2.jpg" alt="Tire Dimensions" className="w-full h-auto object-contain" />
           </div>
 
           <h2 className="text-2xl lg:text-3xl font-heading font-extrabold uppercase text-brand-black mt-16 mb-6 border-l-4 border-brand-yellow pl-4">Service Descriptions</h2>
           <p>The two- or three-digits after the rim diameter, along with the letter next to it, are known as service descriptions. Service descriptions show the load index, which defines the maximum loading capacity of a tire, along with the speed rating, which determines the maximum speed allowed.</p>
           
-          <div className="my-12 flex justify-center">
-            <div className="w-full max-w-xl rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white">
-              <img src="/images/sizing-3.jpg" alt="Typical passenger tire load index table" className="w-full h-auto object-contain" />
-            </div>
+          <div className="my-12 w-full rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white">
+            <img src="/images/sizing-3.jpg" alt="Typical passenger tire load index table" className="w-full h-auto object-contain" />
           </div>
 
           <p>This table shows the typical passenger tire load index along with the maximum loading capacity. The maximum loading capacity at maximum pressure is also available on the tire sidewall. In this example, a load index of 116 on a P265/70R17 116 will be a maximum of 2,756 pounds of load per tire.</p>
           <p>Passenger tires are also identified as light load (LL), standard load (SL) or extra load (XL) on the sidewall. This is the same in both P-metric and Euro-metric sizes, however, the inflation pressure at maximum load slightly varies between the two.</p>
           <p>Light truck tires are identified by load range, which vary from load range B to load range F. The majority of tires in the market are load range C, D and E.</p>
 
-          <div className="my-12 flex justify-center">
-            <div className="w-full max-w-2xl rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white">
-              <img src="/images/sizing-4.jpg" alt="Load index in the light truck tire table" className="w-full h-auto object-contain" />
-            </div>
+          <div className="my-12 w-full rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white">
+            <img src="/images/sizing-4.jpg" alt="Load index in the light truck tire table" className="w-full h-auto object-contain" />
           </div>
 
           <p>This table shows the load index in the tire. Each load index in light truck sizes is also identified by two numbers. The first number is the maximum load in single wheel, and the second number is the maximum load in dual-vehicle applications. In this example, 121/118 represents the maximum load of 3,197 pounds in single and 2,910 pounds on a dual application.</p>
           <p>A tire’s maximum load is the most weight the tire is designed to carry. Since a tire’s load carrying capacity is related to the tire’s size and how much inflation pressure is actually used, maximum loads are rated with the tire inflated to an industry-assigned inflation pressure. Never exceed the maximum vehicle load limit listed on the vehicle placard or in the owner’s manual. Never exceed the load carrying limits molded into the tire’s sidewall. Maximum load can only be carried at the maximum cold inflation pressure indicated on the tire’s sidewall. Overloading can cause excessive heat buildup, internal structural damage and may cause tire failure.</p>
 
-          <div className="my-12 flex justify-center">
-            <div className="w-full max-w-xl rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white">
-              <img src="/images/sizing-5.jpg" alt="Speed capability table" className="w-full h-auto object-contain" />
-            </div>
+          <div className="my-12 w-full rounded-2xl overflow-hidden shadow-xl border border-gray-100 bg-white">
+            <img src="/images/sizing-5.jpg" alt="Speed capability table" className="w-full h-auto object-contain" />
           </div>
 
           <p>This following table illustrates the speed capability of tires. Speed ratings were established to match the speed capability of tires with the top speed of the vehicles to which they are applied. Speed rating does not suggest the speed of the vehicle, and only shows the maximum capability of the tire. Regardless of the speed capability of your tires, never exceed lawful speeds or speeds dictated by driving conditions. Exceeding a tire’s speed capacity could cause overheating and sudden tire failure.</p>
