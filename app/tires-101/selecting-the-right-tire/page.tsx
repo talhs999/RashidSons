@@ -90,9 +90,14 @@ export default function SelectingRightTirePage() {
                 <p className="text-gray-600 leading-relaxed mb-4">
                   The easiest way to determine the correct tyre size for your vehicle is to check the placard located on the driver's side door jamb, or the glove box door. You can also consult your owner's manual.
                 </p>
-                <p className="text-gray-600 leading-relaxed">
-                  These sources will provide you with the exact specifications recommended by the vehicle manufacturer to ensure optimal safety and performance.
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  First and foremost, size is everything when it comes to choosing the right tyre. It’s imperative that you select a tyre designed to fit your wheel size and vehicle type by:
                 </p>
+                <ul className="list-disc pl-5 space-y-2 text-sm text-gray-600">
+                  <li>Identifying the tyre size.</li>
+                  <li>Identifying the load index and speed symbol.</li>
+                  <li>Ensuring your size, load index and speed matches your current vehicle year, make and model.</li>
+                </ul>
               </div>
             </div>
           </motion.div>
@@ -120,21 +125,21 @@ export default function SelectingRightTirePage() {
                     <Sun className="text-brand-yellow mb-4" size={28} />
                     <h3 className="font-bold text-lg mb-2 uppercase tracking-wide">Summer Tyres</h3>
                     <p className="text-sm text-white/60 leading-relaxed">
-                      Designed primarily for dry and mild wet conditions. They provide excellent grip and handling but are not suitable for near-freezing temperatures or snow.
+                      Designed for dry or hot environments. Consider tyres with a higher level of dry braking, including those with higher UTQG temperature level (A) ratings. Not suitable for near-freezing temperatures or snow.
                     </p>
                   </div>
                   <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
                     <CloudRain className="text-blue-400 mb-4" size={28} />
                     <h3 className="font-bold text-lg mb-2 uppercase tracking-wide">All-Season Tyres</h3>
                     <p className="text-sm text-white/60 leading-relaxed">
-                      The most popular choice for year-round driving. They offer a balance of capabilities, performing reasonably well in dry, wet, and light winter conditions.
+                      The most popular choice for year-round driving. If you expect to drive in rainy weather, look for tyres with a higher level of wet traction and UTQG traction levels (AA, A).
                     </p>
                   </div>
                   <div className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-colors">
                     <Snowflake className="text-teal-300 mb-4" size={28} />
                     <h3 className="font-bold text-lg mb-2 uppercase tracking-wide">Winter Tyres</h3>
                     <p className="text-sm text-white/60 leading-relaxed">
-                      Engineered specifically for freezing temperatures, snow, and ice. Their specialized compounds remain flexible in the cold for maximum traction.
+                      For snowy/icy regions, look for dedicated winter tyres or all-season tyres with a three-peak mountain snowflake (3PMS) symbol. Winter tyres must be installed on all four wheels. Never reduce tyre pressures to increase traction on snow or ice.
                     </p>
                   </div>
                 </div>
@@ -281,9 +286,14 @@ export default function SelectingRightTirePage() {
                 <p className="text-gray-600 leading-relaxed mb-4">
                   Longer lasting tyres can add immense value if they provide the performance required for your specific geography and operational requirements. 
                 </p>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed mb-4">
                   However, keep in mind that not all tyres can achieve the highest mileage available while simultaneously meeting extreme weather conditions or high-performance track requirements. Treadlife warranties generally provide a good indication of the mileage you can expect from your tyre choice.
                 </p>
+                <div className="bg-brand-yellow/10 border-l-4 border-brand-yellow p-4 rounded-r-xl">
+                  <p className="text-sm text-brand-black/80 font-medium">
+                    <strong className="text-brand-black">Note on Staggered Sizes:</strong> If your vehicle has staggered sizes, with different sizes on the front and rear axles, the treadwear warranty will often be 50% of the standard mileage.
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
