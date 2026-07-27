@@ -163,7 +163,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30 uppercase tracking-widest font-bold">
           <p>&copy; {new Date().getFullYear()} J. RASHID & SONS. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms-of-use" className="hover:text-white transition-colors">Terms of Use</Link>
           </div>
         </div>
