@@ -56,7 +56,7 @@ export default function SelectingRightTirePage() {
           className="max-w-[1200px] mx-auto relative z-10 text-center"
         >
           <div className="inline-flex items-center justify-center px-4 py-1.5 rounded bg-brand-yellow/10 border border-brand-yellow/30 text-xs text-brand-yellow uppercase tracking-[0.2em] font-bold mb-6">
-            Tires 101 Guide
+            Find Right Tyres
           </div>
           <h1 className="text-4xl lg:text-6xl font-heading font-extrabold uppercase tracking-tight mb-6">
             Selecting the Right Tyre
