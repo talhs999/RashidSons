@@ -156,19 +156,19 @@ export default function ContactPage() {
       {/* Contact form + Branches */}
       <section className="py-12 lg:py-16 bg-cream">
         <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
-          <div className="grid lg:grid-cols-[1fr_400px] gap-12">
+          <div className="max-w-4xl mx-auto w-full">
             {/* Contact form */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-brand-black rounded-2xl p-8 lg:p-10 border border-brand-yellow/30 shadow-md"
+              className="bg-brand-black rounded-2xl p-8 lg:p-12 border border-brand-yellow/30 shadow-2xl"
             >
-              <h2 className="text-2xl font-bold text-brand-yellow mb-2">
+              <h2 className="text-3xl font-bold text-brand-yellow mb-2 text-center">
                 Send us a Message
               </h2>
-              <p className="text-white/70 mb-8">
-                Fill out the form below and we&apos;ll get back to you within 24
+              <p className="text-white/70 mb-10 text-center text-lg">
+                Fill out the form below and we'll get back to you within 24
                 hours.
               </p>
 
@@ -176,18 +176,18 @@ export default function ContactPage() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-12"
+                  className="text-center py-16"
                 >
-                  <div className="w-16 h-16 rounded-full bg-brand-yellow/10 flex items-center justify-center mx-auto mb-4 border border-brand-yellow/20">
+                  <div className="w-20 h-20 rounded-full bg-brand-yellow/10 flex items-center justify-center mx-auto mb-6 border border-brand-yellow/20">
                     <Check
-                      size={32}
+                      size={40}
                       className="text-brand-yellow"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-brand-yellow mb-2">
+                  <h3 className="text-2xl font-bold text-brand-yellow mb-3">
                     Message Sent Successfully
                   </h3>
-                  <p className="text-white/70">
+                  <p className="text-white/70 text-lg max-w-md mx-auto">
                     Thank you for contacting us. Our team will respond shortly.
                   </p>
                   <button
@@ -201,16 +201,16 @@ export default function ContactPage() {
                         message: "",
                       });
                     }}
-                    className="mt-6 text-brand-yellow font-semibold hover:text-white transition-colors"
+                    className="mt-8 text-brand-yellow font-bold text-lg hover:text-white transition-colors border-b-2 border-brand-yellow hover:border-white pb-1"
                   >
                     Send another message
                   </button>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid sm:grid-cols-2 gap-5">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-xs font-bold text-brand-yellow uppercase tracking-wider mb-2">
+                      <label className="block text-sm font-bold text-brand-yellow uppercase tracking-wider mb-2">
                         Full Name *
                       </label>
                       <input
@@ -220,12 +220,12 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormState({ ...formState, name: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all"
+                        className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all text-lg"
                         placeholder="Your name"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-brand-yellow uppercase tracking-wider mb-2">
+                      <label className="block text-sm font-bold text-brand-yellow uppercase tracking-wider mb-2">
                         Phone Number *
                       </label>
                       <input
@@ -235,15 +235,15 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormState({ ...formState, phone: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all"
+                        className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all text-lg"
                         placeholder="+92 300 XXXXXXX"
                       />
                     </div>
                   </div>
 
-                  <div className="grid sm:grid-cols-2 gap-5">
+                  <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-xs font-bold text-brand-yellow uppercase tracking-wider mb-2">
+                      <label className="block text-sm font-bold text-brand-yellow uppercase tracking-wider mb-2">
                         Email (Optional)
                       </label>
                       <input
@@ -252,12 +252,12 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormState({ ...formState, email: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all"
+                        className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all text-lg"
                         placeholder="your@email.com"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold text-brand-yellow uppercase tracking-wider mb-2">
+                      <label className="block text-sm font-bold text-brand-yellow uppercase tracking-wider mb-2">
                         City
                       </label>
                       <input
@@ -266,94 +266,50 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormState({ ...formState, city: e.target.value })
                         }
-                        className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all"
+                        className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all text-lg"
                         placeholder="Lahore, Karachi..."
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-brand-yellow uppercase tracking-wider mb-2">
+                    <label className="block text-sm font-bold text-brand-yellow uppercase tracking-wider mb-2">
                       Message *
                     </label>
                     <textarea
                       required
-                      rows={5}
+                      rows={6}
                       value={formState.message}
                       onChange={(e) =>
                         setFormState({ ...formState, message: e.target.value })
                       }
-                      className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all resize-none"
+                      className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/20 transition-all resize-none text-lg leading-relaxed"
                       placeholder="Tell us how we can help — tyre inquiry, quote request, dealer application..."
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    disabled={submitting}
-                    className="bg-brand-yellow hover:bg-brand-yellow-dark text-brand-black px-6 py-3 font-bold rounded-lg w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 transition-colors"
-                  >
-                    {submitting ? (
-                      <>
-                        <Loader2
-                          size={18}
-                          className="animate-spin"
-                        />
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send size={18} />
-                        Send Message
-                      </>
-                    )}
-                  </button>
+                  <div className="pt-4">
+                    <button
+                      type="submit"
+                      disabled={submitting}
+                      className="bg-brand-yellow hover:bg-brand-yellow-dark text-brand-black px-8 py-4 font-bold rounded-xl w-full sm:w-auto min-w-[200px] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 transition-all transform hover:scale-105 active:scale-95 shadow-xl text-lg mx-auto sm:mx-0"
+                    >
+                      {submitting ? (
+                        <>
+                          <Loader2 size={24} className="animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <Send size={24} />
+                          Send Message
+                        </>
+                      )}
+                    </button>
+                  </div>
                 </form>
               )}
             </motion.div>
-
-            {/* Branch cards */}
-            <div>
-              <h3 className="text-lg font-bold text-brand-black mb-6">
-                Our Branches
-              </h3>
-              <div className="space-y-3">
-                {branches.map((branch, i) => (
-                  <motion.div
-                    key={branch.id}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.05 }}
-                    className="group bg-white rounded-xl p-4 border border-brand-black/5 hover:shadow-md hover:border-brand-yellow/20 transition-all"
-                  >
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0">
-                        <MapPin
-                          size={14}
-                          className="text-red-500"
-                        />
-                      </div>
-                      <div className="min-w-0">
-                        <h4 className="font-semibold text-sm text-brand-black">
-                          {branch.name}
-                        </h4>
-                        <p className="text-xs text-brand-gray mt-0.5">
-                          {branch.address}
-                        </p>
-                        <a
-                          href={`tel:${branch.phone}`}
-                          className="inline-flex items-center gap-1 text-xs font-bold text-brand-black hover:text-red-600 mt-1 transition-colors"
-                        >
-                          <Phone size={11} className="text-red-500" />
-                          {branch.phone}
-                        </a>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
