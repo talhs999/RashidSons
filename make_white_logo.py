@@ -1,9 +1,7 @@
 import sys
 from PIL import Image
 
-def process_logo():
-    input_path = r"C:\jrashid\public\images\brands\warrior-final-black.png"
-    output_path = r"C:\jrashid\public\images\brands\warrior-final-white.png"
+def process_logo(input_path, output_path):
     
     try:
         img = Image.open(input_path).convert("RGBA")
@@ -26,4 +24,4 @@ def process_logo():
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    process_logo()
+    process_logo(sys.argv[1], sys.argv[2])

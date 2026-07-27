@@ -35,7 +35,7 @@ const brandFamilies: BrandFamilyData[] = [
     id: 2,
     name: "Goodyear",
     slug: "goodyear",
-    logo: "/images/partners/goodyear-clean.png",
+    logo: "/images/partners/goodyear-white.png",
     slogan: "MADE TO FEEL GOOD & BUILT TO LAST",
     description:
       "Innovative HydroTred technology for maximum braking efficiency. Engineered for reliability across all driving conditions in Pakistan.",
@@ -220,11 +220,11 @@ export default function TireFamilies() {
               className="flex flex-col items-center"
             >
               {/* Brand Logo with top yellow line */}
-              <div className="mb-6 border-t-4 border-brand-yellow pt-6 h-[110px] md:h-[130px] w-full max-w-[340px] flex items-center justify-center mx-auto">
+              <div className="mb-6 border-t-4 border-brand-yellow pt-6 h-[120px] md:h-[150px] w-full max-w-[400px] flex items-center justify-center mx-auto">
                 <img
                   src={activeBrand.logo}
                   alt={activeBrand.name}
-                  className="h-20 md:h-24 max-w-[320px] w-auto object-contain drop-shadow-lg"
+                  className="h-28 md:h-36 max-w-[380px] w-auto object-contain drop-shadow-lg"
                 />
               </div>
 

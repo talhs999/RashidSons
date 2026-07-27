@@ -1,6 +1,6 @@
 "use client";
 
-import { saveBrand } from "../actions";
+import { saveBrand } from "./actions";
 import Link from "next/link";
 import { ArrowLeft, Save } from "lucide-react";
 import { useTransition } from "react";
