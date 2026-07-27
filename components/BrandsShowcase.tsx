@@ -61,7 +61,7 @@ export default function BrandsShowcase({ brands }: { brands: any[] }) {
                       <img
                         src={brand.logo_url}
                         alt={`${brand.name} logo`}
-                        className="max-h-20 max-w-[95%] object-contain drop-shadow-sm"
+                        className="max-h-12 max-w-[65%] object-contain drop-shadow-sm"
                       />
                     </div>
                   </div>

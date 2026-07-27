@@ -7,6 +7,7 @@ import {
   Search,
 } from "lucide-react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const socials = [
   { 
@@ -33,6 +34,13 @@ const socials = [
 
 export default function Footer() {
   const [zip, setZip] = useState("");
+  const router = useRouter();
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && zip.trim()) {
+      router.push(`/dealers?search=${zip}`);
+    }
+  };
 
   return (
     <footer className="bg-brand-black text-white">
@@ -60,9 +68,10 @@ export default function Footer() {
             <div className="w-full max-w-xl relative">
               <input
                 type="text"
-                placeholder="Enter City, State or Zip Code"
+                placeholder="Enter City"
                 value={zip}
                 onChange={(e) => setZip(e.target.value)}
+                onKeyDown={handleKeyDown}
                 className="w-full bg-transparent border-b-2 border-black/50 text-black placeholder:text-black pb-3 text-xl focus:outline-none focus:border-black transition-colors"
               />
               <Link href={`/dealers?search=${zip}`} className="absolute right-0 top-1 text-black hover:text-black/70 transition-colors">

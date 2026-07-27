@@ -94,7 +94,7 @@ export default function BrandStrip() {
                     <img
                       src={brand.logo}
                       alt={brand.name}
-                      className="max-h-20 max-w-[95%] object-contain drop-shadow-sm"
+                      className="max-h-12 max-w-[65%] object-contain drop-shadow-sm"
                     />
                   </div>
                 </div>
