@@ -5,9 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const vehicleTypes = [
-  { name: "Car", image: "/images/vehicles/car.jpg", link: "/brands/yokohama/passenger-car" },
-  { name: "SUV", image: "/images/vehicles/suv.avif", link: "/brands/yokohama/suv" },
-  { name: "Truck", image: "/images/vehicles/truck.jpg", link: "/brands/goodyear/goodyear-truck" },
+  { name: "Car", image: "/images/vehicles/car.jpg", link: "/brands" },
+  { name: "SUV", image: "/images/vehicles/suv.avif", link: "/brands" },
+  { name: "Truck", image: "/images/vehicles/truck.jpg", link: "/brands" },
 ];
 
 export default function FeaturedCategories() {
