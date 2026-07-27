@@ -113,12 +113,12 @@ export default function CategoryProductsPage() {
             {/* Left Sidebar Filter */}
             <aside className="w-full lg:w-64 flex-shrink-0">
                <div className="sticky top-32 border border-black/10 shadow-sm rounded-t-sm overflow-hidden">
-                  <div className="bg-[#1f5cc0] text-white p-4 border-b border-black/10">
-                     <h3 className="text-lg font-semibold tracking-wide">Tire Family</h3>
+                  <div className="bg-brand-black text-brand-yellow p-4 border-b border-brand-yellow/20">
+                     <h3 className="text-lg font-semibold tracking-wide uppercase">Tire Family</h3>
                   </div>
                   <ul className="bg-white max-h-[60vh] overflow-y-auto custom-scrollbar">
                      <li 
-                        className={`cursor-pointer px-5 py-3 border-b border-black/5 hover:bg-gray-50 transition-colors ${!activeFamily ? 'font-bold bg-gray-50 border-l-4 border-l-[#1f5cc0]' : 'border-l-4 border-l-transparent text-gray-700'}`}
+                        className={`cursor-pointer px-5 py-3 border-b border-black/5 hover:bg-gray-50 transition-colors ${!activeFamily ? 'font-bold bg-gray-50 border-l-4 border-brand-yellow' : 'border-l-4 border-l-transparent text-gray-700'}`}
                         onClick={() => setActiveFamily(null)}
                      >
                         All Families
@@ -126,7 +126,7 @@ export default function CategoryProductsPage() {
                      {families.map((family) => (
                         <li 
                            key={family}
-                           className={`cursor-pointer px-5 py-3 border-b border-black/5 hover:bg-gray-50 transition-colors ${activeFamily === family ? 'font-bold bg-gray-50 border-l-4 border-l-[#1f5cc0]' : 'border-l-4 border-l-transparent text-gray-700'}`}
+                           className={`cursor-pointer px-5 py-3 border-b border-black/5 hover:bg-gray-50 transition-colors ${activeFamily === family ? 'font-bold bg-gray-50 border-l-4 border-brand-yellow' : 'border-l-4 border-l-transparent text-gray-700'}`}
                            onClick={() => setActiveFamily(family)}
                         >
                            {family}
@@ -162,7 +162,7 @@ export default function CategoryProductsPage() {
                   </p>
                   <button
                     onClick={() => setActiveFamily(null)}
-                    className="inline-flex items-center gap-2 mt-4 text-[#1f5cc0] font-semibold hover:underline"
+                    className="inline-flex items-center gap-2 mt-4 text-brand-yellow-dark font-semibold hover:underline"
                   >
                     Clear Filter
                   </button>

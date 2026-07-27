@@ -119,7 +119,7 @@ export default function HorizontalProductCard({
           <div className="flex flex-wrap items-center gap-4 border-t border-black/10 pt-6">
             <Link 
                href={`/brands/${brandSlug}/${categorySlug}/${slug}`}
-               className="flex items-center gap-2 px-6 py-3 bg-[#4a4a4a] hover:bg-brand-black text-white font-bold text-xs uppercase tracking-wider transition-colors skew-x-[-10deg]"
+               className="flex items-center gap-2 px-6 py-3 bg-brand-charcoal hover:bg-brand-black text-white font-bold text-xs uppercase tracking-wider transition-colors skew-x-[-10deg]"
             >
                <span className="skew-x-[10deg] flex items-center gap-2">
                   <FileText size={16} />
@@ -139,7 +139,7 @@ export default function HorizontalProductCard({
                href={`https://wa.me/923004058489?text=${encodeURIComponent(`Hi, I'm interested in ${name} (${size || ""}). Please provide a quote.`)}`}
                target="_blank"
                rel="noopener noreferrer"
-               className="ml-auto flex items-center gap-2 px-8 py-3 bg-[#c93232] hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider transition-colors skew-x-[-10deg] shadow-md"
+               className="ml-auto flex items-center gap-2 px-8 py-3 bg-brand-yellow hover:bg-brand-yellow-dark text-brand-black font-bold text-xs uppercase tracking-wider transition-colors skew-x-[-10deg] shadow-md"
             >
                <span className="skew-x-[10deg] flex items-center gap-2">
                   Buy Now <ChevronRight size={14} />
