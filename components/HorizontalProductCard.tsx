@@ -135,16 +135,6 @@ export default function HorizontalProductCard({
                Find a Dealer <ChevronRight size={14} className="text-brand-yellow-dark" />
             </Link>
 
-            <a 
-               href={`https://wa.me/923004058489?text=${encodeURIComponent(`Hi, I'm interested in ${name} (${size || ""}). Please provide a quote.`)}`}
-               target="_blank"
-               rel="noopener noreferrer"
-               className="ml-auto flex items-center gap-2 px-8 py-3 bg-brand-yellow hover:bg-brand-yellow-dark text-brand-black font-bold text-xs uppercase tracking-wider transition-colors skew-x-[-10deg] shadow-md"
-            >
-               <span className="skew-x-[10deg] flex items-center gap-2">
-                  Buy Now <ChevronRight size={14} />
-               </span>
-            </a>
           </div>
 
         </div>
