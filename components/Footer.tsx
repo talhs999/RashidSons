@@ -109,7 +109,7 @@ export default function Footer() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           <div>
-             <h3 className="font-heading font-bold uppercase text-white tracking-widest text-xs mb-6">Company Info</h3>
+             <h3 className="font-bold uppercase text-white tracking-widest text-xs mb-6">Company Info</h3>
              <ul className="space-y-4">
                <li><Link href="/about" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">About Us</Link></li>
                <li><Link href="/contact" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Contact Us</Link></li>
@@ -117,7 +117,7 @@ export default function Footer() {
              </ul>
           </div>
           <div>
-             <h3 className="font-heading font-bold uppercase text-white tracking-widest text-xs mb-6">Tire Families</h3>
+             <h3 className="font-bold uppercase text-white tracking-widest text-xs mb-6">Tire Families</h3>
              <ul className="space-y-4">
                <li><Link href="/brands/yokohama" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Yokohama</Link></li>
                <li><Link href="/brands/goodyear" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Goodyear</Link></li>
@@ -128,7 +128,7 @@ export default function Footer() {
              </ul>
           </div>
           <div>
-             <h3 className="font-heading font-bold uppercase text-white tracking-widest text-xs mb-6">Quick Links</h3>
+             <h3 className="font-bold uppercase text-white tracking-widest text-xs mb-6">Quick Links</h3>
              <ul className="space-y-4">
                <li><Link href="/brands" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Tire Finder</Link></li>
                <li><Link href="#" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Promotions</Link></li>
@@ -138,7 +138,7 @@ export default function Footer() {
              </ul>
           </div>
           <div>
-             <h3 className="font-heading font-bold uppercase text-white tracking-widest text-xs mb-6">Main Branch</h3>
+             <h3 className="font-bold uppercase text-white tracking-widest text-xs mb-6">Main Branch</h3>
              <div className="w-full h-32 rounded-lg overflow-hidden border border-white/10 mb-3">
                 <iframe
                   src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Sardar%20Enterprises,%20Circular%20Rd,%20Badami%20Bagh,%20Lahore&t=&z=13&ie=UTF8&iwloc=B&output=embed"
