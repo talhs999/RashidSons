@@ -136,11 +136,13 @@ export default function SizingInformationPage() {
                 </p>
               </div>
 
-              {/* Image Placeholder 2 */}
-              <div className="mt-6 w-full aspect-[16/5] bg-white/5 rounded-2xl border-2 border-dashed border-white/20 flex flex-col items-center justify-center text-white/40">
-                <ImageIcon size={32} className="mb-2 opacity-50" />
-                <p className="font-heading uppercase tracking-widest font-bold text-sm">Image Placeholder 2</p>
-                <p className="text-xs mt-1">Upload Tire Dimensions Graphic Here</p>
+              {/* Image 2: Tire Dimensions Graphic */}
+              <div className="mt-6 w-full rounded-2xl overflow-hidden shadow-lg border border-white/10">
+                <img 
+                  src="/images/tire-dimensions-yellow.jpg" 
+                  alt="Tire Dimensions Graphic" 
+                  className="w-full h-auto object-contain bg-[#111111]"
+                />
               </div>
             </div>
           </motion.div>
