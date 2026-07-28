@@ -9,6 +9,19 @@ import {
   MapPin,
   Phone,
   Quote,
+  Store,
+  TrendingUp,
+  Building2,
+  Globe,
+  Award,
+  Compass,
+  Flag,
+  Layers,
+  ShieldCheck,
+  Briefcase,
+  Truck,
+  Building,
+  Sparkles,
 } from "lucide-react";
 
 const timeline = [
@@ -17,90 +30,105 @@ const timeline = [
     title: "1st Retail Shop",
     description:
       "1st retail shop of J Rashid & Sons opened at Neela Gumbad, Lahore with the import of Firestone Tyres from USA",
+    icon: Store,
   },
   {
     year: "1950",
     title: "Wholesale Operations Started",
     description:
       "Wholesale operations started with 2nd retail shop in Bahadur Shah Market, Karachi covering all Pakistan",
+    icon: TrendingUp,
   },
   {
     year: "1955",
     title: "3rd Retail Shop",
     description:
       "3rd retail shop opened in Lahore",
+    icon: Building2,
   },
   {
     year: "1967",
     title: "Yokohama Import",
     description:
       "Started the import of Yokohama and 4th retail outlet opened in Lahore",
+    icon: Globe,
   },
   {
     year: "1970",
     title: "Bridgestone Dealer",
     description:
       "Became Bridgestone's exclusive Commercial and PCR dealer for Punjab, Pakistan",
+    icon: Award,
   },
   {
     year: "1982",
     title: "Hankook Import",
     description:
       "Imported Korean Brand \"Hankook\" for the 1st time in Pakistan",
+    icon: Compass,
   },
   {
     year: "2002",
     title: "International Operations",
     description:
       "Ventured into international operations with the name of JR Worldwide Ltd, covering South American and Caribbean markets.",
+    icon: Globe,
   },
   {
     year: "2005",
     title: "UK & EU Operations",
     description:
       "JR Worldwide UK Ltd. was formed to manage UK & EU operations",
+    icon: Flag,
   },
   {
     year: "2008",
     title: "Middle East & Africa",
     description:
       "JR Worldwide FZE Ltd. opened in UAE to manage Middle East & African Markets",
+    icon: Layers,
   },
   {
     year: "2012",
     title: "Turkey Operations",
     description:
       "JR Worldwide Ltd. started its operations in Turkey covering sales in Turkey, Iraq & CIS",
+    icon: ShieldCheck,
   },
   {
     year: "2015",
     title: "USA & Canada",
     description:
       "JR Worldwide Ltd. USA started its operations to cover USA & Canada",
+    icon: Briefcase,
   },
   {
     year: "2018",
     title: "Best Drive Franchise",
     description:
       "Opened the first-ever Store with the Franchise concept \"Best Drive\" in Pakistan",
+    icon: Award,
   },
   {
     year: "2020",
     title: "6th Retail Location",
     description:
       "6th retail location was added at Truck Adda Lahore to cover both PCR & TBR sales",
+    icon: Truck,
   },
   {
     year: "2021",
     title: "1st Flagship Store",
     description:
       "Proudly opens Pakistan's 1st ever Flagship Tyre Retail Store in Faisal Town, Lahore",
+    icon: Store,
   },
   {
     year: "2023",
     title: "2nd Flagship Store",
     description:
       "Proudly opens Pakistan 2nd ever Flagship Tyre Retail Store in DHA - Kamaha Lahore",
+    icon: Building,
   },
 ];
 
@@ -321,64 +349,89 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 lg:py-28 bg-cream">
-        <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
+      <section className="py-24 lg:py-36 bg-brand-black text-white relative overflow-hidden border-t border-white/10">
+        {/* Animated ambient glowing spheres */}
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-brand-yellow/10 rounded-full blur-[140px] pointer-events-none animate-pulse" />
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-brand-yellow/5 rounded-full blur-[140px] pointer-events-none" />
+
+        <div className="max-w-[1400px] mx-auto px-4 lg:px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-14"
+            className="text-center mb-20"
           >
-            <div className="inline-flex items-center justify-center px-3 py-1.5 rounded bg-black border border-brand-yellow/20 text-xs text-brand-yellow uppercase tracking-[0.2em] font-bold mb-4 shadow-sm">
+            <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-xs text-brand-yellow uppercase tracking-[0.25em] font-bold mb-4 shadow-[0_0_20px_rgba(255,193,7,0.15)] backdrop-blur-md">
+              <Sparkles size={14} className="animate-spin text-brand-yellow" style={{ animationDuration: '4s' }} />
               Our Journey
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-brand-black uppercase font-heading">
-              A Legacy of Excellence
+            <h2 className="text-4xl lg:text-6xl font-extrabold text-white uppercase font-heading tracking-tighter">
+              A LEGACY OF <span className="text-brand-yellow">EXCELLENCE</span>
             </h2>
+            <p className="text-white/60 text-lg max-w-2xl mx-auto mt-4 font-sans">
+              From our humble retail beginnings in 1948 to becoming Pakistan&apos;s leading nationwide tyre conglomerate.
+            </p>
           </motion.div>
 
           <div className="relative">
-            {/* Timeline line */}
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-brand-black/10 -translate-x-1/2" />
+            {/* Glowing Timeline line */}
+            <div className="hidden lg:block absolute left-1/2 top-4 bottom-4 w-1 bg-gradient-to-b from-brand-yellow via-brand-yellow/40 to-transparent -translate-x-1/2 shadow-[0_0_15px_rgba(255,193,7,0.5)] rounded-full" />
 
-            <div className="space-y-8 lg:space-y-0">
-              {timeline.map((item, i) => (
-                <motion.div
-                  key={item.year}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className={`relative lg:grid lg:grid-cols-2 lg:gap-12 ${
-                    i % 2 === 0 ? "" : "lg:direction-rtl"
-                  }`}
-                >
-                  {/* Center line dot */}
-                  <div className="hidden lg:flex absolute top-6 left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-brand-yellow border-4 border-brand-black z-20 shadow-md" />
-
-                  <div
-                    className={`${i % 2 === 0 ? "lg:text-right" : "lg:col-start-2"} relative pb-8 lg:pb-16`}
+            <div className="space-y-12 lg:space-y-0">
+              {timeline.map((item, i) => {
+                const Icon = item.icon || Calendar;
+                const isEven = i % 2 === 0;
+                return (
+                  <motion.div
+                    key={item.year}
+                    initial={{ opacity: 0, y: 40, x: isEven ? -30 : 30 }}
+                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className={`relative lg:grid lg:grid-cols-2 lg:gap-16 items-center ${
+                      isEven ? "" : "lg:direction-rtl"
+                    }`}
                   >
-                    <div className="bg-white rounded-2xl p-6 lg:p-8 border border-brand-black/5 hover:shadow-lg transition-shadow">
-                      <div className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 bg-black rounded-lg border border-brand-yellow/20 shadow-sm">
-                        <Calendar
-                          size={15}
-                          className="text-brand-yellow"
-                        />
-                        <span className="text-sm font-bold text-brand-yellow">
-                          {item.year}
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-bold text-brand-black mb-2 font-heading">
-                        {item.title}
-                      </h3>
-                      <p className="text-brand-gray leading-relaxed">
-                        {item.description}
-                      </p>
+                    {/* Center line pulsing dot */}
+                    <div className="hidden lg:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-brand-black border-2 border-brand-yellow items-center justify-center z-20 shadow-[0_0_20px_rgba(255,193,7,0.8)] group-hover:scale-125 transition-transform duration-300">
+                      <div className="w-3 h-3 rounded-full bg-brand-yellow animate-ping" />
+                      <div className="absolute w-3 h-3 rounded-full bg-brand-yellow" />
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+
+                    <div
+                      dir="ltr"
+                      className={`${isEven ? "lg:text-left" : "lg:col-start-2 lg:text-left"} relative pb-6 lg:pb-12`}
+                    >
+                      <motion.div 
+                        whileHover={{ y: -6, scale: 1.02 }}
+                        transition={{ duration: 0.3 }}
+                        className="bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl rounded-3xl p-8 border border-white/15 hover:border-brand-yellow/60 transition-all duration-500 shadow-[0_10px_30px_rgba(0,0,0,0.5)] group relative overflow-hidden"
+                      >
+                        {/* Glow effect on hover */}
+                        <div className="absolute -top-20 -right-20 w-40 h-40 bg-brand-yellow/15 rounded-full blur-2xl group-hover:bg-brand-yellow/30 transition-all duration-500 pointer-events-none" />
+
+                        <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
+                          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-yellow text-brand-black font-extrabold rounded-full text-sm uppercase tracking-wider shadow-[0_0_15px_rgba(255,193,7,0.4)]">
+                            <Calendar size={15} className="text-brand-black" />
+                            <span>{item.year}</span>
+                          </div>
+                          
+                          <div className="w-12 h-12 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-brand-yellow group-hover:scale-110 group-hover:bg-brand-yellow group-hover:text-brand-black transition-all duration-300 shadow-inner">
+                            <Icon size={24} />
+                          </div>
+                        </div>
+
+                        <h3 className="text-2xl font-extrabold text-white mb-3 group-hover:text-brand-yellow transition-colors font-heading tracking-wide">
+                          {item.title}
+                        </h3>
+                        <p className="text-white/75 leading-relaxed font-sans text-base">
+                          {item.description}
+                        </p>
+                      </motion.div>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>
