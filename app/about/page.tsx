@@ -14,39 +14,93 @@ import {
 const timeline = [
   {
     year: "1948",
-    title: "The Beginning",
+    title: "1st Retail Shop",
     description:
-      "J. Rashid & Sons founded in Lahore's historic Anarkali bazaar, starting as a small tyre trading business.",
+      "1st retail shop of J Rashid & Sons opened at Neela Gumbad, Lahore with the import of Firestone Tyres from USA",
   },
   {
-    year: "1970s",
-    title: "Growth & Expansion",
+    year: "1950",
+    title: "Wholesale Operations Started",
     description:
-      "Expanded operations across Lahore with multiple branches. Established strong relationships with international tyre manufacturers.",
+      "Wholesale operations started with 2nd retail shop in Bahadur Shah Market, Karachi covering all Pakistan",
   },
   {
-    year: "1990s",
-    title: "Official Distributor",
+    year: "1955",
+    title: "3rd Retail Shop",
     description:
-      "Became the official importer and distributor of Yokohama and Goodyear tyres in Pakistan. A landmark achievement.",
+      "3rd retail shop opened in Lahore",
   },
   {
-    year: "2000s",
-    title: "Nationwide Network",
+    year: "1967",
+    title: "Yokohama Import",
     description:
-      "Built a wholesale dealer network spanning all major cities of Pakistan. Over 200 dealers strong.",
+      "Started the import of Yokohama and 4th retail outlet opened in Lahore",
   },
   {
-    year: "2020s",
-    title: "Premium Multi-Brand",
+    year: "1970",
+    title: "Bridgestone Dealer",
     description:
-      "Added Michelin, Blackarrow & Warrior to the portfolio. Modernized service centers with 3D alignment and advanced equipment.",
+      "Became Bridgestone's exclusive Commercial and PCR dealer for Punjab, Pakistan",
   },
   {
-    year: "Today",
-    title: "Leading the Industry",
+    year: "1982",
+    title: "Hankook Import",
     description:
-      "70+ years of excellence. 5 global brands, 6 branches, 200+ dealers. Pakistan's most trusted tyre partner.",
+      "Imported Korean Brand \"Hankook\" for the 1st time in Pakistan",
+  },
+  {
+    year: "2002",
+    title: "International Operations",
+    description:
+      "Ventured into international operations with the name of JR Worldwide Ltd, covering South American and Caribbean markets.",
+  },
+  {
+    year: "2005",
+    title: "UK & EU Operations",
+    description:
+      "JR Worldwide UK Ltd. was formed to manage UK & EU operations",
+  },
+  {
+    year: "2008",
+    title: "Middle East & Africa",
+    description:
+      "JR Worldwide FZE Ltd. opened in UAE to manage Middle East & African Markets",
+  },
+  {
+    year: "2012",
+    title: "Turkey Operations",
+    description:
+      "JR Worldwide Ltd. started its operations in Turkey covering sales in Turkey, Iraq & CIS",
+  },
+  {
+    year: "2015",
+    title: "USA & Canada",
+    description:
+      "JR Worldwide Ltd. USA started its operations to cover USA & Canada",
+  },
+  {
+    year: "2018",
+    title: "Best Drive Franchise",
+    description:
+      "Opened the first-ever Store with the Franchise concept \"Best Drive\" in Pakistan",
+  },
+  {
+    year: "2020",
+    title: "6th Retail Location",
+    description:
+      "6th retail location was added at Truck Adda Lahore to cover both PCR & TBR sales",
+  },
+  {
+    year: "2021",
+    title: "1st Flagship Store",
+    description:
+      "Proudly opens Pakistan's 1st ever Flagship Tyre Retail Store in Faisal Town, Lahore",
+  },
+  {
+    year: "2023",
+    title: "2nd Flagship Store",
+    description:
+      "Proudly opens Pakistan 2nd ever Flagship Tyre Retail Store in DHA - Kamaha Lahore",
   },
 ];
 
