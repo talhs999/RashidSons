@@ -493,7 +493,7 @@ export default function AboutPage() {
                           </div>
                         </div>
 
-                        <h3 className="text-2xl font-extrabold text-brand-black mb-3 group-hover:text-amber-600 transition-colors font-heading tracking-wide relative z-10">
+                        <h3 className="text-2xl font-extrabold text-brand-black mb-3 transition-colors font-heading tracking-wide relative z-10">
                           {item.title}
                         </h3>
                         <p className="text-brand-gray/90 leading-relaxed font-sans text-base relative z-10 font-medium">
