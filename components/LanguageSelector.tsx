@@ -26,7 +26,7 @@ const naLanguages = [
   { code: "en", abbr: "US", label: "English", flag: "us" },
 ];
 
-const flagUrl = (code: string) => `https://flagcdn.com/w40/${code}.png`;
+const flagUrl = (code: string) => `https://hatscripts.github.io/circle-flags/flags/${code}.svg`;
 
 // Store original text so we can revert
 const originalTexts = new Map<Node, string>();
@@ -251,7 +251,7 @@ export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorPr
                           : "text-brand-gray hover:text-brand-black"
                       }`}
                     >
-                      <span className="text-xl">{lang.flag}</span>
+                      <img src={flagUrl(lang.flag)} alt={lang.abbr} className="w-6 h-4 object-cover rounded-sm shadow-sm" />
                       <span className="text-xs font-semibold tracking-widest text-brand-black/60 group-hover:text-brand-black">{lang.abbr}</span>
                       <span className="text-base group-hover:font-bold">{lang.label}</span>
                     </button>
