@@ -1,11 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { Globe } from "lucide-react";
-import LanguageSelector from "./LanguageSelector";
+import LanguageSelector, { translatePage } from "./LanguageSelector";
 
 export default function FloatingLanguageToggle() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const prevPathname = useRef(pathname);
+
+  // Auto-translate when navigating to a new page
+  useEffect(() => {
+    const savedLang = localStorage.getItem("jrs-lang");
+    if (savedLang && savedLang !== "en") {
+      // Small delay to let the new page render its content first
+      const timer = setTimeout(() => {
+        translatePage(savedLang);
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [pathname]);
 
   return (
     <>

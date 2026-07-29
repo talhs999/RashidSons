@@ -94,7 +94,11 @@ async function translateTexts(texts: string[], targetLang: string): Promise<stri
   return results;
 }
 
-async function translatePage(targetLang: string): Promise<void> {
+export function getCurrentLang() {
+  return currentLang;
+}
+
+export async function translatePage(targetLang: string): Promise<void> {
   // If going back to English, restore originals
   if (targetLang === "en") {
     originalTexts.forEach((original, node) => {
