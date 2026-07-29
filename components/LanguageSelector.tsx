@@ -9,20 +9,20 @@ interface LanguageSelectorProps {
 }
 
 const globalLanguages = [
-  { code: "en", label: "English", flag: "🇺🇸" },
-  { code: "es", label: "Español", flag: "🇪🇸" },
-  { code: "pt", label: "Português", flag: "🇧🇷" },
-  { code: "ar", label: "العربية", flag: "🇸🇦" },
-  { code: "fr", label: "Français", flag: "🇫🇷" },
-  { code: "ja", label: "日本語", flag: "🇯🇵" },
-  { code: "ko", label: "한국어", flag: "🇰🇷" },
+  { code: "en", abbr: "US", label: "English", flag: "🇺🇸" },
+  { code: "es", abbr: "ES", label: "Español", flag: "🇪🇸" },
+  { code: "pt", abbr: "BR", label: "Português", flag: "🇧🇷" },
+  { code: "ar", abbr: "SA", label: "العربية", flag: "🇸🇦" },
+  { code: "fr", abbr: "FR", label: "Français", flag: "🇫🇷" },
+  { code: "ja", abbr: "JP", label: "日本語", flag: "🇯🇵" },
+  { code: "ko", abbr: "KR", label: "한국어", flag: "🇰🇷" },
 ];
 
 const naLanguages = [
-  { code: "es", label: "Español", flag: "🇲🇽" },
-  { code: "pt", label: "Português", flag: "🇧🇷" },
-  { code: "fr", label: "Français", flag: "🇨🇦" },
-  { code: "en", label: "English", flag: "🇺🇸" },
+  { code: "es", abbr: "MX", label: "Español", flag: "🇲🇽" },
+  { code: "pt", abbr: "BR", label: "Português", flag: "🇧🇷" },
+  { code: "fr", abbr: "CA", label: "Français", flag: "🇨🇦" },
+  { code: "en", abbr: "US", label: "English", flag: "🇺🇸" },
 ];
 
 export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorProps) {
@@ -79,7 +79,7 @@ export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorPr
             <div className="p-8 md:p-12 space-y-12 max-h-[75vh] overflow-y-auto">
               {/* Global Site */}
               <div>
-                <h3 className="text-2xl font-extrabold mb-8 font-heading text-brand-black border-l-4 border-brand-yellow pl-4">
+                <h3 className="text-xl font-extrabold mb-6 font-heading text-brand-black border-l-4 border-brand-yellow pl-3 uppercase tracking-wider">
                   Global Site
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">
@@ -87,10 +87,11 @@ export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorPr
                     <button
                       key={`global-${lang.code}-${idx}`}
                       onClick={() => handleTranslate(lang.code)}
-                      className="text-left text-brand-gray hover:text-brand-black hover:font-bold transition-all duration-300 hover:translate-x-2 transform flex items-center gap-3 group text-lg"
+                      className="text-left text-brand-gray hover:text-brand-black transition-all duration-300 hover:translate-x-2 transform flex items-center gap-3 group"
                     >
-                      <span className="text-2xl">{lang.flag}</span>
-                      <span>{lang.label}</span>
+                      <span className="text-xl">{lang.flag}</span>
+                      <span className="text-xs font-semibold tracking-widest text-brand-black/60 group-hover:text-brand-black">{lang.abbr}</span>
+                      <span className="text-base group-hover:font-bold">{lang.label}</span>
                     </button>
                   ))}
                 </div>
@@ -98,7 +99,7 @@ export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorPr
 
               {/* North America Site */}
               <div>
-                <h3 className="text-2xl font-extrabold mb-8 font-heading text-brand-black border-l-4 border-brand-yellow pl-4">
+                <h3 className="text-xl font-extrabold mb-6 font-heading text-brand-black border-l-4 border-brand-yellow pl-3 uppercase tracking-wider">
                   North America Site
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">
@@ -106,10 +107,11 @@ export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorPr
                     <button
                       key={`na-${lang.code}-${idx}`}
                       onClick={() => handleTranslate(lang.code)}
-                      className="text-left text-brand-gray hover:text-brand-black hover:font-bold transition-all duration-300 hover:translate-x-2 transform flex items-center gap-3 group text-lg"
+                      className="text-left text-brand-gray hover:text-brand-black transition-all duration-300 hover:translate-x-2 transform flex items-center gap-3 group"
                     >
-                      <span className="text-2xl">{lang.flag}</span>
-                      <span>{lang.label}</span>
+                      <span className="text-xl">{lang.flag}</span>
+                      <span className="text-xs font-semibold tracking-widest text-brand-black/60 group-hover:text-brand-black">{lang.abbr}</span>
+                      <span className="text-base group-hover:font-bold">{lang.label}</span>
                     </button>
                   ))}
                 </div>

@@ -82,9 +82,22 @@
 .goog-te-banner-frame.skiptranslate,
 .goog-te-gadget-icon,
 .goog-te-gadget-simple,
-#goog-gt-tt {
+#goog-gt-tt,
+.goog-te-balloon-frame {
   display: none !important;
+  visibility: hidden !important;
 }
+
 body {
   top: 0px !important;
+  position: static !important;
+}
+
+html {
+  margin-top: 0px !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
 }
