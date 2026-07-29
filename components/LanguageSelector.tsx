@@ -10,21 +10,23 @@ interface LanguageSelectorProps {
 }
 
 const globalLanguages = [
-  { code: "en", abbr: "US", label: "English", flag: "🇺🇸" },
-  { code: "es", abbr: "ES", label: "Español", flag: "🇪🇸" },
-  { code: "pt", abbr: "BR", label: "Português", flag: "🇧🇷" },
-  { code: "ar", abbr: "SA", label: "العربية", flag: "🇸🇦" },
-  { code: "fr", abbr: "FR", label: "Français", flag: "🇫🇷" },
-  { code: "ja", abbr: "JP", label: "日本語", flag: "🇯🇵" },
-  { code: "ko", abbr: "KR", label: "한국어", flag: "🇰🇷" },
+  { code: "en", abbr: "US", label: "English", flag: "us" },
+  { code: "es", abbr: "ES", label: "Español", flag: "es" },
+  { code: "pt", abbr: "BR", label: "Português", flag: "br" },
+  { code: "ar", abbr: "SA", label: "العربية", flag: "sa" },
+  { code: "fr", abbr: "FR", label: "Français", flag: "fr" },
+  { code: "ja", abbr: "JP", label: "日本語", flag: "jp" },
+  { code: "ko", abbr: "KR", label: "한국어", flag: "kr" },
 ];
 
 const naLanguages = [
-  { code: "es", abbr: "MX", label: "Español", flag: "🇲🇽" },
-  { code: "pt", abbr: "BR", label: "Português", flag: "🇧🇷" },
-  { code: "fr", abbr: "CA", label: "Français", flag: "🇨🇦" },
-  { code: "en", abbr: "US", label: "English", flag: "🇺🇸" },
+  { code: "es", abbr: "MX", label: "Español", flag: "mx" },
+  { code: "pt", abbr: "BR", label: "Português", flag: "br" },
+  { code: "fr", abbr: "CA", label: "Français", flag: "ca" },
+  { code: "en", abbr: "US", label: "English", flag: "us" },
 ];
+
+const flagUrl = (code: string) => `https://flagcdn.com/w40/${code}.png`;
 
 // Store original text so we can revert
 const originalTexts = new Map<Node, string>();
@@ -225,7 +227,7 @@ export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorPr
                           : "text-brand-gray hover:text-brand-black"
                       }`}
                     >
-                      <span className="text-xl">{lang.flag}</span>
+                      <img src={flagUrl(lang.flag)} alt={lang.abbr} className="w-6 h-4 object-cover rounded-sm shadow-sm" />
                       <span className="text-xs font-semibold tracking-widest text-brand-black/60 group-hover:text-brand-black">{lang.abbr}</span>
                       <span className="text-base group-hover:font-bold">{lang.label}</span>
                     </button>
