@@ -50,8 +50,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
-      <body className="min-h-screen flex flex-col antialiased">
+    <html lang="en" className={`${inter.variable} ${oswald.variable}`} suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col antialiased" suppressHydrationWarning>
         <NextTopLoader color="#ffc107" showSpinner={false} />
         <LayoutWrapper>{children}</LayoutWrapper>
         
