@@ -9,7 +9,6 @@ import BrandsShowcase from "@/components/BrandsShowcase";
 import AboutUsTeaser from "@/components/AboutUsTeaser";
 import FeaturedNews from "@/components/FeaturedNews";
 import SplitCTA from "@/components/SplitCTA";
-import FloatingLanguageToggle from "@/components/FloatingLanguageToggle";
 
 import { getBrands } from "@/lib/localDb";
 
@@ -18,7 +17,6 @@ export default function HomePage() {
 
   return (
     <>
-      <FloatingLanguageToggle />
       <HeroVideo />
       <ComfortTicker />
       <CertifiedPartners brands={brands} />

@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingLanguageToggle from "@/components/FloatingLanguageToggle";
 
 export default function LayoutWrapper({
   children,
@@ -15,6 +16,7 @@ export default function LayoutWrapper({
   return (
     <>
       {!isAdminOrLogin && <Navbar />}
+      {!isAdminOrLogin && <FloatingLanguageToggle />}
       <main className="flex-1">{children}</main>
       {!isAdminOrLogin && <Footer />}
     </>
