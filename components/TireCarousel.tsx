@@ -20,9 +20,9 @@ const brandData: Record<string, { id: number; image: string; title: string }[]> 
     { id: 12, image: "/images/tires/goodyear-3.png", title: "EAGLE F1 ASYMMETRIC 6" },
   ],
   Warrior: [
-    { id: 17, image: "/images/tires/advan-neova-ad09.webp", title: "ALL TERRAIN X" },
-    { id: 18, image: "/images/tires/advan-a052.png", title: "HIGHWAY MASTER" },
-    { id: 19, image: "/images/tires/advan-sport-v107.webp", title: "RUGGED GRIP 4X4" },
+    { id: 17, image: "/images/tires/warrior-1.png", title: "WARRIOR SR1" },
+    { id: 18, image: "/images/tires/warrior-2.png", title: "WARRIOR AT-PLUS" },
+    { id: 19, image: "/images/tires/warrior-3.png", title: "WARRIOR SPORT" },
   ],
   "Atlas Tyre": [
     { id: 20, image: "/images/tires/advan-apex.png", title: "ATLAS PRO MAX" },

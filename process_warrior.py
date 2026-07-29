@@ -1,29 +1,45 @@
-import sys
+import os
 from PIL import Image
 
-def remove_yellow_background(image_path, output_path):
-    try:
-        img = Image.open(image_path).convert("RGBA")
-        datas = img.getdata()
+media_dir = r"C:\Users\IQRA TRADERS\.gemini\antigravity-ide\brain\8e0a3f65-453d-45c6-bb72-8c79ef519091"
+images = [
+    "media__1785350674663.jpg",
+    "media__1785350681545.jpg",
+    "media__1785350689156.jpg"
+]
 
-        newData = []
-        for item in datas:
-            # item is (R, G, B, A)
-            # Yellow is high R, high G, low B. 
-            # Let's say if R > 200, G > 200, B < 150, we make it transparent.
-            # The warrior logo has a bright yellow background.
-            r, g, b, a = item
-            if r > 150 and g > 150 and b < 100:
-                newData.append((255, 255, 255, 0)) # transparent
-            else:
-                newData.append(item)
+output_names = [
+    "warrior-1.png",
+    "warrior-2.png",
+    "warrior-3.png"
+]
 
-        img.putdata(newData)
-        img.save(output_path, "WEBP")
-        print(f"Successfully removed yellow background from {image_path}")
-    except Exception as e:
-        print(f"Error processing {image_path}: {e}")
+out_dir = r"C:\jrashid\public\images\tires"
+os.makedirs(out_dir, exist_ok=True)
 
-if __name__ == "__main__":
-    if len(sys.argv) > 2:
-        remove_yellow_background(sys.argv[1], sys.argv[2])
+for in_name, out_name in zip(images, output_names):
+    input_path = os.path.join(media_dir, in_name)
+    output_path = os.path.join(out_dir, out_name)
+    
+    img = Image.open(input_path).convert("RGBA")
+    datas = img.getdata()
+    
+    newData = []
+    for item in datas:
+        # White background removal
+        if item[0] > 240 and item[1] > 240 and item[2] > 240:
+            newData.append((255, 255, 255, 0))
+        else:
+            newData.append(item)
+            
+    img.putdata(newData)
+    
+    # Crop to bounding box
+    bbox = img.getbbox()
+    if bbox:
+        cropped_img = img.crop(bbox)
+        cropped_img.save(output_path, "PNG")
+        print(f"Processed, cropped and saved to {output_path}")
+    else:
+        img.save(output_path, "PNG")
+        print(f"Processed and saved to {output_path} (no crop)")
