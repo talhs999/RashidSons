@@ -15,10 +15,9 @@ const brandData: Record<string, { id: number; image: string; title: string }[]> 
     { id: 5, image: "/images/tires/advan-a052.png", title: "ADVAN A052" },
   ],
   Goodyear: [
-    { id: 10, image: "/images/tires/advan-a052.png", title: "ASSURANCE TRIPLEMAX" },
-    { id: 11, image: "/images/tires/advan-fleva.png", title: "WRANGLER AT/SA+" },
-    { id: 12, image: "/images/tires/advan-neova-ad09.webp", title: "EAGLE F1 ASYMMETRIC" },
-    { id: 13, image: "/images/tires/advan-sport-v107.webp", title: "KMAX S STEER" },
+    { id: 10, image: "/images/tires/goodyear-1.png", title: "EAGLE F1 SUPERSPORT" },
+    { id: 11, image: "/images/tires/goodyear-2.png", title: "EAGLE F1 SUPERCAR" },
+    { id: 12, image: "/images/tires/goodyear-3.png", title: "EAGLE F1 ASYMMETRIC 6" },
   ],
   Warrior: [
     { id: 17, image: "/images/tires/advan-neova-ad09.webp", title: "ALL TERRAIN X" },
