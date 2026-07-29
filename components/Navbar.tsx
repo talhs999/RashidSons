@@ -4,10 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { Menu, X, ChevronDown, MapPin, Search, Globe } from "lucide-react";
+import { Menu, X, ChevronDown, MapPin, Search } from "lucide-react";
 import SearchDrawer from "./SearchDrawer";
-import LanguageSelector from "./LanguageSelector";
-
 const mainNav = [
   { name: "Brands", href: "/brands" },
   { name: "About Us", href: "/about" },
@@ -19,7 +17,6 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSearchDrawerOpen, setIsSearchDrawerOpen] = useState(false);
-  const [isLangOpen, setIsLangOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -76,12 +73,6 @@ export default function Navbar() {
 
             {/* Desktop Right CTA */}
             <div className="hidden lg:flex items-center gap-6">
-               <button 
-                 onClick={() => setIsLangOpen(true)}
-                 className="text-white hover:text-brand-yellow transition-colors relative z-10 flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/10"
-               >
-                  <Globe size={20} />
-               </button>
                <button 
                  onClick={() => setIsSearchDrawerOpen(true)}
                  className="text-white hover:text-brand-yellow transition-colors relative z-10 flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/10"
@@ -149,9 +140,6 @@ export default function Navbar() {
 
       {/* Search Drawer */}
       <SearchDrawer isOpen={isSearchDrawerOpen} onClose={() => setIsSearchDrawerOpen(false)} />
-
-      {/* Language Selector */}
-      <LanguageSelector isOpen={isLangOpen} onClose={() => setIsLangOpen(false)} />
     </>
   );
 }

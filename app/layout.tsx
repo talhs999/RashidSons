@@ -3,6 +3,7 @@ import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import NextTopLoader from "nextjs-toploader";
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -53,6 +54,23 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col antialiased">
         <NextTopLoader color="#ffc107" showSpinner={false} />
         <LayoutWrapper>{children}</LayoutWrapper>
+        
+        {/* Google Translate Integration */}
+        <div id="google_translate_element" style={{ display: "none" }}></div>
+        <Script
+          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+          strategy="afterInteractive"
+        />
+        <Script id="google-translate-init" strategy="afterInteractive">
+          {`
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                autoDisplay: false
+              }, 'google_translate_element');
+            }
+          `}
+        </Script>
       </body>
     </html>
   );

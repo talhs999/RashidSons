@@ -9,23 +9,35 @@ interface LanguageSelectorProps {
 }
 
 const globalLanguages = [
-  { code: "en", label: "English" },
-  { code: "es", label: "Español" },
-  { code: "pt", label: "Português" },
-  { code: "ar", label: "العربية" },
-  { code: "fr", label: "Français" },
-  { code: "ja", label: "日本語" },
-  { code: "ko", label: "한국어" },
+  { code: "en", label: "English", flag: "🇺🇸" },
+  { code: "es", label: "Español", flag: "🇪🇸" },
+  { code: "pt", label: "Português", flag: "🇧🇷" },
+  { code: "ar", label: "العربية", flag: "🇸🇦" },
+  { code: "fr", label: "Français", flag: "🇫🇷" },
+  { code: "ja", label: "日本語", flag: "🇯🇵" },
+  { code: "ko", label: "한국어", flag: "🇰🇷" },
 ];
 
 const naLanguages = [
-  { code: "es-na", label: "Español" },
-  { code: "pt-na", label: "Português" },
-  { code: "fr-na", label: "Français" },
-  { code: "en-na", label: "English" },
+  { code: "es", label: "Español", flag: "🇲🇽" },
+  { code: "pt", label: "Português", flag: "🇧🇷" },
+  { code: "fr", label: "Français", flag: "🇨🇦" },
+  { code: "en", label: "English", flag: "🇺🇸" },
 ];
 
 export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorProps) {
+  const handleTranslate = (langCode: string) => {
+    // Google translate select element
+    const combo = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+    if (combo) {
+      combo.value = langCode;
+      combo.dispatchEvent(new Event('change'));
+    }
+    // Set a cookie so it persists
+    document.cookie = `googtrans=/en/${langCode}; path=/`;
+    
+    onClose();
+  };
   return (
     <AnimatePresence>
       {isOpen && (
@@ -71,14 +83,14 @@ export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorPr
                   Global Site
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">
-                  {globalLanguages.map((lang) => (
+                  {globalLanguages.map((lang, idx) => (
                     <button
-                      key={lang.code}
-                      onClick={onClose}
-                      className="text-left text-brand-gray hover:text-brand-black hover:font-bold transition-all duration-300 hover:translate-x-2 transform flex items-center gap-2 group"
+                      key={`global-${lang.code}-${idx}`}
+                      onClick={() => handleTranslate(lang.code)}
+                      className="text-left text-brand-gray hover:text-brand-black hover:font-bold transition-all duration-300 hover:translate-x-2 transform flex items-center gap-3 group text-lg"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {lang.label}
+                      <span className="text-2xl">{lang.flag}</span>
+                      <span>{lang.label}</span>
                     </button>
                   ))}
                 </div>
@@ -90,14 +102,14 @@ export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorPr
                   North America Site
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">
-                  {naLanguages.map((lang) => (
+                  {naLanguages.map((lang, idx) => (
                     <button
-                      key={lang.code}
-                      onClick={onClose}
-                      className="text-left text-brand-gray hover:text-brand-black hover:font-bold transition-all duration-300 hover:translate-x-2 transform flex items-center gap-2 group"
+                      key={`na-${lang.code}-${idx}`}
+                      onClick={() => handleTranslate(lang.code)}
+                      className="text-left text-brand-gray hover:text-brand-black hover:font-bold transition-all duration-300 hover:translate-x-2 transform flex items-center gap-3 group text-lg"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {lang.label}
+                      <span className="text-2xl">{lang.flag}</span>
+                      <span>{lang.label}</span>
                     </button>
                   ))}
                 </div>

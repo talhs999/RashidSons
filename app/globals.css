@@ -77,3 +77,14 @@
 @utility animate-marquee {
   animation: scroll 20s linear infinite;
 }
+
+/* Hide Google Translate Default UI */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-icon,
+.goog-te-gadget-simple,
+#goog-gt-tt {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
