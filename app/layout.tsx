@@ -71,6 +71,26 @@ export default function RootLayout({
             }
           `}
         </Script>
+        {/* Force hide Google Translate Banner */}
+        <style dangerouslySetInnerHTML={{ __html: `
+          iframe.goog-te-banner-frame {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0px !important;
+          }
+          body {
+            top: 0px !important;
+            position: static !important;
+          }
+          html {
+            margin-top: 0px !important;
+            height: 100%;
+          }
+          #goog-gt-tt {
+            display: none !important;
+            visibility: hidden !important;
+          }
+        `}} />
       </body>
     </html>
   );
