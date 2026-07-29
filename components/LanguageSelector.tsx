@@ -1,7 +1,8 @@
 "use client";
 
-import { X, Globe } from "lucide-react";
+import { X, Globe, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 interface LanguageSelectorProps {
   isOpen: boolean;
@@ -25,19 +26,142 @@ const naLanguages = [
   { code: "en", abbr: "US", label: "English", flag: "🇺🇸" },
 ];
 
-export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorProps) {
-  const handleTranslate = (langCode: string) => {
-    // Google translate select element
-    const combo = document.querySelector('.goog-te-combo') as HTMLSelectElement;
-    if (combo) {
-      combo.value = langCode;
-      combo.dispatchEvent(new Event('change'));
-    }
-    // Set a cookie so it persists
-    document.cookie = `googtrans=/en/${langCode}; path=/`;
+// Store original text so we can revert
+const originalTexts = new Map<Node, string>();
+let currentLang = "en";
+
+function getTextNodes(root: Node): Text[] {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode: (node) => {
+      const parent = node.parentElement;
+      if (!parent) return NodeFilter.FILTER_REJECT;
+      const tag = parent.tagName;
+      // Skip script, style, noscript, textarea, input, and already-translating elements
+      if (["SCRIPT", "STYLE", "NOSCRIPT", "TEXTAREA", "CODE", "PRE"].includes(tag)) {
+        return NodeFilter.FILTER_REJECT;
+      }
+      // Skip empty or whitespace-only text
+      if (!node.textContent || !node.textContent.trim()) {
+        return NodeFilter.FILTER_REJECT;
+      }
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  });
+  const nodes: Text[] = [];
+  let n: Node | null;
+  while ((n = walker.nextNode())) {
+    nodes.push(n as Text);
+  }
+  return nodes;
+}
+
+async function translateTexts(texts: string[], targetLang: string): Promise<string[]> {
+  // Batch into chunks of max 50 texts or 5000 chars
+  const results: string[] = [];
+  const batchSize = 30;
+
+  for (let i = 0; i < texts.length; i += batchSize) {
+    const batch = texts.slice(i, i + batchSize);
+    const query = batch.map((t) => `q=${encodeURIComponent(t)}`).join("&");
     
+    try {
+      const res = await fetch(
+        `https://translate.googleapis.com/translate_a/t?client=gtx&sl=en&tl=${targetLang}&${query}`
+      );
+      const data = await res.json();
+      
+      if (Array.isArray(data)) {
+        if (batch.length === 1) {
+          // Single item returns differently
+          results.push(typeof data[0] === "string" ? data[0] : data[0]?.[0] || batch[0]);
+        } else {
+          for (let j = 0; j < batch.length; j++) {
+            const item = data[j];
+            results.push(typeof item === "string" ? item : item?.[0] || batch[j]);
+          }
+        }
+      } else {
+        results.push(...batch);
+      }
+    } catch {
+      // On error, keep originals
+      results.push(...batch);
+    }
+  }
+  
+  return results;
+}
+
+async function translatePage(targetLang: string): Promise<void> {
+  // If going back to English, restore originals
+  if (targetLang === "en") {
+    originalTexts.forEach((original, node) => {
+      node.textContent = original;
+    });
+    originalTexts.clear();
+    currentLang = "en";
+    localStorage.removeItem("jrs-lang");
+    return;
+  }
+
+  // If already translated, restore first
+  if (currentLang !== "en") {
+    originalTexts.forEach((original, node) => {
+      node.textContent = original;
+    });
+    originalTexts.clear();
+  }
+
+  const textNodes = getTextNodes(document.body);
+  const textsToTranslate: string[] = [];
+  const nodesToUpdate: Text[] = [];
+
+  for (const node of textNodes) {
+    const text = node.textContent?.trim();
+    if (text && text.length > 0) {
+      // Save original
+      if (!originalTexts.has(node)) {
+        originalTexts.set(node, node.textContent || "");
+      }
+      textsToTranslate.push(text);
+      nodesToUpdate.push(node);
+    }
+  }
+
+  if (textsToTranslate.length === 0) return;
+
+  const translated = await translateTexts(textsToTranslate, targetLang);
+
+  for (let i = 0; i < nodesToUpdate.length; i++) {
+    const node = nodesToUpdate[i];
+    const original = node.textContent || "";
+    const trimmed = original.trim();
+    // Preserve leading/trailing whitespace
+    const leading = original.substring(0, original.indexOf(trimmed));
+    const trailing = original.substring(original.indexOf(trimmed) + trimmed.length);
+    node.textContent = leading + (translated[i] || trimmed) + trailing;
+  }
+
+  currentLang = targetLang;
+  localStorage.setItem("jrs-lang", targetLang);
+}
+
+export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorProps) {
+  const [isTranslating, setIsTranslating] = useState(false);
+  const [activeLang, setActiveLang] = useState("en");
+
+  const handleTranslate = async (langCode: string) => {
+    setIsTranslating(true);
+    setActiveLang(langCode);
+    try {
+      await translatePage(langCode);
+    } catch (e) {
+      console.error("Translation failed:", e);
+    }
+    setIsTranslating(false);
     onClose();
   };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -75,6 +199,14 @@ export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorPr
               </button>
             </div>
 
+            {/* Translating overlay */}
+            {isTranslating && (
+              <div className="absolute inset-0 bg-white/80 backdrop-blur-sm z-10 flex items-center justify-center gap-3">
+                <Loader2 className="w-8 h-8 animate-spin text-brand-yellow" />
+                <span className="text-lg font-semibold text-brand-black">Translating...</span>
+              </div>
+            )}
+
             {/* Content */}
             <div className="p-8 md:p-12 space-y-12 max-h-[75vh] overflow-y-auto">
               {/* Global Site */}
@@ -87,7 +219,11 @@ export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorPr
                     <button
                       key={`global-${lang.code}-${idx}`}
                       onClick={() => handleTranslate(lang.code)}
-                      className="text-left text-brand-gray hover:text-brand-black transition-all duration-300 hover:translate-x-2 transform flex items-center gap-3 group"
+                      className={`text-left transition-all duration-300 hover:translate-x-2 transform flex items-center gap-3 group ${
+                        activeLang === lang.code
+                          ? "text-brand-black font-bold"
+                          : "text-brand-gray hover:text-brand-black"
+                      }`}
                     >
                       <span className="text-xl">{lang.flag}</span>
                       <span className="text-xs font-semibold tracking-widest text-brand-black/60 group-hover:text-brand-black">{lang.abbr}</span>
@@ -107,7 +243,11 @@ export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorPr
                     <button
                       key={`na-${lang.code}-${idx}`}
                       onClick={() => handleTranslate(lang.code)}
-                      className="text-left text-brand-gray hover:text-brand-black transition-all duration-300 hover:translate-x-2 transform flex items-center gap-3 group"
+                      className={`text-left transition-all duration-300 hover:translate-x-2 transform flex items-center gap-3 group ${
+                        activeLang === lang.code
+                          ? "text-brand-black font-bold"
+                          : "text-brand-gray hover:text-brand-black"
+                      }`}
                     >
                       <span className="text-xl">{lang.flag}</span>
                       <span className="text-xs font-semibold tracking-widest text-brand-black/60 group-hover:text-brand-black">{lang.abbr}</span>
