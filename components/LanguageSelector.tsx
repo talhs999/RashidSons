@@ -225,10 +225,10 @@ export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorPr
                     <button
                       key={`global-${lang.code}-${idx}`}
                       onClick={() => handleTranslate(lang.code)}
-                      className={`text-left transition-all duration-300 hover:translate-x-2 transform flex items-center gap-3 group ${
+                      className={`text-left transition-all duration-300 transform flex items-center gap-3 group p-3 rounded-xl ${
                         activeLang === lang.code
-                          ? "text-brand-black font-bold"
-                          : "text-brand-gray hover:text-brand-black"
+                          ? "bg-brand-yellow text-brand-black font-bold shadow-md"
+                          : "bg-white border border-gray-100 shadow-sm text-brand-gray hover:text-brand-black hover:bg-brand-yellow/20 hover:-translate-y-1 hover:shadow-md"
                       }`}
                     >
                       <img src={flagUrl(lang.flag)} alt={lang.abbr} className="w-6 h-4 object-cover rounded-sm shadow-sm" />
@@ -249,10 +249,10 @@ export default function LanguageSelector({ isOpen, onClose }: LanguageSelectorPr
                     <button
                       key={`na-${lang.code}-${idx}`}
                       onClick={() => handleTranslate(lang.code)}
-                      className={`text-left transition-all duration-300 hover:translate-x-2 transform flex items-center gap-3 group ${
+                      className={`text-left transition-all duration-300 transform flex items-center gap-3 group p-3 rounded-xl ${
                         activeLang === lang.code
-                          ? "text-brand-black font-bold"
-                          : "text-brand-gray hover:text-brand-black"
+                          ? "bg-brand-yellow text-brand-black font-bold shadow-md"
+                          : "bg-white border border-gray-100 shadow-sm text-brand-gray hover:text-brand-black hover:bg-brand-yellow/20 hover:-translate-y-1 hover:shadow-md"
                       }`}
                     >
                       <img src={flagUrl(lang.flag)} alt={lang.abbr} className="w-6 h-4 object-cover rounded-sm shadow-sm" />
