@@ -10,6 +10,8 @@ export async function saveBrand(formData: FormData) {
   const slug = formData.get("slug") as string;
   const logo_url = formData.get("logo_url") as string;
   const logo_white_url = formData.get("logo_white_url") as string;
+  const tire_image = formData.get("tire_image") as string;
+  const slogan = formData.get("slogan") as string;
   const description = formData.get("description") as string;
 
   const data = {
@@ -17,6 +19,8 @@ export async function saveBrand(formData: FormData) {
     slug,
     logo_url,
     logo_white_url,
+    tire_image,
+    slogan,
     description,
   };
 

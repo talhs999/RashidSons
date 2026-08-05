@@ -10,17 +10,18 @@ import AboutUsTeaser from "@/components/AboutUsTeaser";
 import FeaturedNews from "@/components/FeaturedNews";
 import SplitCTA from "@/components/SplitCTA";
 
-import { getBrands } from "@/lib/localDb";
+import { getBrands, getPartnersSettings } from "@/lib/localDb";
 
 export default function HomePage() {
   const brands = getBrands();
+  const partnersSettings = getPartnersSettings();
 
   return (
     <>
       <HeroVideo />
       <ComfortTicker />
-      <CertifiedPartners brands={brands} />
-      <TireFamilies />
+      <CertifiedPartners heading={partnersSettings?.heading} partners={partnersSettings?.partners} />
+      <TireFamilies brands={brands} />
       <AboutUsTeaser />
       <BrandsShowcase brands={brands} />
       <TireCarousel />

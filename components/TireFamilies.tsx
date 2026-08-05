@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 interface BrandFamilyData {
   id: number;
@@ -13,14 +13,9 @@ interface BrandFamilyData {
   logo: string;
   slogan: string;
   description: string;
-  tires: {
-    name: string;
-    image: string;
-    tag?: string;
-  }[];
 }
 
-const brandFamilies: BrandFamilyData[] = [
+const defaultBrandFamilies: BrandFamilyData[] = [
   {
     id: 1,
     name: "Yokohama",
@@ -29,7 +24,6 @@ const brandFamilies: BrandFamilyData[] = [
     slogan: "THE DEFINITION OF ALL-SEASON PERFORMANCE",
     description:
       "As the official importer of Yokohama tyres in Pakistan, J. Rashid & Sons brings world-class Japanese engineering and advanced rubber compounds to Pakistani roads.",
-    tires: [],
   },
   {
     id: 2,
@@ -39,7 +33,6 @@ const brandFamilies: BrandFamilyData[] = [
     slogan: "MADE TO FEEL GOOD & BUILT TO LAST",
     description:
       "Innovative HydroTred technology for maximum braking efficiency. Engineered for reliability across all driving conditions in Pakistan.",
-    tires: [],
   },
   {
     id: 3,
@@ -49,7 +42,6 @@ const brandFamilies: BrandFamilyData[] = [
     slogan: "TOUGH DURABILITY FOR PAKISTANI ROADS",
     description:
       "Heavy-duty construction and deep tread depth engineered to resist punctures and conquer rough road conditions with confidence.",
-    tires: [],
   },
   {
     id: 4,
@@ -59,7 +51,6 @@ const brandFamilies: BrandFamilyData[] = [
     slogan: "ENGINEERED FOR EXTREME DURABILITY",
     description:
       "Atlas Tyres deliver superior traction and durability for a wide range of vehicles, ensuring a safe and comfortable ride across Pakistan.",
-    tires: [],
   },
   {
     id: 5,
@@ -69,7 +60,6 @@ const brandFamilies: BrandFamilyData[] = [
     slogan: "RELIABLE PERFORMANCE ON EVERY JOURNEY",
     description:
       "Risen Tyres provide exceptional value and reliable performance, designed specifically to tackle tough road conditions with ease.",
-    tires: [],
   },
   {
     id: 6,
@@ -79,54 +69,28 @@ const brandFamilies: BrandFamilyData[] = [
     slogan: "PRECISION HANDLING & SUPERIOR GRIP",
     description:
       "Falken is known for its high-performance tires, offering precision handling and superior grip for sports cars and everyday driving.",
-    tires: [],
   },
 ];
 
-export default function TireFamilies() {
+export default function TireFamilies({ brands }: { brands?: any[] }) {
   const [brandIndex, setBrandIndex] = useState(0);
-  const [tireIndex, setTireIndex] = useState(1);
 
-  const activeBrand = brandFamilies[brandIndex];
-  const currentTires = activeBrand.tires;
+  // Normalize dynamic brands array from DB or default
+  const activeBrandList: BrandFamilyData[] = (brands && brands.length > 0)
+    ? brands.map((b) => ({
+        id: b.id,
+        name: b.name,
+        slug: b.slug,
+        logo: b.logo_white_url || b.logo_url || "/images/brands/yokohama-white.png",
+        slogan: b.slogan || "PREMIUM QUALITY TYRES",
+        description: b.description || "",
+      }))
+    : defaultBrandFamilies;
 
-  const handleNextBrand = () => {
-    setBrandIndex((prev) => (prev < brandFamilies.length - 1 ? prev + 1 : 0));
-    setTireIndex(1);
-  };
-
-  const handlePrevBrand = () => {
-    setBrandIndex((prev) => (prev > 0 ? prev - 1 : brandFamilies.length - 1));
-    setTireIndex(1);
-  };
-
-  const handleNextTire = () => {
-    if (tireIndex < currentTires.length - 1) {
-      setTireIndex((prev) => prev + 1);
-    } else {
-      // Wrap to next brand
-      handleNextBrand();
-    }
-  };
-
-  const handlePrevTire = () => {
-    if (tireIndex > 0) {
-      setTireIndex((prev) => prev - 1);
-    } else {
-      // Wrap to prev brand
-      handlePrevBrand();
-    }
-  };
-
-  const getOffset = (index: number) => {
-    let offset = index - tireIndex;
-    if (offset < -1 && tireIndex === 0 && index === currentTires.length - 1) offset = -1;
-    if (offset > 1 && tireIndex === currentTires.length - 1 && index === 0) offset = 1;
-    return offset;
-  };
+  const activeBrand = activeBrandList[brandIndex] || activeBrandList[0];
 
   return (
-    <section className="bg-brand-black relative min-h-[850px] flex flex-col justify-center overflow-hidden pt-16 pb-16">
+    <section className="bg-brand-black relative min-h-[750px] flex flex-col justify-center overflow-hidden pt-16 pb-16">
       {/* Background elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-black" />
@@ -175,14 +139,13 @@ export default function TireFamilies() {
         {/* Brand Tab Navigation */}
         <div className="w-full max-w-5xl mx-auto mb-10 py-2 px-2">
           <div className="flex flex-wrap items-center justify-center gap-2.5 md:gap-4 border-b border-white/10 pb-4">
-            {brandFamilies.map((brand, idx) => {
+            {activeBrandList.map((brand, idx) => {
               const isActive = idx === brandIndex;
               return (
                 <button
                   key={brand.id}
                   onClick={() => {
                     setBrandIndex(idx);
-                    setTireIndex(1);
                   }}
                   className={`relative px-3.5 py-2 rounded-xl transition-all duration-300 flex items-center gap-2 group ${
                     isActive
@@ -208,7 +171,7 @@ export default function TireFamilies() {
           </div>
         </div>
 
-        {/* Featured Brand Content (IMAGE 1 HEADER) */}
+        {/* Featured Brand Content */}
         <div className="max-w-3xl mx-auto flex flex-col items-center min-h-[280px]">
           <AnimatePresence mode="wait">
             <motion.div
@@ -247,7 +210,6 @@ export default function TireFamilies() {
           </AnimatePresence>
         </div>
       </div>
-
 
     </section>
   );

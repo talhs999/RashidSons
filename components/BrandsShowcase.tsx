@@ -4,15 +4,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
-const brandTires: Record<string, string> = {
-  yokohama: "/images/tires/advan-fleva.png",
-  goodyear: "/images/tires/advan-a052.png",
-  warrior: "/images/tires/advan-neova-ad09.webp",
-  atlas: "/images/tires/advan-apex.png",
-  risen: "/images/tires/advan-a055.webp",
-  falken: "/images/tires/advan-sport-v107.webp",
-};
-
 export default function BrandsShowcase({ brands }: { brands: any[] }) {
   const showcaseBrands = brands || [];
 
@@ -31,7 +22,7 @@ export default function BrandsShowcase({ brands }: { brands: any[] }) {
         {/* Brands Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {showcaseBrands.map((brand, i) => {
-            const tireImg = brandTires[brand.slug] || "/images/tires/advan-fleva.png";
+            const tireImg = brand.tire_image || "/images/tires/advan-fleva.png";
 
             return (
               <motion.div

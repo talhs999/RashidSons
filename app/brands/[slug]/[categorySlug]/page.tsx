@@ -4,12 +4,7 @@ import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { useState } from "react";
-import {
-  getBrandBySlug,
-  getCategoryBySlug,
-  getProductsByCategory,
-} from "@/lib/data";
+import { useState, useEffect } from "react";
 import HorizontalProductCard from "@/components/HorizontalProductCard";
 import { ChevronRight } from "lucide-react";
 
@@ -18,26 +13,45 @@ export default function CategoryProductsPage() {
   const brandSlug = params.slug as string;
   const categorySlug = params.categorySlug as string;
 
-  const brand = getBrandBySlug(brandSlug);
-  const category = getCategoryBySlug(categorySlug);
+  const [brand, setBrand] = useState<any>(null);
+  const [category, setCategory] = useState<any>(null);
+  const [categoryProducts, setCategoryProducts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [activeFamily, setActiveFamily] = useState<string | null>(null);
 
-  if (!brand || !category || category.brand_id !== brand.id) {
+  useEffect(() => {
+    fetch(`/api/brands/${brandSlug}/${categorySlug}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setBrand(data.brand);
+        setCategory(data.category);
+        setCategoryProducts(data.products || []);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, [brandSlug, categorySlug]);
+
+  if (loading) {
+    return (
+      <section className="bg-brand-black pt-32 md:pt-40 pb-16 min-h-screen flex items-center justify-center">
+        <div className="text-white/50 text-lg">Loading...</div>
+      </section>
+    );
+  }
+
+  if (!brand || !category) {
     notFound();
   }
 
-  const categoryProducts = getProductsByCategory(category.id);
-
   // Extract unique tire families from products
-  const families = Array.from(new Set(categoryProducts.map(p => {
+  const families = Array.from(new Set(categoryProducts.map((p: any) => {
     const parts = p.name.split(" ");
     const isBrand = parts[0].toLowerCase() === brand.name.toLowerCase();
     return isBrand && parts.length > 1 ? parts[1] : parts[0];
   })));
 
-  const [activeFamily, setActiveFamily] = useState<string | null>(null);
-
   const filteredProducts = activeFamily 
-    ? categoryProducts.filter(p => {
+    ? categoryProducts.filter((p: any) => {
         const parts = p.name.split(" ");
         const isBrand = parts[0].toLowerCase() === brand.name.toLowerCase();
         const f = isBrand && parts.length > 1 ? parts[1] : parts[0];
@@ -140,7 +154,7 @@ export default function CategoryProductsPage() {
             <div className="flex-1 min-w-0 pt-4 lg:pt-0">
               {filteredProducts.length > 0 ? (
                 <div className="flex flex-col">
-                  {filteredProducts.map((product, i) => (
+                  {filteredProducts.map((product: any, i: number) => (
                     <HorizontalProductCard
                       key={product.slug}
                       name={product.name}

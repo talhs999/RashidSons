@@ -30,24 +30,29 @@ export default function BrandsPage() {
             <tr>
               <th className="px-6 py-4">ID</th>
               <th className="px-6 py-4">Logo</th>
-              <th className="px-6 py-4">Name / Slug</th>
+              <th className="px-6 py-4">Brand Name & Slogan</th>
               <th className="px-6 py-4 text-right">Actions</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-white/5">
             {brands.map((brand: any) => (
               <tr key={brand.id} className="hover:bg-white/[0.02] transition-colors">
-                <td className="px-6 py-4">{brand.id}</td>
+                <td className="px-6 py-4 font-mono text-sm">{brand.id}</td>
                 <td className="px-6 py-4">
-                  <img src={brand.logo_white_url || brand.logo_url} alt={brand.name} className="h-8 object-contain" />
+                  <img src={brand.logo_white_url || brand.logo_url} alt={brand.name} className="h-8 max-w-[120px] object-contain" />
                 </td>
                 <td className="px-6 py-4">
-                  <div className="font-bold text-white">{brand.name}</div>
-                  <div className="text-xs text-white/40">{brand.slug}</div>
+                  <div className="font-bold text-white text-base">{brand.name}</div>
+                  <div className="text-xs text-brand-yellow mt-0.5 font-medium">{brand.slogan || "No slogan set"}</div>
+                  <div className="text-[11px] text-white/40 truncate max-w-md mt-0.5">{brand.description}</div>
                 </td>
-                <td className="px-6 py-4 text-right flex justify-end gap-3">
-                  <Link href={`/admin/brands/${brand.id}`} className="p-2 bg-blue-500/10 text-blue-400 rounded hover:bg-blue-500/20 transition-colors">
-                    <Edit size={16} />
+                <td className="px-6 py-4 text-right flex items-center justify-end gap-3 pt-6">
+                  <Link 
+                    href={`/admin/brands/${brand.id}`} 
+                    className="px-3 py-1.5 bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 border border-blue-500/30"
+                  >
+                    <Edit size={14} />
+                    Edit Wording & Details
                   </Link>
                   <DeleteBrandButton id={brand.id} />
                 </td>

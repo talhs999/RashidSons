@@ -5,25 +5,41 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  getBrandBySlug,
-  getCategoriesByBrand,
-  getProductsByBrand,
-  brands,
-} from "@/lib/data";
 import { ArrowRight, Package, Grid3X3 } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function BrandDetailPage() {
   const params = useParams();
   const slug = params.slug as string;
-  const brand = getBrandBySlug(slug);
+
+  const [brand, setBrand] = useState<any>(null);
+  const [brandCategories, setBrandCategories] = useState<any[]>([]);
+  const [brandProducts, setBrandProducts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`/api/brands/${slug}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setBrand(data.brand);
+        setBrandCategories(data.categories || []);
+        setBrandProducts(data.products || []);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, [slug]);
+
+  if (loading) {
+    return (
+      <section className="relative bg-brand-black pt-32 md:pt-40 pb-24 min-h-screen flex items-center justify-center">
+        <div className="text-white/50 text-lg">Loading...</div>
+      </section>
+    );
+  }
 
   if (!brand) {
     notFound();
   }
-
-  const brandCategories = getCategoriesByBrand(brand.id);
-  const brandProducts = getProductsByBrand(brand.id);
 
   return (
     <>
@@ -146,9 +162,9 @@ export default function BrandDetailPage() {
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {brandCategories.map((category, i) => {
+            {brandCategories.map((category: any, i: number) => {
               const catProducts = brandProducts.filter(
-                (p) => p.category_id === category.id
+                (p: any) => p.category_id === category.id
               );
               return (
                 <motion.div

@@ -2,15 +2,23 @@
 
 import { motion } from "framer-motion";
 
-export default function CertifiedPartners({ brands }: { brands: any[] }) {
+export default function CertifiedPartners({
+  heading = "We have over 150+ Certified Partners",
+  partners = [],
+}: {
+  heading?: string;
+  partners?: any[];
+}) {
+  const displayPartners = partners.length > 0 ? partners : [];
+
   return (
     <section className="bg-gradient-to-r from-brand-yellow to-brand-yellow-dark py-4 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 lg:px-6 flex flex-col md:flex-row items-center justify-between gap-8">
         
         {/* Heading */}
         <div className="flex-shrink-0">
-          <h2 className="text-3xl lg:text-4xl font-heading font-extrabold text-brand-black leading-tight py-4 uppercase">
-            We have over 150+<br />Certified Partners
+          <h2 className="text-2xl lg:text-3xl font-heading font-extrabold text-brand-black leading-tight py-4 uppercase max-w-xs">
+            {heading}
           </h2>
         </div>
 
@@ -25,8 +33,8 @@ export default function CertifiedPartners({ brands }: { brands: any[] }) {
             transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
             className="flex gap-14 md:gap-20 items-center whitespace-nowrap"
           >
-            {/* Repeat the brands 4 times for smooth continuous infinite marquee loop */}
-            {[...(brands || []), ...(brands || []), ...(brands || []), ...(brands || [])].map((partner, index) => (
+            {/* Repeat the partners 4 times for smooth continuous infinite marquee loop */}
+            {[...(displayPartners || []), ...(displayPartners || []), ...(displayPartners || []), ...(displayPartners || [])].map((partner, index) => (
               <div
                 key={index}
                 className="flex-shrink-0 flex items-center justify-center min-w-[120px]"
