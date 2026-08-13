@@ -144,6 +144,64 @@ export default function BrandDetailPage() {
         </div>
       </section>
 
+      {/* About Brand Section */}
+      {brand.about && (
+        <section className="py-16 lg:py-24 bg-white border-b border-brand-black/5">
+          <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+              {/* Left: Heading & Stats */}
+              <div className="lg:col-span-5">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                >
+                  <h2 className="text-3xl lg:text-4xl font-bold text-brand-black mb-8 uppercase">
+                    {brand.about.heading || `About ${brand.name}`}
+                  </h2>
+                  
+                  <div className="grid grid-cols-2 gap-6">
+                    {brand.about.founder && (
+                      <div className="bg-brand-black/5 p-4 rounded-xl border border-brand-black/10">
+                        <p className="text-xs text-brand-gray uppercase tracking-wider font-bold mb-1">Founder</p>
+                        <p className="text-sm font-semibold text-brand-black">{brand.about.founder}</p>
+                      </div>
+                    )}
+                    {brand.about.founded_year && (
+                      <div className="bg-brand-yellow/20 p-4 rounded-xl border border-brand-yellow/30">
+                        <p className="text-xs text-brand-gray uppercase tracking-wider font-bold mb-1">Founded In</p>
+                        <p className="text-sm font-semibold text-brand-black">{brand.about.founded_year}</p>
+                      </div>
+                    )}
+                    {brand.about.headquarters && (
+                      <div className="col-span-2 bg-brand-black/5 p-4 rounded-xl border border-brand-black/10">
+                        <p className="text-xs text-brand-gray uppercase tracking-wider font-bold mb-1">Headquarters</p>
+                        <p className="text-sm font-semibold text-brand-black">{brand.about.headquarters}</p>
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Right: History Text */}
+              <div className="lg:col-span-7">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  className="prose prose-lg max-w-none prose-p:text-brand-gray prose-p:leading-relaxed"
+                >
+                  <p className="text-lg lg:text-xl text-brand-black font-medium leading-relaxed mb-6">
+                    {brand.about.history}
+                  </p>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Categories */}
       <section className="py-16 lg:py-20 bg-cream">
         <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
