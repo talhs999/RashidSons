@@ -213,7 +213,7 @@ export const products: Product[] = [
       "All-terrain performance meets on-road comfort. Triple polymer tread compound delivers outstanding traction on any surface. Perfect for SUV drivers who need both highway comfort and off-road capability.",
     stock_status: "in_stock",
     featured: true,
-    images: ["/uploads/products/yokohama-geolandar-at-g015.png"],
+    images: ["/images/tires/advan-fleva.png"],
   },
   {
     id: 3,
@@ -226,7 +226,7 @@ export const products: Product[] = [
       "Premium commercial drive tyre with deep tread design for extended mileage. Engineered for long-haul operations with superior fuel efficiency.",
     stock_status: "in_stock",
     featured: false,
-    images: ["/uploads/products/yokohama-ty517.png"],
+    images: ["/images/tires/advan-fleva.png"],
   },
   {
     id: 4,
@@ -239,7 +239,7 @@ export const products: Product[] = [
       "HydroTred Technology for superior wet braking. DuraGrip Technology for longer tyre life. Perfect for Pakistani city driving with enhanced safety features.",
     stock_status: "in_stock",
     featured: true,
-    images: ["/uploads/products/goodyear-assurance-triplemax-2.png"],
+    images: ["/images/tires/goodyear-1.png"],
   },
   {
     id: 5,
@@ -252,7 +252,7 @@ export const products: Product[] = [
       "Versatile all-terrain tyre with aggressive tread pattern. Self-cleaning grooves for off-road confidence. Ideal for Pakistani terrain.",
     stock_status: "in_stock",
     featured: true,
-    images: ["/uploads/products/goodyear-wrangler-at-sa-plus.png"],
+    images: ["/images/tires/goodyear-1.png"],
   },
   {
     id: 6,
@@ -265,7 +265,7 @@ export const products: Product[] = [
       "Steer axle truck tyre with optimized footprint shape for even wear and long tread life. Built for commercial fleets.",
     stock_status: "in_stock",
     featured: false,
-    images: ["/uploads/products/goodyear-kmax-s.png"],
+    images: ["/images/tires/goodyear-1.png"],
   },
   {
     id: 7,
@@ -278,7 +278,7 @@ export const products: Product[] = [
       "Premium touring tyre with EverGrip Technology. New when worn - maintains performance throughout its life. The benchmark in premium comfort.",
     stock_status: "in_stock",
     featured: true,
-    images: ["/uploads/products/michelin-primacy-4-st.png"],
+    images: ["/images/tires/advan-apex.png"],
   },
   {
     id: 8,
@@ -291,7 +291,7 @@ export const products: Product[] = [
       "High-performance SUV tyre combining sportiness with comfort. Green X technology for fuel efficiency. Premium handling and braking.",
     stock_status: "in_stock",
     featured: false,
-    images: ["/uploads/products/michelin-latitude-sport-3.png"],
+    images: ["/images/tires/advan-apex.png"],
   },
   {
     id: 9,
@@ -304,7 +304,7 @@ export const products: Product[] = [
       "Reliable all-season tyre with optimized tread pattern for comfortable daily driving in Pakistan. Excellent value for money.",
     stock_status: "in_stock",
     featured: false,
-    images: ["/uploads/products/blackarrow-touring-plus.png"],
+    images: ["/images/tires/advan-apex.png"],
   },
   {
     id: 10,
@@ -317,7 +317,7 @@ export const products: Product[] = [
       "Performance-oriented tyre with aggressive tread design. Enhanced cornering stability and responsive handling for spirited driving.",
     stock_status: "in_stock",
     featured: false,
-    images: ["/uploads/products/blackarrow-sport-gt.png"],
+    images: ["/images/tires/advan-apex.png"],
   },
   {
     id: 11,
@@ -330,7 +330,7 @@ export const products: Product[] = [
       "Built for the toughest Pakistani roads. Reinforced sidewalls and deep tread lugs for maximum durability and off-road confidence.",
     stock_status: "in_stock",
     featured: false,
-    images: ["/uploads/products/warrior-all-terrain-x.png"],
+    images: ["/images/tires/warrior-1.png"],
   },
   {
     id: 12,
@@ -343,7 +343,7 @@ export const products: Product[] = [
       "Smooth, quiet highway tyre with excellent fuel economy. Low rolling resistance compound for long-distance comfort.",
     stock_status: "in_stock",
     featured: false,
-    images: ["/uploads/products/warrior-highway-master.png"],
+    images: ["/images/tires/warrior-1.png"],
   },
 ];
 
