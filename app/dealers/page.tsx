@@ -195,7 +195,7 @@ export default function DealersPage() {
                         </div>
 
                         {/* Yokohama Style Skewed CTA Button */}
-                        <div className="flex items-center gap-3">
+                        <div className="flex flex-wrap items-center gap-3">
                           <a
                             href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(dealer.address + ' ' + dealer.city)}`}
                             target="_blank"
@@ -217,6 +217,12 @@ export default function DealersPage() {
                               CALL <Phone size={12} />
                             </span>
                           </a>
+
+                          <div className="bg-gray-100 border border-gray-200 text-gray-500 font-extrabold text-[10px] uppercase tracking-wider px-4 py-2.5 skew-x-[-15deg] inline-flex items-center shadow-sm cursor-default">
+                            <span className="skew-x-[15deg]">
+                              {dealer.brands ? dealer.brands.join(', ') : 'YOKOHAMA, GOODYEAR, WARRIOR'}
+                            </span>
+                          </div>
                         </div>
                       </motion.div>
                     ))}

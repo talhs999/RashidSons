@@ -42,6 +42,7 @@ export interface Dealer {
   phone: string;
   lat: number;
   lng: number;
+  brands?: string[];
 }
 
 export interface Branch {
