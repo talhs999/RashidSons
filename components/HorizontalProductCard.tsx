@@ -48,17 +48,10 @@ export default function HorizontalProductCard({
       */}
       <div className="relative bg-[#e9e9e9] border border-black/5 flex flex-col md:flex-row shadow-lg ml-0 md:ml-24 lg:ml-32 transition-shadow hover:shadow-xl group">
         
-        {/* Top-Left Pattern Tab Decoration (Desktop Only) */}
-        <div className="hidden md:block absolute -top-8 left-0 z-10 w-48 h-16 bg-[#e9e9e9] border-t border-l border-black/5"
-             style={{ clipPath: "polygon(0 0, 100% 0, 85% 100%, 0 100%)" }}>
-           <div className="pt-2 pl-4">
-             <h4 className="text-xl font-heading font-extrabold italic text-brand-black/20 uppercase tracking-widest">{brandName}</h4>
-             <h3 className="text-3xl font-heading font-extrabold italic text-brand-black leading-none uppercase tracking-widest -mt-1">{patternFamily}</h3>
-           </div>
-        </div>
+        {/* Top-Left Pattern Tab Decoration Removed per user request */}
 
         {/* Overlapping Tire Image */}
-        <div className="relative w-full md:w-auto h-64 md:h-auto md:absolute md:-left-32 md:top-1/2 md:-translate-y-1/2 flex items-center justify-center z-20 pointer-events-none p-4 md:p-0 mt-8 md:mt-0">
+        <div className="relative w-full md:w-auto h-64 md:h-auto md:absolute md:-left-12 lg:-left-16 md:top-1/2 md:-translate-y-1/2 flex items-center justify-center z-20 pointer-events-none p-4 md:p-0 mt-8 md:mt-0">
           {image ? (
             <div className="relative w-56 h-56 md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px] drop-shadow-2xl group-hover:scale-105 transition-transform duration-700 ease-out">
               <Image
@@ -76,7 +69,7 @@ export default function HorizontalProductCard({
         </div>
 
         {/* Content Area */}
-        <div className="flex-1 p-6 md:py-10 md:pr-10 md:pl-[220px] lg:pl-[260px] flex flex-col justify-between">
+        <div className="flex-1 p-6 md:py-10 md:pr-10 md:pl-[180px] lg:pl-[200px] flex flex-col justify-between">
           
           <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
             <div>
