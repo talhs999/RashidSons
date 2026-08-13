@@ -44,100 +44,92 @@ export default function BrandDetailPage() {
   return (
     <>
       {/* Brand hero */}
-      <section className="relative bg-brand-black pt-32 md:pt-40 pb-24 overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div
-            className="w-full h-full"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-              backgroundSize: "40px 40px",
-            }}
+      <section className="relative bg-brand-black pt-32 md:pt-40 pb-24 overflow-hidden min-h-[70vh] flex items-center">
+        {/* Background image fading on the right */}
+        <div className="absolute top-0 right-0 w-full lg:w-2/3 h-full z-0 opacity-30 lg:opacity-60">
+          <Image
+            src={brand.tire_image || brand.logo_url}
+            alt={brand.name}
+            fill
+            className="object-cover lg:object-contain object-right"
+            priority
           />
+          {/* Gradient fade from left to right to blend with the black background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black/50" />
         </div>
 
-        <div className="max-w-[1400px] mx-auto px-4 lg:px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Content */}
-            <div>
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="flex items-center gap-3 mb-6"
-              >
-                <Link
-                  href="/brands"
-                  className="text-xs text-white/40 uppercase tracking-wider hover:text-brand-yellow transition-colors"
-                >
-                  Brands
-                </Link>
-                <span className="text-white/20">/</span>
-                <span className="text-xs text-brand-yellow uppercase tracking-wider font-semibold">
-                  {brand.name}
-                </span>
-              </motion.div>
-
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="text-4xl lg:text-6xl font-bold text-white mb-6"
-              >
-                {brand.name}
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="text-white/50 text-lg leading-relaxed mb-8"
-              >
-                {brand.description}
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="flex gap-6"
-              >
-                <div className="flex items-center gap-2">
-                  <Grid3X3 size={18} className="text-brand-yellow" />
-                  <span className="text-sm text-white/60">
-                    <strong className="text-white">
-                      {brandCategories.length}
-                    </strong>{" "}
-                    Categories
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Package size={18} className="text-brand-yellow" />
-                  <span className="text-sm text-white/60">
-                    <strong className="text-white">
-                      {brandProducts.length}
-                    </strong>{" "}
-                    Products
-                  </span>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Right: Brand logo */}
+        <div className="max-w-[1400px] mx-auto px-4 lg:px-6 relative z-10 w-full">
+          <div className="lg:w-3/5">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="flex justify-center"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex items-center gap-3 mb-8"
             >
-              <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center p-12">
-                <Image
-                  src={brand.logo_url}
-                  alt={brand.name}
-                  width={200}
-                  height={200}
-                  className="w-full h-full object-contain filter brightness-0 invert"
-                />
+              <Link
+                href="/brands"
+                className="text-xs text-white/40 uppercase tracking-wider hover:text-brand-yellow transition-colors"
+              >
+                Brands
+              </Link>
+              <span className="text-white/20">/</span>
+              <span className="text-xs text-brand-yellow uppercase tracking-wider font-semibold">
+                {brand.name}
+              </span>
+            </motion.div>
+
+            {/* Brand Logo replacing text heading if available, else text */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="mb-8 h-16 lg:h-24 relative"
+            >
+              <Image 
+                src={brand.logo_white_url || brand.logo_url}
+                alt={brand.name}
+                fill
+                className="object-contain object-left filter brightness-0 invert"
+              />
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-white/60 text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl"
+            >
+              {brand.description}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="flex gap-8"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                  <Grid3X3 size={20} className="text-brand-yellow" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold text-white leading-none mb-1">
+                    {brandCategories.length}
+                  </span>
+                  <span className="text-xs text-white/40 uppercase tracking-wider">Categories</span>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                  <Package size={20} className="text-brand-yellow" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold text-white leading-none mb-1">
+                    {brandProducts.length}
+                  </span>
+                  <span className="text-xs text-white/40 uppercase tracking-wider">Products</span>
+                </div>
               </div>
             </motion.div>
           </div>
