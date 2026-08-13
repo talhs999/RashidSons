@@ -160,95 +160,46 @@ export default function AboutPage() {
           </div>
 
           {/* Section 2: CEO */}
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-7">
-              <Quote size={80} className="absolute -top-6 -left-6 text-white/[0.05] pointer-events-none" />
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow font-bold uppercase text-xs tracking-widest mb-4">
-                Leadership Vision
-              </div>
-              <h2 className="text-4xl lg:text-6xl font-heading font-extrabold uppercase tracking-tighter mb-2 leading-none">
-                CEO&apos;S <span className="text-brand-yellow">MESSAGE</span>
-              </h2>
-              <p className="text-brand-yellow font-semibold text-xl lg:text-2xl mb-6 tracking-wide">
-                Jawad Rashid
-              </p>
-              <p className="text-white/85 text-lg leading-relaxed font-sans font-normal border-l-2 border-brand-yellow/40 pl-6 py-1">
-                As the CEO of our tyre retail company, I envision a future where we are the go-to destination for drivers seeking unapparelled expertise, convenience and value in tyre purchasing and maintenance. Our vision is to create a seamless omnichannel experience, where customers can get expert advice, browse a wide selection of top-quality tyres, and receive professional installation and maintenance services with ease. We prioritize customer satisfaction, offering personalized recommendations and exceptional service at every touchpoint. Through innovation and a relentless commitment to excellence, we will redefine the tire retail industry, setting new standards for convenience, reliability, and customer care.
-              </p>
+          <div className="max-w-4xl relative">
+            <Quote size={80} className="absolute -top-6 -left-6 text-white/[0.05] pointer-events-none" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow font-bold uppercase text-xs tracking-widest mb-4">
+              Leadership Vision
             </div>
-            <div className="lg:col-span-5 relative">
-              <motion.div 
-                 initial={{ opacity: 0, x: 30 }}
-                 whileInView={{ opacity: 1, x: 0 }}
-                 viewport={{ once: true }}
-                 className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-brand-yellow/30"
-               >
-                 <Image src="/images/ceo_final.jpeg" alt="Jawad Rashid - CEO" fill className="object-cover object-top" />
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                 <div className="absolute bottom-6 left-6 right-6">
-                    <p className="text-white font-bold uppercase text-2xl tracking-widest mb-1">Jawad Rashid</p>
-                    <p className="text-brand-yellow font-bold uppercase text-sm tracking-widest">Chief Executive Officer</p>
-                 </div>
-               </motion.div>
-            </div>
+            <h2 className="text-4xl lg:text-6xl font-heading font-extrabold uppercase tracking-tighter mb-2 leading-none">
+              CEO&apos;S <span className="text-brand-yellow">MESSAGE</span>
+            </h2>
+            <p className="text-brand-yellow font-semibold text-xl lg:text-2xl mb-6 tracking-wide">
+              Jawad Rashid
+            </p>
+            <p className="text-white/85 text-lg leading-relaxed font-sans font-normal border-l-2 border-brand-yellow/40 pl-6 py-1">
+              As the CEO of our tyre retail company, I envision a future where we are the go-to destination for drivers seeking unapparelled expertise, convenience and value in tyre purchasing and maintenance. Our vision is to create a seamless omnichannel experience, where customers can get expert advice, browse a wide selection of top-quality tyres, and receive professional installation and maintenance services with ease. We prioritize customer satisfaction, offering personalized recommendations and exceptional service at every touchpoint. Through innovation and a relentless commitment to excellence, we will redefine the tire retail industry, setting new standards for convenience, reliability, and customer care.
+            </p>
           </div>
 
           {/* Section 3: Sales Director */}
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-5 relative order-2 lg:order-1">
-               <motion.div 
-                 initial={{ opacity: 0, x: -30 }}
-                 whileInView={{ opacity: 1, x: 0 }}
-                 viewport={{ once: true }}
-                 className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-white/10"
-               >
-                 <Image src="/images/sales-director.jpeg" alt="Sales Director" fill className="object-cover object-top" />
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                 <div className="absolute bottom-6 left-6 right-6">
-                    <p className="text-brand-yellow font-bold uppercase text-sm tracking-widest bg-brand-black/50 py-2 px-4 rounded-xl inline-block backdrop-blur-sm border border-white/10">Sales Director</p>
-                 </div>
-               </motion.div>
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow font-bold uppercase text-xs tracking-widest mb-4">
+              Driving Growth
             </div>
-            <div className="lg:col-span-7 order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow font-bold uppercase text-xs tracking-widest mb-4">
-                Driving Growth
-              </div>
-              <h2 className="text-4xl lg:text-5xl font-heading font-extrabold uppercase tracking-tighter mb-4 leading-none text-white">
-                SALES <span className="text-brand-yellow">DIRECTOR</span>
-              </h2>
-              <p className="text-white/85 text-lg leading-relaxed font-sans font-normal border-l-2 border-brand-yellow/40 pl-6 py-1">
-                Leading our sales initiatives with passion and strategic insight, our Sales Director ensures that our premium tyre offerings reach every corner of the market. Building lasting relationships with our network of dealers and enterprise clients is at the heart of our continued growth and success.
-              </p>
-            </div>
+            <h2 className="text-4xl lg:text-5xl font-heading font-extrabold uppercase tracking-tighter mb-4 leading-none text-white">
+              SALES <span className="text-brand-yellow">DIRECTOR</span>
+            </h2>
+            <p className="text-white/85 text-lg leading-relaxed font-sans font-normal border-l-2 border-brand-yellow/40 pl-6 py-1">
+              Leading our sales initiatives with passion and strategic insight, our Sales Director ensures that our premium tyre offerings reach every corner of the market. Building lasting relationships with our network of dealers and enterprise clients is at the heart of our continued growth and success.
+            </p>
           </div>
 
           {/* Section 4: Import Manager */}
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow font-bold uppercase text-xs tracking-widest mb-4">
-                Global Sourcing
-              </div>
-              <h2 className="text-4xl lg:text-5xl font-heading font-extrabold uppercase tracking-tighter mb-4 leading-none text-white">
-                IMPORT <span className="text-brand-yellow">MANAGER</span>
-              </h2>
-              <p className="text-white/85 text-lg leading-relaxed font-sans font-normal border-l-2 border-brand-yellow/40 pl-6 py-1">
-                Ensuring a steady and reliable supply chain is critical to our operations. Our Import Manager works tirelessly with international manufacturers and logistics partners to bring the world's best tyre brands to our facilities efficiently, maintaining the high standards of quality our customers expect.
-              </p>
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow font-bold uppercase text-xs tracking-widest mb-4">
+              Global Sourcing
             </div>
-            <div className="lg:col-span-5 relative">
-              <motion.div 
-                 initial={{ opacity: 0, x: 30 }}
-                 whileInView={{ opacity: 1, x: 0 }}
-                 viewport={{ once: true }}
-                 className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-4 border-white/10"
-               >
-                 <Image src="/images/import-manager.jpeg" alt="Import Manager" fill className="object-cover object-top" />
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                 <div className="absolute bottom-6 left-6 right-6">
-                    <p className="text-brand-yellow font-bold uppercase text-sm tracking-widest bg-brand-black/50 py-2 px-4 rounded-xl inline-block backdrop-blur-sm border border-white/10">Import Manager</p>
-                 </div>
-               </motion.div>
-            </div>
+            <h2 className="text-4xl lg:text-5xl font-heading font-extrabold uppercase tracking-tighter mb-4 leading-none text-white">
+              IMPORT <span className="text-brand-yellow">MANAGER</span>
+            </h2>
+            <p className="text-white/85 text-lg leading-relaxed font-sans font-normal border-l-2 border-brand-yellow/40 pl-6 py-1">
+              Ensuring a steady and reliable supply chain is critical to our operations. Our Import Manager works tirelessly with international manufacturers and logistics partners to bring the world's best tyre brands to our facilities efficiently, maintaining the high standards of quality our customers expect.
+            </p>
           </div>
 
         </div>
