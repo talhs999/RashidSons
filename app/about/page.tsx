@@ -144,48 +144,19 @@ export default function AboutPage() {
         <div className="max-w-[1400px] mx-auto px-4 lg:px-6 relative z-10 space-y-24 lg:space-y-32 py-12">
           
           {/* Section 1: Founders */}
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-5 relative order-2 lg:order-1 flex gap-6">
-               <motion.div 
-                 initial={{ opacity: 0, y: 20 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 className="relative w-1/2 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-yellow/30"
-               >
-                 <Image src="/images/founder_final.jpeg" alt="Founder" fill className="object-cover object-top" />
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                 <div className="absolute bottom-4 left-4 right-4 text-center">
-                    <p className="text-white font-bold uppercase text-sm tracking-widest bg-brand-yellow/90 text-brand-black py-1 px-2 rounded backdrop-blur">Founder</p>
-                 </div>
-               </motion.div>
-               <motion.div 
-                 initial={{ opacity: 0, y: 40 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 transition={{ delay: 0.2 }}
-                 className="relative w-1/2 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-yellow/30 mt-8"
-               >
-                 <Image src="/images/founder2.png" alt="Founder" fill className="object-cover object-top" />
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                 <div className="absolute bottom-4 left-4 right-4 text-center">
-                    <p className="text-white font-bold uppercase text-sm tracking-widest bg-brand-yellow/90 text-brand-black py-1 px-2 rounded backdrop-blur">Founder</p>
-                 </div>
-               </motion.div>
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow font-bold uppercase text-xs tracking-widest mb-4">
+              Our Legacy
             </div>
-            <div className="lg:col-span-7 order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-yellow/10 border border-brand-yellow/30 text-brand-yellow font-bold uppercase text-xs tracking-widest mb-4">
-                Our Legacy
-              </div>
-              <h2 className="text-4xl lg:text-6xl font-heading font-extrabold uppercase tracking-tighter mb-4 leading-none">
-                THE <span className="text-brand-yellow">FOUNDERS</span>
-              </h2>
-              <h3 className="text-xl lg:text-3xl font-heading font-bold text-white uppercase tracking-tight mb-6">
-                MOHAMMAD ABDUL RASHID <br className="hidden lg:block"/>& HAJI JAVED RASHID
-              </h3>
-              <p className="text-white/85 text-lg leading-relaxed font-sans font-normal border-l-2 border-brand-yellow/40 pl-6 py-1">
-                The foundation of our company was built on the unwavering dedication and visionary leadership of our founders. Their commitment to excellence and customer satisfaction laid the groundwork for what J. Rashid & Sons is today.
-              </p>
-            </div>
+            <h2 className="text-4xl lg:text-6xl font-heading font-extrabold uppercase tracking-tighter mb-4 leading-none">
+              THE <span className="text-brand-yellow">FOUNDERS</span>
+            </h2>
+            <h3 className="text-xl lg:text-3xl font-heading font-bold text-white uppercase tracking-tight mb-6">
+              MOHAMMAD ABDUL RASHID <br className="hidden lg:block"/>& HAJI JAVED RASHID
+            </h3>
+            <p className="text-white/85 text-lg leading-relaxed font-sans font-normal border-l-2 border-brand-yellow/40 pl-6 py-1">
+              The foundation of our company was built on the unwavering dedication and visionary leadership of our founders. Their commitment to excellence and customer satisfaction laid the groundwork for what J. Rashid & Sons is today.
+            </p>
           </div>
 
           {/* Section 2: CEO */}
