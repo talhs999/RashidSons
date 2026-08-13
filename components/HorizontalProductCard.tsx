@@ -51,7 +51,7 @@ export default function HorizontalProductCard({
         {/* Top-Left Pattern Tab Decoration Removed per user request */}
 
         {/* Overlapping Tire Image */}
-        <div className="relative w-full md:w-auto h-64 md:h-auto md:absolute md:-left-12 lg:-left-16 md:top-1/2 md:-translate-y-1/2 flex items-center justify-center z-20 pointer-events-none p-4 md:p-0 mt-8 md:mt-0">
+        <div className="relative w-full md:w-auto h-64 md:h-auto md:absolute md:-left-24 lg:-left-28 md:top-1/2 md:-translate-y-1/2 flex items-center justify-center z-20 pointer-events-none p-4 md:p-0 mt-8 md:mt-0">
           {image ? (
             <div className="relative w-56 h-56 md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px] drop-shadow-2xl group-hover:scale-105 transition-transform duration-700 ease-out">
               <Image
@@ -69,7 +69,7 @@ export default function HorizontalProductCard({
         </div>
 
         {/* Content Area */}
-        <div className="flex-1 p-6 md:py-10 md:pr-10 md:pl-[180px] lg:pl-[200px] flex flex-col justify-between">
+        <div className="flex-1 p-6 md:py-10 md:pr-10 md:pl-[200px] lg:pl-[230px] flex flex-col justify-between">
           
           <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
             <div>
