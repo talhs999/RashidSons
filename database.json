@@ -333,7 +333,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/uploads/products/yokohama-geolandar-at-g015.png"
+        "/images/tires/advan-fleva.png"
       ]
     },
     {
@@ -347,7 +347,7 @@
       "stock_status": "in_stock",
       "featured": false,
       "images": [
-        "/uploads/products/yokohama-ty517.png"
+        "/images/tires/advan-fleva.png"
       ]
     },
     {
@@ -361,7 +361,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/uploads/products/goodyear-assurance-triplemax-2.png"
+        "/images/tires/goodyear-1.png"
       ]
     },
     {
@@ -375,7 +375,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/uploads/products/goodyear-wrangler-at-sa-plus.png"
+        "/images/tires/goodyear-1.png"
       ]
     },
     {
@@ -389,7 +389,7 @@
       "stock_status": "in_stock",
       "featured": false,
       "images": [
-        "/uploads/products/goodyear-kmax-s.png"
+        "/images/tires/goodyear-1.png"
       ]
     },
     {
@@ -403,7 +403,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/uploads/products/michelin-primacy-4-st.png"
+        "/images/tires/warrior-1.png"
       ]
     },
     {
@@ -417,7 +417,7 @@
       "stock_status": "in_stock",
       "featured": false,
       "images": [
-        "/uploads/products/michelin-latitude-sport-3.png"
+        "/images/tires/warrior-1.png"
       ]
     },
     {
@@ -431,7 +431,7 @@
       "stock_status": "in_stock",
       "featured": false,
       "images": [
-        "/uploads/products/blackarrow-touring-plus.png"
+        "/images/tires/advan-apex.png"
       ]
     },
     {
@@ -445,7 +445,7 @@
       "stock_status": "in_stock",
       "featured": false,
       "images": [
-        "/uploads/products/blackarrow-sport-gt.png"
+        "/images/tires/advan-apex.png"
       ]
     },
     {
@@ -459,7 +459,7 @@
       "stock_status": "in_stock",
       "featured": false,
       "images": [
-        "/uploads/products/warrior-all-terrain-x.png"
+        "/images/tires/advan-apex.png"
       ]
     },
     {
@@ -473,7 +473,7 @@
       "stock_status": "in_stock",
       "featured": false,
       "images": [
-        "/uploads/products/warrior-highway-master.png"
+        "/images/tires/advan-apex.png"
       ]
     },
     {
