@@ -30,9 +30,9 @@ const brandData: Record<string, { id: number; image: string; title: string }[]> 
     { id: 22, image: "/images/tires/atlas-3.png", title: "FORCE UHP" },
   ],
   Risen: [
-    { id: 23, image: "/images/tires/advan-fleva.png", title: "RISEN TOURING T1" },
-    { id: 24, image: "/images/tires/advan-neova-ad09.webp", title: "RISEN SPORT R3" },
-    { id: 25, image: "/images/tires/advan-a052.png", title: "RISEN HIGHWAY H/T" },
+    { id: 23, image: "/images/tires/risen-1.png", title: "RP68 H/T" },
+    { id: 24, image: "/images/tires/risen-2.png", title: "RP68" },
+    { id: 25, image: "/images/tires/risen-3.png", title: "RP68 H/T" },
   ],
   Falken: [
     { id: 26, image: "/images/tires/advan-sport-v107.webp", title: "AZENIS FK510" },
