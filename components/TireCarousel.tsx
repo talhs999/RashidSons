@@ -25,9 +25,9 @@ const brandData: Record<string, { id: number; image: string; title: string }[]> 
     { id: 19, image: "/images/tires/warrior-3.png", title: "WARRIOR SPORT" },
   ],
   "Atlas Tyre": [
-    { id: 20, image: "/images/tires/advan-apex.png", title: "ATLAS PRO MAX" },
-    { id: 21, image: "/images/tires/advan-sport-as.webp", title: "ATLAS DURAGUARD" },
-    { id: 22, image: "/images/tires/advan-a055.webp", title: "ATLAS TERRAIN M/T" },
+    { id: 20, image: "/images/tires/atlas-1.png", title: "FORCE HP" },
+    { id: 21, image: "/images/tires/atlas-2.png", title: "PARALLER 4X4 HP" },
+    { id: 22, image: "/images/tires/atlas-3.png", title: "FORCE UHP" },
   ],
   Risen: [
     { id: 23, image: "/images/tires/advan-fleva.png", title: "RISEN TOURING T1" },
