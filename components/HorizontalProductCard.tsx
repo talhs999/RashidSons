@@ -81,9 +81,6 @@ export default function HorizontalProductCard({
               {/* Tags/Badges */}
               <div className="flex flex-wrap gap-2">
                 <span className="bg-white border border-black/10 px-3 py-1.5 text-[10px] md:text-xs font-bold text-brand-black uppercase tracking-wider shadow-sm">
-                  {size ? size : "VARIOUS SIZES"}
-                </span>
-                <span className="bg-white border border-black/10 px-3 py-1.5 text-[10px] md:text-xs font-bold text-brand-black uppercase tracking-wider shadow-sm">
                   PREMIUM QUALITY
                 </span>
               </div>
