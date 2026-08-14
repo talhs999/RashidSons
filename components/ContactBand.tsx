@@ -59,7 +59,7 @@ export default function ContactBand() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a
-              href="https://wa.me/923004058489"
+              href="https://wa.me/923071777510"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary rounded-lg"
@@ -67,9 +67,9 @@ export default function ContactBand() {
               <MessageCircle size={18} />
               WhatsApp Us
             </a>
-            <a href="tel:+923004058489" className="btn-secondary rounded-lg">
+            <a href="tel:+923071777510" className="btn-secondary rounded-lg">
               <Phone size={18} />
-              Call +92 300 4058489
+              Call +92 307 1777510
             </a>
             <Link href="/contact" className="btn-secondary rounded-lg">
               Contact Form

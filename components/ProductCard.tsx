@@ -107,7 +107,7 @@ export default function ProductCard({
             Details
           </Link>
           <a
-            href={`https://wa.me/923004058489?text=${encodeURIComponent(`Hi, I'm interested in ${name} (${size || ""}). Please provide a quote.`)}`}
+            href={`https://wa.me/923071777510?text=${encodeURIComponent(`Hi, I'm interested in ${name} (${size || ""}). Please provide a quote.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-yellow text-brand-black text-xs font-semibold uppercase tracking-wider hover:bg-brand-yellow transition-colors"

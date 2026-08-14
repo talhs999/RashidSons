@@ -165,12 +165,12 @@ export default function TermsOfUsePage() {
             <div className="bg-white/5 rounded-xl p-6 border border-white/10 text-center hover:bg-white/10 transition-colors">
               <PhoneCall className="text-brand-yellow mx-auto mb-3" size={24} />
               <h3 className="text-white font-bold mb-2 uppercase text-xs tracking-wider">Phone</h3>
-              <a href="tel:+923004058489" className="text-white/60 text-xs hover:text-white transition-colors">+92 300 4058489</a>
+              <a href="tel:+923071777510" className="text-white/60 text-xs hover:text-white transition-colors">+92 307 1777510</a>
             </div>
             <div className="bg-white/5 rounded-xl p-6 border border-white/10 text-center hover:bg-white/10 transition-colors">
               <Mail className="text-brand-yellow mx-auto mb-3" size={24} />
               <h3 className="text-white font-bold mb-2 uppercase text-xs tracking-wider">Email</h3>
-              <a href="mailto:yousuf.jamal@jrashid.com" className="text-white/60 text-xs hover:text-white transition-colors">yousuf.jamal@jrashid.com</a>
+              <a href="mailto:jrashidandsons786@gmail.com" className="text-white/60 text-xs hover:text-white transition-colors">jrashidandsons786@gmail.com</a>
             </div>
           </div>
         </div>

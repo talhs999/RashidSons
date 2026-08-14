@@ -83,7 +83,7 @@ export default function ContactPage() {
         <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <motion.a
-              href="tel:+923004058489"
+              href="tel:+923071777510"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -93,11 +93,11 @@ export default function ContactPage() {
                 <Phone size={22} className="text-brand-yellow" />
               </div>
               <h3 className="font-bold text-brand-black mb-1">Call Us</h3>
-              <p className="text-sm text-brand-gray">+92 300 4058489</p>
+              <p className="text-sm text-brand-gray">+92 307 1777510</p>
             </motion.a>
 
             <motion.a
-              href="https://wa.me/923004058489"
+              href="https://wa.me/923071777510"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
@@ -118,7 +118,7 @@ export default function ContactPage() {
             </motion.a>
 
             <motion.a
-              href="mailto:yousuf.jamal@jrashid.com"
+              href="mailto:jrashidandsons786@gmail.com"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -129,7 +129,7 @@ export default function ContactPage() {
               </div>
               <h3 className="font-bold text-brand-black mb-1">Email</h3>
               <p className="text-sm text-brand-gray">
-                yousuf.jamal@jrashid.com
+                jrashidandsons786@gmail.com
               </p>
             </motion.a>
 
