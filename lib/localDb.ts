@@ -124,8 +124,11 @@ export function getCategoriesByBrandId(brandId: number) {
   return categories.filter((c: any) => c.brand_id === brandId);
 }
 
-export function getCategoryBySlug(slug: string) {
+export function getCategoryBySlug(slug: string, brandId?: number) {
   const categories = getCategories();
+  if (brandId) {
+    return categories.find((c: any) => c.slug === slug && c.brand_id === brandId) || null;
+  }
   return categories.find((c: any) => c.slug === slug) || null;
 }
 

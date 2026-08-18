@@ -61,6 +61,7 @@ export const brands: Brand[] = [
     "slug": "yokohama",
     "logo_url": "/images/partners/yokohama-hd-5100.png",
     "logo_white_url": "/images/brands/yokohama-white.png",
+    "banner_image": "/images/brands/yokohama-hero-banner.jpg",
     "description": "Yokohama Rubber Company is a Japanese tire manufacturer. As the official importer of Yokohama tyres in Pakistan, J. Rashid & Sons brings world-class Japanese engineering to Pakistani roads."
   },
   {
@@ -69,6 +70,7 @@ export const brands: Brand[] = [
     "slug": "goodyear",
     "logo_url": "/images/partners/goodyear-clean.png",
     "logo_white_url": "/images/partners/goodyear-clean.png",
+    "banner_image": "/images/brands/goodyear-hero-banner.jpg",
     "description": "Goodyear Tire & Rubber Company is one of the world's largest tyre companies. J. Rashid & Sons provides authentic Goodyear tyres for passenger cars, SUVs, and commercial vehicles."
   },
   {
@@ -77,6 +79,7 @@ export const brands: Brand[] = [
     "slug": "warrior",
     "logo_url": "/images/brands/warrior-final-black.png",
     "logo_white_url": "/images/brands/warrior-final-white.png",
+    "banner_image": "/images/brands/warrior-hero-banner.jpg",
     "description": "Warrior tyres are built tough for Pakistani road conditions. Designed for durability and performance at competitive prices."
   },
   {
@@ -85,6 +88,7 @@ export const brands: Brand[] = [
     "slug": "atlas",
     "logo_url": "/images/brands/atlas-logo.png",
     "logo_white_url": "/images/brands/atlas-logo-white.png",
+    "banner_image": "/images/brands/atlas-hero-banner.jpg",
     "description": "Atlas Tyres deliver superior traction and durability for a wide range of vehicles, ensuring a safe and comfortable ride across Pakistan."
   },
   {
@@ -93,6 +97,7 @@ export const brands: Brand[] = [
     "slug": "risen",
     "logo_url": "/images/brands/risen-logo.png",
     "logo_white_url": "/images/brands/risen-logo-white.png",
+    "banner_image": "/images/brands/risen-hero-banner.jpg",
     "description": "Risen Tyres provide exceptional value and reliable performance, designed specifically to tackle tough road conditions with ease."
   },
   {
@@ -101,6 +106,7 @@ export const brands: Brand[] = [
     "slug": "falken",
     "logo_url": "/images/brands/falken-logo.png",
     "logo_white_url": "/images/brands/falken-logo-white.png",
+    "banner_image": "/images/brands/falken-hero-banner.jpg",
     "description": "Falken is known for its high-performance tires, offering precision handling and superior grip for sports cars and everyday driving."
   }
 ];
@@ -125,226 +131,964 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
   {
-    id: 1,
-    name: "Yokohama BluEarth AE51",
-    slug: "yokohama-bluearth-ae51",
-    brand_id: 1,
-    category_id: 1,
-    size: "205/55R16",
-    description:
-      "The BluEarth AE51 combines eco-friendly performance with excellent wet grip. Advanced silica compound for reduced rolling resistance and improved fuel economy. Featuring Yokohama's orange oil technology for enhanced grip and lower environmental impact.",
-    stock_status: "in_stock",
-    featured: true,
-    images: ["/images/tires/advan-fleva.png"],
+    "id": 4,
+    "name": "Goodyear Assurance TripleMax 2",
+    "slug": "goodyear-assurance-triplemax-2",
+    "brand_id": 2,
+    "category_id": 4,
+    "size": "195/65R15",
+    "description": "HydroTred Technology for superior wet braking. DuraGrip Technology for longer tyre life. Perfect for Pakistani city driving with enhanced safety features.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/goodyear-1.png"
+    ]
   },
   {
-    id: 201,
-    name: "Yokohama ADVAN A052",
-    slug: "yokohama-advan-a052",
-    brand_id: 1,
-    category_id: 1,
-    size: "245/40R18",
-    description:
-      "The ADVAN A052 is your race-ready, extreme performance summer tire that delivers physics-defying levels of grip, making a statement on the street and a standout on the track.",
-    stock_status: "in_stock",
-    featured: true,
-    images: ["/images/tires/advan-a052.png"],
+    "id": 5,
+    "name": "Goodyear Wrangler AT/SA+",
+    "slug": "goodyear-wrangler-at-sa-plus",
+    "brand_id": 2,
+    "category_id": 5,
+    "size": "245/70R16",
+    "description": "Versatile all-terrain tyre with aggressive tread pattern. Self-cleaning grooves for off-road confidence. Ideal for Pakistani terrain.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/goodyear-1.png"
+    ]
   },
   {
-    id: 202,
-    name: "Yokohama ADVAN Neova AD09",
-    slug: "yokohama-advan-neova-ad09",
-    brand_id: 1,
-    category_id: 1,
-    size: "265/35R19",
-    description:
-      "The next generation in legendary street/track performance. A specialized tread pattern provides rapid water evacuation for superior wet grip and control.",
-    stock_status: "in_stock",
-    featured: true,
-    images: ["/images/tires/advan-neova-ad09.webp"],
+    "id": 6,
+    "name": "Goodyear KMAX S",
+    "slug": "goodyear-kmax-s",
+    "brand_id": 2,
+    "category_id": 6,
+    "size": "315/80R22.5",
+    "description": "Steer axle truck tyre with optimized footprint shape for even wear and long tread life. Built for commercial fleets.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/goodyear-1.png"
+    ]
   },
   {
-    id: 203,
-    name: "Yokohama ADVAN Apex V601",
-    slug: "yokohama-advan-apex-v601",
-    brand_id: 1,
-    category_id: 1,
-    size: "275/35R19",
-    description:
-      "An ultra-high performance summer tire born from Yokohama's legendary performance tire heritage. Optimized contact patch for maximum grip.",
-    stock_status: "in_stock",
-    featured: true,
-    images: ["/images/tires/advan-apex.png"],
+    "id": 206,
+    "name": "Goodyear EfficientGrip Performance 2",
+    "slug": "goodyear-efficientgrip-performance-2",
+    "brand_id": 2,
+    "category_id": 4,
+    "description": "The Goodyear EfficientGrip Performance 2 offers 50% more miles and the shortest braking distances on wet and dry roads. Designed for optimal touring and passenger car performance.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/goodyear_effigrip_perf2.png"
+    ]
   },
   {
-    id: 204,
-    name: "Yokohama ADVAN A055",
-    slug: "yokohama-advan-a055",
-    brand_id: 1,
-    category_id: 1,
-    size: "285/30R18",
-    description:
-      "Built specifically for on-track racing with competitive performance and fast lap times, the ADVAN A055 is the latest addition to Yokohama's decades-long legacy of UHP tires.",
-    stock_status: "in_stock",
-    featured: true,
-    images: ["/images/tires/advan-a055.webp"],
+    "id": 207,
+    "name": "Goodyear Eagle Sport 2",
+    "slug": "goodyear-eagle-sport-2",
+    "brand_id": 2,
+    "category_id": 4,
+    "description": "The Eagle Sport 2 delivers excellent all-season sport performance with enhanced steering responsiveness and confident grip in various conditions.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/goodyear_eagle_sport2.png"
+    ]
   },
   {
-    id: 205,
-    name: "Yokohama ADVAN Sport V107",
-    slug: "yokohama-advan-sport-v107",
-    brand_id: 1,
-    category_id: 1,
-    size: "305/30ZR20",
-    description:
-      "The flagship ADVAN Sport V107 provides the ultimate blend of precision steering response, incredible grip, and exceptional stability at high speeds.",
-    stock_status: "in_stock",
-    featured: true,
-    images: ["/images/tires/advan-sport-v107.webp"],
+    "id": 208,
+    "name": "Goodyear Eagle F1 Asymmetric 5",
+    "slug": "goodyear-eagle-f1-asymmetric-5",
+    "brand_id": 2,
+    "category_id": 4,
+    "description": "High-performance summer tire delivering superior wet grip and luxurious comfort, offering short braking distances in wet and dry conditions.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/goodyear_eagle_f1_asy5.png"
+    ]
   },
   {
-    id: 2,
-    name: "Yokohama Geolandar A/T G015",
-    slug: "yokohama-geolandar-at-g015",
-    brand_id: 1,
-    category_id: 2,
-    size: "265/70R16",
-    description:
-      "All-terrain performance meets on-road comfort. Triple polymer tread compound delivers outstanding traction on any surface. Perfect for SUV drivers who need both highway comfort and off-road capability.",
-    stock_status: "in_stock",
-    featured: true,
-    images: ["/images/tires/advan-fleva.png"],
+    "id": 209,
+    "name": "Goodyear Eagle F1 Asymmetric 3 MOE RFT",
+    "slug": "goodyear-eagle-f1-asymmetric-3-moe-rft",
+    "brand_id": 2,
+    "category_id": 5,
+    "description": "Ultra-high-performance tire featuring RunOnFlat technology and Mercedes Original Extended (MOE) homologation. Shorter braking distances and precise handling.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/goodyear_eagle_f1_asy3.png"
+    ]
   },
   {
-    id: 3,
-    name: "Yokohama TY517",
-    slug: "yokohama-ty517",
-    brand_id: 1,
-    category_id: 3,
-    size: "11R22.5",
-    description:
-      "Premium commercial drive tyre with deep tread design for extended mileage. Engineered for long-haul operations with superior fuel efficiency.",
-    stock_status: "in_stock",
-    featured: false,
-    images: ["/images/tires/advan-fleva.png"],
+    "id": 210,
+    "name": "Goodyear Eagle F1 Asymmetric 2 MOE RFT",
+    "slug": "goodyear-eagle-f1-asymmetric-2-moe-rft",
+    "brand_id": 2,
+    "category_id": 4,
+    "description": "High-performance tire with RunOnFlat capabilities, engineered for responsive handling and control in dry and wet conditions.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/goodyear_eagle_f1_asy2.png"
+    ]
   },
   {
-    id: 4,
-    name: "Goodyear Assurance TripleMax 2",
-    slug: "goodyear-assurance-triplemax-2",
-    brand_id: 2,
-    category_id: 4,
-    size: "195/65R15",
-    description:
-      "HydroTred Technology for superior wet braking. DuraGrip Technology for longer tyre life. Perfect for Pakistani city driving with enhanced safety features.",
-    stock_status: "in_stock",
-    featured: true,
-    images: ["/images/tires/goodyear-1.png"],
+    "id": 211,
+    "name": "Goodyear EfficientGrip RFT MOE ROF",
+    "slug": "goodyear-efficientgrip-rft-moe-rof",
+    "brand_id": 2,
+    "category_id": 4,
+    "description": "Features RunOnFlat technology ensuring mobility even after a puncture. Designed with fuel-saving technology for efficient, long-lasting drives.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/goodyear_effigrip_rft.png"
+    ]
   },
   {
-    id: 5,
-    name: "Goodyear Wrangler AT/SA+",
-    slug: "goodyear-wrangler-at-sa-plus",
-    brand_id: 2,
-    category_id: 5,
-    size: "245/70R16",
-    description:
-      "Versatile all-terrain tyre with aggressive tread pattern. Self-cleaning grooves for off-road confidence. Ideal for Pakistani terrain.",
-    stock_status: "in_stock",
-    featured: true,
-    images: ["/images/tires/goodyear-1.png"],
+    "id": 212,
+    "name": "Goodyear Eagle F1 Asymmetric 6",
+    "slug": "goodyear-eagle-f1-asymmetric-6",
+    "brand_id": 2,
+    "category_id": 4,
+    "description": "The latest ultra-high-performance tire ready for anything. Superb dry and wet performance and optimized for electric vehicles.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/goodyear_eagle_f1_asy6.png"
+    ]
   },
   {
-    id: 6,
-    name: "Goodyear KMAX S",
-    slug: "goodyear-kmax-s",
-    brand_id: 2,
-    category_id: 6,
-    size: "315/80R22.5",
-    description:
-      "Steer axle truck tyre with optimized footprint shape for even wear and long tread life. Built for commercial fleets.",
-    stock_status: "in_stock",
-    featured: false,
-    images: ["/images/tires/goodyear-1.png"],
+    "id": 101,
+    "name": "Yokohama Alliance AL30",
+    "slug": "yokohama-alliance-al30",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "185/65R14",
+    "description": "Reliable touring and all-season passenger tire engineered by Yokohama/Alliance for smooth comfort, long tread life, and quiet daily performance. Available sizes: 175/70R14 AL30, 165/70R14 AL30, 185/65R14 AL30, 195/65R15 AL30.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/advan-fleva.png"
+    ]
   },
   {
-    id: 7,
-    name: "Michelin Primacy 4 ST",
-    slug: "michelin-primacy-4-st",
-    brand_id: 3,
-    category_id: 7,
-    size: "215/55R17",
-    description:
-      "Premium touring tyre with EverGrip Technology. New when worn - maintains performance throughout its life. The benchmark in premium comfort.",
-    stock_status: "in_stock",
-    featured: true,
-    images: ["/images/tires/advan-apex.png"],
+    "id": 102,
+    "name": "Yokohama S707",
+    "slug": "yokohama-s707",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "165/70R12",
+    "description": "Heavy-duty compact passenger tire providing durable performance, excellent wet stability, and long mileage for small city vehicles. Available sizes: 165/70R12 77H S707.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/advan-fleva.png"
+    ]
   },
   {
-    id: 8,
-    name: "Michelin Latitude Sport 3",
-    slug: "michelin-latitude-sport-3",
-    brand_id: 3,
-    category_id: 8,
-    size: "235/65R17",
-    description:
-      "High-performance SUV tyre combining sportiness with comfort. Green X technology for fuel efficiency. Premium handling and braking.",
-    stock_status: "in_stock",
-    featured: false,
-    images: ["/images/tires/advan-apex.png"],
+    "id": 103,
+    "name": "Yokohama ADVAN A460",
+    "slug": "yokohama-advan-a460",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "205/55R16",
+    "description": "Original equipment high-performance summer passenger tire engineered for crisp steering response, high-speed stability, and refined ride quality. Available sizes: 205/55R16 91V A460.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/advan-apex.png"
+    ]
   },
   {
-    id: 9,
-    name: "Blackarrow Touring Plus",
-    slug: "blackarrow-touring-plus",
-    brand_id: 4,
-    category_id: 9,
-    size: "185/65R15",
-    description:
-      "Reliable all-season tyre with optimized tread pattern for comfortable daily driving in Pakistan. Excellent value for money.",
-    stock_status: "in_stock",
-    featured: false,
-    images: ["/images/tires/advan-apex.png"],
+    "id": 104,
+    "name": "Yokohama A.drive AA01",
+    "slug": "yokohama-adrive-aa01",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "185/65R14",
+    "description": "Yokohama A.drive (AA01) passenger tire designed to offer balanced handling, superior fuel efficiency, and confident wet surface traction. Available sizes: 175/70R13 A01, 185/70R13 86H AA01, 185/65R14 86H AA01.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/advan-fleva.png"
+    ]
   },
   {
-    id: 10,
-    name: "Blackarrow Sport GT",
-    slug: "blackarrow-sport-gt",
-    brand_id: 4,
-    category_id: 10,
-    size: "225/45R17",
-    description:
-      "Performance-oriented tyre with aggressive tread design. Enhanced cornering stability and responsive handling for spirited driving.",
-    stock_status: "in_stock",
-    featured: false,
-    images: ["/images/tires/advan-apex.png"],
+    "id": 105,
+    "name": "Yokohama A-345",
+    "slug": "yokohama-a345",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "165/65R14",
+    "description": "Premium OE passenger tire engineered for ultra-quiet ride, low rolling resistance, and dependable everyday urban driving. Available sizes: 165/65R14 97S A345.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/advan-fleva.png"
+    ]
   },
   {
-    id: 11,
-    name: "Warrior All Terrain X",
-    slug: "warrior-all-terrain-x",
-    brand_id: 5,
-    category_id: 11,
-    size: "265/75R16",
-    description:
-      "Built for the toughest Pakistani roads. Reinforced sidewalls and deep tread lugs for maximum durability and off-road confidence.",
-    stock_status: "in_stock",
-    featured: false,
-    images: ["/images/tires/warrior-1.png"],
+    "id": 106,
+    "name": "Yokohama BluEarth AE-50",
+    "slug": "yokohama-bluearth-ae-50",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "175/70R14",
+    "description": "Premium fuel-efficient passenger tire incorporating nano-blend rubber technology for outstanding wet grip and smooth touring comfort. Available sizes: 175/70R14 AE-50, 165/70R14 AE-50, 185/70R14 AE-50.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/advan-fleva.png"
+    ]
   },
   {
-    id: 12,
-    name: "Warrior Highway Master",
-    slug: "warrior-highway-master",
-    brand_id: 5,
-    category_id: 12,
-    size: "195/65R15",
-    description:
-      "Smooth, quiet highway tyre with excellent fuel economy. Low rolling resistance compound for long-distance comfort.",
-    stock_status: "in_stock",
-    featured: false,
-    images: ["/images/tires/warrior-1.png"],
+    "id": 107,
+    "name": "Yokohama BluEarth ES-32",
+    "slug": "yokohama-bluearth-es-32",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "195/65R15",
+    "description": "THE ALL NEW POWERFUL & COMFORTABLE TREAD - GRIP THE EARTH. High-rigidity extra-wide profile tread offering extra mileage, strong wet braking, and powerful stability across 13 to 18 inch rims. Available sizes: 175/70R14, 155/60R15, 175/70R13, 185/65R15, 195/65R15, 205/60R15, 205/65R15, 185/55R16, 195/50R16, 195/55R16, 195/60R16, 205/55R16, 205/60R16, 215/55R16, 225/55R16, 215/60R16, 225/60R16, 205/65R16, 205/40R17, 205/45R17, 215/45R17, 225/45R17, 215/50R17, 215/55R17, 225/50R17, 225/40R18, 235/40R18 (27 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/yokohama-bluearth-es32.png"
+    ]
   },
+  {
+    "id": 108,
+    "name": "Yokohama ADVAN dB V552",
+    "slug": "yokohama-advan-db-v552",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "215/55R16",
+    "description": "DRAMATIC SILENCE - Beautiful small block design creates breathtaking silence. Premium luxury noise-cancelling tire featuring small block tread design for near-silent cabin quietness and supreme comfort. Available sizes: 185/65R15, 195/65R15, 205/65R15, 195/55R16, 205/55R16, 215/55R16, 225/55R16, 205/60R16, 215/60R16, 215/50R17, 225/50R17, 215/55R17, 225/55R17, 215/60R17, 225/60R17, 225/45R18, 225/55R18, 235/45R18, 235/50R18, 245/50R18, 245/40R18, 245/45R18, 265/35R18, 245/45R19 (24 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/yokohama-advan-db-v552.png"
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Yokohama ADVAN dB V553",
+    "slug": "yokohama-advan-db-v553",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "215/55R17",
+    "description": "DRAMATIC SILENCE E+ - Handling Silence Comfort Dry Wet Asymmetric Luxury. Next-generation EV-compatible luxury quiet tire delivering sustainable noise suppression, long-lasting smoothness, and wet handling. Available sizes: 175/65R15, 185/65R15, 195/65R15, 195/55R16, 195/60R16, 205/55R16, 215/60R16, 205/60R16, 195/60R17, 215/45R17, 215/50R17, 215/55R17, 215/60R17, 225/45R17, 225/50R17, 225/55R17, 225/65R17, 245/45R17, 225/45R18, 225/50R18, 225/55R18, 225/60R18, 235/45R18, 235/50R18, 245/40R18, 245/45R18, 245/50R18, 225/55R19, 235/40R19, 245/40R19 (30 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/yokohama-advan-db-v552.png"
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Yokohama BluEarth-GT AE51",
+    "slug": "yokohama-bluearth-gt-ae51",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "205/55R16",
+    "description": "GRAND TOURING BLUE EARTH GTAE-51 - Newly-developed High-rigidity Asymmetrical Pattern Spirited. Grand touring passenger tire designed for high-speed stability, anti-uneven wear, and responsive steering performance. Available sizes: 155/65R14, 175/65R14, 175/65R15, 185/55R15, 185/60R15, 185/65R15, 195/60R15, 195/65R15, 205/65R15, 185/55R16, 195/55R16, 205/55R16, 205/60R16, 205/65R16, 215/55R16, 215/60R16, 215/50R17, 205/45R17, 225/55R17, 225/50R18, 235/45R18, 245/40R18, 245/45R18 (23 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/advan-fleva.png"
+    ]
+  },
+  {
+    "id": 111,
+    "name": "Yokohama BluEarth RV-03",
+    "slug": "yokohama-bluearth-rv03",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "215/60R16",
+    "description": "Specially designed for MPV's BLUEARTH RV03 - Improved quietness & considerations designed for MPVs. Dedicated MPV and minivan tire engineered to reduce side-to-side sway, quieten rear-seat noise, and maximize wear life. Available sizes: 215/60R16, 225/55R18, 235/50R18.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/advan-fleva.png"
+    ]
+  },
+  {
+    "id": 112,
+    "name": "Yokohama dB Decibel E70",
+    "slug": "yokohama-db-decibel-e70",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "215/60R16",
+    "description": "OEM quiet luxury touring tire optimized for fuel economy, smooth ride quality, and ultra-low tread pattern noise. Available sizes: 215/60R16 95V E70B, 215/55R17 93V E70B.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/advan-fleva.png"
+    ]
+  },
+  {
+    "id": 113,
+    "name": "Yokohama ADVAN Apex V601",
+    "slug": "yokohama-advan-apex-v601",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "245/40R18",
+    "description": "MAKE YOUR CONTROL DIRECT ADVAN APEX V601 - Superior traction and handling without the road noise. High-performance summer tire engineered with solid center ribs, high-rigidity blocks, and micro-silica compound for maximum cornering. Available sizes: 225/45R17, 235/40R18, 235/45R18, 245/45R18, 245/40R18, 275/40R18, 225/40R19, 245/40R19, 245/45R19, 255/35R19, 275/35R19, 275/40R19, 275/35R20, 245/40R20 (14 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/advan-apex.png"
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Yokohama ADVAN Fleva V701",
+    "slug": "yokohama-advan-fleva-v701",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "195/55R16",
+    "description": "V701 - Sport compact street performance tire featuring directional claw grooves for aggressive wet traction and emotional driving response. Available sizes: 195/55R16 87V V701, 215/50R17 95W V701.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/advan-fleva.png"
+    ]
+  },
+  {
+    "id": 115,
+    "name": "Yokohama ADVAN Sport V105",
+    "slug": "yokohama-advan-sport-v105",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "245/40R19",
+    "description": "ADVAN APEX V105 - Superb Performance Street Tire. Flagship high-speed sport tire developed on the Nürburgring for high-horsepower luxury sports cars and premium sedans. Available sizes: 205/55R16, 235/50R19, 245/40R19, 245/40R18, 275/35R19, 265/55R19, 315/35R20 RFT ZPS.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/advan-sport-v107.webp"
+    ]
+  },
+  {
+    "id": 116,
+    "name": "Yokohama ADVAN Sport V107 EV",
+    "slug": "yokohama-advan-sport-v107-ev",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "275/35ZR21",
+    "description": "ADNAN SPORTS EV+SILENT FOAM V107 - Ultra-high performance EV and supercar tire with Silent Foam acoustic lining for whisper-quiet high-speed handling. Available sizes: 255/40ZR21, 275/35ZR21, 285/35ZR21, 305/30ZR21, 315/30ZR21, 315/30ZR22, 315/30ZR23.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/advan-sport-v107.webp"
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Yokohama RFT 103 ZPS",
+    "slug": "yokohama-rft-103-zps",
+    "brand_id": 1,
+    "category_id": 1,
+    "size": "225/50R17",
+    "description": "RFT 103 ZPS - Zero Pressure System (Run-Flat) tire allowing safe driving after total pressure loss, combining high-speed safety with comfort. Available sizes: 225/50R17 V103 ZPS, 245/50R18 V103 ZPS.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/advan-apex.png"
+    ]
+  },
+  {
+    "id": 118,
+    "name": "Yokohama ADVAN V61",
+    "slug": "yokohama-advan-v61",
+    "brand_id": 1,
+    "category_id": 2,
+    "size": "235/55R18",
+    "description": "Ultra-modern premium SUV original equipment tire offering agile high-speed handling, superior wet grip, and luxurious highway quietness. Available sizes: 235/55R18 V61, 235/60R18 V61, 225/55R19 V61, 235/55R19 V61.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/advan-apex.png"
+    ]
+  },
+  {
+    "id": 119,
+    "name": "Yokohama BluEarth-XT AE61",
+    "slug": "yokohama-bluearth-xt-ae61",
+    "brand_id": 1,
+    "category_id": 2,
+    "size": "225/65R17",
+    "description": "GT AE-61, JUST FOR YOU, URBAN SUV TIRE BLUEARTH - All-new pattern for urban SUVs. Specialized crossover and urban SUV tire engineered to eliminate uneven wear, enhance cornering stability, and deliver a smooth ride. Available sizes: 215/50R17, 215/55R17, 225/55R17, 215/60R17, 225/60R17, 225/65R17, 225/50R18, 225/55R18, 235/50R18, 225/60R18, 235/60R18, 225/55R19, 235/55R19, 235/55R20 (14 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/advan-fleva.png"
+    ]
+  },
+  {
+    "id": 120,
+    "name": "Yokohama Geolandar G91",
+    "slug": "yokohama-geolandar-g91",
+    "brand_id": 1,
+    "category_id": 2,
+    "size": "225/65R17",
+    "description": "Factory-fitted crossover & light SUV tire providing refined highway comfort, wet grip, and dependable all-season capability. Available sizes: 225/60R17 98H G91F, 225/65R17 G-91.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/yokohama-geolandar-g015.png"
+    ]
+  },
+  {
+    "id": 121,
+    "name": "Yokohama Geolandar X-CV G057",
+    "slug": "yokohama-geolandar-xcv-g057",
+    "brand_id": 1,
+    "category_id": 2,
+    "size": "265/50R20",
+    "description": "GEOLANDAR X-CV GO-57 - The all new Performance A/S for Crossover SUV. Luxury performance all-season tire built for high-performance luxury SUVs, delivering wide contact patches and all-weather traction. Available sizes: 255/55R19, 235/45R19, 265/50R19, 265/55R19, 275/55R19, 255/55R20, 265/50R20, 265/55R20, 265/60R20, 295/35R21, 265/45R21, 275/45R21, 285/45R21, 275/40R22 (14 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/yokohama-geolandar-g015.png"
+    ]
+  },
+  {
+    "id": 122,
+    "name": "Yokohama Geolandar CV G058",
+    "slug": "yokohama-geolandar-cv-g058",
+    "brand_id": 1,
+    "category_id": 2,
+    "size": "225/65R17",
+    "description": "GEO LANDER GO-58 - Transcend Time & Distance. Grand touring all-season SUV tire engineered with micro-silica polymer for long mileage, wet safety, and quiet highway cruising. Available sizes: 225/60R17, 225/65R17, 225/50R18, 225/55R18, 235/50R18, 235/55R18, 255/55R18, 225/60R18, 235/60R18, 265/60R18, 255/50R19, 225/55R19, 245/55R19, 255/55R19, 235/55R19, 235/55R20, 255/50R20, 255/55R20 (18 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/yokohama-geolandar-g015.png"
+    ]
+  },
+  {
+    "id": 123,
+    "name": "Yokohama Geolandar H/T G056",
+    "slug": "yokohama-geolandar-ht-g056",
+    "brand_id": 1,
+    "category_id": 2,
+    "size": "265/70R16",
+    "description": "GEOLANDAR H/T GO-56 - Long-lasting comfort, everywhere you go. Heavy-duty highway terrain SUV & truck tire featuring adaptive 3D sipes and triple-polymer compound for extended tread wear. Available sizes: 255/70R15, 31*10.50R15, 245/70R16, 265/70R16, 275/70R16, 265/65R17, 275/65R17, 225/70R17, 255/60R18, 265/60R18, 285/60R18, 275/60R18, 275/65R18, 265/55R19, 285/50R20, 285/45R21, 275/50R21 (17 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/yokohama-geolandar-g015.png"
+    ]
+  },
+  {
+    "id": 124,
+    "name": "Yokohama Geolandar A/T G015",
+    "slug": "yokohama-geolandar-at-g015",
+    "brand_id": 1,
+    "category_id": 2,
+    "size": "265/70R16",
+    "description": "GEO LANDER A/T GO-15 - High dimension All-Terrain tire. Greater Durability & Longer life. Excellent Wet Grip & Off-road capability across all surfaces. Available sizes: 31*10.50R15, 215/70R16, 245/70R16, 265/70R16, 275/70R16, 205/80R16, 265/65R17, 285/65R17, 225/70R17, 265/60R18, 275/65R18, 285/50R20 (12 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/yokohama-geolandar-g015.png"
+    ]
+  },
+  {
+    "id": 125,
+    "name": "Yokohama Geolandar M/T G003",
+    "slug": "yokohama-geolandar-mt-g003",
+    "brand_id": 1,
+    "category_id": 2,
+    "size": "31*10.50R15",
+    "description": "AMAZING TRACTION GEO LANDER M/T G003 - INTEGRATED DESIGN CONCEPT. Extreme mud-terrain tire featuring Rock-Crusher blocks, aggressive sidewall armor, and GEO-SHIELD construction for off-road dominance. Available sizes: 31*10.50R15 A9Q, 285/75R16 GO03, 37*12.50R17C 4Q, LT 285/65R18C 5Q.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/yokohama-geolandar-g003.png"
+    ]
+  },
+  {
+    "id": 126,
+    "name": "Yokohama Geolandar X-AT G016",
+    "slug": "yokohama-geolandar-xat-g016",
+    "brand_id": 1,
+    "category_id": 2,
+    "size": "265/70R17",
+    "description": "GEO LANDER X/T GO-16 FOR BULLET-PROOF VEHICLES - Go-anywhere performance. Extreme all-terrain crossover tire designed for bulletproof/armored vehicles, extreme loads, dual sidewall designs, and off-road trails. Available sizes: 31*10.50R15, 245/75R16, LT 265/75R16, LT 265-65R17, 265-65R17, LT 265/70R17, 265/65R18, 265/60R18, LT275/70R18, LT285/60R18, LT285/65R18, LT285/75R18, LT285/55R20, 265/60R20, LT285/60R20 (15 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/yokohama-geolandar-g003.png"
+    ]
+  },
+  {
+    "id": 127,
+    "name": "Yokohama Geolandar A/T G-94",
+    "slug": "yokohama-geolandar-at-g94",
+    "brand_id": 1,
+    "category_id": 2,
+    "size": "265/65R17",
+    "description": "GEO LANDER A/T G-94 - Factory original equipment all-terrain tire customized for Toyota Land Cruiser and Hilux, delivering all-weather dependability. Available sizes: 265/70R16 G94, 265/65R17 B2SG94, 285/65R17 B6HG94, 285/60R18 B6VG94.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/yokohama-geolandar-g015.png"
+    ]
+  },
+  {
+    "id": 128,
+    "name": "Yokohama Geolandar A/T G-31B",
+    "slug": "yokohama-geolandar-at-g31b",
+    "brand_id": 1,
+    "category_id": 2,
+    "size": "265/65R18",
+    "description": "GEO LANDER A/T G-31B - Specialty OEM all-terrain tire with reinforced bead structure for heavy SUVs and utility 4x4 vehicles. Available sizes: 265/65R18 B4VG31 X L TORR.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/yokohama-geolandar-g015.png"
+    ]
+  },
+  {
+    "id": 129,
+    "name": "Yokohama Geolandar 4x4 PA02",
+    "slug": "yokohama-geolandar-4x4-pa02",
+    "brand_id": 1,
+    "category_id": 2,
+    "size": "285/50R20",
+    "description": "GEO LANDER 4X4 - High-performance luxury 4x4 urban street tire designed for big rim fitments, sleek aesthetics, and wet surface grip. Available sizes: 285/50R20 V105 TWRBL, 275/55R20 PA02, 285/50R20 B2VPA02.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/yokohama-geolandar-g015.png"
+    ]
+  },
+  {
+    "id": 130,
+    "name": "Yokohama Delivery Star RY356 Light Truck",
+    "slug": "yokohama-delivery-star-ry356",
+    "brand_id": 1,
+    "category_id": 3,
+    "size": "185R14C",
+    "description": "LT RADIAL - Heavy-duty delivery van and light truck commercial radial engineered for high payload capacity, puncture resistance, and long tread life. Available sizes: 185R14C 8PR RY356, 195R14C 8PR RY356, 195R15 6PR RY356.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/advan-fleva.png"
+    ]
+  },
+  {
+    "id": 131,
+    "name": "Yokohama BluEarth-Van RY55 Commercial",
+    "slug": "yokohama-bluearth-van-ry55",
+    "brand_id": 1,
+    "category_id": 3,
+    "size": "195R14C",
+    "description": "LT RADIAL - Fuel efficient high mileage commercial van radial designed for maximum durability, wet safety, and heavy cargo transport. Available sizes: 185R14C 8PR RY55, 195R14C 8PR RY55, 195R15 8PR RY55, 195/70R15 RY55, 205/70R15 8PR RY55, 215/70R15C 8PR RY55, 225/70R15 8PR RY-55, 195/75R16 RY55, 215/75R16 RY55, 225/75R16 RY55, 235/65R16 8PR RY-55.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/advan-fleva.png"
+    ]
+  },
+  {
+    "id": 132,
+    "name": "Yokohama Super Van RY53 Commercial",
+    "slug": "yokohama-super-van-ry53",
+    "brand_id": 1,
+    "category_id": 3,
+    "size": "205/70R15",
+    "description": "LT RADIAL - Heavy commercial transport radial featuring reinforced shoulder ribs for heavy urban multi-stop delivery routes. Available sizes: 205/70R15 8PR RY-53.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/advan-fleva.png"
+    ]
+  },
+  {
+    "id": 133,
+    "name": "Yokohama Y-828A 4x4 Commercial Radial",
+    "slug": "yokohama-y828a-commercial",
+    "brand_id": 1,
+    "category_id": 3,
+    "size": "205R16",
+    "description": "LT RADIAL - All-terrain heavy load commercial 4x4 pickup radial tire engineered for rough rural roads and tough construction work. Available sizes: 205R16 Y-828A 8PR.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/yokohama-geolandar-g015.png"
+    ]
+  },
+  {
+    "id": 134,
+    "name": "Yokohama 99HG033 Commercial Truck Radial",
+    "slug": "yokohama-99hg033-radial",
+    "brand_id": 1,
+    "category_id": 3,
+    "size": "215/70R16",
+    "description": "LT RADIAL - High ply rating light truck commercial radial tire with reinforced casing for heavy cargo haulage. Available sizes: 215/70R16 8PR 99HG033.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/advan-fleva.png"
+    ]
+  },
+  {
+    "id": 135,
+    "name": "Yokohama Geolandar G018 Commercial Radial",
+    "slug": "yokohama-geolandar-g018",
+    "brand_id": 1,
+    "category_id": 3,
+    "size": "LT 265/70R17",
+    "description": "LT GO18 INCHES RIM / GO18 17/18 INCHES RIM - Heavy-duty light truck and 4x4 commercial radial engineered for high load capacity, rugged puncture resistance, and tough road durability. Available sizes: LT 285/75R16, LT 285/70R17, LT 275/70R18, LT 265/60R18, 255/70R15 GO18, 31*10.50R15 GO18, 265-65R17 GO18, 285-65R17 GO18, 265-60R18 GO18, 285/60R18 GO18 (10 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/yokohama-geolandar-g003.png"
+    ]
+  },
+  {
+    "id": 301,
+    "name": "Warrior R700 EV",
+    "slug": "warrior-r700-ev",
+    "brand_id": 3,
+    "category_id": 7,
+    "size": "185/55R16",
+    "description": "EV Special - Advanced Electric Vehicle passenger tire designed for whisper-quiet rolling comfort, instantaneous torque traction, and low energy consumption. Available sizes: 145-70R12 69T, 165-65R15 81H, 185-55R16 87H XL, 215/55R17, 215/55R18.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/warrior-ecomax.png"
+    ]
+  },
+  {
+    "id": 302,
+    "name": "Warrior ECO-MAX",
+    "slug": "warrior-eco-max",
+    "brand_id": 3,
+    "category_id": 7,
+    "size": "195/65R15",
+    "description": "High-efficiency green touring passenger tire engineered for maximum fuel economy, smooth tread life, and reliable wet/dry handling across city and highway roads. Available sizes: 175-70R13 82T, 175-65R14 82H, 175-70R14, 185-65R14 86H, 185-70R14 88H, 185-60R15 84H, 185-65R15 88H, 195-65R15, 205-65R15 94V, 195-55R16 91W XL, 195-60R16 89H, 205-55R16 91V, 205-60R16 92V, 215-60R16 95V (14 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/warrior-ecomax.png"
+    ]
+  },
+  {
+    "id": 303,
+    "name": "Warrior R29",
+    "slug": "warrior-r29",
+    "brand_id": 3,
+    "category_id": 7,
+    "size": "185/55R15",
+    "description": "Durable daily commute passenger tire built for long mileage, wear resistance, and comfortable steering response for compact vehicles. Available sizes: 165-65R13, 155-65R14, 165-65R14 79T, 185-55R15, 195-65R15 91V.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/warrior-1.png"
+    ]
+  },
+  {
+    "id": 304,
+    "name": "Warrior R699",
+    "slug": "warrior-r699",
+    "brand_id": 3,
+    "category_id": 7,
+    "size": "185/65R15",
+    "description": "Premium family sedan tire featuring multi-pitch tread design to minimize road noise and provide enhanced wet braking safety. Available sizes: 165-70R13 79T, 165-70R14 81T, 175-65R14 82T, 185-70R14 88H, 185-65R15 88H, 195-65R15 91V.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/warrior-1.png"
+    ]
+  },
+  {
+    "id": 305,
+    "name": "Warrior R35 UHP",
+    "slug": "warrior-r35-uhp",
+    "brand_id": 3,
+    "category_id": 7,
+    "size": "225/45R18",
+    "description": "Ultra-high performance (UHP) summer sport tire delivering sharp cornering control, high-speed stability, and aggressive grip for sports sedans. Available sizes: 225-45R18 XL 95W, 215/45R17 91W, 235/35R19 91Y XL.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/warrior-ecomax.png"
+    ]
+  },
+  {
+    "id": 306,
+    "name": "Warrior Comfortune A05",
+    "slug": "warrior-comfortune-a05",
+    "brand_id": 3,
+    "category_id": 7,
+    "size": "215/55R16",
+    "description": "Luxury comfort-oriented touring tire optimized for vibration absorption, plush ride comfort, and stable high-speed cruising. Available sizes: 215-55R16, 185/65R15.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/warrior-1.png"
+    ]
+  },
+  {
+    "id": 307,
+    "name": "Warrior R32",
+    "slug": "warrior-r32",
+    "brand_id": 3,
+    "category_id": 7,
+    "size": "205/55R17",
+    "description": "High-performance sport touring tire featuring optimized tread blocks for precise steering feedback and excellent high-speed stability. Available sizes: 205-45ZR17 88W XL, 205-55R17 95V XL, 215-55R17 98W XL.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/warrior-ecomax.png"
+    ]
+  },
+  {
+    "id": 308,
+    "name": "Warrior Wondergy EV",
+    "slug": "warrior-wondergy-ev",
+    "brand_id": 3,
+    "category_id": 7,
+    "size": "225/45R18",
+    "description": "WONDERGY EV - Next-generation EV flagship tire engineered for high load index, ultra-low rolling resistance, and supreme acoustic quietness. Available sizes: 215/45R17 91W, 205/55R17 95V XL, 225/60R17 99H, 215/50R18 92Y, 225/45R18 95E XL, 235-45R18 98Y XL, 225-50R18 95W, 235/50R19 99V, 245/40R19 98W, 245-45R19 102Y XL, 255/45R19 100W, 255/45R21 105W XL, 265/45R21 108W XL, 245/40R20 103V XL, 255/40R20 101Y XL, 275/45R20 110Y XL, 235/55R20 102V, 275-40R19 101Y (18 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/warrior-ecomax.png"
+    ]
+  },
+  {
+    "id": 309,
+    "name": "Warrior SR1 / SR1HP SUV",
+    "slug": "warrior-sr1-suv",
+    "brand_id": 3,
+    "category_id": 8,
+    "size": "235/60R18",
+    "description": "Premium highway terrain crossover & SUV tire engineered for smooth luxury cruising, enhanced wet grip, and long-lasting tread wear. Available sizes: 215-60R17 96H SR1, 225-55R18 102W XL SR1, 235-60R18 103W SR1, 225-55R19 99V HP SR1, 265-65R17 112H SR1HP, 265-60R18 110H SR1HP.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/warrior-at-plus.png"
+    ]
+  },
+  {
+    "id": 310,
+    "name": "Warrior Cosilency SUV",
+    "slug": "warrior-cosilency-suv",
+    "brand_id": 3,
+    "category_id": 8,
+    "size": "235/55R18",
+    "description": "COSILENCY - Ultra-quiet luxury SUV tire featuring noise-cancelling tread sipes and extra-wide shoulder blocks for supreme highway comfort. Available sizes: 225-45R17 94W XL, 215-50R17 95W XL, 225/50R17 98W XL, 235-45R18 98W XL, 235-50R18 101V XL, 225/55R18 102W XL SUV, 235-55R18 104V XL SUV, 235-60R18 107V XL, 245-45R18 100W XL, 225-45R19 96W XL, 235-55R19 105V XL, 245-55R19 103V, 255/50R20 109W, 275-45R21 110W XL SUV (14 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/warrior-at-plus.png"
+    ]
+  },
+  {
+    "id": 311,
+    "name": "Warrior AT-PLUS 4x4",
+    "slug": "warrior-at-plus-4x4",
+    "brand_id": 3,
+    "category_id": 8,
+    "size": "265/70R16",
+    "description": "AT-PLUS - Heavy-duty All-Terrain 4x4 tire with reinforced sidewalls, self-cleaning tread grooves, and aggressive off-road mud & gravel traction. Available sizes: 265-70R16 115T XL, 265-65R17 112T, 265-60R18 114T XL, 285-60R18 120T XL, 215-75R15C AT-PLUS.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/warrior-at-plus.png"
+    ]
+  },
+  {
+    "id": 312,
+    "name": "Warrior LT Cruseross 4x4",
+    "slug": "warrior-lt-cruseross-4x4",
+    "brand_id": 3,
+    "category_id": 8,
+    "size": "LT 265/65R17",
+    "description": "LT CRUSEROSS - Extreme light-truck all-terrain 4x4 tire built for high load capacity, puncture-resistant casing, and heavy-duty off-road adventure. Available sizes: LT265/65R17 120/117S CRUSEROSS, LT265/65R18 122/119Q CRUSEROSS.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/warrior-at-plus.png"
+    ]
+  },
+  {
+    "id": 313,
+    "name": "Warrior Light Truck Commercial CR19 / WS320",
+    "slug": "warrior-lt-commercial-cr19",
+    "brand_id": 3,
+    "category_id": 16,
+    "size": "185R14C",
+    "description": "LT LIGHT-TRUCK - Heavy-duty commercial van and truck radial tire engineered for maximum payload capacity, high ply ratings, and extreme durability on Pakistani commercial routes. Available sizes: 175-70R14C 95/93S, 165R13 CR19, 185R14C 102/100Q, 195R14C 106/104, 195R15C 106/104R, 195/70R15C 104/102R, 205/70R15C 106/104R, 215-70R15C 109/107, 750R16 14PR WS320, 750R16 16PR WS256 (10 Sizes).",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/warrior-1.png"
+    ]
+  },
+  {
+    "id": 401,
+    "name": "Atlas Green ULM W/L",
+    "slug": "atlas-green-ulm-wl",
+    "brand_id": 4,
+    "category_id": 9,
+    "size": "165/70R12",
+    "description": "PCR - Compact city car eco-friendly passenger tire engineered for low rolling resistance, long wear life, and comfortable daily commuting. Available sizes: 155/70R12 GREEN ULM W/L, 165/70R12 GREEN ULM W/L.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/atlas-green-at.png"
+    ]
+  },
+  {
+    "id": 402,
+    "name": "Atlas Green AT Passenger",
+    "slug": "atlas-green-at-passenger",
+    "brand_id": 4,
+    "category_id": 9,
+    "size": "185/65R15",
+    "description": "PCR - All-terrain pattern passenger & crossover tire built with multi-siped tread blocks for smooth handling and reliable wet grip. Available sizes: 165/70R13 GREEN AT, 175/70R13 GREEN AT, 165/65R14 GREEN AT, 165/70R14 GREEN AT, 185/70R14 GREEN AT, 185/60R15 GREEN AT, 185/65R15 GREEN AT (7 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/atlas-green-at.png"
+    ]
+  },
+  {
+    "id": 403,
+    "name": "Atlas LT Nylon Series (LL87 / LL MG99 / LL89)",
+    "slug": "atlas-lt-nylon-series",
+    "brand_id": 4,
+    "category_id": 10,
+    "size": "7.50-16 16PR",
+    "description": "LT NYLON - Heavy-duty nylon bias light truck tire built for maximum load durability, rugged puncture resistance, and tough commercial transport on Pakistani highways. Available sizes: 7.50-16 LL87 14PR, 7.50-16 LL MG99 16PR, 7.50-16 LL89 16PR.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/atlas-otr-heavy.png"
+    ]
+  },
+  {
+    "id": 404,
+    "name": "Atlas Tractor Agricultural LBR103 AT",
+    "slug": "atlas-tractor-agri-lbr103",
+    "brand_id": 4,
+    "category_id": 17,
+    "size": "23.1-26 TL 12PR",
+    "description": "AGRI - Heavy agricultural tractor & harvester tire engineered with deep lug tread design for maximum field traction, mud clearing, and soil protection. Available sizes: 23.1-26 TL 12PR LBR103 AT, 23.1-30 TL 16PR LBR103 AT.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/atlas-otr-heavy.png"
+    ]
+  },
+  {
+    "id": 405,
+    "name": "Atlas OTR Heavy Machinery Earthmover & Loader Series",
+    "slug": "atlas-otr-earthmover-loader",
+    "brand_id": 4,
+    "category_id": 18,
+    "size": "20.5R25**",
+    "description": "OTR - Heavy-duty mining, quarry, and construction earthmover machinery tire built for extreme rock cut resistance, heavy payloads, and durability. Available sizes: 1400-24 TT 16PR LL25 AT SDLG, 1800R33** LB02S TL LA E-4 S1, 20.5R25** LB02SD TL AT L5 C1 ZY, 23.1-26 TL 12PR LL308 LA, 23.5R25** LB02SD TL AT L5 C1 ZY (5 Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/atlas-otr-heavy.png"
+    ]
+  },
+  {
+    "id": 406,
+    "name": "Atlas Industrial Forklift LL45",
+    "slug": "atlas-industrial-forklift-ll45",
+    "brand_id": 4,
+    "category_id": 19,
+    "size": "600-9 10PR",
+    "description": "IND FORKLIFT - Heavy industrial forklift tire engineered with thick sidewall protection and high ply rating for heavy warehouse material handling. Available sizes: 600-9 LL45 10PR.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/atlas-otr-heavy.png"
+    ]
+  },
+  {
+    "id": 501,
+    "name": "Risen RP68 Passenger",
+    "slug": "risen-rp68-passenger",
+    "brand_id": 5,
+    "category_id": 11,
+    "size": "195/65R15",
+    "description": "RP68 PASSENGER - Premium touring passenger tire engineered with variable pitch tread blocks for whisper-quiet ride comfort, superior wet braking, and 4 wide longitudinal drainage grooves. Available sizes: 165/65R13, 165/70R13, 175/65R14, 175/70R14, 185/60R14, 185/60R15, 185/65R14, 185/65R15, 185/70R14, 195/55R15, 195/55R16, 195/60R15, 195/65R15, 205/55R16, 205/60R16, 205/65R15, 215/60R16, 215/70R15, 205/45R17, 205/50R17, 205/55R17, 215/45R17, 215/50R17, 215/55R16, 215/55R17, 215/55R18, 225/45R17, 225/45R18, 225/50R17, 225/55R17, 225/55R18, 225/60R17, 225/65R17, 235/45R18, 235/50R18, 235/55R18, 235/55R19, 235/60R18, 245/45R18, 265/60R18, 265/65R17, 265/70R17, 275/45R20, 245/40R20 (65+ Sizes).",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/risen-rp68.png"
+    ]
+  },
+  {
+    "id": 502,
+    "name": "Risen RS20 Eco Comfort",
+    "slug": "risen-rs20-eco-comfort",
+    "brand_id": 5,
+    "category_id": 11,
+    "size": "185/65R15",
+    "description": "High-efficiency compact & midsize sedan tire offering low rolling resistance, long wear life, and dependable wet surface traction for daily urban driving.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/risen-rp68.png"
+    ]
+  },
+  {
+    "id": 503,
+    "name": "Risen HT70 Highway SUV",
+    "slug": "risen-ht70-highway-suv",
+    "brand_id": 5,
+    "category_id": 12,
+    "size": "235/65R17",
+    "description": "Highway terrain SUV & crossover tire engineered for smooth luxury cruising, low road noise, and stable high-speed handling across Pakistani highways.",
+    "stock_status": "in_stock",
+    "featured": true,
+    "images": [
+      "/images/tires/risen-rp68.png"
+    ]
+  },
+  {
+    "id": 504,
+    "name": "Risen AT01 All-Terrain 4x4",
+    "slug": "risen-at01-all-terrain",
+    "brand_id": 5,
+    "category_id": 12,
+    "size": "265/70R16",
+    "description": "Aggressive All-Terrain 4x4 tire with reinforced sidewalls, self-cleaning tread grooves, and tough off-road mud & gravel traction.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/risen-rp68.png"
+    ]
+  },
+  {
+    "id": 505,
+    "name": "Risen RL88 Commercial Light Truck",
+    "slug": "risen-rl88-commercial-truck",
+    "brand_id": 5,
+    "category_id": 20,
+    "size": "185R14C",
+    "description": "Heavy-duty commercial van & light truck radial tire engineered for high load capacity, puncture-resistant casing, and extended mileage on delivery routes.",
+    "stock_status": "in_stock",
+    "featured": false,
+    "images": [
+      "/images/tires/risen-rp68.png"
+    ]
+  }
 ];
 
 export const dealers: Dealer[] = [
@@ -422,7 +1166,7 @@ export const branches: Branch[] = [
     phone: "+92 42 37712001",
     city: "Lahore",
     sort_order: 6,
-  },
+  }
 ];
 
 // Helper functions
@@ -434,7 +1178,10 @@ export function getCategoriesByBrand(brandId: number): Category[] {
   return categories.filter((c) => c.brand_id === brandId);
 }
 
-export function getCategoryBySlug(slug: string): Category | undefined {
+export function getCategoryBySlug(slug: string, brandId?: number): Category | undefined {
+  if (brandId) {
+    return categories.find((c) => c.slug === slug && c.brand_id === brandId);
+  }
   return categories.find((c) => c.slug === slug);
 }
 

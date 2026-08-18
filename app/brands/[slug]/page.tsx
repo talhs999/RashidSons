@@ -45,18 +45,18 @@ export default function BrandDetailPage() {
     <>
       {/* Brand hero */}
       <section className="relative bg-brand-black pt-32 md:pt-40 pb-24 overflow-hidden min-h-[70vh] flex items-center">
-        {/* Background image fading on the right */}
-        <div className="absolute top-0 right-0 w-full lg:w-2/3 h-full z-0 opacity-30 lg:opacity-60">
+        {/* Background hero image */}
+        <div className={brand.banner_image ? "absolute inset-0 w-full h-full z-0" : "absolute top-0 right-0 w-full lg:w-2/3 h-full z-0 opacity-30 lg:opacity-60"}>
           <Image
-            src={brand.tire_image || brand.logo_url}
+            src={brand.banner_image || brand.tire_image || brand.logo_url}
             alt={brand.name}
             fill
-            className="object-cover lg:object-contain object-right"
+            className={brand.banner_image ? "object-cover object-center opacity-80" : "object-cover lg:object-contain object-right"}
             priority
           />
           {/* Gradient fade from left to right to blend with the black background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black/50" />
+          <div className={brand.banner_image ? "absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/60 to-transparent" : "absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-transparent"} />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-brand-black/40" />
         </div>
 
         <div className="max-w-[1400px] mx-auto px-4 lg:px-6 relative z-10 w-full">

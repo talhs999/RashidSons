@@ -14,7 +14,7 @@ export async function GET(
     return NextResponse.json({ error: "Brand not found" }, { status: 404 });
   }
 
-  const category = getCategoryBySlug(categorySlug);
+  const category = getCategoryBySlug(categorySlug, brand.id);
 
   if (!category || category.brand_id !== brand.id) {
     return NextResponse.json({ error: "Category not found" }, { status: 404 });
