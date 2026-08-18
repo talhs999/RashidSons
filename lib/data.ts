@@ -1,6 +1,3 @@
-// Static data that mirrors the database seed data
-// This allows the site to work without a database connection during development
-
 export interface Brand {
   id: number;
   name: string;
@@ -8,6 +5,16 @@ export interface Brand {
   logo_url: string;
   logo_white_url?: string;
   banner_url?: string;
+  banner_image?: string;
+  tire_image?: string;
+  slogan?: string;
+  about?: {
+    heading?: string;
+    founder?: string;
+    founded_year?: string;
+    headquarters?: string;
+    history?: string;
+  };
   description: string;
 }
 
