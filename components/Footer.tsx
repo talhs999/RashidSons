@@ -125,6 +125,7 @@ export default function Footer() {
                <li><Link href="/brands/atlas" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Atlas Tyre</Link></li>
                <li><Link href="/brands/risen" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Risen</Link></li>
                <li><Link href="/brands/falken" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Falken</Link></li>
+               <li><Link href="/brands/sunwide" className="text-sm text-white/50 hover:text-white transition-colors uppercase tracking-wider font-bold">Sunwide</Link></li>
              </ul>
           </div>
           <div>

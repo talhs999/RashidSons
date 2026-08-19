@@ -1,3 +1,12 @@
+export interface BrandAbout {
+  heading?: string;
+  founder?: string;
+  founded_year?: string;
+  history: string;
+  vision?: string;
+  mission?: string;
+}
+
 export interface Brand {
   id: number;
   name: string;
@@ -8,13 +17,7 @@ export interface Brand {
   banner_image?: string;
   tire_image?: string;
   slogan?: string;
-  about?: {
-    heading?: string;
-    founder?: string;
-    founded_year?: string;
-    headquarters?: string;
-    history?: string;
-  };
+  about?: BrandAbout;
   description: string;
 }
 
@@ -115,6 +118,16 @@ export const brands: Brand[] = [
     "logo_white_url": "/images/brands/falken-logo-white.png",
     "banner_image": "/images/brands/falken-hero-banner.jpg",
     "description": "Falken is known for its high-performance tires, offering precision handling and superior grip for sports cars and everyday driving."
+  }
+,
+  {
+    "id": 7,
+    "name": "Sunwide",
+    "slug": "sunwide",
+    "logo_url": "/images/brands/sunwide-logo.png",
+    "logo_white_url": "/images/brands/sunwide-logo-white.png",
+    "banner_image": "/images/brands/sunwide-hero-banner.webp",
+    "description": "Sunwide Tyres is a rapidly emerging brand known for providing highly reliable and cost-effective tire solutions for everyday drivers."
   }
 ];
 

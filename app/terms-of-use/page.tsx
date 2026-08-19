@@ -61,7 +61,7 @@ export default function TermsOfUsePage() {
       icon: Copyright,
       content: (
         <p>
-          The Site and its original content, features, and functionality are owned by J. Rashid & Sons and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws. This includes, but is not limited to, our logos, brand names, and website design. The logos of our partner brands (Yokohama, Goodyear, Warrior, Atlas Tyre, Risen, Falken) are the property of their respective owners.
+          The Site and its original content, features, and functionality are owned by J. Rashid & Sons and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws. This includes, but is not limited to, our logos, brand names, and website design. The logos of our partner brands (Yokohama, Goodyear, Warrior, Atlas Tyre, Risen, Falken, Sunwide) are the property of their respective owners.
         </p>
       ),
     },

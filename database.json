@@ -56,8 +56,9 @@
         "heading": "The Yokohama Story",
         "founder": "Yokohama Cable Mfg. & B.F. Goodrich",
         "founded_year": "1917",
-        "headquarters": "Tokyo, Japan",
-        "history": "The Yokohama Rubber Company, Limited was established in 1917 as a joint venture between Yokohama Cable Manufacturing and B.F. Goodrich. Over the past century, Yokohama has grown into a global leader in tire technology, renowned for its high-performance tires, motorsports pedigree, and cutting-edge rubber compounds."
+        "history": "The Yokohama Rubber Co. was born in 1917, merging Japanese engineering excellence with global vision. A century of motorsports dominance and relentless innovation has sculpted Yokohama into a titan of the tire industry, renowned for ultra-high-performance engineering and cutting-edge rubber compounds.",
+        "vision": "To empower every driver globally with the ultimate driving experience, blending thrilling performance, unmatched safety, and deep respect for the environment.",
+        "mission": "To engineer tires that redefine limits. We fuse cutting-edge technology with sustainable practices to craft products that inspire confidence on the track, the street, and the trail."
       }
     },
     {
@@ -74,8 +75,9 @@
         "heading": "The Goodyear Heritage",
         "founder": "Frank Seiberling",
         "founded_year": "1898",
-        "headquarters": "Akron, Ohio, USA",
-        "history": "Founded in 1898 by Frank Seiberling, The Goodyear Tire & Rubber Company was named after Charles Goodyear, the inventor of vulcanized rubber. Today, Goodyear is one of the world's largest tire companies, celebrated for its innovations in aviation, motorsports, and everyday consumer driving."
+        "history": "Founded in 1898 in Akron, Ohio, Goodyear quickly became an icon of American industry. From outfitting the Model T to supplying tires for the lunar rover, our legacy is built on a relentless drive to keep the world moving forward through continuous innovation.",
+        "vision": "To be the world's most trusted mobility partner, leading the transition toward a sustainable, connected, and autonomous future of transportation.",
+        "mission": "To deliver superior tire solutions and services that anticipate the evolving needs of our customers, driven by a culture of relentless innovation and operational excellence."
       }
     },
     {
@@ -92,8 +94,9 @@
         "heading": "The Warrior Legacy",
         "founder": "Double Coin Holdings",
         "founded_year": "1920s",
-        "headquarters": "Shanghai, China",
-        "history": "With a heritage dating back to the 1920s in Shanghai, Warrior Tyres is one of China's most historic and respected domestic tire brands. Backed by joint ventures with global tire giants over the decades, Warrior combines century-old manufacturing experience with modern European and Asian tire technology."
+        "history": "Warrior Tyres emerged in the 1920s in Shanghai as a pioneering force in China's automotive revolution. Combining a century of heritage with strategic global partnerships, Warrior has evolved into a symbol of rugged durability, integrating modern European and Asian tire technologies.",
+        "vision": "To be recognized globally as the premier symbol of unyielding strength, reliability, and immense value in the tire industry.",
+        "mission": "To forge highly resilient and technologically advanced tires that conquer the most demanding conditions, providing drivers with safety and confidence on any road, anywhere."
       }
     },
     {
@@ -110,8 +113,9 @@
         "heading": "The Atlas Tradition",
         "founder": "Standard Oil",
         "founded_year": "1935",
-        "headquarters": "USA",
-        "history": "Established in 1935 as the official tire brand of Standard Oil service stations across the United States, Atlas has long been a symbol of American automotive reliability. Today, Atlas continues to deliver exceptional quality, durability, and value for passenger cars and commercial vehicles globally."
+        "history": "Originating in 1935 as the trusted tire brand for Standard Oil service stations across America, Atlas built its reputation on rock-solid reliability. Today, Atlas continues its storied tradition by delivering exceptional value, durability, and enduring quality to a new generation of drivers globally.",
+        "vision": "To be the steadfast companion for every journey, seamlessly blending timeless reliability with modern automotive performance demands.",
+        "mission": "To engineer accessible, high-quality tires that deliver outstanding mileage, safety, and comfort, ensuring that our customers always arrive at their destination with peace of mind."
       }
     },
     {
@@ -128,8 +132,9 @@
         "heading": "The Risen Innovation",
         "founder": "Shandong Risen Tyre",
         "founded_year": "2000s",
-        "headquarters": "Shandong, China",
-        "history": "Risen Tyre represents the new wave of modern Chinese tire manufacturing. Utilizing state-of-the-art automated production lines and advanced tread design technologies, Risen focuses on eco-friendly, fuel-efficient, and highly durable tires that meet strict international safety standards."
+        "history": "Risen Tyre represents the pinnacle of modern, intelligent tire manufacturing. Emerging as a dynamic force in the global market, Risen leverages state-of-the-art automated production to challenge the status quo and deliver premium performance at exceptional value.",
+        "vision": "To revolutionize the smart mobility landscape by providing highly efficient, eco-conscious, and technologically superior tire solutions for the modern world.",
+        "mission": "To utilize advanced tread design and sustainable compounds to produce tires that offer superior fuel efficiency, safety, and longevity, exceeding strict international standards without compromise."
       }
     },
     {
@@ -146,9 +151,28 @@
         "heading": "The Falken Journey",
         "founder": "Sumitomo Rubber Industries",
         "founded_year": "1983",
-        "headquarters": "Kobe, Japan",
-        "history": "Launched in 1983 as a flagship high-performance brand under Sumitomo Rubber Industries, Falken was created to challenge the world's most demanding motorsports arenas. Falken has since transformed that track-tested technology into premium passenger, light truck, and SUV tires for the global market."
+        "history": "Born in 1983 as the high-performance division of Sumitomo Rubber Industries, Falken was forged in the heat of international motorsports. By dominating grueling endurance races like the 24 Hours of Nürburgring, Falken translates track-tested supremacy directly to the street.",
+        "vision": "To be the heartbeat of automotive enthusiasm, continually pushing the boundaries of what is possible in ultra-high-performance and all-terrain mobility.",
+        "mission": "To develop pulse-pounding, high-technology tires that deliver razor-sharp handling, exceptional grip, and unyielding durability for drivers who demand the very best from their vehicles."
       }
+    },
+    {
+      "id": 7,
+      "name": "Sunwide",
+      "slug": "sunwide",
+      "logo_url": "/images/brands/sunwide-logo.png",
+      "logo_white_url": "/images/brands/sunwide-logo-white.png",
+      "slogan": "Embrace the Wide Horizon",
+      "description": "Sunwide Tyres is a rapidly emerging brand known for providing highly reliable and cost-effective tire solutions for everyday drivers.",
+      "about": {
+        "heading": "The Sunwide Story",
+        "founder": "Sunwide Tires Group",
+        "founded_year": "Recent",
+        "history": "Sunwide has quickly gained a reputation in the international tire market by leveraging advanced manufacturing processes and focusing heavily on value-driven performance. Designed to meet everyday commuting needs with excellence, Sunwide is rapidly expanding its footprint across the globe.",
+        "vision": "To become the most trusted and accessible tire brand for daily drivers worldwide, offering uncompromising safety at an exceptional value.",
+        "mission": "To engineer tires that seamlessly blend durability, comfort, and efficiency, ensuring that every journey is smooth and secure."
+      },
+      "banner_image": "/images/brands/sunwide-hero-banner.webp"
     }
   ],
   "categories": [
@@ -199,12 +223,6 @@
       "name": "SUV & 4x4",
       "slug": "rydanz-suv",
       "brand_id": 6
-    },
-    {
-      "id": 15,
-      "name": "Commercial & Off-Road",
-      "slug": "alliance-commercial",
-      "brand_id": 7
     },
     {
       "id": 7,
@@ -271,6 +289,13 @@
       "name": "Commercial & Light Truck Tyres",
       "slug": "commercial",
       "brand_id": 5
+    },
+    {
+      "id": 21,
+      "name": "Passenger Car",
+      "slug": "passenger-car",
+      "brand_id": 7,
+      "image_url": "/images/categories/passenger.png"
     }
   ],
   "products": [
@@ -1232,6 +1257,44 @@
       "images": [
         "/images/tires/risen-rp68.png"
       ]
+    },
+    {
+      "id": 506,
+      "name": "Sunwide RS-ECO",
+      "slug": "sunwide-rs-eco",
+      "brand_id": 7,
+      "category_id": 21,
+      "size": "Multiple Sizes",
+      "description": "The RS-ECO is designed for maximum fuel efficiency and a quiet, comfortable ride for daily commuting.",
+      "features": [
+        "Eco-friendly compound",
+        "Low rolling resistance",
+        "Quiet ride technology"
+      ],
+      "images": [
+        "/images/tires/sunwide-rs-eco.png"
+      ],
+      "stock_status": "in_stock",
+      "featured": false
+    },
+    {
+      "id": 507,
+      "name": "Sunwide RS-ZERO",
+      "slug": "sunwide-rs-zero",
+      "brand_id": 7,
+      "category_id": 21,
+      "size": "Multiple Sizes",
+      "description": "The RS-ZERO delivers enhanced grip and stability, providing confidence in both wet and dry conditions.",
+      "features": [
+        "Enhanced grip",
+        "Optimized tread pattern",
+        "Durable construction"
+      ],
+      "images": [
+        "/images/tires/sunwide-rs-zero.png"
+      ],
+      "stock_status": "in_stock",
+      "featured": false
     }
   ],
   "dealers": [

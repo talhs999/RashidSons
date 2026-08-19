@@ -39,7 +39,7 @@ const features = [
     icon: Shield,
     title: "Authorized Importer",
     description:
-      "Official distributor of Yokohama, Goodyear & Falken tyres in Pakistan. Guaranteed genuine products.",
+      "Official distributor of Yokohama, Goodyear, Falken & Sunwide tyres in Pakistan. Guaranteed genuine products.",
   },
   {
     icon: Award,

@@ -136,13 +136,13 @@ export default function BrandDetailPage() {
         </div>
       </section>
 
-      {/* About Brand Section */}
+            {/* About Brand Section */}
       {brand.about && (
         <section className="py-16 lg:py-24 bg-white border-b border-brand-black/5">
           <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
               {/* Left: Heading & Stats */}
-              <div className="lg:col-span-5">
+              <div className="lg:col-span-4">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -152,7 +152,7 @@ export default function BrandDetailPage() {
                     {brand.about.heading || `About ${brand.name}`}
                   </h2>
                   
-                  <div className="grid grid-cols-2 gap-6">
+                  <div className="flex flex-col gap-4">
                     {brand.about.founder && (
                       <div className="bg-brand-black/5 p-4 rounded-xl border border-brand-black/10">
                         <p className="text-xs text-brand-gray uppercase tracking-wider font-bold mb-1">Founder</p>
@@ -165,28 +165,55 @@ export default function BrandDetailPage() {
                         <p className="text-sm font-semibold text-brand-black">{brand.about.founded_year}</p>
                       </div>
                     )}
-                    {brand.about.headquarters && (
-                      <div className="col-span-2 bg-brand-black/5 p-4 rounded-xl border border-brand-black/10">
-                        <p className="text-xs text-brand-gray uppercase tracking-wider font-bold mb-1">Headquarters</p>
-                        <p className="text-sm font-semibold text-brand-black">{brand.about.headquarters}</p>
-                      </div>
-                    )}
                   </div>
                 </motion.div>
               </div>
 
-              {/* Right: History Text */}
-              <div className="lg:col-span-7">
+              {/* Right: History, Vision, Mission */}
+              <div className="lg:col-span-8">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
-                  className="prose prose-lg max-w-none prose-p:text-brand-gray prose-p:leading-relaxed"
+                  className="space-y-8"
                 >
-                  <p className="text-lg lg:text-xl text-brand-black font-medium leading-relaxed mb-6">
-                    {brand.about.history}
-                  </p>
+                  {/* History */}
+                  <div>
+                    <h3 className="text-xl font-bold text-brand-black mb-3 uppercase flex items-center gap-2">
+                      <div className="w-2 h-6 bg-brand-yellow rounded-full" />
+                      Our History
+                    </h3>
+                    <p className="text-lg text-brand-gray font-medium leading-relaxed">
+                      {brand.about.history}
+                    </p>
+                  </div>
+                  
+                  {/* Vision */}
+                  {brand.about.vision && (
+                    <div>
+                      <h3 className="text-xl font-bold text-brand-black mb-3 uppercase flex items-center gap-2">
+                        <div className="w-2 h-6 bg-brand-yellow rounded-full" />
+                        Vision
+                      </h3>
+                      <p className="text-lg text-brand-gray font-medium leading-relaxed">
+                        {brand.about.vision}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Mission */}
+                  {brand.about.mission && (
+                    <div>
+                      <h3 className="text-xl font-bold text-brand-black mb-3 uppercase flex items-center gap-2">
+                        <div className="w-2 h-6 bg-brand-yellow rounded-full" />
+                        Mission
+                      </h3>
+                      <p className="text-lg text-brand-gray font-medium leading-relaxed">
+                        {brand.about.mission}
+                      </p>
+                    </div>
+                  )}
                 </motion.div>
               </div>
             </div>

@@ -32,7 +32,7 @@ export default function AboutUsTeaser() {
             <p className="text-brand-gray text-lg mb-8 font-sans leading-relaxed">
               J. Rashid & Sons has been at the forefront of the tire industry in Pakistan, 
               bringing world-class performance and safety to every journey. As official distributors 
-              for Yokohama, Goodyear, Falken, and more, we guarantee authentic products and unmatched expertise.
+              for Yokohama, Goodyear, Falken, Sunwide, and more, we guarantee authentic products and unmatched expertise.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

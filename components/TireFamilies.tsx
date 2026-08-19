@@ -70,6 +70,17 @@ const defaultBrandFamilies: BrandFamilyData[] = [
     description:
       "Falken is known for its high-performance tires, offering precision handling and superior grip for sports cars and everyday driving.",
   },
+  {
+    name: "Sunwide",
+    slug: "sunwide",
+    logo: "/images/brands/sunwide-logo-white.png",
+    description:
+      "Reliable, efficient, and built for the everyday driver. Discover exceptional value with Sunwide.",
+    tires: [
+      { name: "RS-ECO", image: "/images/tires/sunwide-rs-eco.png" },
+      { name: "RS-ZERO", image: "/images/tires/sunwide-rs-zero.png" },
+    ],
+  },
 ];
 
 export default function TireFamilies({ brands }: { brands?: any[] }) {
