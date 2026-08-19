@@ -52,7 +52,7 @@ export default function BrandsShowcase({ brands }: { brands: any[] }) {
                       <img
                         src={brand.logo_url}
                         alt={`${brand.name} logo`}
-                        className="max-h-12 max-w-[65%] object-contain drop-shadow-sm"
+                        className={`object-contain drop-shadow-sm ${brand.slug === 'sunwide' ? 'max-h-20 max-w-[85%] scale-110' : 'max-h-16 max-w-[75%]'}`}
                       />
                     </div>
                   </div>

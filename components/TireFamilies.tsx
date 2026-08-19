@@ -149,7 +149,7 @@ export default function TireFamilies({ brands }: { brands?: any[] }) {
 
         {/* Brand Tab Navigation */}
         <div className="w-full max-w-5xl mx-auto mb-10 py-2 px-2">
-          <div className="flex flex-wrap items-center justify-center gap-2.5 md:gap-4 border-b border-white/10 pb-4">
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 pb-2">
             {activeBrandList.map((brand, idx) => {
               const isActive = idx === brandIndex;
               return (
@@ -172,7 +172,7 @@ export default function TireFamilies({ brands }: { brands?: any[] }) {
                   {isActive && (
                     <motion.div
                       layoutId="activeBrandIndicator"
-                      className="absolute -bottom-[17px] left-0 right-0 h-1 bg-brand-yellow shadow-[0_0_12px_rgba(255,215,0,0.8)]"
+                      className="absolute -bottom-2 left-0 right-0 h-1 bg-brand-yellow shadow-[0_0_12px_rgba(255,215,0,0.8)] rounded-full"
                       transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}

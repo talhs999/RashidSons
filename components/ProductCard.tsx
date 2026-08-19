@@ -85,11 +85,7 @@ export default function ProductCard({
         <h3 className="text-base font-bold text-brand-black mb-3 group-hover:text-brand-yellow-dark transition-colors line-clamp-1">
           {name}
         </h3>
-        {price && (
-          <p className="text-lg font-bold text-brand-yellow-dark mb-3">
-            PKR {price.toLocaleString()}
-          </p>
-        )}
+
 
         {/* Actions */}
         <div className="flex gap-2 mt-4">

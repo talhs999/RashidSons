@@ -178,13 +178,6 @@ export default function ProductDetailPage() {
                 </div>
               </div>
 
-              {/* Price */}
-              {product.price && (
-                <p className="text-2xl font-bold text-brand-yellow mb-6">
-                  PKR {product.price.toLocaleString()}
-                </p>
-              )}
-
               {/* Description */}
               <div className="mb-8">
                 <h3 className="text-sm font-semibold text-white/40 uppercase tracking-wider mb-3">
