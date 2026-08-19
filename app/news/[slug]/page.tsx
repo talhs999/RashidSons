@@ -253,7 +253,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
         {/* Back Link */}
         <div className="flex items-center justify-between mb-16">
-          <Link href="/news" className="inline-flex items-center gap-2 font-heading font-bold text-sm uppercase tracking-wider text-brand-black hover:text-amber-600 transition-colors">
+          <Link href="/news" className="inline-flex items-center gap-2 font-heading font-bold text-sm uppercase tracking-wider text-brand-black hover:text-brand-yellow transition-colors">
             <ArrowLeft size={16} /> Back To All News
           </Link>
           <Link href="/dealers" className="inline-flex items-center gap-2 bg-brand-yellow text-brand-black px-5 py-2.5 font-heading font-extrabold text-xs uppercase tracking-wider hover:bg-yellow-400 transition-colors">
@@ -280,14 +280,14 @@ export default async function BlogPostPage({ params }: PageProps) {
                   <div className="p-6 flex-1 flex flex-col justify-between">
                     <div>
                       <span className="text-[10px] font-extrabold uppercase tracking-widest text-amber-700 block mb-1">{rel.tag}</span>
-                      <h4 className="text-base font-heading font-bold text-brand-black leading-snug mb-2 group-hover:text-amber-600 transition-colors line-clamp-2">
+                      <h4 className="text-base font-heading font-bold text-brand-black leading-snug mb-2 group-hover:text-brand-yellow transition-colors line-clamp-2">
                         {rel.title}
                       </h4>
                       <p className="text-gray-600 text-xs line-clamp-2 mb-4">
                         {rel.excerpt}
                       </p>
                     </div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-brand-black group-hover:text-amber-600 flex items-center gap-1">
+                    <span className="text-xs font-bold uppercase tracking-wider text-brand-black group-hover:text-brand-yellow flex items-center gap-1">
                       Read Story <ChevronRight size={14} />
                     </span>
                   </div>

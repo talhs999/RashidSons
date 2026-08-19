@@ -67,7 +67,7 @@ export default function NewsIndexPage() {
                     <span className="flex items-center gap-1"><Clock size={14} className="text-brand-yellow" /> {featuredPost.readTime}</span>
                   </div>
                   
-                  <h3 className="text-2xl lg:text-3xl font-heading font-extrabold text-brand-black leading-tight mb-4 group-hover:text-amber-600 transition-colors">
+                  <h3 className="text-2xl lg:text-3xl font-heading font-extrabold text-brand-black leading-tight mb-4 group-hover:text-brand-yellow transition-colors">
                     {featuredPost.title}
                   </h3>
 
@@ -132,7 +132,7 @@ export default function NewsIndexPage() {
                       <span>{post.readTime}</span>
                     </div>
 
-                    <h3 className="text-xl font-heading font-bold text-brand-black leading-snug mb-3 group-hover:text-amber-600 transition-colors">
+                    <h3 className="text-xl font-heading font-bold text-brand-black leading-snug mb-3 group-hover:text-brand-yellow transition-colors">
                       {post.title}
                     </h3>
 

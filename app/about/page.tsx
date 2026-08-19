@@ -344,7 +344,7 @@ export default function AboutPage() {
                 </div>
 
                 <h3 className="text-3xl lg:text-4xl font-heading font-extrabold uppercase text-brand-black tracking-tight mb-4">
-                  OUR <span className="text-amber-600">MISSION</span>
+                  OUR <span className="text-brand-yellow">MISSION</span>
                 </h3>
 
                 <p className="text-gray-700 text-base lg:text-lg leading-relaxed font-sans mb-8">

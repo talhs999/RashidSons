@@ -13,6 +13,7 @@ interface BrandFamilyData {
   logo: string;
   slogan: string;
   description: string;
+  tires?: { name: string; image: string }[];
 }
 
 const defaultBrandFamilies: BrandFamilyData[] = [
@@ -71,9 +72,11 @@ const defaultBrandFamilies: BrandFamilyData[] = [
       "Falken is known for its high-performance tires, offering precision handling and superior grip for sports cars and everyday driving.",
   },
   {
+    id: 7,
     name: "Sunwide",
     slug: "sunwide",
     logo: "/images/brands/sunwide-logo-white.png",
+    slogan: "EXCEPTIONAL VALUE & RELIABILITY",
     description:
       "Reliable, efficient, and built for the everyday driver. Discover exceptional value with Sunwide.",
     tires: [
