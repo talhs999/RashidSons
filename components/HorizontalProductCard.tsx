@@ -101,7 +101,7 @@ export default function HorizontalProductCard({
           {/* Description */}
           <div className="mb-8">
             <p className="text-brand-gray/90 leading-relaxed text-sm md:text-base pr-0 md:pr-8">
-              {description}
+              {(description || "").split(/available sizes:/i)[0].trim()}
             </p>
           </div>
 

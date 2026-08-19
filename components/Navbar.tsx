@@ -8,6 +8,7 @@ import { Menu, X, ChevronDown, MapPin, Search } from "lucide-react";
 import SearchDrawer from "./SearchDrawer";
 const mainNav = [
   { name: "Brands", href: "/brands" },
+  { name: "News", href: "/news" },
   { name: "About Us", href: "/about" },
   { name: "Contact", href: "/contact" },
   { name: "Dealers", href: "/dealers" },

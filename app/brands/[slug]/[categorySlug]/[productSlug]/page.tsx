@@ -166,14 +166,8 @@ export default function ProductDetailPage() {
                 {product.name}
               </h1>
 
-              {/* Size + Stock */}
+              {/* Stock */}
               <div className="flex items-center gap-4 mb-6">
-                {product.size && (
-                  <div className="flex items-center gap-2 text-white/60">
-                    <Ruler size={16} className="text-brand-yellow" />
-                    <span className="text-sm font-medium">{product.size}</span>
-                  </div>
-                )}
                 <div
                   className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${stock.bg}`}
                 >
@@ -197,7 +191,7 @@ export default function ProductDetailPage() {
                   Description
                 </h3>
                 <p className="text-white/60 leading-relaxed">
-                  {product.description}
+                  {(product.description || "").split(/available sizes:/i)[0].trim()}
                 </p>
               </div>
 
@@ -221,16 +215,6 @@ export default function ProductDetailPage() {
                         {category.name}
                       </td>
                     </tr>
-                    {product.size && (
-                      <tr className="border-b border-white/5">
-                        <td className="px-4 py-3 text-xs text-white/40 uppercase tracking-wider">
-                          Size
-                        </td>
-                        <td className="px-4 py-3 text-sm text-white font-medium">
-                          {product.size}
-                        </td>
-                      </tr>
-                    )}
                     <tr>
                       <td className="px-4 py-3 text-xs text-white/40 uppercase tracking-wider">
                         Availability
@@ -246,7 +230,7 @@ export default function ProductDetailPage() {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                 <a
-                  href={`https://wa.me/923071777510?text=${encodeURIComponent(`Hi, I'm interested in ${product.name} (${product.size || ""}). Please provide a quote and availability.`)}`}
+                  href={`https://wa.me/923071777510?text=${encodeURIComponent(`Hi, I'm interested in ${product.name}. Please provide a quote and availability.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-brand-yellow hover:bg-brand-yellow-dark text-brand-black px-6 py-3 font-bold rounded-xl flex-1 flex items-center justify-center gap-2 transition-colors"

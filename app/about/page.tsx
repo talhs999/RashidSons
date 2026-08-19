@@ -22,6 +22,8 @@ import {
   Truck,
   Building,
   Sparkles,
+  Eye,
+  Target,
 } from "lucide-react";
 
 const timeline = [
@@ -242,6 +244,132 @@ export default function AboutPage() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Vision & Mission Section */}
+      <section className="py-24 lg:py-32 bg-brand-light relative overflow-hidden border-t border-black/10">
+        <div className="max-w-[1400px] mx-auto px-4 lg:px-6 relative z-10">
+          
+          {/* Section Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-brand-black text-brand-yellow font-extrabold uppercase text-xs tracking-[0.2em] mb-4 shadow-sm border border-brand-yellow/30">
+              <Sparkles size={14} className="text-brand-yellow" />
+              STRATEGIC DIRECTION
+            </div>
+            <h2 className="text-4xl lg:text-6xl font-heading font-extrabold text-brand-black uppercase tracking-tighter">
+              OUR <span className="text-brand-yellow bg-brand-black px-4 py-1 rounded-lg inline-block">VISION &amp; MISSION</span>
+            </h2>
+            <div className="w-24 h-1.5 bg-brand-yellow mx-auto mt-6 mb-4" />
+            <p className="text-gray-700 text-lg lg:text-xl font-sans leading-relaxed font-medium">
+              Guided by over seven decades of automotive excellence, our purpose is clear: to keep Pakistan moving safely with world-class tire technology and uncompromised service.
+            </p>
+          </motion.div>
+
+          {/* Cards Grid */}
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            
+            {/* Vision Card */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.5 }}
+              className="bg-brand-black text-white p-8 lg:p-12 rounded-3xl relative overflow-hidden border-2 border-brand-yellow/30 shadow-2xl flex flex-col justify-between group"
+            >
+              {/* Background Glow & Pattern */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-brand-yellow/10 rounded-full blur-3xl pointer-events-none group-hover:bg-brand-yellow/20 transition-colors duration-500" />
+              
+              <div>
+                <div className="flex items-center justify-between mb-8">
+                  <div className="w-16 h-16 rounded-2xl bg-brand-yellow/10 border border-brand-yellow/30 flex items-center justify-center text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors duration-500">
+                    <Eye size={32} />
+                  </div>
+                  <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-brand-yellow bg-white/5 border border-white/10 px-3 py-1 rounded-full">
+                    Future Roadmap
+                  </span>
+                </div>
+
+                <h3 className="text-3xl lg:text-4xl font-heading font-extrabold uppercase text-white tracking-tight mb-4">
+                  OUR <span className="text-brand-yellow">VISION</span>
+                </h3>
+
+                <p className="text-gray-300 text-base lg:text-lg leading-relaxed font-sans mb-8">
+                  To be Pakistan&apos;s premier, most trusted automotive tire importer and retail network—pioneering next-generation omnichannel convenience, sustainable EV compatibility, and bringing global Japanese tire engineering to every road in the nation.
+                </p>
+              </div>
+
+              <div className="pt-6 border-t border-white/10 space-y-3 text-sm font-semibold text-gray-200">
+                <div className="flex items-center gap-3">
+                  <div className="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0" />
+                  <span>100% Authentic Japanese &amp; Global Brand Imports</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0" />
+                  <span>Seamless Omnichannel Dealer &amp; Retail Network</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2.5 h-2.5 rounded-full bg-brand-yellow shrink-0" />
+                  <span>Leading Green &amp; EV Tire Innovation in Pakistan</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Mission Card */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white text-brand-black p-8 lg:p-12 rounded-3xl relative overflow-hidden border-2 border-black/10 hover:border-brand-black shadow-2xl flex flex-col justify-between group"
+            >
+              {/* Background Glow */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-amber-100/50 rounded-full blur-3xl pointer-events-none group-hover:bg-amber-200/60 transition-colors duration-500" />
+              
+              <div>
+                <div className="flex items-center justify-between mb-8">
+                  <div className="w-16 h-16 rounded-2xl bg-brand-black text-brand-yellow flex items-center justify-center group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors duration-500">
+                    <Target size={32} />
+                  </div>
+                  <span className="text-xs font-extrabold uppercase tracking-[0.25em] text-brand-black bg-black/5 border border-black/10 px-3 py-1 rounded-full">
+                    Core Purpose
+                  </span>
+                </div>
+
+                <h3 className="text-3xl lg:text-4xl font-heading font-extrabold uppercase text-brand-black tracking-tight mb-4">
+                  OUR <span className="text-amber-600">MISSION</span>
+                </h3>
+
+                <p className="text-gray-700 text-base lg:text-lg leading-relaxed font-sans mb-8">
+                  To empower every driver, family, and fleet in Pakistan with certified high-performance tires, transparent pricing, and expert 3D precision maintenance—delivering uncompromised safety, comfort, and peace of mind on every journey.
+                </p>
+              </div>
+
+              <div className="pt-6 border-t border-gray-200 space-y-3 text-sm font-semibold text-gray-800">
+                <div className="flex items-center gap-3">
+                  <div className="w-2.5 h-2.5 rounded-full bg-brand-black shrink-0" />
+                  <span>Uncompromising Road &amp; Motorway Safety Standards</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2.5 h-2.5 rounded-full bg-brand-black shrink-0" />
+                  <span>Transparent Pricing &amp; Certified Dealership Excellence</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2.5 h-2.5 rounded-full bg-brand-black shrink-0" />
+                  <span>70+ Years of Unbroken Heritage &amp; Customer Trust</span>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
+
         </div>
       </section>
 

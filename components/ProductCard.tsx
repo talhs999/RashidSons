@@ -82,15 +82,9 @@ export default function ProductCard({
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="text-base font-bold text-brand-black mb-1 group-hover:text-brand-yellow-dark transition-colors line-clamp-1">
+        <h3 className="text-base font-bold text-brand-black mb-3 group-hover:text-brand-yellow-dark transition-colors line-clamp-1">
           {name}
         </h3>
-        {size && (
-          <div className="flex items-center gap-1.5 text-brand-gray mb-3">
-            <Ruler size={13} />
-            <span className="text-xs font-medium">{size}</span>
-          </div>
-        )}
         {price && (
           <p className="text-lg font-bold text-brand-yellow-dark mb-3">
             PKR {price.toLocaleString()}
@@ -107,7 +101,7 @@ export default function ProductCard({
             Details
           </Link>
           <a
-            href={`https://wa.me/923071777510?text=${encodeURIComponent(`Hi, I'm interested in ${name} (${size || ""}). Please provide a quote.`)}`}
+            href={`https://wa.me/923071777510?text=${encodeURIComponent(`Hi, I'm interested in ${name}. Please provide a quote.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-lg bg-brand-yellow text-brand-black text-xs font-semibold uppercase tracking-wider hover:bg-brand-yellow transition-colors"

@@ -5,29 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 
-const newsItems = [
-  {
-    id: 1,
-    date: "Jul 1st, 2026",
-    title: "J. Rashid & Sons 'Pit Crew' Teaches Drivers the Importance of Tire Safety",
-    tag: "CONSUMER NEWS",
-    image: "/images/hero-bg.jpg" // Placeholder
-  },
-  {
-    id: 2,
-    date: "Jun 23rd, 2026",
-    title: "Drivers Ride ADVAN Tires to Division Victories, Record-Breaking Runs",
-    tag: "MOTORSPORTS",
-    image: "/images/hero-bg.jpg" // Placeholder
-  },
-  {
-    id: 3,
-    date: "Jun 16th, 2026",
-    title: "Tire Drivers Gearing Up for 104th Pikes Peak International Hill Climb",
-    tag: "MOTORSPORTS",
-    image: "/images/hero-bg.jpg" // Placeholder
-  }
-];
+import { blogPosts } from "@/lib/newsData";
+
 
 export default function FeaturedNews() {
   return (
@@ -48,15 +27,15 @@ export default function FeaturedNews() {
 
         {/* News Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {newsItems.map((news, i) => (
-            <motion.div
-              key={news.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group relative h-[450px] w-full bg-brand-black overflow-hidden cursor-pointer"
-            >
+          {blogPosts.map((news, i) => (
+            <Link key={news.id} href={`/news/${news.slug}`} className="block">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="group relative h-[450px] w-full bg-brand-black overflow-hidden cursor-pointer"
+              >
               {/* Background Image */}
               <Image
                 src={news.image}
@@ -96,6 +75,7 @@ export default function FeaturedNews() {
                 </div>
               </div>
             </motion.div>
+          </Link>
           ))}
         </div>
 

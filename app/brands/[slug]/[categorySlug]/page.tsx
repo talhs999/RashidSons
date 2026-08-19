@@ -43,20 +43,32 @@ export default function CategoryProductsPage() {
     notFound();
   }
 
-  // Extract unique tire families from products
-  const families = Array.from(new Set(categoryProducts.map((p: any) => {
+  // Helper to extract clean tire family name
+  const getFamily = (p: any) => {
     const parts = p.name.split(" ");
     const isBrand = parts[0].toLowerCase() === brand.name.toLowerCase();
-    return isBrand && parts.length > 1 ? parts[1] : parts[0];
-  })));
+    let family = isBrand && parts.length > 1 ? parts[1] : parts[0];
+    
+    if (family.toUpperCase() === "ADVAN") {
+      return "Advan";
+    }
+    if (family.toLowerCase() === "a.drive") {
+      return "A.Drive";
+    }
+    if (family.toLowerCase().startsWith("bluearth")) {
+      return "BluEarth";
+    }
+    if (family.toLowerCase() === "db") {
+      return "Decibel";
+    }
+    return family;
+  };
+
+  // Extract unique tire families from products
+  const families = Array.from(new Set(categoryProducts.map(getFamily)));
 
   const filteredProducts = activeFamily 
-    ? categoryProducts.filter((p: any) => {
-        const parts = p.name.split(" ");
-        const isBrand = parts[0].toLowerCase() === brand.name.toLowerCase();
-        const f = isBrand && parts.length > 1 ? parts[1] : parts[0];
-        return f === activeFamily;
-      })
+    ? categoryProducts.filter((p: any) => getFamily(p) === activeFamily)
     : categoryProducts;
 
   return (
