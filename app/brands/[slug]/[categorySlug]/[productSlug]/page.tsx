@@ -5,12 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  getBrandBySlug,
-  getCategoryBySlug,
-  getProductBySlug,
-  brands,
-} from "@/lib/data";
+import { useEffect, useState } from "react";
 import {
   ChevronRight,
   MessageCircle,
@@ -51,15 +46,36 @@ export default function ProductDetailPage() {
   const categorySlug = params.categorySlug as string;
   const productSlug = params.productSlug as string;
 
-  const brand = getBrandBySlug(brandSlug);
-  const category = getCategoryBySlug(categorySlug);
-  const product = getProductBySlug(productSlug);
+  const [brand, setBrand] = useState<any>(null);
+  const [category, setCategory] = useState<any>(null);
+  const [product, setProduct] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`/api/brands/${brandSlug}/${categorySlug}/${productSlug}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setBrand(data.brand);
+        setCategory(data.category);
+        setProduct(data.product);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, [brandSlug, categorySlug, productSlug]);
+
+  if (loading) {
+    return (
+      <section className="relative bg-brand-black pt-32 md:pt-40 pb-24 min-h-screen flex items-center justify-center">
+        <div className="text-white/50 text-lg">Loading...</div>
+      </section>
+    );
+  }
 
   if (!brand || !category || !product) {
     notFound();
   }
 
-  const stock = stockConfig[product.stock_status];
+  const stock = stockConfig[(product.stock_status || "in_stock") as keyof typeof stockConfig];
   const StockIcon = stock.icon;
 
   return (
