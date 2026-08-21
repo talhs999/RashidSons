@@ -31,6 +31,11 @@
         "id": 6,
         "name": "Falken",
         "logo_url": "/images/brands/falken-logo.png"
+      },
+      {
+        "id": 7,
+        "name": "Sunwide",
+        "logo_url": "/images/brands/sunwide-logo.png"
       }
     ]
   },
@@ -67,7 +72,7 @@
       "slug": "goodyear",
       "logo_url": "/images/partners/goodyear-clean.png",
       "logo_white_url": "/images/partners/goodyear-white.png",
-      "tire_image": "/images/tires/goodyear_effigrip_perf2.png",
+      "tire_image": "/images/tires/goodyear_home.png",
       "banner_image": "/images/brands/goodyear-hero-banner.jpg",
       "slogan": "MADE TO FEEL GOOD & BUILT TO LAST",
       "description": "Goodyear Tire & Rubber Company is one of the world's largest tyre companies. J. Rashid & Sons provides authentic Goodyear tyres for passenger cars, SUVs, and commercial vehicles.",
@@ -151,7 +156,7 @@
         "heading": "The Falken Journey",
         "founder": "Sumitomo Rubber Industries",
         "founded_year": "1983",
-        "history": "Born in 1983 as the high-performance division of Sumitomo Rubber Industries, Falken was forged in the heat of international motorsports. By dominating grueling endurance races like the 24 Hours of Nürburgring, Falken translates track-tested supremacy directly to the street.",
+        "history": "Born in 1983 as the high-performance division of Sumitomo Rubber Industries, Falken was forged in the heat of international motorsports. By dominating grueling endurance races like the 24 Hours of N\u00fcrburgring, Falken translates track-tested supremacy directly to the street.",
         "vision": "To be the heartbeat of automotive enthusiasm, continually pushing the boundaries of what is possible in ultra-high-performance and all-terrain mobility.",
         "mission": "To develop pulse-pounding, high-technology tires that deliver razor-sharp handling, exceptional grip, and unyielding durability for drivers who demand the very best from their vehicles."
       }
@@ -162,6 +167,7 @@
       "slug": "sunwide",
       "logo_url": "/images/brands/sunwide-logo.png",
       "logo_white_url": "/images/brands/sunwide-logo-white.png",
+      "tire_image": "/images/tires/sunwide_home.png",
       "slogan": "Embrace the Wide Horizon",
       "description": "Sunwide Tyres is a rapidly emerging brand known for providing highly reliable and cost-effective tire solutions for everyday drivers.",
       "about": {
@@ -471,7 +477,7 @@
       "stock_status": "in_stock",
       "featured": false,
       "images": [
-        "/images/tires/advan-apex.png"
+        "/images/tires/yokohama_yokohama-advan-a460.png"
       ]
     },
     {
@@ -485,7 +491,7 @@
       "stock_status": "in_stock",
       "featured": false,
       "images": [
-        "/images/tires/advan-fleva.png"
+        "/images/tires/yokohama_yokohama-adrive-aa01.png"
       ]
     },
     {
@@ -527,7 +533,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/images/tires/yokohama-bluearth-es32.png"
+        "/images/tires/yokohama_yokohama-bluearth-es-32.png"
       ]
     },
     {
@@ -541,7 +547,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/images/tires/yokohama-advan-db-v552.png"
+        "/images/tires/yokohama_yokohama-advan-db-v552.png"
       ]
     },
     {
@@ -555,7 +561,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/images/tires/yokohama-advan-db-v552.png"
+        "/images/tires/yokohama_yokohama-advan-db-v553.png"
       ]
     },
     {
@@ -611,7 +617,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/images/tires/advan-apex.png"
+        "/images/tires/yokohama-advan-apex-v601.png"
       ]
     },
     {
@@ -625,7 +631,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/images/tires/advan-fleva.png"
+        "/images/tires/yokohama-advan-fleva-v701.png"
       ]
     },
     {
@@ -639,7 +645,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/images/tires/advan-sport-v107.webp"
+        "/images/tires/yokohama-advan-sport-v105.png"
       ]
     },
     {
@@ -653,7 +659,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/images/tires/advan-sport-v107.webp"
+        "/images/tires/yokohama-advan-sport-v107-ev.png"
       ]
     },
     {
@@ -723,7 +729,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/images/tires/yokohama-geolandar-g015.png"
+        "/images/tires/yokohama-geolandar-x-cv-g057.png"
       ]
     },
     {
@@ -737,7 +743,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/images/tires/yokohama-geolandar-g015.png"
+        "/images/tires/yokohama_yokohama-geolandar-cv-g058.png"
       ]
     },
     {
@@ -751,7 +757,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/images/tires/yokohama-geolandar-g015.png"
+        "/images/tires/yokohama-geolandar-ht-g056.png"
       ]
     },
     {
@@ -779,7 +785,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/images/tires/yokohama-geolandar-g003.png"
+        "/images/tires/yokohama-geolandar-mt-g003.png"
       ]
     },
     {
@@ -835,7 +841,7 @@
       "stock_status": "in_stock",
       "featured": false,
       "images": [
-        "/images/tires/yokohama-geolandar-g015.png"
+        "/images/tires/yokohama-geolandar-4x4-pa02.png"
       ]
     },
     {
@@ -849,7 +855,7 @@
       "stock_status": "in_stock",
       "featured": false,
       "images": [
-        "/images/tires/advan-fleva.png"
+        "/images/tires/yokohama-delivery-star-ry356.png"
       ]
     },
     {
@@ -919,7 +925,7 @@
       "stock_status": "in_stock",
       "featured": true,
       "images": [
-        "/images/tires/yokohama-geolandar-g003.png"
+        "/images/tires/yokohama-geolandar-g018.png"
       ]
     },
     {
@@ -1292,6 +1298,25 @@
       ],
       "images": [
         "/images/tires/sunwide-rs-zero.png"
+      ],
+      "stock_status": "in_stock",
+      "featured": false
+    },
+    {
+      "id": 508,
+      "name": "Sunwide RS-ONE",
+      "slug": "sunwide-rs-one",
+      "brand_id": 7,
+      "category_id": 21,
+      "size": "Multiple Sizes",
+      "description": "The RS-ONE offers high performance, precision handling, and superior braking stability.",
+      "features": [
+        "High performance tread",
+        "Precision steering response",
+        "All-season durability"
+      ],
+      "images": [
+        "/images/tires/sunwide-rs-eco.png"
       ],
       "stock_status": "in_stock",
       "featured": false

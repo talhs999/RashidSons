@@ -61,6 +61,12 @@ export default function CategoryProductsPage() {
     if (family.toLowerCase() === "db") {
       return "Decibel";
     }
+    if (p.name.toLowerCase().includes("efficientgrip performance")) {
+      return "EfficientGrip Performance";
+    }
+    if (family.toLowerCase() === "eagle") {
+      return "Eagle F1";
+    }
     return family;
   };
 

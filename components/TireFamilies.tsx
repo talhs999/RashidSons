@@ -70,6 +70,11 @@ const defaultBrandFamilies: BrandFamilyData[] = [
     slogan: "PRECISION HANDLING & SUPERIOR GRIP",
     description:
       "Falken is known for its high-performance tires, offering precision handling and superior grip for sports cars and everyday driving.",
+    tires: [
+      { name: "AZENIS FK510", image: "/images/tires/falken-1.png" },
+      { name: "AZENIS FK510 DARK", image: "/images/tires/falken-2.png" },
+      { name: "AZENIS FK510", image: "/images/tires/falken-3.png" },
+    ],
   },
   {
     id: 7,
@@ -82,6 +87,7 @@ const defaultBrandFamilies: BrandFamilyData[] = [
     tires: [
       { name: "RS-ECO", image: "/images/tires/sunwide-rs-eco.png" },
       { name: "RS-ZERO", image: "/images/tires/sunwide-rs-zero.png" },
+      { name: "RS-ONE", image: "/images/tires/sunwide-rs-one.png" },
     ],
   },
 ];

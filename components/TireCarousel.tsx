@@ -35,13 +35,14 @@ const brandData: Record<string, { id: number; image: string; title: string }[]> 
     { id: 25, image: "/images/tires/risen-3.png", title: "RP68 H/T" },
   ],
   Falken: [
-    { id: 26, image: "/images/tires/advan-sport-v107.webp", title: "AZENIS FK510" },
-    { id: 27, image: "/images/tires/advan-apex.png", title: "WILDPEAK A/T3W" },
-    { id: 28, image: "/images/tires/advan-fleva.png", title: "ZIEX ZE914" },
+    { id: 26, image: "/images/tires/falken-1.png", title: "AZENIS FK510" },
+    { id: 27, image: "/images/tires/falken-2.png", title: "AZENIS FK510 DARK" },
+    { id: 28, image: "/images/tires/falken-3.png", title: "AZENIS FK510" },
   ],
   Sunwide: [
     { id: 101, image: "/images/tires/sunwide-rs-eco.png", title: "RS-ECO" },
     { id: 102, image: "/images/tires/sunwide-rs-zero.png", title: "RS-ZERO" },
+    { id: 103, image: "/images/tires/sunwide-rs-one.png", title: "RS-ONE" },
   ],
 };
 

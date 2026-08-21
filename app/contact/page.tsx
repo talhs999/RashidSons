@@ -288,11 +288,11 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <div className="pt-4">
+                  <div className="pt-4 flex justify-center">
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="bg-brand-yellow hover:bg-brand-yellow-dark text-brand-black px-8 py-4 font-bold rounded-xl w-full sm:w-auto min-w-[200px] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 transition-all transform hover:scale-105 active:scale-95 shadow-xl text-lg mx-auto sm:mx-0"
+                      className="bg-brand-yellow hover:bg-brand-yellow-dark text-brand-black px-8 py-4 font-bold rounded-xl w-full sm:w-auto min-w-[200px] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 transition-all transform hover:scale-105 active:scale-95 shadow-xl text-lg mx-auto"
                     >
                       {submitting ? (
                         <>
