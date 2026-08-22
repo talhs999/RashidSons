@@ -55,8 +55,8 @@ export default function CategoryProductsPage() {
     if (family.toLowerCase() === "a.drive") {
       return "A.Drive";
     }
-    if (family.toLowerCase().startsWith("bluearth")) {
-      return "BluEarth";
+    if (family.toLowerCase().startsWith("bluearth") || family.toLowerCase().startsWith("blue")) {
+      return "Blue Earth";
     }
     if (family.toLowerCase() === "db") {
       return "Decibel";
