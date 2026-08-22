@@ -87,12 +87,8 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-white/10 text-xs text-gray-300">
             {/* Author */}
             <div className="flex items-center gap-3">
-              <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-brand-yellow bg-gray-800">
-                <Image src={post.author.avatar} alt={post.author.name} fill className="object-cover" />
-              </div>
               <div>
-                <p className="font-bold text-white text-sm">{post.author.name}</p>
-                <p className="text-gray-400 text-[11px]">{post.author.role}</p>
+                <p className="font-bold text-white text-sm">Published by jrashid.com.pk</p>
               </div>
             </div>
 
@@ -237,15 +233,10 @@ export default async function BlogPostPage({ params }: PageProps) {
         )}
 
         {/* Author Bio Box */}
-        <div className="bg-gray-50 border border-gray-200 p-6 flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-16">
-          <div className="relative w-20 h-20 rounded-full overflow-hidden bg-brand-black shrink-0 border-2 border-brand-yellow">
-            <Image src={post.author.avatar} alt={post.author.name} fill className="object-cover" />
-          </div>
+        <div className="bg-gray-50 border border-gray-200 p-6 mb-16 flex items-center justify-center sm:justify-start">
           <div className="text-center sm:text-left">
-            <span className="text-[11px] font-extrabold uppercase tracking-widest text-gray-500">Published By</span>
-            <h4 className="text-lg font-heading font-bold text-brand-black mt-0.5">{post.author.name}</h4>
-            <p className="text-xs font-semibold text-amber-700 mb-2">{post.author.role}</p>
-            <p className="text-xs text-gray-600 leading-relaxed">
+            <h4 className="text-lg font-heading font-bold text-brand-black">Published by jrashid.com.pk</h4>
+            <p className="text-xs text-gray-600 leading-relaxed mt-2">
               Official importer and distribution network of premium tire brands across Pakistan. Bringing Japanese performance engineering and tire safety to Pakistani roads.
             </p>
           </div>
