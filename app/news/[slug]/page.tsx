@@ -222,7 +222,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               {post.relatedBrands.map((brandName, bIdx) => (
                 <Link
                   key={bIdx}
-                  href={`/brands/${brandName.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={`/brands/${brandName.toLowerCase().includes("atlas") ? "atlas" : brandName.toLowerCase().replace(/\s+/g, "-")}`}
                   className="bg-gray-100 hover:bg-brand-yellow hover:text-brand-black transition-colors px-3 py-1.5 text-xs font-bold text-gray-800 uppercase tracking-wider border border-gray-200"
                 >
                   {brandName}
