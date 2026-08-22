@@ -71,7 +71,7 @@ export default function NewsIndexPage() {
                     {featuredPost.title}
                   </h3>
 
-                  <p className="text-gray-600 leading-relaxed mb-6 line-clamp-4">
+                  <p className="text-gray-600 group-hover:text-gray-300 leading-relaxed mb-6 line-clamp-4 transition-colors">
                     {featuredPost.excerpt}
                   </p>
                 </div>
@@ -103,7 +103,7 @@ export default function NewsIndexPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <Link key={post.id} href={`/news/${post.slug}`} className="group flex flex-col bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300">
+              <Link key={post.id} href={`/news/${post.slug}`} className="group flex flex-col bg-white border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-500 hover:bg-brand-black hover:border-brand-black">
                 {/* Image */}
                 <div className="relative h-60 w-full bg-brand-black overflow-hidden">
                   <Image
@@ -122,7 +122,7 @@ export default function NewsIndexPage() {
                 {/* Body */}
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                    <div className="flex items-center gap-3 text-xs text-gray-500 group-hover:text-gray-400 mb-3 transition-colors">
                       <span>{post.date}</span>
                       <span>•</span>
                       <span>{post.readTime}</span>
@@ -132,7 +132,7 @@ export default function NewsIndexPage() {
                       {post.title}
                     </h3>
 
-                    <p className="text-gray-600 text-sm line-clamp-3 mb-6">
+                    <p className="text-gray-600 text-sm line-clamp-3 mb-6 group-hover:text-gray-300 transition-colors">
                       {post.excerpt}
                     </p>
                   </div>

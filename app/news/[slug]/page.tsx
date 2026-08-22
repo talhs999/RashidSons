@@ -87,12 +87,8 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-white/10 text-xs text-gray-300">
             {/* Author */}
             <div className="flex items-center gap-3">
-              <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-brand-yellow bg-gray-800">
-                <Image src={post.author.avatar} alt={post.author.name} fill className="object-cover" />
-              </div>
               <div>
-                <p className="font-bold text-white text-sm">{post.author.name}</p>
-                <p className="text-gray-400 text-[11px]">{post.author.role}</p>
+                <p className="font-bold text-white text-sm">Published by jrashid.com.pk</p>
               </div>
             </div>
 
