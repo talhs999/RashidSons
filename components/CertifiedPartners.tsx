@@ -42,7 +42,7 @@ export default function CertifiedPartners({
                 <img
                   src={partner.logo_url}
                   alt={partner.name}
-                  className="h-9 md:h-12 max-w-[180px] w-auto object-contain drop-shadow-sm brightness-0"
+                  className={`w-auto object-contain drop-shadow-sm brightness-0 ${partner.name.toLowerCase().includes("sunwide") ? "h-14 md:h-20 max-w-[220px]" : "h-9 md:h-12 max-w-[180px]"}`}
                 />
               </div>
             ))}
