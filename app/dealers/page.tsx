@@ -64,6 +64,7 @@ export default function DealersPage() {
     "Rahim Yar Khan",
     "Haripur",
     "Mardan",
+    "Depalpur",
   ];
 
   return (
