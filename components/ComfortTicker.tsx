@@ -1,5 +1,3 @@
-"use client";
-
 export default function ComfortTicker() {
   return (
     <div className="bg-brand-black border-y border-white/10 overflow-hidden py-3">

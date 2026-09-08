@@ -203,11 +203,13 @@ export default function TireFamilies({ brands }: { brands?: any[] }) {
               className="flex flex-col items-center"
             >
               {/* Brand Logo with top yellow line */}
-              <div className="mb-6 border-t-4 border-brand-yellow pt-6 h-[120px] md:h-[150px] w-full max-w-[400px] flex items-center justify-center mx-auto">
-                <img
+              <div className="mb-6 border-t-4 border-brand-yellow pt-6 h-[120px] md:h-[150px] w-full max-w-[400px] relative flex items-center justify-center mx-auto">
+                <Image
                   src={activeBrand.logo}
                   alt={activeBrand.name}
-                  className="h-28 md:h-36 max-w-[380px] w-auto object-contain drop-shadow-lg"
+                  fill
+                  sizes="(max-width: 768px) 300px, 400px"
+                  className="object-contain p-2 drop-shadow-lg"
                 />
               </div>
 

@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -19,19 +16,14 @@ export default function FeaturedCategories() {
          </h2>
 
          <div className="grid md:grid-cols-3 gap-8">
-            {vehicleTypes.map((type, i) => (
-              <motion.div
-                key={type.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-              >
+            {vehicleTypes.map((type) => (
+              <div key={type.name}>
                 <Link href={type.link} className="group block relative h-[300px] w-full overflow-hidden" style={{ clipPath: "polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%)" }}>
                   <Image
                     src={type.image}
                     alt={type.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-brand-black/40 group-hover:bg-brand-yellow/80 transition-colors duration-300" />
@@ -39,7 +31,7 @@ export default function FeaturedCategories() {
                      <h3 className="text-3xl font-heading font-extrabold uppercase tracking-widest">{type.name}</h3>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
          </div>
       </div>

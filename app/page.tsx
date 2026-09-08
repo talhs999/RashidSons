@@ -2,7 +2,6 @@ import HeroVideo from "@/components/HeroVideo";
 import ComfortTicker from "@/components/ComfortTicker";
 import FeaturedCategories from "@/components/FeaturedCategories";
 import TireFamilies from "@/components/TireFamilies";
-import BrandStrip from "@/components/BrandStrip";
 import TireCarousel from "@/components/TireCarousel";
 import CertifiedPartners from "@/components/CertifiedPartners";
 import BrandsShowcase from "@/components/BrandsShowcase";

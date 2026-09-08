@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
@@ -12,12 +9,7 @@ export default function AboutUsTeaser() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <div className="mb-6 flex items-center gap-4">
               <div className="h-1 w-12 bg-brand-yellow" />
               <div className="bg-brand-black px-5 py-1.5 skew-x-[-15deg] shadow-md border-b-2 border-brand-yellow">
@@ -30,7 +22,7 @@ export default function AboutUsTeaser() {
             </h2>
             
             <p className="text-brand-gray text-lg mb-8 font-sans leading-relaxed">
-              J. Rashid & Sons has been at the forefront of the tire industry in Pakistan, 
+              J. Rashid &amp; Sons has been at the forefront of the tire industry in Pakistan, 
               bringing world-class performance and safety to every journey. As official distributors 
               for Yokohama, Goodyear, Falken, Sunwide, and more, we guarantee authentic products and unmatched expertise.
             </p>
@@ -42,21 +34,16 @@ export default function AboutUsTeaser() {
                 </span>
               </Link>
             </div>
-          </motion.div>
+          </div>
 
           {/* Images/Visuals */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative h-[400px] lg:h-[600px] w-full"
-          >
+          <div className="relative h-[400px] lg:h-[600px] w-full">
             <div className="absolute top-0 right-0 w-[85%] h-[80%] overflow-hidden rounded-2xl shadow-2xl border-2 border-brand-yellow/30 group">
               <Image
                 src="/images/about-history.jpg" // The new history image
                 alt="J Rashid History"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center opacity-95 group-hover:scale-105 transition-all duration-700"
               />
             </div>
@@ -66,7 +53,7 @@ export default function AboutUsTeaser() {
                  <p className="text-brand-black font-bold uppercase tracking-widest text-sm">Certified Dealers</p>
                </div>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

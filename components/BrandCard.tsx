@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
@@ -18,15 +15,9 @@ export default function BrandCard({
   slug,
   logo,
   description,
-  index = 0,
 }: BrandCardProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-    >
+    <div>
       <Link
         href={`/brands/${slug}`}
         className="group block relative bg-white rounded-2xl overflow-hidden border border-brand-black/5 hover:shadow-2xl hover:shadow-brand-black/10 hover:-translate-y-2 transition-all duration-500"
@@ -52,6 +43,7 @@ export default function BrandCard({
               alt={name}
               width={180}
               height={180}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="w-full h-full object-contain filter brightness-0 invert"
             />
           </div>
@@ -81,6 +73,6 @@ export default function BrandCard({
         {/* Bottom accent */}
         <div className="absolute bottom-0 left-0 w-0 h-1 bg-brand-yellow group-hover:w-full transition-all duration-500" />
       </Link>
-    </motion.div>
+    </div>
   );
 }

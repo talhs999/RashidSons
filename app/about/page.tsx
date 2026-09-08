@@ -229,11 +229,13 @@ export default function AboutPage() {
               transition={{ delay: 0.3 }}
               className="relative"
             >
-              <div className="rounded-3xl overflow-hidden border border-brand-yellow/30 shadow-2xl group">
-                <img
+              <div className="rounded-3xl overflow-hidden border border-brand-yellow/30 shadow-2xl group relative h-[400px] lg:h-[450px]">
+                <Image
                   src="/images/showroom.jpg"
                   alt="J. Rashid & Sons Historic Shop 1948"
-                  className="w-full h-[400px] lg:h-[450px] object-cover object-center opacity-95 group-hover:scale-105 transition-transform duration-700"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover object-center opacity-95 group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="absolute -bottom-4 -left-4 bg-brand-yellow rounded-2xl p-6 text-brand-black shadow-2xl">
@@ -562,13 +564,17 @@ export default function AboutPage() {
               >
                 <Link
                   href={`/brands/${brand.slug}`}
-                  className="group block p-6 rounded-2xl bg-brand-yellow border border-brand-yellow hover:bg-white hover:border-white hover:-translate-y-1 hover:shadow-xl transition-all text-center h-[180px] flex flex-col items-center justify-center shadow-lg"
+                  className="group block p-6 rounded-2xl bg-brand-yellow border border-brand-yellow hover:bg-white hover:border-white hover:-translate-y-1 hover:shadow-xl transition-all text-center h-[180px] flex flex-col items-center justify-center shadow-lg relative"
                 >
-                  <img
-                    src={brand.logo_white_url || brand.logo_url}
-                    alt={brand.name}
-                    className="w-full h-16 md:h-20 object-contain mx-auto brightness-0 group-hover:scale-110 transition-all duration-500 p-1"
-                  />
+                  <div className="relative w-full h-16 md:h-20">
+                    <Image
+                      src={brand.logo_white_url || brand.logo_url}
+                      alt={brand.name}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                      className="object-contain mx-auto brightness-0 group-hover:scale-110 transition-all duration-500 p-1"
+                    />
+                  </div>
                   <p className="mt-4 text-sm font-bold text-brand-black uppercase tracking-wider">
                     {brand.name}
                   </p>

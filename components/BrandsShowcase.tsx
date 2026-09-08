@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 
 export default function BrandsShowcase({ brands }: { brands: any[] }) {
@@ -40,19 +41,23 @@ export default function BrandsShowcase({ brands }: { brands: any[] }) {
                   <div className="flex flex-col items-center justify-between w-full h-full group-hover:opacity-0 group-hover:scale-95 transition-all duration-500">
                     {/* Top: Tyre Image */}
                     <div className="relative w-full h-[160px] flex items-center justify-center pt-2">
-                      <img
+                      <Image
                         src={tireImg}
                         alt={`${brand.name} tire`}
-                        className="h-full w-auto object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-500"
+                        fill
+                        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        className="object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
 
                     {/* Bottom: Brand Logo */}
                     <div className="relative w-full h-[85px] flex items-center justify-center border-t border-black/10 pt-3">
-                      <img
+                      <Image
                         src={brand.logo_url}
                         alt={`${brand.name} logo`}
-                        className={`object-contain drop-shadow-sm ${brand.slug === 'sunwide' ? 'max-h-20 max-w-[85%] scale-110' : 'max-h-16 max-w-[75%]'}`}
+                        fill
+                        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                        className={`object-contain drop-shadow-sm p-1 ${brand.slug === 'sunwide' ? 'scale-110' : ''}`}
                       />
                     </div>
                   </div>

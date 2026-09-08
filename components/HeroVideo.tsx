@@ -15,6 +15,8 @@ export default function HeroVideo() {
           loop
           muted
           playsInline
+          preload="metadata"
+          poster="/images/hero-bg.jpg"
           className="w-full h-full object-cover opacity-60"
         >
           <source src="/videos/1-Opening-homepage-video-banner_2_CQ30.webm" type="video/webm" />

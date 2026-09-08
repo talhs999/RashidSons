@@ -167,6 +167,7 @@ export default function TireCarousel() {
                         src={item.image}
                         alt={item.title}
                         fill
+                        sizes="(max-width: 768px) 150px, (max-width: 1024px) 220px, 280px"
                         className="object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.9)] relative z-10"
                       />
                       {/* Floor contact shadow */}

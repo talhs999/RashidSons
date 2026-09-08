@@ -1,9 +1,6 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { Eye, MessageCircle, Package, Ruler } from "lucide-react";
+import { Eye, MessageCircle, Package } from "lucide-react";
 
 interface ProductCardProps {
   name: string;
@@ -30,22 +27,13 @@ export default function ProductCard({
   brandName,
   brandSlug,
   categorySlug,
-  size,
   image,
-  price,
   stockStatus,
-  index = 0,
 }: ProductCardProps) {
   const stock = stockLabels[stockStatus];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: index * 0.06 }}
-      className="group relative bg-white rounded-2xl overflow-hidden border border-brand-black/5 hover:shadow-2xl hover:shadow-brand-black/10 hover:-translate-y-1 transition-all duration-500"
-    >
+    <div className="group relative bg-white rounded-2xl overflow-hidden border border-brand-black/5 hover:shadow-2xl hover:shadow-brand-black/10 hover:-translate-y-1 transition-all duration-500">
       {/* Image area */}
       <div className="relative h-52 bg-gradient-to-br from-cream to-cream-dark flex items-center justify-center p-6 overflow-hidden">
         {image ? (
@@ -54,6 +42,7 @@ export default function ProductCard({
             alt={name}
             width={200}
             height={200}
+            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
           />
         ) : (
@@ -86,7 +75,6 @@ export default function ProductCard({
           {name}
         </h3>
 
-
         {/* Actions */}
         <div className="flex gap-2 mt-4">
           <Link
@@ -107,6 +95,6 @@ export default function ProductCard({
           </a>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

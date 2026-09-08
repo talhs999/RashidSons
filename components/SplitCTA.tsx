@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 
@@ -13,6 +11,7 @@ export default function SplitCTA() {
           src="/images/hero-bg.jpg" // Using placeholder image, user can replace
           alt="Contact Us"
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-brand-black/70 group-hover:bg-brand-black/60 transition-colors duration-500" />
@@ -47,6 +46,7 @@ export default function SplitCTA() {
           src="/images/citroen-suv.png"
           alt="Wholesale Dealers"
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-brand-charcoal/80 group-hover:bg-brand-charcoal/70 transition-colors duration-500" />
