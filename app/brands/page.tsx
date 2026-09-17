@@ -3,9 +3,26 @@ import BrandCard from "@/components/BrandCard";
 import { brands } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Our Brands",
+  title: "Authorized Tyre Brands | Yokohama, Goodyear, Falken, Sunwide & Warrior Pakistan",
   description:
-    "Explore our premium tyre brands - Yokohama, Goodyear, Michelin, Blackarrow & Warrior. Official importer and distributor in Pakistan.",
+    "Explore Pakistan's leading official tyre brands imported by J. Rashid & Sons: Yokohama, Goodyear, Falken, Sunwide, Warrior, Atlas & Risen tyres. Premium Japanese and international performance.",
+  keywords: [
+    "tyre brands Pakistan",
+    "Yokohama Pakistan",
+    "Goodyear Pakistan",
+    "Falken Pakistan",
+    "Sunwide Pakistan",
+    "Warrior tyres Pakistan",
+    "Atlas tyre Pakistan",
+    "Risen tyres Pakistan",
+    "official tyre distributor Lahore",
+  ],
+  openGraph: {
+    title: "Authorized Premium Tyre Brands | J. Rashid & Sons Pakistan",
+    description:
+      "Explore official imported tyre brands in Pakistan: Yokohama, Goodyear, Falken, Sunwide, Warrior, Atlas & Risen.",
+    url: "https://jrashid.com/brands",
+  },
 };
 
 export default function BrandsPage() {
