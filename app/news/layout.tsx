@@ -11,11 +11,14 @@ export const metadata: Metadata = {
     "Yokohama motorsport news",
     "car maintenance guide Pakistan",
   ],
+  alternates: {
+    canonical: "https://jrashid.com.pk/news",
+  },
   openGraph: {
     title: "News & Automotive Insights | J. Rashid & Sons Pakistan",
     description:
       "Read official updates, technical tyre articles, and maintenance guides from J. Rashid & Sons.",
-    url: "https://jrashid.com/news",
+    url: "https://jrashid.com.pk/news",
   },
 };
 

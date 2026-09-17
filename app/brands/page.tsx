@@ -17,11 +17,14 @@ export const metadata: Metadata = {
     "Risen tyres Pakistan",
     "official tyre distributor Lahore",
   ],
+  alternates: {
+    canonical: "https://jrashid.com.pk/brands",
+  },
   openGraph: {
     title: "Authorized Premium Tyre Brands | J. Rashid & Sons Pakistan",
     description:
       "Explore official imported tyre brands in Pakistan: Yokohama, Goodyear, Falken, Sunwide, Warrior, Atlas & Risen.",
-    url: "https://jrashid.com/brands",
+    url: "https://jrashid.com.pk/brands",
   },
 };
 

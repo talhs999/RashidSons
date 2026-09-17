@@ -17,7 +17,10 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jrashid.com"),
+  metadataBase: new URL("https://jrashid.com.pk"),
+  alternates: {
+    canonical: "https://jrashid.com.pk",
+  },
   title: {
     default: "J. Rashid & Sons | Official Importer of Yokohama, Goodyear & Premium Tyres in Pakistan",
     template: "%s | J. Rashid & Sons",
@@ -53,7 +56,7 @@ export const metadata: Metadata = {
     title: "J. Rashid & Sons | Official Importer of Yokohama, Goodyear & Premium Tyres in Pakistan",
     description:
       "Official importer of Yokohama, Goodyear, Falken & Sunwide tyres. 70+ years of trust & 200+ wholesale dealers across Pakistan.",
-    url: "https://jrashid.com",
+    url: "https://jrashid.com.pk",
     siteName: "J. Rashid & Sons",
     locale: "en_PK",
     type: "website",
@@ -79,13 +82,13 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "AutoPartsStore",
-      "@id": "https://jrashid.com/#store",
+      "@id": "https://jrashid.com.pk/#store",
       "name": "J. Rashid & Sons",
-      "url": "https://jrashid.com",
+      "url": "https://jrashid.com.pk",
       "telephone": "+923071777510",
       "email": "jrashidandsons786@gmail.com",
       "priceRange": "$$",
-      "image": "https://jrashid.com/images/logo.png",
+      "image": "https://jrashid.com.pk/images/logo.png",
       "description": "Official importer and distributor of Yokohama, Goodyear, Falken, Sunwide, Warrior & Atlas tyres in Pakistan.",
       "address": {
         "@type": "PostalAddress",
@@ -109,10 +112,10 @@ const jsonLd = {
     },
     {
       "@type": "Organization",
-      "@id": "https://jrashid.com/#organization",
+      "@id": "https://jrashid.com.pk/#organization",
       "name": "J. Rashid & Sons",
-      "url": "https://jrashid.com",
-      "logo": "https://jrashid.com/images/logo.png",
+      "url": "https://jrashid.com.pk",
+      "logo": "https://jrashid.com.pk/images/logo.png",
       "foundingDate": "1948",
       "sameAs": [
         "https://www.facebook.com/profile.php?id=61591938635324",

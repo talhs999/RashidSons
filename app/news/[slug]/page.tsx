@@ -39,9 +39,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${post.title} | J. Rashid & Sons News`,
     description: post.excerpt,
+    alternates: {
+      canonical: `https://jrashid.com.pk/news/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
+      url: `https://jrashid.com.pk/news/${slug}`,
       images: [post.image],
     },
   };

@@ -11,11 +11,14 @@ export const metadata: Metadata = {
     "Yokohama customer support Pakistan",
     "dealership application J Rashid",
   ],
+  alternates: {
+    canonical: "https://jrashid.com.pk/contact",
+  },
   openGraph: {
     title: "Contact J. Rashid & Sons | Tyre Support & Wholesale Quotes",
     description:
       "Have questions or need a tyre quotation? Contact Pakistan's premier official importer and distributor network.",
-    url: "https://jrashid.com/contact",
+    url: "https://jrashid.com.pk/contact",
   },
 };
 

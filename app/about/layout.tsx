@@ -12,11 +12,14 @@ export const metadata: Metadata = {
     "tyre company Lahore",
     "legacy tyre distributor",
   ],
+  alternates: {
+    canonical: "https://jrashid.com.pk/about",
+  },
   openGraph: {
     title: "About J. Rashid & Sons | 70+ Years Tyre Excellence in Pakistan",
     description:
       "Since 1948, J. Rashid & Sons has been Pakistan's pioneer in automotive tyres, importing world-class Japanese and global tyre brands.",
-    url: "https://jrashid.com/about",
+    url: "https://jrashid.com.pk/about",
   },
 };
 

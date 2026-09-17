@@ -11,11 +11,14 @@ export const metadata: Metadata = {
     "car tire maintenance guide",
     "3D alignment guide",
   ],
+  alternates: {
+    canonical: "https://jrashid.com.pk/tires-101",
+  },
   openGraph: {
     title: "Tires 101 Guide | J. Rashid & Sons Pakistan",
     description:
       "Learn how to choose the right tyre, decode size markings, and optimize fuel efficiency.",
-    url: "https://jrashid.com/tires-101",
+    url: "https://jrashid.com.pk/tires-101",
   },
 };
 

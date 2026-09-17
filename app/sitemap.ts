@@ -3,7 +3,7 @@ import { brands, categories, products } from "@/lib/data";
 import { blogPosts } from "@/lib/newsData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://jrashid.com";
+  const baseUrl = "https://jrashid.com.pk";
 
   // Static Pages
   const staticRoutes: MetadataRoute.Sitemap = [

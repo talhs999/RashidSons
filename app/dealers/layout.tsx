@@ -13,11 +13,14 @@ export const metadata: Metadata = {
     "tyre shop Depalpur Okara",
     "authorized tyre dealers Pakistan",
   ],
+  alternates: {
+    canonical: "https://jrashid.com.pk/dealers",
+  },
   openGraph: {
     title: "Wholesale Dealers Locator | J. Rashid & Sons Pakistan",
     description:
       "Locate over 200+ authorized wholesale tyre dealers across Pakistan for Yokohama, Goodyear, Falken, and Sunwide tyres.",
-    url: "https://jrashid.com/dealers",
+    url: "https://jrashid.com.pk/dealers",
   },
 };
 
