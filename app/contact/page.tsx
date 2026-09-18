@@ -118,19 +118,22 @@ export default function ContactPage() {
             </motion.a>
 
             <motion.a
-              href="mailto:jrashidandsons786@gmail.com"
+              href="#official-emails"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="group bg-white rounded-2xl p-6 border border-brand-black/5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-400"
+              className="group bg-white rounded-2xl p-6 border border-brand-black/5 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-400 cursor-pointer"
             >
               <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition-colors">
                 <Mail size={22} className="text-blue-500" />
               </div>
-              <h3 className="font-bold text-brand-black mb-1">Email</h3>
-              <p className="text-sm text-brand-gray">
+              <h3 className="font-bold text-brand-black mb-1">Email Us</h3>
+              <p className="text-sm font-semibold text-brand-black group-hover:text-brand-yellow transition-colors truncate">
                 jrashidandsons786@gmail.com
               </p>
+              <span className="inline-block mt-2 text-xs font-bold text-brand-yellow">
+                + 3 Corporate Contacts ↓
+              </span>
             </motion.a>
 
             <motion.div
@@ -150,6 +153,107 @@ export default function ContactPage() {
               </p>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Official Email Directory */}
+      <section id="official-emails" className="pt-2 pb-10 bg-cream relative z-20">
+        <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="bg-white rounded-2xl p-6 md:p-8 border border-brand-black/5 shadow-md"
+          >
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-4 border-b border-brand-black/5">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-brand-yellow/20 flex items-center justify-center">
+                  <Mail className="text-brand-black" size={20} />
+                </div>
+                <div>
+                  <h2 className="text-xl font-bold text-brand-black">Official Email Directory</h2>
+                  <p className="text-xs md:text-sm text-brand-gray">Direct communication with our key corporate and management representatives</p>
+                </div>
+              </div>
+              <span className="text-xs font-bold uppercase tracking-wider text-brand-yellow bg-brand-black px-3 py-1.5 rounded-lg w-fit">
+                24/7 Response
+              </span>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <a
+                href="mailto:jrashidandsons786@gmail.com"
+                className="group flex flex-col justify-between p-4 rounded-xl bg-cream hover:bg-brand-yellow/15 border border-brand-black/5 hover:border-brand-yellow/40 transition-all duration-300"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-xs font-bold uppercase tracking-wider text-brand-gray group-hover:text-brand-black transition-colors">
+                      General & Inquiries
+                    </span>
+                    <Send size={13} className="text-brand-gray/50 group-hover:text-brand-black transition-colors" />
+                  </div>
+                  <span className="text-xs md:text-sm font-semibold text-brand-black group-hover:text-brand-black break-all">
+                    jrashidandsons786@gmail.com
+                  </span>
+                </div>
+                <span className="text-[11px] font-medium text-brand-yellow group-hover:text-brand-black mt-3 font-mono">Click to email →</span>
+              </a>
+
+              <a
+                href="mailto:Adnan.rashid@maktyres.com"
+                className="group flex flex-col justify-between p-4 rounded-xl bg-cream hover:bg-brand-yellow/15 border border-brand-black/5 hover:border-brand-yellow/40 transition-all duration-300"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-xs font-bold uppercase tracking-wider text-brand-gray group-hover:text-brand-black transition-colors">
+                      Adnan Rashid
+                    </span>
+                    <Send size={13} className="text-brand-gray/50 group-hover:text-brand-black transition-colors" />
+                  </div>
+                  <span className="text-xs md:text-sm font-semibold text-brand-black group-hover:text-brand-black break-all">
+                    Adnan.rashid@maktyres.com
+                  </span>
+                </div>
+                <span className="text-[11px] font-medium text-brand-yellow group-hover:text-brand-black mt-3 font-mono">Click to email →</span>
+              </a>
+
+              <a
+                href="mailto:shoaibjawad776@gmail.com"
+                className="group flex flex-col justify-between p-4 rounded-xl bg-cream hover:bg-brand-yellow/15 border border-brand-black/5 hover:border-brand-yellow/40 transition-all duration-300"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-xs font-bold uppercase tracking-wider text-brand-gray group-hover:text-brand-black transition-colors">
+                      Shoaib Jawad
+                    </span>
+                    <Send size={13} className="text-brand-gray/50 group-hover:text-brand-black transition-colors" />
+                  </div>
+                  <span className="text-xs md:text-sm font-semibold text-brand-black group-hover:text-brand-black break-all">
+                    shoaibjawad776@gmail.com
+                  </span>
+                </div>
+                <span className="text-[11px] font-medium text-brand-yellow group-hover:text-brand-black mt-3 font-mono">Click to email →</span>
+              </a>
+
+              <a
+                href="mailto:Shoaib.rashid@maktyres.com"
+                className="group flex flex-col justify-between p-4 rounded-xl bg-cream hover:bg-brand-yellow/15 border border-brand-black/5 hover:border-brand-yellow/40 transition-all duration-300"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-xs font-bold uppercase tracking-wider text-brand-gray group-hover:text-brand-black transition-colors">
+                      Shoaib Rashid
+                    </span>
+                    <Send size={13} className="text-brand-gray/50 group-hover:text-brand-black transition-colors" />
+                  </div>
+                  <span className="text-xs md:text-sm font-semibold text-brand-black group-hover:text-brand-black break-all">
+                    Shoaib.rashid@maktyres.com
+                  </span>
+                </div>
+                <span className="text-[11px] font-medium text-brand-yellow group-hover:text-brand-black mt-3 font-mono">Click to email →</span>
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 

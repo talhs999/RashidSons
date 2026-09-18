@@ -1128,7 +1128,7 @@ export const dealers: Dealer[] = [
   { id: 14, name: "Muslim Tyres", city: "Sargodha", region: "Punjab", address: "Fatima Jinnah Rd, Sargodha", phone: "0321-8600678", lat: 32.0836, lng: 72.6711, brands: ["Yokohama"] },
   { id: 15, name: "Olympia Tyre", city: "Multan", region: "Punjab", address: "Vehari Road, Multan", phone: "0321-6382002", lat: 30.1700, lng: 71.4900, brands: ["Yokohama"] },
   { id: 16, name: "United Motors", city: "Multan", region: "Punjab", address: "Nawa Shehar Road, Multan", phone: "0300-6369695", lat: 30.1980, lng: 71.4680, brands: ["ALL BRANDS"] },
-  { id: 17, name: "Sardar Ent.", city: "Karachi", region: "Sindh", address: "PSO Pump 6 No Checkpost Cantt, Karachi", phone: "021-34900207", lat: 24.8500, lng: 67.0300, brands: ["ALL BRANDS"] },
+  { id: 17, name: "Sardar Enterprises", city: "Karachi", region: "Sindh", address: "PSO Pump 6 No Checkpost Cantt, Karachi", phone: "0300-2071060", lat: 24.8500, lng: 67.0300, brands: ["ALL BRANDS"] },
   { id: 18, name: "Misal Ent.", city: "Karachi", region: "Sindh", address: "Sharah-e-Qadeem Plot#235, Karachi", phone: "0300-3478088", lat: 24.8600, lng: 67.0100, brands: ["Yokohama"] },
   { id: 19, name: "Pakistan Motor", city: "Sukkur", region: "Sindh", address: "Hussaini Rd, Gharyabad, Sukkur", phone: "0333-7151707", lat: 27.7052, lng: 68.8574, brands: ["Yokohama"] },
   { id: 20, name: "Wheel Look", city: "Hyderabad", region: "Sindh", address: "Latifabad Road, Hyderabad", phone: "0312-1332056", lat: 25.3670, lng: 68.3670, brands: ["Yokohama"] },
