@@ -1140,6 +1140,7 @@ export const dealers: Dealer[] = [
   { id: 26, name: "Ibrahim Autos", city: "Hyderabad", region: "Sindh", address: "Auto Bhan Road / Latifabad, Hyderabad", phone: "0312-3456789", lat: 25.3670, lng: 68.3670, brands: ["Yokohama", "Warrior", "Atlas Tyres Truck"] },
   { id: 27, name: "Rahim Yar Khan Tyre Center (RTC)", city: "Rahim Yar Khan", region: "Punjab", address: "6- Circular Road, Belgium Chowk, Rahim Yar Khan", phone: "0300-0630870", lat: 28.4212, lng: 70.2989, brands: ["ALL BRANDS"] },
   { id: 28, name: "MashaAllah Tyre & Wheel Alignment", city: "Depalpur", region: "Punjab", address: "Okara Road, Katchery Road, Depalpur", phone: "0304-1945450 / 0307-1964974", lat: 30.6708, lng: 73.6534, brands: ["ALL BRANDS"] },
+  { id: 29, name: "Anwar Auto Store", city: "Rawalpindi", region: "Punjab", address: "115/7, Saeed Plaza, Saadi Road, Rawalpindi Cantt.", phone: "0333-5122279 / 051-5513098", lat: 33.5973, lng: 73.0479, brands: ["Yokohama"] },
 ];
 
 export const branches: Branch[] = [

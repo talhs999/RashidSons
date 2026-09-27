@@ -3,12 +3,14 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Wholesale Dealers Locator | Authorized Tyre Shops Pakistan",
   description:
-    "Find authorized wholesale tyre dealers and retail shops for Yokohama, Goodyear, Falken & Sunwide tyres across Lahore, Karachi, Islamabad, Multan, Peshawar & Rahim Yar Khan.",
+    "Find authorized wholesale tyre dealers and retail shops for Yokohama, Goodyear, Falken & Sunwide tyres across Lahore, Karachi, Islamabad, Rawalpindi, Multan, Peshawar & Rahim Yar Khan.",
   keywords: [
     "tyre dealer locator Pakistan",
     "wholesale tyre dealers Lahore",
     "Yokohama dealer Karachi",
     "Goodyear dealer Islamabad",
+    "Yokohama dealer Rawalpindi",
+    "tyre shop Rawalpindi Cantt",
     "tyre shop Rahim Yar Khan",
     "tyre shop Depalpur Okara",
     "authorized tyre dealers Pakistan",

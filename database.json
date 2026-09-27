@@ -1606,6 +1606,17 @@
       "lat": 30.6708,
       "lng": 73.6534,
       "brands": ["ALL BRANDS"]
+    },
+    {
+      "id": 29,
+      "name": "Anwar Auto Store",
+      "city": "Rawalpindi",
+      "region": "Punjab",
+      "address": "115/7, Saeed Plaza, Saadi Road, Rawalpindi Cantt.",
+      "phone": "0333-5122279 / 051-5513098",
+      "lat": 33.5973,
+      "lng": 73.0479,
+      "brands": ["Yokohama"]
     }
   ],
   "branches": [
