@@ -132,7 +132,7 @@ export default function ContactPage() {
                 jrashidandsons786@gmail.com
               </p>
               <span className="inline-block mt-2 text-xs font-bold text-brand-yellow">
-                + 3 Corporate Contacts ↓
+                + 5 Corporate Contacts ↓
               </span>
             </motion.a>
 
@@ -157,100 +157,160 @@ export default function ContactPage() {
       </section>
 
       {/* Official Email Directory */}
-      <section id="official-emails" className="pt-2 pb-10 bg-cream relative z-20">
+      <section id="official-emails" className="pt-2 pb-12 bg-cream relative z-20">
         <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="bg-white rounded-2xl p-6 md:p-8 border border-brand-black/5 shadow-md"
+            className="bg-white rounded-3xl p-6 md:p-10 border border-brand-black/10 shadow-xl"
           >
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-4 border-b border-brand-black/5">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-brand-yellow/20 flex items-center justify-center">
-                  <Mail className="text-brand-black" size={20} />
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-5 border-b border-brand-black/10">
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-2xl bg-brand-yellow flex items-center justify-center shadow-md">
+                  <Mail className="text-brand-black" size={24} />
                 </div>
                 <div>
-                  <h2 className="text-xl font-bold text-brand-black">Official Email Directory</h2>
-                  <p className="text-xs md:text-sm text-brand-gray">Direct communication with our key corporate and management representatives</p>
+                  <h2 className="text-2xl font-bold text-brand-black">Official Email Directory</h2>
+                  <p className="text-sm text-brand-gray">Direct communication with our key corporate and management representatives</p>
                 </div>
               </div>
-              <span className="text-xs font-bold uppercase tracking-wider text-brand-yellow bg-brand-black px-3 py-1.5 rounded-lg w-fit">
+              <span className="text-xs font-bold uppercase tracking-wider text-brand-yellow bg-brand-black px-4 py-2 rounded-xl w-fit shadow-sm">
                 24/7 Response
               </span>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {/* 1. General Inquiries */}
               <a
                 href="mailto:jrashidandsons786@gmail.com"
-                className="group flex flex-col justify-between p-4 rounded-xl bg-cream hover:bg-brand-yellow/15 border border-brand-black/5 hover:border-brand-yellow/40 transition-all duration-300"
+                className="group flex flex-col justify-between p-5 rounded-2xl bg-cream/70 hover:bg-brand-black border border-brand-black/10 hover:border-brand-yellow/50 transition-all duration-300 shadow-sm hover:shadow-2xl hover:-translate-y-1"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-xs font-bold uppercase tracking-wider text-brand-gray group-hover:text-brand-black transition-colors">
+                  <div className="flex items-center justify-between mb-2.5">
+                    <span className="text-xs font-black uppercase tracking-wider text-brand-gray group-hover:text-brand-yellow transition-colors">
                       General & Inquiries
                     </span>
-                    <Send size={13} className="text-brand-gray/50 group-hover:text-brand-black transition-colors" />
+                    <Send size={15} className="text-brand-black/40 group-hover:text-brand-yellow transition-colors" />
                   </div>
-                  <span className="text-xs md:text-sm font-semibold text-brand-black group-hover:text-brand-black break-all">
+                  <span className="text-sm md:text-base font-bold text-brand-black group-hover:text-white transition-colors break-all">
                     jrashidandsons786@gmail.com
                   </span>
                 </div>
-                <span className="text-[11px] font-medium text-brand-yellow group-hover:text-brand-black mt-3 font-mono">Click to email →</span>
+                <div className="mt-4 pt-3 border-t border-brand-black/10 group-hover:border-white/15 flex items-center justify-between">
+                  <span className="text-xs font-medium text-brand-gray group-hover:text-white/70 transition-colors">Helpline Desk</span>
+                  <span className="text-xs font-bold text-brand-black group-hover:text-brand-yellow transition-colors">Send Email →</span>
+                </div>
               </a>
 
+              {/* 2. Adnan Rashid */}
               <a
-                href="mailto:Adnan.rashid@maktyres.com"
-                className="group flex flex-col justify-between p-4 rounded-xl bg-cream hover:bg-brand-yellow/15 border border-brand-black/5 hover:border-brand-yellow/40 transition-all duration-300"
+                href="mailto:adnan.rashid@maktyres.com"
+                className="group flex flex-col justify-between p-5 rounded-2xl bg-cream/70 hover:bg-brand-black border border-brand-black/10 hover:border-brand-yellow/50 transition-all duration-300 shadow-sm hover:shadow-2xl hover:-translate-y-1"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-xs font-bold uppercase tracking-wider text-brand-gray group-hover:text-brand-black transition-colors">
+                  <div className="flex items-center justify-between mb-2.5">
+                    <span className="text-xs font-black uppercase tracking-wider text-brand-gray group-hover:text-brand-yellow transition-colors">
                       Adnan Rashid
                     </span>
-                    <Send size={13} className="text-brand-gray/50 group-hover:text-brand-black transition-colors" />
+                    <Send size={15} className="text-brand-black/40 group-hover:text-brand-yellow transition-colors" />
                   </div>
-                  <span className="text-xs md:text-sm font-semibold text-brand-black group-hover:text-brand-black break-all">
-                    Adnan.rashid@maktyres.com
+                  <span className="text-sm md:text-base font-bold text-brand-black group-hover:text-white transition-colors break-all">
+                    adnan.rashid@maktyres.com
                   </span>
                 </div>
-                <span className="text-[11px] font-medium text-brand-yellow group-hover:text-brand-black mt-3 font-mono">Click to email →</span>
-              </a>
-
-              <a
-                href="mailto:shoaibjawad776@gmail.com"
-                className="group flex flex-col justify-between p-4 rounded-xl bg-cream hover:bg-brand-yellow/15 border border-brand-black/5 hover:border-brand-yellow/40 transition-all duration-300"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-xs font-bold uppercase tracking-wider text-brand-gray group-hover:text-brand-black transition-colors">
-                      Shoaib Jawad
-                    </span>
-                    <Send size={13} className="text-brand-gray/50 group-hover:text-brand-black transition-colors" />
-                  </div>
-                  <span className="text-xs md:text-sm font-semibold text-brand-black group-hover:text-brand-black break-all">
-                    shoaibjawad776@gmail.com
-                  </span>
+                <div className="mt-4 pt-3 border-t border-brand-black/10 group-hover:border-white/15 flex items-center justify-between">
+                  <span className="text-xs font-medium text-brand-gray group-hover:text-white/70 transition-colors">Executive Director</span>
+                  <span className="text-xs font-bold text-brand-black group-hover:text-brand-yellow transition-colors">Send Email →</span>
                 </div>
-                <span className="text-[11px] font-medium text-brand-yellow group-hover:text-brand-black mt-3 font-mono">Click to email →</span>
               </a>
 
+              {/* 3. Shoaib Rashid */}
               <a
                 href="mailto:Shoaib.rashid@maktyres.com"
-                className="group flex flex-col justify-between p-4 rounded-xl bg-cream hover:bg-brand-yellow/15 border border-brand-black/5 hover:border-brand-yellow/40 transition-all duration-300"
+                className="group flex flex-col justify-between p-5 rounded-2xl bg-cream/70 hover:bg-brand-black border border-brand-black/10 hover:border-brand-yellow/50 transition-all duration-300 shadow-sm hover:shadow-2xl hover:-translate-y-1"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-xs font-bold uppercase tracking-wider text-brand-gray group-hover:text-brand-black transition-colors">
+                  <div className="flex items-center justify-between mb-2.5">
+                    <span className="text-xs font-black uppercase tracking-wider text-brand-gray group-hover:text-brand-yellow transition-colors">
                       Shoaib Rashid
                     </span>
-                    <Send size={13} className="text-brand-gray/50 group-hover:text-brand-black transition-colors" />
+                    <Send size={15} className="text-brand-black/40 group-hover:text-brand-yellow transition-colors" />
                   </div>
-                  <span className="text-xs md:text-sm font-semibold text-brand-black group-hover:text-brand-black break-all">
+                  <span className="text-sm md:text-base font-bold text-brand-black group-hover:text-white transition-colors break-all">
                     Shoaib.rashid@maktyres.com
                   </span>
                 </div>
-                <span className="text-[11px] font-medium text-brand-yellow group-hover:text-brand-black mt-3 font-mono">Click to email →</span>
+                <div className="mt-4 pt-3 border-t border-brand-black/10 group-hover:border-white/15 flex items-center justify-between">
+                  <span className="text-xs font-medium text-brand-gray group-hover:text-white/70 transition-colors">Managing Director</span>
+                  <span className="text-xs font-bold text-brand-black group-hover:text-brand-yellow transition-colors">Send Email →</span>
+                </div>
+              </a>
+
+              {/* 4. Jawad Rashid (Corporate) */}
+              <a
+                href="mailto:Jawad.rashid@maktyres.com"
+                className="group flex flex-col justify-between p-5 rounded-2xl bg-cream/70 hover:bg-brand-black border border-brand-black/10 hover:border-brand-yellow/50 transition-all duration-300 shadow-sm hover:shadow-2xl hover:-translate-y-1"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-2.5">
+                    <span className="text-xs font-black uppercase tracking-wider text-brand-gray group-hover:text-brand-yellow transition-colors">
+                      Jawad Rashid (Corporate)
+                    </span>
+                    <Send size={15} className="text-brand-black/40 group-hover:text-brand-yellow transition-colors" />
+                  </div>
+                  <span className="text-sm md:text-base font-bold text-brand-black group-hover:text-white transition-colors break-all">
+                    Jawad.rashid@maktyres.com
+                  </span>
+                </div>
+                <div className="mt-4 pt-3 border-t border-brand-black/10 group-hover:border-white/15 flex items-center justify-between">
+                  <span className="text-xs font-medium text-brand-gray group-hover:text-white/70 transition-colors">Mak Tyres Corporate</span>
+                  <span className="text-xs font-bold text-brand-black group-hover:text-brand-yellow transition-colors">Send Email →</span>
+                </div>
+              </a>
+
+              {/* 5. Jawad Rashid (Direct) */}
+              <a
+                href="mailto:jawad.rashid162@gmail.com"
+                className="group flex flex-col justify-between p-5 rounded-2xl bg-cream/70 hover:bg-brand-black border border-brand-black/10 hover:border-brand-yellow/50 transition-all duration-300 shadow-sm hover:shadow-2xl hover:-translate-y-1"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-2.5">
+                    <span className="text-xs font-black uppercase tracking-wider text-brand-gray group-hover:text-brand-yellow transition-colors">
+                      Jawad Rashid (Direct)
+                    </span>
+                    <Send size={15} className="text-brand-black/40 group-hover:text-brand-yellow transition-colors" />
+                  </div>
+                  <span className="text-sm md:text-base font-bold text-brand-black group-hover:text-white transition-colors break-all">
+                    jawad.rashid162@gmail.com
+                  </span>
+                </div>
+                <div className="mt-4 pt-3 border-t border-brand-black/10 group-hover:border-white/15 flex items-center justify-between">
+                  <span className="text-xs font-medium text-brand-gray group-hover:text-white/70 transition-colors">Direct Inquiries</span>
+                  <span className="text-xs font-bold text-brand-black group-hover:text-brand-yellow transition-colors">Send Email →</span>
+                </div>
+              </a>
+
+              {/* 6. Shoaib Jawad */}
+              <a
+                href="mailto:shoaibjawad776@gmail.com"
+                className="group flex flex-col justify-between p-5 rounded-2xl bg-cream/70 hover:bg-brand-black border border-brand-black/10 hover:border-brand-yellow/50 transition-all duration-300 shadow-sm hover:shadow-2xl hover:-translate-y-1"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-2.5">
+                    <span className="text-xs font-black uppercase tracking-wider text-brand-gray group-hover:text-brand-yellow transition-colors">
+                      Shoaib Jawad
+                    </span>
+                    <Send size={15} className="text-brand-black/40 group-hover:text-brand-yellow transition-colors" />
+                  </div>
+                  <span className="text-sm md:text-base font-bold text-brand-black group-hover:text-white transition-colors break-all">
+                    shoaibjawad776@gmail.com
+                  </span>
+                </div>
+                <div className="mt-4 pt-3 border-t border-brand-black/10 group-hover:border-white/15 flex items-center justify-between">
+                  <span className="text-xs font-medium text-brand-gray group-hover:text-white/70 transition-colors">Customer Relations</span>
+                  <span className="text-xs font-bold text-brand-black group-hover:text-brand-yellow transition-colors">Send Email →</span>
+                </div>
               </a>
             </div>
           </motion.div>
