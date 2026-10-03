@@ -29,7 +29,8 @@ export default function DealersPage() {
         dealer.name.toLowerCase().includes(query) ||
         dealer.city.toLowerCase().includes(query) ||
         dealer.address.toLowerCase().includes(query) ||
-        dealer.region.toLowerCase().includes(query)
+        dealer.region.toLowerCase().includes(query) ||
+        (dealer.brands && dealer.brands.some((b) => b.toLowerCase().includes(query) || query.includes(b.toLowerCase())))
     );
   }, [searchQuery, hasSearched]);
 

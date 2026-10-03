@@ -1138,7 +1138,7 @@ export const dealers: Dealer[] = [
   { id: 24, name: "Rustam Tyre", city: "Mardan", region: "KPK", address: "Charsaddah Road Near Inayat Shopping Center, Mardan", phone: "0300-5724177", lat: 34.1980, lng: 72.0400, brands: ["Warrior"] },
   { id: 25, name: "Anees Tyre", city: "Islamabad", region: "Federal", address: "F-10 Markaz, Islamabad", phone: "0345-5278895", lat: 33.6983, lng: 73.0135, brands: ["Yokohama", "Warrior", "Atlas Tyre", "Risen"] },
   { id: 26, name: "Ibrahim Autos", city: "Hyderabad", region: "Sindh", address: "Auto Bhan Road / Latifabad, Hyderabad", phone: "0312-3456789", lat: 25.3670, lng: 68.3670, brands: ["Yokohama", "Warrior", "Atlas Tyres Truck"] },
-  { id: 27, name: "Rahim Yar Khan Tyre Center (RTC)", city: "Rahim Yar Khan", region: "Punjab", address: "6- Circular Road, Belgium Chowk, Rahim Yar Khan", phone: "0300-0630870", lat: 28.4212, lng: 70.2989, brands: ["ALL BRANDS"] },
+  { id: 27, name: "Rahim Yar Khan Tyre Center (RTC)", city: "Rahim Yar Khan", region: "Punjab", address: "6- Circular Road, Belgium Chowk, Rahim Yar Khan", phone: "0300-0630870", lat: 28.4212, lng: 70.2989, brands: ["Atlas"] },
   { id: 28, name: "MashaAllah Tyre & Wheel Alignment", city: "Depalpur", region: "Punjab", address: "Okara Road, Katchery Road, Depalpur", phone: "0304-1945450 / 0307-1964974", lat: 30.6708, lng: 73.6534, brands: ["ALL BRANDS"] },
   { id: 29, name: "Anwar Auto Store", city: "Rawalpindi", region: "Punjab", address: "115/7, Saeed Plaza, Saadi Road, Rawalpindi Cantt.", phone: "0333-5122279 / 051-5513098", lat: 33.5973, lng: 73.0479, brands: ["Yokohama"] },
 ];
