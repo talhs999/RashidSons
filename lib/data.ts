@@ -1112,7 +1112,7 @@ export const products: Product[] = [
 ];
 
 export const dealers: Dealer[] = [
-  { id: 1, name: "Rashid Sons", city: "Lahore", region: "Punjab", address: "Neela Gumbad, Lahore", phone: "0315-4416626", lat: 31.5724, lng: 74.3075, brands: ["ALL BRANDS"] },
+  { id: 1, name: "J Rashid & Co", city: "Lahore", region: "Punjab", address: "Neela Gumbad, Lahore", phone: "0315-4416626", lat: 31.5724, lng: 74.3075, brands: ["ALL BRANDS"] },
   { id: 2, name: "J Rashid & Sons", city: "Lahore", region: "Punjab", address: "Neela Gumbad, Lahore", phone: "0321-4697896", lat: 31.5724, lng: 74.3075, brands: ["ALL BRANDS"] },
   { id: 3, name: "J Rashid & Sons", city: "Lahore", region: "Punjab", address: "Faisal Town, Lahore", phone: "0300-4058489", lat: 31.4727, lng: 74.3072, brands: ["ALL BRANDS"] },
   { id: 4, name: "J Rashid & Sons", city: "Lahore", region: "Punjab", address: "DHA Kamaha Interchange, Lahore", phone: "0313-7017059", lat: 31.4580, lng: 74.4120, brands: ["ALL BRANDS"] },
