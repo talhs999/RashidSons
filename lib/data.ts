@@ -1119,7 +1119,6 @@ export const dealers: Dealer[] = [
   { id: 5, name: "Fine Traders", city: "Lahore", region: "Punjab", address: "Neela Gumbad, Lahore", phone: "0321-4457276", lat: 31.5724, lng: 74.3075, brands: ["ALL BRANDS"] },
   { id: 6, name: "Sardar Ent", city: "Lahore", region: "Punjab", address: "Sardar Enterprises 313 Circular Road, Lahore", phone: "0345-4040726", lat: 31.5830, lng: 74.3160, brands: ["ALL BRANDS"] },
   { id: 7, name: "Shakeel Tyre", city: "Gujranwala", region: "Punjab", address: "Opposite Iqbal School GT Rd, Gujranwala", phone: "0337-7903730 / 0312-7915855", lat: 32.1617, lng: 74.1883, brands: ["Yokohama", "Warrior", "Atlas Tyre", "Risen", "Falken"] },
-  { id: 8, name: "Japan Tyre", city: "Islamabad", region: "Federal", address: "Blue Area Huma Plaza, Islamabad", phone: "0345-2055505 / 0321-5699331", lat: 33.7118, lng: 73.0573, brands: ["Yokohama"] },
   { id: 9, name: "Mughal Auto", city: "Sialkot", region: "Punjab", address: "Shahabpura, Sialkot", phone: "0332-5252535", lat: 32.4945, lng: 74.5229, brands: ["ALL BRANDS"] },
   { id: 10, name: "Anees Tyre", city: "Peshawar", region: "KPK", address: "Fakhr-e-Alam Rd, Cantt, Peshawar", phone: "091-5278895", lat: 34.0040, lng: 71.5540, brands: ["Yokohama", "Warrior"] },
   { id: 11, name: "Malik Tyre", city: "Peshawar", region: "KPK", address: "F.C Dil Jan Plaza, Sunehri Masjid Rd, Peshawar", phone: "0345-9086758", lat: 34.0080, lng: 71.5510, brands: ["Yokohama"] },
