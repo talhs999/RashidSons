@@ -1,6 +1,6 @@
 "use client";
 
-// Deployment build trigger: v1.0.2 (Emails Directory & Rawalpindi Cantt Dealer)
+// Deployment build trigger: v1.0.3 (Emails Directory redeploy)
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { branches } from "@/lib/data";
