@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     "tyre shop Rahim Yar Khan",
     "tyre shop Depalpur Okara",
     "authorized tyre dealers Pakistan",
+    "best tyre shop Lahore",
+    "Yokohama dealer Lahore",
+    "Goodyear dealer Lahore",
+    "tyre shop Badami Bagh Lahore",
   ],
   alternates: {
     canonical: "https://jrashid.com.pk/dealers",

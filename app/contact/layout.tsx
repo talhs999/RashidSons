@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     "tyre helpline Lahore",
     "Yokohama customer support Pakistan",
     "dealership application J Rashid",
+    "tyre shop Lahore contact",
+    "J Rashid Badami Bagh Lahore contact",
+    "tyre quote Lahore",
   ],
   alternates: {
     canonical: "https://jrashid.com.pk/contact",
