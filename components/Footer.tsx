@@ -73,7 +73,7 @@ export default function Footer() {
       </div>
 
       {/* Main Footer Links */}
-      <div className="max-w-[1400px] mx-auto px-4 lg:px-6 pt-16 pb-8">
+      <div className="max-w-[1400px] mx-auto px-4 lg:px-6 pt-16 pb-24">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-12 mb-16 border-b border-white/10 pb-8">
           <div className="flex-shrink-0">
              <Image
@@ -163,8 +163,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30 uppercase tracking-widest font-bold">
-          <p>&copy; {new Date().getFullYear()} J. RASHID & SONS. ALL RIGHTS RESERVED.</p>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40 uppercase tracking-widest font-bold text-center md:text-left">
+          <p>
+            &copy; {new Date().getFullYear()} J. RASHID &amp; SONS. ALL RIGHTS RESERVED.
+            <span className="mx-2 text-white/20 hidden sm:inline">|</span>
+            <span className="block sm:inline mt-1 sm:mt-0">
+              Made By{" "}
+              <a
+                href="https://www.lumasofts.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-yellow hover:text-white transition-colors underline underline-offset-4"
+              >
+                Luma Softs
+              </a>
+            </span>
+          </p>
           <div className="flex gap-6">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms-of-use" className="hover:text-white transition-colors">Terms of Use</Link>
