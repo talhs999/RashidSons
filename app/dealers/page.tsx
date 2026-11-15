@@ -221,7 +221,7 @@ export default function DealersPage() {
                           </a>
 
                           <a
-                            href={`tel:${dealer.phone.split('/')[0].trim()}`}
+                            href={`tel:${dealer.phone.split('/')[0].replace(/\s+/g, '')}`}
                             onClick={(e) => e.stopPropagation()}
                             className="bg-brand-black text-white font-extrabold text-xs uppercase tracking-wider px-6 py-2.5 skew-x-[-15deg] inline-flex items-center gap-2 hover:bg-brand-charcoal transition-colors shadow-md"
                           >

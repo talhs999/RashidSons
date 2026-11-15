@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { branches, dealers } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Wholesale Dealers Locator | Authorized Tyre Shops Pakistan",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     "wholesale tyre dealers Lahore",
     "Yokohama dealer Karachi",
     "Goodyear dealer Islamabad",
+    "Anees Tyre Islamabad",
     "Yokohama dealer Rawalpindi",
     "tyre shop Rawalpindi Cantt",
     "tyre shop Rahim Yar Khan",
@@ -30,10 +32,67 @@ export const metadata: Metadata = {
   },
 };
 
+const dealersJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "J. Rashid & Sons Authorized Tyre Dealers & Branches in Pakistan",
+  "url": "https://jrashid.com.pk/dealers",
+  "numberOfItems": branches.length + dealers.length,
+  "itemListElement": [
+    ...branches.map((branch, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "AutoPartsStore",
+        "name": `J. Rashid & Sons - ${branch.name}`,
+        "telephone": branch.phone,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": branch.address,
+          "addressLocality": branch.city,
+          "addressCountry": "PK",
+        },
+        "parentOrganization": {
+          "@id": "https://jrashid.com.pk/#organization",
+        },
+      },
+    })),
+    ...dealers.map((dealer, index) => ({
+      "@type": "ListItem",
+      "position": branches.length + index + 1,
+      "item": {
+        "@type": "AutoPartsStore",
+        "name": dealer.name,
+        "telephone": dealer.phone.split("/")[0].trim(),
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": dealer.address,
+          "addressLocality": dealer.city,
+          "addressRegion": dealer.region,
+          "addressCountry": "PK",
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": dealer.lat,
+          "longitude": dealer.lng,
+        },
+      },
+    })),
+  ],
+};
+
 export default function DealersLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dealersJsonLd) }}
+      />
+      {children}
+    </>
+  );
 }

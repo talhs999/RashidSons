@@ -45,11 +45,17 @@ export const metadata: Metadata = {
     "Warrior tyres Pakistan",
     "Atlas tyres Pakistan",
     "Risen tyres Pakistan",
-    "Michelin tyres Pakistan",
     "J Rashid Sons",
+    "J Rashid & Co Lahore",
     "tyre shop Lahore",
     "tyre dealer Karachi",
     "tyre shop Islamabad",
+    "tyre dealer Rawalpindi",
+    "tyre shop Multan",
+    "tyre dealer Peshawar",
+    "tyre shop Faisalabad",
+    "tyre shop Gujranwala",
+    "tyre shop Sialkot",
     "tyre shop Faisal Town Lahore",
     "tyre shop Anarkali Lahore",
     "tyre shop Rahim Yar Khan",
@@ -66,7 +72,6 @@ export const metadata: Metadata = {
     "Goodyear dealer Lahore",
     "tyre shop Badami Bagh Lahore",
     "tyre shop Neela Gumbad Lahore",
-    "tyre shop Anarkali Lahore",
     "wholesale tyres Lahore",
     "tyre price Lahore",
     "genuine imported tyres Pakistan",
@@ -101,21 +106,35 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://jrashid.com.pk/#website",
+      "url": "https://jrashid.com.pk",
+      "name": "J. Rashid & Sons",
+      "description": "Official importer and nationwide distributor of Yokohama, Goodyear, Falken, Sunwide, Warrior, Atlas & Risen tyres in Pakistan since 1948.",
+      "publisher": {
+        "@id": "https://jrashid.com.pk/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://jrashid.com.pk/dealers?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
       "@type": "AutoPartsStore",
       "@id": "https://jrashid.com.pk/#store",
       "name": "J. Rashid & Sons",
+      "alternateName": ["J. Rashid & Sons (Pvt.) Ltd.", "J Rashid & Co"],
       "url": "https://jrashid.com.pk",
       "telephone": "+923071777510",
       "email": "jrashidandsons786@gmail.com",
       "priceRange": "$$",
-      "areaServed": [
-        { "@type": "City", "name": "Lahore" },
-        { "@type": "State", "name": "Punjab" },
-        { "@type": "Country", "name": "Pakistan" }
-      ],
-      "hasMap": "https://maps.app.goo.gl/UjLVkSDqg5ZG8Quy9",
       "image": "https://jrashid.com.pk/images/logo.png",
-      "description": "Official importer and distributor of Yokohama, Goodyear, Falken, Sunwide, Warrior & Atlas tyres in Pakistan.",
+      "hasMap": "https://maps.app.goo.gl/UjLVkSDqg5ZG8Quy9",
+      "description": "Official importer and distributor of Yokohama, Goodyear, Falken, Sunwide, Warrior, Atlas & Risen tyres in Pakistan.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Circular Rd, Badami Bagh, Qadimi Shehr",
@@ -129,6 +148,28 @@ const jsonLd = {
         "latitude": "31.5830",
         "longitude": "74.3160"
       },
+      "areaServed": [
+        { "@type": "City", "name": "Lahore" },
+        { "@type": "State", "name": "Punjab" },
+        { "@type": "Country", "name": "Pakistan" }
+      ],
+      "brand": [
+        { "@type": "Brand", "name": "Yokohama", "url": "https://jrashid.com.pk/brands/yokohama" },
+        { "@type": "Brand", "name": "Goodyear", "url": "https://jrashid.com.pk/brands/goodyear" },
+        { "@type": "Brand", "name": "Falken", "url": "https://jrashid.com.pk/brands/falken" },
+        { "@type": "Brand", "name": "Sunwide", "url": "https://jrashid.com.pk/brands/sunwide" },
+        { "@type": "Brand", "name": "Warrior", "url": "https://jrashid.com.pk/brands/warrior" },
+        { "@type": "Brand", "name": "Atlas Tyre", "url": "https://jrashid.com.pk/brands/atlas" },
+        { "@type": "Brand", "name": "Risen", "url": "https://jrashid.com.pk/brands/risen" }
+      ],
+      "parentOrganization": {
+        "@id": "https://jrashid.com.pk/#organization"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61591938635324",
+        "https://www.instagram.com/jrashidandsonspvtltd",
+        "https://maps.app.goo.gl/UjLVkSDqg5ZG8Quy9"
+      ],
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -140,19 +181,22 @@ const jsonLd = {
       "@type": "Organization",
       "@id": "https://jrashid.com.pk/#organization",
       "name": "J. Rashid & Sons",
+      "legalName": "J. Rashid & Sons (Pvt.) Ltd.",
       "url": "https://jrashid.com.pk",
       "logo": "https://jrashid.com.pk/images/logo.png",
       "foundingDate": "1948",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+92-307-1777510",
+        "contactType": "sales",
+        "areaServed": "PK",
+        "availableLanguage": ["English", "Urdu"]
+      },
       "sameAs": [
         "https://www.facebook.com/profile.php?id=61591938635324",
-        "https://www.instagram.com/jrashidandsonspvtltd"
+        "https://www.instagram.com/jrashidandsonspvtltd",
+        "https://maps.app.goo.gl/UjLVkSDqg5ZG8Quy9"
       ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://jrashid.com.pk/#website",
-      "url": "https://jrashid.com.pk",
-      "name": "J. Rashid & Sons"
     },
     {
       "@type": "FAQPage",
